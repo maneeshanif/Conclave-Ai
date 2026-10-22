@@ -5,6 +5,8 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CommandPalette } from "@/components/CommandPalette";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { MotionRoot } from "@/components/motion/MotionRoot";
+import { Cursor } from "@/components/motion/Cursor";
 import { site } from "@/lib/site";
 
 const syne = Syne({ subsets: ["latin"], weight: ["700", "800"], variable: "--font-syne", display: "swap" });
@@ -28,8 +30,15 @@ export const viewport: Viewport = { themeColor: "#F1F4EC" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${syne.variable} ${outfit.variable} ${plex.variable}`}>
+    <html lang="en" className={`${syne.variable} ${outfit.variable} ${plex.variable}`} suppressHydrationWarning>
       <body>
+        {/* Arms the motion start states unless the visitor prefers reduced motion; removed again if MotionRoot never boots. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              'var d=document.documentElement;if(!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("motion-ok");setTimeout(function(){if(!window.__motion)d.classList.remove("motion-ok")},4000)}',
+          }}
+        />
         <a
           href="#main"
           className="fixed left-4 top-4 z-[70] -translate-y-20 rounded-xl bg-ink px-4 py-2 text-paper focus:translate-y-0"
@@ -39,6 +48,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SmoothScroll>
           <Navbar />
           <CommandPalette />
+          <MotionRoot />
+          <Cursor />
           <main id="main">{children}</main>
           <Footer />
         </SmoothScroll>

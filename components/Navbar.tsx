@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
 import { Button } from "./ui/Button";
@@ -12,6 +12,14 @@ import { cn } from "@/lib/utils";
 export function Navbar() {
   const pathname = usePathname();
   const { menuOpen, setMenuOpen, setPaletteOpen } = useUI();
+
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const on = () => setScrolled(window.scrollY > 8);
+    on();
+    window.addEventListener("scroll", on, { passive: true });
+    return () => window.removeEventListener("scroll", on);
+  }, []);
 
   useEffect(() => setMenuOpen(false), [pathname, setMenuOpen]);
   useEffect(() => {
@@ -26,7 +34,10 @@ export function Navbar() {
       <header className="fixed inset-x-0 top-4 z-50 px-4">
         <nav
           aria-label="Main"
-          className="mx-auto flex h-16 max-w-[1240px] items-center justify-between rounded-2xl border hair bg-paper pl-5 pr-2.5"
+          className={cn(
+            "mx-auto flex h-16 max-w-[1240px] items-center justify-between rounded-2xl border hair bg-paper pl-5 pr-2.5 transition-shadow duration-200",
+            scrolled && "shadow-[0_8px_24px_rgb(11_21_18/0.08)]",
+          )}
         >
           <Logo />
           <ul className="hidden items-center gap-1 md:flex">
@@ -88,7 +99,7 @@ export function Navbar() {
         >
           <ul className="flex flex-1 flex-col justify-center gap-2">
             {[...nav, { href: "/pricing", label: "Pricing" }].map((l, i) => (
-              <li key={l.href} className="border-b hair">
+              <li key={l.href} className="menu-item border-b hair" style={{ "--i": i } as React.CSSProperties}>
                 <Link href={l.href} className="flex items-baseline gap-3 py-4 text-[1.75rem] font-semibold tracking-tight text-ink">
                   <span className="label text-slate">{String(i + 1).padStart(2, "0")}</span>
                   {l.label}

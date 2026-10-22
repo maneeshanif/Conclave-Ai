@@ -33,16 +33,20 @@ export default async function ProjectPage({ params }: Params) {
       </header>
 
       <div className="frame px-4 md:px-10">
-        <div className="aspect-video rounded-3xl bg-paper" role="img" aria-label="Project hero video placeholder" />
+        {/* Flat poster until the real loop exists, so the page never shows an empty box. */}
+        <div data-reveal className="relative grid aspect-video place-items-center overflow-hidden rounded-3xl bg-lime" role="img" aria-label={`${p.title} preview`}>
+          <span className="display text-display-xl text-ink">{p.title.slice(0, 1)}</span>
+          <span className="pill-label absolute bottom-4 left-4">Preview video to come</span>
+        </div>
 
         {sections.map((s) => (
-          <section key={s} className="grid gap-6 border-t hair py-12 md:grid-cols-[1fr_2fr]">
+          <section data-reveal key={s} className="grid gap-6 border-t hair py-12 md:grid-cols-[1fr_2fr]">
             <h2 className="label text-slate">{s}</h2>
             <p className="max-w-xl text-slate">{p.body || "Write-up to be added."}</p>
           </section>
         ))}
 
-        <section className="grid gap-6 border-t hair py-12 md:grid-cols-[1fr_2fr]">
+        <section data-reveal className="grid gap-6 border-t hair py-12 md:grid-cols-[1fr_2fr]">
           <h2 className="label text-slate">Results</h2>
           {p.results.length ? (
             <dl className="grid gap-6 sm:grid-cols-3">

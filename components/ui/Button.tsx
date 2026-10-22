@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 type Variant = "primary" | "dark" | "ghost" | "light";
 
 const base =
-  "inline-flex h-11 items-center justify-center rounded-xl px-5 text-[0.9375rem] font-medium transition-colors duration-150 [transition-timing-function:var(--ease-out-quart)]";
+  "press inline-flex h-11 items-center justify-center rounded-xl px-5 text-[0.9375rem] font-medium transition-[color,background-color,transform] duration-150 [transition-timing-function:var(--ease-out-quart)]";
 
 const variants: Record<Variant, string> = {
   // Lime fill, Ink label: 14.37:1. The brand action colour.
@@ -21,12 +21,14 @@ interface Props {
   href: string;
   variant?: Variant;
   className?: string;
+  /** Leans toward the pointer on fine-pointer devices. Use on hero and closing actions only. */
+  magnetic?: boolean;
   children: React.ReactNode;
 }
 
-export function Button({ href, variant = "primary", className, children }: Props) {
+export function Button({ href, variant = "primary", className, magnetic, children }: Props) {
   return (
-    <Link href={href} className={cn(base, variants[variant], className)}>
+    <Link href={href} data-magnetic={magnetic ? "" : undefined} className={cn(base, variants[variant], className)}>
       {children}
     </Link>
   );

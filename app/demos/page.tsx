@@ -8,7 +8,7 @@ export default function DemosPage() {
   return (
     <>
       <PageHeader eyebrow="Demos" title="Try it, don't take our word." />
-      <div className="frame px-4 md:px-10 grid gap-4 pb-24 md:grid-cols-2">
+      <div data-stagger className="frame px-4 md:px-10 grid gap-4 pb-24 md:grid-cols-2">
         <section id="aria" className="scroll-mt-28 rounded-3xl border hair bg-paper p-8">
           <Eyebrow>Talk to Aria</Eyebrow>
           <h2 className="display mt-4 text-display-m">Live voice agent.</h2>

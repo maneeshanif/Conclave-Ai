@@ -1,7 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { gsap } from "gsap";
 import { cn } from "@/lib/utils";
+import { ease } from "@/lib/motion";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Button } from "@/components/ui/Button";
 
 const bars = [10, 24, 14, 36, 20, 44, 18, 30, 12, 26, 16, 38, 22, 10, 28, 16];
@@ -58,16 +61,29 @@ const tabs: { id: string; label: string; ask: string; lines: Line[] }[] = [
 export function AriaWindow() {
   const [active, setActive] = useState(tabs[0].id);
   const tab = tabs.find((t) => t.id === active)!;
+  const lines = useRef<HTMLOListElement>(null);
+  const reduced = useReducedMotion();
+
+  /* Each tab plays its conversation in: lines rise in turn like messages arriving. Skipped for reduced motion. */
+  useEffect(() => {
+    if (reduced || !lines.current) return;
+    const items = Array.from(lines.current.children);
+    const tween = gsap.fromTo(items, { y: 12, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: ease.outExpo, stagger: 0.22, clearProps: "transform" });
+    return () => {
+      tween.kill();
+    };
+  }, [active, reduced]);
 
   return (
     <div className="overflow-hidden rounded-2xl border hair bg-paper shadow-[0_1px_0_rgb(11_21_18/0.06)]">
-      <div className="flex items-center gap-4 overflow-x-auto border-b hair bg-mist/60 px-4 py-2">
-        <span className="flex shrink-0 gap-1.5" aria-hidden="true">
+      <div className="flex items-center gap-4 border-b hair bg-mist/60 px-3 py-2 md:px-4">
+        <span className="hidden shrink-0 gap-1.5 sm:flex" aria-hidden="true">
           <span className="h-3 w-3 rounded-full bg-ink/20" />
           <span className="h-3 w-3 rounded-full bg-ink/20" />
           <span className="h-3 w-3 rounded-full bg-ink/20" />
         </span>
-        <div role="tablist" aria-label="What Aria can do" className="flex gap-1">
+        {/* Two by two on phones so no label is ever cut off; one row from 640px. */}
+        <div role="tablist" aria-label="What Aria can do" className="grid min-w-0 flex-1 grid-cols-2 gap-1 sm:flex sm:flex-none">
           {tabs.map((t) => (
             <button
               key={t.id}
@@ -77,7 +93,7 @@ export function AriaWindow() {
               aria-controls={`panel-${t.id}`}
               onClick={() => setActive(t.id)}
               className={cn(
-                "h-9 shrink-0 rounded-lg px-3 text-sm transition-colors duration-150",
+                "press h-9 rounded-lg px-3 text-sm transition-[color,background-color,transform] duration-150",
                 active === t.id ? "bg-paper font-medium text-ink" : "text-slate hover:text-ink",
               )}
             >
@@ -94,7 +110,7 @@ export function AriaWindow() {
             <span className="text-sm font-medium">Aria</span>
             <span className="text-sm text-slate">{tab.ask}</span>
           </div>
-          <ol className="mt-5 space-y-2.5 text-[0.9375rem]">
+          <ol ref={lines} className="mt-5 min-h-[14rem] space-y-2.5 text-[0.9375rem]">
             {tab.lines.map((l, i) => (
               <li
                 key={i}
@@ -118,7 +134,7 @@ export function AriaWindow() {
             <h2 className="mt-4 text-2xl font-semibold tracking-tight">Talk to Aria yourself</h2>
             <p className="mt-2 text-slate">Speak to the agent from your browser. Ask it to book you in. No sign-up needed.</p>
           </div>
-          <div className="flex h-16 items-center gap-1.5" role="img" aria-label="Voice waveform, idle">
+          <div data-wave className="flex h-16 items-center gap-1.5" role="img" aria-label="Voice waveform, idle">
             {bars.map((h, i) => (
               <span key={i} className="w-1.5 rounded-full bg-violet" style={{ height: h }} />
             ))}

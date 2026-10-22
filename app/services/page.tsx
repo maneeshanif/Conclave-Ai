@@ -23,7 +23,7 @@ export default function ServicesPage() {
         {services.map((s, i) => {
           const Visual = serviceVisuals[i];
           return (
-          <section key={s.slug} id={s.slug} className="grid scroll-mt-28 gap-8 border-t hair py-12 md:grid-cols-2">
+          <section data-reveal key={s.slug} id={s.slug} className="grid scroll-mt-28 gap-8 border-t hair py-12 md:grid-cols-2">
             <div>
               <Eyebrow n={s.n}>{s.slug}</Eyebrow>
               <h2 className="display mt-4 text-display-m">{s.title}</h2>

@@ -13,7 +13,7 @@ function ExampleTag() {
 function Waveform({ n = 18, className }: { n?: number; className?: string }) {
   const h = [8, 18, 12, 28, 16, 34, 14, 24, 10, 30, 18, 36, 12, 22, 16, 28, 10, 20];
   return (
-    <div className={cn("flex h-10 items-center gap-1", className)} role="img" aria-label="Voice waveform">
+    <div data-wave className={cn("flex h-10 items-center gap-1", className)} role="img" aria-label="Voice waveform">
       {Array.from({ length: n }, (_, i) => (
         <span key={i} className="w-1 rounded-full bg-violet" style={{ height: h[i % h.length] }} />
       ))}
@@ -24,7 +24,7 @@ function Waveform({ n = 18, className }: { n?: number; className?: string }) {
 /* 01 Voice: an answered call */
 export function VoiceVisual() {
   return (
-    <div className={cn(card, "w-full max-w-sm p-4")}>
+    <div data-visual data-parallax="10" className={cn(card, "w-full max-w-sm p-4")}>
       <div className="flex items-center justify-between">
         <span className="flex items-center gap-2 text-sm font-medium">
           <span className="h-2 w-2 rounded-full bg-violet" /> Call answered
@@ -33,9 +33,9 @@ export function VoiceVisual() {
       </div>
       <Waveform className="mt-4" />
       <div className="mt-4 space-y-2 text-sm">
-        <p className="rounded-lg bg-mist px-3 py-2">Hi, I&apos;d like to book a cleaning this week.</p>
-        <p className="rounded-lg bg-ink px-3 py-2 text-paper">Of course. I have Thursday at 10:30 or Friday at 2.</p>
-        <p className="rounded-lg bg-mist px-3 py-2">Thursday works.</p>
+        <p data-pop className="rounded-lg bg-mist px-3 py-2">Hi, I&apos;d like to book a cleaning this week.</p>
+        <p data-pop className="rounded-lg bg-ink px-3 py-2 text-paper">Of course. I have Thursday at 10:30 or Friday at 2.</p>
+        <p data-pop className="rounded-lg bg-mist px-3 py-2">Thursday works.</p>
       </div>
       <p className="mt-4 flex items-center justify-between border-t hair pt-3 text-xs text-slate">
         <span>Answered in 1 ring</span>
@@ -48,18 +48,18 @@ export function VoiceVisual() {
 /* 02 Follow-up: a fast reply thread */
 export function FollowUpVisual() {
   return (
-    <div className={cn(card, "w-full max-w-sm p-4")}>
+    <div data-visual data-parallax="10" className={cn(card, "w-full max-w-sm p-4")}>
       <div className="flex items-center justify-between">
         <span className="text-sm font-medium">New enquiry</span>
         <ExampleTag />
       </div>
       <div className="mt-4 space-y-2 text-sm">
-        <p className="w-4/5 rounded-lg bg-mist px-3 py-2">Do you have any appointments left today?</p>
-        <p className="ml-auto w-4/5 rounded-lg bg-ink px-3 py-2 text-paper">Yes, 4:15 pm is open. Want me to hold it for you?</p>
-        <p className="w-1/2 rounded-lg bg-mist px-3 py-2">Yes please.</p>
+        <p data-pop className="w-4/5 rounded-lg bg-mist px-3 py-2">Do you have any appointments left today?</p>
+        <p data-pop className="ml-auto w-4/5 rounded-lg bg-ink px-3 py-2 text-paper">Yes, 4:15 pm is open. Want me to hold it for you?</p>
+        <p data-pop className="w-1/2 rounded-lg bg-mist px-3 py-2">Yes please.</p>
       </div>
       <div className="mt-4 flex items-center justify-between border-t hair pt-3 text-xs">
-        <span className="rounded-md bg-lime px-2 py-1 font-medium text-ink">Replied in 8 seconds</span>
+        <span data-pop className="rounded-md bg-lime px-2 py-1 font-medium text-ink">Replied in 8 seconds</span>
         <span className="text-slate">SMS</span>
       </div>
     </div>
@@ -76,7 +76,7 @@ export function BookingVisual() {
     [0, 0, 1, 0, 0],
   ];
   return (
-    <div className={cn(card, "w-full max-w-sm p-4")}>
+    <div data-visual data-parallax="10" className={cn(card, "w-full max-w-sm p-4")}>
       <div className="flex items-center justify-between">
         <span className="text-sm font-medium">This week</span>
         <ExampleTag />
@@ -88,12 +88,12 @@ export function BookingVisual() {
         {rows.flat().map((v, i) => (
           <span
             key={i}
-            className={cn("h-9 rounded-md border hair", v === 1 && "border-transparent bg-mist", v === 2 && "border-transparent bg-lime")}
+            data-fill={v === 2 ? "" : undefined} className={cn("h-9 rounded-md border hair", v === 1 && "border-transparent bg-mist", v === 2 && "border-transparent bg-lime")}
             aria-label={v === 2 ? "Booked slot" : v === 1 ? "Busy" : "Free"}
           />
         ))}
       </div>
-      <p className="mt-4 flex items-center gap-2 border-t hair pt-3 text-xs">
+      <p data-pop className="mt-4 flex items-center gap-2 border-t hair pt-3 text-xs">
         <span className="h-2.5 w-2.5 rounded-sm bg-lime" /> Booked by Aria, Thursday 10:30
       </p>
     </div>
@@ -109,14 +109,14 @@ export function ReactivationVisual() {
     ["Last visit 9 months ago", "Contacted", false],
   ];
   return (
-    <div className={cn(card, "w-full max-w-sm p-4")}>
+    <div data-visual data-parallax="10" className={cn(card, "w-full max-w-sm p-4")}>
       <div className="flex items-center justify-between">
         <span className="text-sm font-medium">Lapsed customers</span>
         <ExampleTag />
       </div>
       <ul className="mt-4 divide-y divide-[rgb(11_21_18/0.12)] text-sm">
         {rows.map(([a, b, done], i) => (
-          <li key={i} className="flex items-center justify-between py-2.5">
+          <li data-pop key={i} className="flex items-center justify-between py-2.5">
             <span className="flex items-center gap-2">
               <span className="h-6 w-6 rounded-full bg-mist" />
               {a}
@@ -133,7 +133,7 @@ export function ReactivationVisual() {
 export function ReportVisual() {
   const bars = [38, 52, 46, 64, 58, 78, 70];
   return (
-    <div className={cn(card, "w-full max-w-sm p-4")}>
+    <div data-visual data-parallax="10" className={cn(card, "w-full max-w-sm p-4")}>
       <div className="flex items-center justify-between">
         <span className="text-sm font-medium">Weekly summary</span>
         <ExampleTag />
@@ -148,13 +148,13 @@ export function ReportVisual() {
         ).map(([l, v]) => (
           <div key={l} className="rounded-lg bg-mist p-2.5">
             {l}
-            <p className="mt-1 text-lg font-semibold text-ink">{v}</p>
+            <p data-count={v} className="mt-1 text-lg font-semibold text-ink">{v}</p>
           </div>
         ))}
       </div>
       <div className="mt-4 flex h-24 items-end gap-2" role="img" aria-label="Bar chart, example">
         {bars.map((h, i) => (
-          <span key={i} className={cn("flex-1 rounded-t-md", i === bars.length - 1 ? "bg-lime" : "bg-ink")} style={{ height: `${h}%` }} />
+          <span data-bar key={i} className={cn("flex-1 rounded-t-md", i === bars.length - 1 ? "bg-lime" : "bg-ink")} style={{ height: `${h}%` }} />
         ))}
       </div>
     </div>
@@ -191,16 +191,21 @@ export function HeroScene() {
   ];
   return (
     <svg viewBox="0 0 440 400" className="h-full w-full" role="img" aria-label="Agents connecting to the Conclave mark">
+      {/* MotionRoot drifts each node (data-node) and its link (data-link) and leans them away from the pointer. */}
       {nodes.map(([x, y], i) => (
-        <line key={i} x1={x} y1={y} x2="220" y2="200" stroke="#0B1512" strokeOpacity="0.35" strokeWidth="1.5" strokeDasharray="4 6" />
+        <line key={i} data-link={i} x1={x} y1={y} x2="220" y2="200" stroke="#0B1512" strokeOpacity="0.35" strokeWidth="1.5" strokeDasharray="4 6" />
       ))}
       {nodes.map(([x, y, r], i) => (
-        <circle key={i} cx={x} cy={y} r={r} fill={i % 3 === 0 ? "#FBFCF8" : i % 3 === 1 ? "#0B1512" : "#CFC4FF"} stroke="#0B1512" strokeWidth="2" />
+        <g key={i} data-node={i} data-x={x} data-y={y} data-depth={0.6 + (i % 4) * 0.4}>
+          <circle cx={x} cy={y} r={r} fill={i % 3 === 0 ? "#FBFCF8" : i % 3 === 1 ? "#0B1512" : "#CFC4FF"} stroke="#0B1512" strokeWidth="2" />
+        </g>
       ))}
-      <rect x="140" y="120" width="160" height="160" rx="40" fill="#FBFCF8" stroke="#0B1512" strokeWidth="2" />
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <image href="/brand/conclave-mark.svg" x="160" y="140" width="120" height="120" />
-      <circle cx="300" cy="122" r="7" fill="#7C5CFF" />
+      <g data-core>
+        <rect x="140" y="120" width="160" height="160" rx="40" fill="#FBFCF8" stroke="#0B1512" strokeWidth="2" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <image href="/brand/conclave-mark.svg" x="160" y="140" width="120" height="120" />
+        <circle cx="300" cy="122" r="7" fill="#7C5CFF" />
+      </g>
     </svg>
   );
 }

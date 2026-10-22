@@ -63,6 +63,25 @@ p { text-wrap: pretty; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
 
+/*
+ * Motion start states. Only hidden while html.motion-ok is set by the inline script in app/layout.tsx
+ * (it is never set under prefers-reduced-motion, and it is removed again if MotionRoot fails to boot),
+ * so no-JS and reduced-motion visitors always see full content. GSAP owns the transform; CSS only hides.
+ */
+.motion-ok :is([data-reveal], [data-stagger] > *, [data-hero-line], [data-hero-fade], [data-hero-scene], [data-hero-pill]) { opacity: 0; }
+.motion-ok [data-visual] :is([data-pop], [data-bar], [data-fill]) { opacity: 0; }
+
+/* Micro-interactions measured on lemlist: 150ms colour, 200ms icon, 300ms image scale, 320ms accordion. */
+.zoom-on-hover { transition: transform 300ms var(--ease-out-quart); }
+.group:hover .zoom-on-hover { transform: scale(1.04); }
+.lift-on-hover { transition: transform 200ms var(--ease-out-quart); }
+.group:hover .lift-on-hover { transform: translateY(-6px) rotate(-1.5deg); }
+.press:active { transform: scale(0.98); }
+.u-link { text-decoration: underline; text-decoration-color: rgb(11 21 18 / 0.3); text-underline-offset: 4px; transition: text-decoration-color 150ms; }
+.u-link:hover { text-decoration-color: currentColor; }
+.menu-item { animation: rise 500ms var(--ease-out-expo) both; animation-delay: calc(var(--i, 0) * 60ms); }
+@keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
 /* lemlist-style framed column: hairline sides, content centred at 1280px */
 .frame { margin-inline: auto; max-width: 1280px; border-inline: 1px solid rgb(11 21 18 / 0.12); }
 .hair { border-color: rgb(11 21 18 / 0.12); }

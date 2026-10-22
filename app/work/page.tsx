@@ -19,7 +19,7 @@ export default async function WorkPage() {
             </li>
           ))}
         </ul>
-        <ul className="grid gap-4 md:grid-cols-2">
+        <ul data-stagger className="grid gap-4 md:grid-cols-2">
           {projects.map((p) => (
             <li key={p.slug}>
               <Link
