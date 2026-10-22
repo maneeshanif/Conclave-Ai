@@ -115,6 +115,12 @@ export function MotionRoot() {
         ScrollTrigger.create({ trigger: wave, start: "top bottom", end: "bottom top", onToggle: (s) => tweens.forEach((t) => (s.isActive ? t.play() : t.pause())) });
       });
 
+      /* Crew blink: each pair of eyes closes for a beat on its own random rhythm, only while on screen. */
+      all<SVGGElement>(".crew-eye").forEach((eyes) => {
+        const tl = gsap.timeline({ repeat: -1, repeatDelay: gsap.utils.random(2.4, 5.6), delay: gsap.utils.random(0.4, 4), paused: true });
+        tl.to(eyes, { scaleY: 0.08, duration: 0.07, ease: "power2.in" }).to(eyes, { scaleY: 1, duration: 0.11, ease: "power2.out" });
+        ScrollTrigger.create({ trigger: eyes.ownerSVGElement ?? eyes, start: "top bottom", end: "bottom top", onToggle: (s) => (s.isActive ? tl.play() : tl.pause()) });
+      });
       /* Hero scene: nodes drift on their own beat and lean away from the pointer. One ticker, only while the hero is on screen. */
       const scene = document.querySelector<SVGElement>("[data-hero-scene] svg");
       const heroSection = document.querySelector<HTMLElement>("[data-hero]");

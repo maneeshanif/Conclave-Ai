@@ -87,3 +87,6 @@ p { text-wrap: pretty; }
 .hair { border-color: rgb(11 21 18 / 0.12); }
 .pill-label { display: inline-flex; align-items: center; border: 1px solid rgb(11 21 18 / 0.12); background: var(--color-paper); border-radius: 8px; padding: 4px 10px; font-family: var(--font-mono); font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-slate); box-shadow: 0 1px 0 rgb(11 21 18 / 0.06); }
 .head { font-family: var(--font-sans); font-weight: 600; letter-spacing: -0.02em; font-size: var(--text-head); line-height: 1.1; text-wrap: balance; }
+
+/* Crew animation hooks: SVG parts scale around their own centre (blink, talk). */
+.crew-eye, [data-wave] > * { transform-box: fill-box; transform-origin: center; }

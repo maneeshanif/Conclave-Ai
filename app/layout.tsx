@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Syne, Outfit, IBM_Plex_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import { Navbar } from "@/components/Navbar";
@@ -33,14 +34,12 @@ export const viewport: Viewport = { themeColor: "#F1F4EC" };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${syne.variable} ${outfit.variable} ${plex.variable}`} suppressHydrationWarning>
-      <body>
+      {/* suppressHydrationWarning on body: browser extensions (Grammarly, password managers, etc.) inject attributes into it before React hydrates. */}
+      <body suppressHydrationWarning>
         {/* Arms the motion start states unless the visitor prefers reduced motion; removed again if MotionRoot never boots. */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              'var d=document.documentElement;if(!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("motion-ok");setTimeout(function(){if(!window.__motion)d.classList.remove("motion-ok")},4000)}',
-          }}
-        />
+        <Script id="motion-arm" strategy="beforeInteractive">
+          {`var d=document.documentElement;if(!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("motion-ok");setTimeout(function(){if(!window.__motion)d.classList.remove("motion-ok")},4000)}`}
+        </Script>
         {/* Organization and WebSite structured data. sameAs is added when the profiles (LinkedIn, GitHub, X) exist. */}
         <script
           type="application/ld+json"
