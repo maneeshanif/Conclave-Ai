@@ -45,7 +45,7 @@ export default function PricingPage() {
 
       <section data-reveal className="frame border-t hair px-4 py-12 md:px-10">
         <h2 className="head">What is included</h2>
-        <div className="mt-6 overflow-x-auto rounded-2xl border hair bg-paper">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways" className="mt-6 overflow-x-auto rounded-2xl border hair bg-paper">
           <table className="w-full min-w-[28rem] text-left text-sm">
             <caption className="sr-only">What each plan includes</caption>
             <tbody className="divide-y divide-[rgb(11_21_18/0.12)]">

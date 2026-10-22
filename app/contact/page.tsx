@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
+import { ContactForm } from "@/components/ContactForm";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Contact", description: "Book a call or send a message." };
+export const metadata: Metadata = {
+  title: "Contact: book a call or send a message",
+  description: "Book a call with Conclave AI or send a message. We reply by email.",
+  alternates: { canonical: "/contact" },
+};
 
 export default function ContactPage() {
   return (
-    <div className="frame px-4 md:px-10 grid gap-12 pb-24 pt-40 lg:grid-cols-2">
+    <div className="frame grid gap-12 px-4 pb-24 pt-40 md:px-10 lg:grid-cols-2">
       <div>
         <p className="label text-slate">Contact</p>
         <h1 className="display mt-4 text-display-xl">Let&apos;s talk</h1>
@@ -19,6 +24,12 @@ export default function ContactPage() {
             </dd>
           </div>
           <div>
+            <dt className="label text-slate">Where</dt>
+            <dd className="text-title">
+              {site.city}, serving {site.serving}
+            </dd>
+          </div>
+          <div>
             <dt className="label text-slate">WhatsApp</dt>
             <dd className="text-title">Number to be added</dd>
           </div>
@@ -27,11 +38,19 @@ export default function ContactPage() {
             <dd className="text-title">To be added</dd>
           </div>
         </dl>
+        <div className="mt-10 rounded-2xl border hair bg-paper p-5">
+          <p className="label text-plum">Book a time</p>
+          {site.calLink ? (
+            <a href={site.calLink} className="u-link mt-2 inline-block font-medium hover:text-plum" rel="noopener">
+              Pick a slot on our calendar
+            </a>
+          ) : (
+            <p className="mt-2 text-sm text-slate">The calendar link is added with the Cal.com account. Until then, send the form and we will reply with times.</p>
+          )}
+        </div>
+        <p className="mt-6 text-sm text-slate">Not sure where to start? Try the &ldquo;Which agent do I need?&rdquo; picker on the services page.</p>
       </div>
-      <div className="rounded-3xl border hair bg-paper p-8">
-        <p className="label text-plum">Form and Cal.com booking</p>
-        <p className="mt-4 text-slate">The contact form and booking embed are built end to end in the implementation step.</p>
-      </div>
+      <ContactForm />
     </div>
   );
 }

@@ -86,6 +86,16 @@ export const industries = [
   },
 ] as const;
 
+/** Labels for the example dashboard on each industry page. The figures drawn are sample values and the card says so. */
+export const industryDash: Record<string, { title: string; tiles: [string, string][] }> = {
+  clinics: { title: "A week at a clinic", tiles: [["Calls answered", "128"], ["Appointments booked", "41"], ["Reminders sent", "96"], ["Handed to staff", "7"]] },
+  "med-spas": { title: "A week at a med spa", tiles: [["Enquiries answered", "64"], ["Consultations held", "18"], ["Win-back replies", "9"], ["Handed to staff", "5"]] },
+  dental: { title: "A week at a dental practice", tiles: [["Confirmations", "88"], ["Slots refilled", "12"], ["Recalls sent", "54"], ["Handed to staff", "6"]] },
+  "real-estate": { title: "A week at an agency", tiles: [["Portal leads answered", "72"], ["Viewings booked", "23"], ["Old leads revived", "11"], ["Handed to agents", "8"]] },
+  "home-services": { title: "A week at a home-services firm", tiles: [["Calls answered", "57"], ["Visits booked", "19"], ["Quotes chased", "14"], ["Urgent, flagged", "4"]] },
+  startups: { title: "A week on a platform build", tiles: [["Deploys", "6"], ["Alerts resolved", "11"], ["Agent runs", "420"], ["Escalations", "2"]] },
+};
+
 export const serviceDetail: Record<
   string,
   { problem: string; flow: string[]; integrations: string[]; faq: [string, string][]; related: string }

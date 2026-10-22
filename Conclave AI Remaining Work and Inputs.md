@@ -1,94 +1,97 @@
 # Conclave AI: what is left and what I need from you
 
-Updated 22 Oct 2026. Repo: `C:\code\concave-ai` (3 commits, nothing pushed yet). Read this top to bottom: section 1 is what you must send, section 2 is what I build next, section 3 is what is already done.
+Updated 22 Oct 2026. Repo: `C:\code\concave-ai` (nothing pushed yet: no remote). Section 1 is what only you can give me. Section 2 is what is still open on my side. Section 3 is what is done.
 
-## 1. What I need from you (blocks the items in the right column)
+## 1. What I need from you
 
-### A. Needed first (small, unblocks a lot)
+### A. First (small, unblocks a lot)
 
 | # | What | Why | Blocks |
 | --- | --- | --- | --- |
-| 1 | GitHub (or other) **repo URL**, empty | There is no remote, so nothing is pushed. Send it and I add `origin` and push `main` | Push, Vercel deploy |
-| 2 | **Domain**: do you own `conclaveai.com` or `conclave.ai`? Which is canonical, which redirects? | Set in one line (`lib/site.ts`), currently `hello@conclaveai.com`. Also email address and all SEO tags | Contact page, JSON-LD, sitemap, deploy |
-| 3 | **Approve the Brick Crew** (see `/crew`): roster, names, jobs, look. Say keep, change or add | New mascot system replaces the round dots. Names and personalities feed copy and the sticker pack | Stickers, Flow prompts, per-section art |
+| 1 | GitHub (or other) **repo URL**, empty | No remote exists, so nothing is pushed | Push, Vercel deploy |
+| 2 | **Domain**: `conclaveai.com` or `conclave.ai`? Which is canonical, which redirects? | One line in `lib/site.ts`, currently `hello@conclaveai.com` | Email address, SEO, deploy |
+| 3 | **Verdict on the Brick Crew** (see `/crew`, now glossy with moods): keep, change, add | You rated v1 5/10; v2 adds gloss, hands and feet, faces, moods. Tell me what is still off | Stickers, Flow prompts |
 
-### B. Keys and accounts (I will not invent or guess these)
+### B. Keys and accounts (I will not guess these). Put them in `.env.local` and `backend/.env`; never paste them in chat
 
-| Item | Needed for |
+| Item | Switches on |
 | --- | --- |
-| Supabase project URL, anon key, service-role key | Leads, leaderboard, projects, receipts |
-| Resend API key and a verified sending domain | Contact form email, weekly reports |
-| Vapi (or Retell) public key and an assistant ID, plus OpenAI key | The live Aria voice demo |
-| Cal.com link or username | Booking widget on the closing CTA and Contact |
-| A phone number (Twilio or the Vapi number) | The "Call our demo line" card |
-| Vercel and Railway (or Render) access, or tell me to give you steps | Deploy |
-| Google Search Console and Bing Webmaster verification | SEO: sitemap submission (your accounts) |
-
-Put keys in `.env.local` (frontend) and `backend/.env`. Both are gitignored. Never paste keys in chat.
+| Supabase URL, anon key, service-role key | Leads, leaderboard and receipts go to Supabase instead of local files |
+| Resend key and a verified sender domain | The contact form emails you and the visitor; the newsletter |
+| OpenAI key | Aria answers with the real model (and in Arabic and Urdu) instead of demo mode |
+| Vapi or Retell public key and assistant ID | Phone-quality voice (the browser mic works without it) |
+| Cal.com link | The booking link on Contact |
+| A phone number | "Call our demo line" |
+| Vercel and Railway (or Render) access | Deploy (`docs/DEPLOY.md` has the steps) |
+| Google Search Console and Bing Webmaster | Submit the sitemap (your accounts) |
 
 ### C. Real content (I will not make up numbers, names or prices)
 
-| Item | Where it goes | Notes |
-| --- | --- | --- |
-| **Prices**: "from" price for Pilot, Build, Retainer, plus Studio tiers | Pricing, Studio, home | Today it says "Scoped on a call". The plan wants "from" prices |
-| **Real numbers** for a stats band: calls handled in demos, build hours, uptime | Home Proof, Receipts | Real only. Until then the page shows the method |
-| **Case studies**: for each of the 3 projects: screenshots or short loop, one metric, stack, problem and solution, what you would do differently | Work, Work detail | Order the plan wants: voice agent, MedSpa site, platform build |
-| **Team**: names, photos, one-line story, roles | About | Faces help trust more than anything else here |
-| **WhatsApp number, time zone, reply-time promise** | Contact, About | Currently "To be added" |
-| **Social profile URLs**: LinkedIn, GitHub, X, YouTube, Product Hunt, Crunchbase, Clutch, Google Business Profile | Footer, JSON-LD `sameAs` | Same name and logo on all of them |
-| **Legal text**: Privacy, Terms (and a DPA if you offer one) | `/privacy`, `/terms` | Needs your lawyer or your chosen template. I will not draft legal claims |
-| **Testimonials and logos**, with permission | Home, Work | None until a client agrees |
-| **Careers**: any open roles; **open-source**: which repos you will publish | Join | Currently "none yet" |
-| **Notes**: who writes the posts (the plan says two a week for 8 weeks) and the first topics | Notes | Each needs a real number or diagram |
+| Item | Where it goes |
+| --- | --- |
+| **"From" prices** for Pilot, Build, Retainer and the Studio tiers | Pricing, Studio, home. Today it says "Scoped on a call" |
+| **Real numbers** for a stats band (calls handled in demos, build hours, uptime) | Home, Receipts (rows go in the Supabase `receipts` table and appear automatically) |
+| **Case studies**: for each project a screenshot or short loop, one metric, problem, solution, what you would do differently | Work, Work detail |
+| **Team**: names, photos, one-line story | About |
+| **WhatsApp, time zone, reply-time promise** | Contact, About |
+| **Social profile URLs** (LinkedIn, GitHub, X, YouTube, Product Hunt, Crunchbase, Clutch, Google Business Profile) | Footer, structured data |
+| **Legal text** (Privacy, Terms, DPA if you offer one) | `/privacy`, `/terms` |
+| **Testimonials and logos**, with permission | Home, Work |
+| **Careers roles; open-source repos to publish** | Join |
+| **Notes**: who writes them and the next topics. One is live (missed-call math); four are planned | Notes |
 
-### D. Please confirm these statements are true for your business
-
-I wrote them from your plan. They sit on the site as promises, so confirm or tell me to soften them:
+### D. Please confirm these are true (they sit on the site as promises)
 
 1. "Live in 14 days. Fixed price. Hear it first." and the 14-day pilot.
-2. Audit takes 2 days, Build 7 to 10 days, Run is weekly.
+2. Audit 2 days, Build 7 to 10 days, Run weekly.
 3. Languages: English, Arabic and Urdu.
 4. "You own the code", "No lock-in", "Data stays yours".
-5. Security page: no model training on customers' data, call recording off unless the client turns it on, subprocessors listed and approved by the client, no certification claimed.
-6. Location: Karachi, serving the US, Gulf and Europe.
+5. Security page: no model training on customers' data, call recording off unless the client turns it on, subprocessors approved by the client, no certification claimed.
+6. Karachi, serving the US, Gulf and Europe.
 7. The comparison table on `/compare` (typical cases, no company named).
-8. Trademark and name check for "Conclave AI" (the plan marks this as your task).
+8. Trademark and name check for "Conclave AI" (your task, per the plan).
 
-### E. Flow-generated assets (send files back)
+### E. Flow-generated assets
 
-All prompts are in `docs/google-flow-prompts.md`: ten original assets (hero loop, five service videos, demo backdrop, closing CTA, story, receptionist) plus **six new Brick Crew prompts** (crew sheet, snap-into-C loop, call to calendar, founders, brick badges, sticker pack). Flat style, palette only.
+Prompts are in `docs/google-flow-prompts.md`: ten original assets plus six Brick Crew prompts (crew sheet, snap-into-C loop, call to calendar, founders, brick badges, sticker pack). Send the files back and I will wire them in.
 
-## 2. What I build next (in order)
+## 2. What is still open on my side
 
-| # | Item | Needs from you | Size |
-| --- | --- | --- | --- |
-| 1 | **Missed-call calculator** (no backend needed) | Nothing | Small |
-| 2 | **Contact form end to end**: FastAPI endpoint, Supabase `leads`, Resend email, honeypot, rate limit, Cal.com widget | Keys A.2 to A.4, domain | Medium |
-| 3 | **Aria live voice demo** with a text fallback, language switch, latency readout and a filling transcript | Vapi or Retell and OpenAI keys | Large |
-| 4 | **Convene game + leaderboard** (Supabase), feeds the Join page | Supabase | Medium |
-| 5 | **"Build your own agent" wizard** (4 questions, ends in a booking) | Cal.com | Small |
-| 6 | **Work detail rebuild**: real hero loop, problem, solution, architecture diagram, results, "what we'd do differently" | Case-study content (C) | Medium |
-| 7 | **Per-service call-flow diagrams** and per-industry mock dashboards | Nothing | Medium |
-| 8 | **Brick Crew v2**: blink and talk expressions, stickers, a mascot in each empty and error state, crew assembling into the C on scroll | Approval (A.3), Flow assets | Medium |
-| 9 | **Receipts ledger live** from Supabase, build-log entries, bounty board | Real numbers | Small |
-| 10 | **Notes** as MDX posts, newsletter signup, Roadmap page | Post content, Resend | Medium |
-| 11 | **Hero upgrade**: the one Three.js scene from the PRD, or the Flow loop in place of the SVG scene | Flow loop | Medium |
-| 12 | **SEO pass 2**: per-page OG images, Service and Article schema, internal-link audit | Domain, social URLs | Small |
-| 13 | **Step 6 QA**: accessibility audit (axe), performance (Lighthouse), cross-browser, the break and interface-review skills, motion review | Nothing | Medium |
-| 14 | **Deploy**: Vercel (frontend) and Railway or Render (FastAPI), env, domain, redirects | Accounts, domain | Small |
+| Item | State | Waiting on |
+| --- | --- | --- |
+| Aria on the **live AI model** | Code path written (OpenAI Agents SDK with availability and booking tools). **Not yet tried against a real key** | OpenAI key |
+| **Phone-quality voice** (Vapi or Retell) | Browser speech works now. Vendor SDK not added | Vapi or Retell keys |
+| **Calendar booking** on Contact | Link slot ready | Cal.com link |
+| **Hero in Three.js** | Skipped on purpose: the SVG crew scene is lighter and reads better. Say so if you still want a WebGL scene | Your call |
+| **Hero Flow loop** in place of the SVG scene | Not started | Flow files |
+| **Crew assembling into the C on scroll**, sticker pack, more moods | Not started | Your verdict on the crew |
+| **Per-page social images** | One site-wide share card done; per-page not done | Nothing, low priority |
+| **Deploy** | Guide and `Procfile` written, nothing deployed | Accounts, domain |
+| **Performance pass** (Lighthouse, image weights, bundle) | Not done | Nothing |
+| **Cross-browser pass** (Safari, Firefox) | Chromium only so far | Nothing |
 
-## 3. Already done
+## 3. Done
 
-- **Foundation:** Next.js 16 App Router, Tailwind v4, GSAP, Lenis, zustand, FastAPI skeleton (port 8010), Supabase schema, logo pack in use.
-- **Design:** light lemlist-style redesign, palette and type system, contrast fixes, design-system doc.
-- **Motion** (`docs/motion-implementation.md`): lemlist's measured transitions, sticky service card stack, GSAP intro, reveals, mock-up playback, manifesto word brightening, accordion, ring cursor, reduced-motion safe. 22 automated checks pass.
-- **Upgrade plan** (build list items 3 to 7): Studio, Join, Security, Compare, Receipts, Notes, five service pages, six industry pages, Company dropdown, richer footer, trust strip, stack-and-scale diagram, join-the-guild, agent picker, FAQ, SEO basics (titles, canonical, JSON-LD, sitemap, robots), mobile fixes.
-- **Brick Crew** (`/crew`, `docs/mascot-research.md`): seven toy-brick characters from one kit, used in the hero (snap in, drift, lean from the pointer), Built-for, Manifesto, About and industry pages.
-- **Review pack**: `docs/review` and `docs/conclave-design-review.zip` (rebuild with `node review.mjs` in `tools/research`).
-- **Checks:** 60-page overflow sweep at 1440, 390 and 360 wide, plus motion checks. Commands: `node verify.mjs`, `node motion-verify.mjs` in `tools/research`.
+- **Foundation:** Next.js 16, Tailwind v4, GSAP, Lenis, zustand; light lemlist-style design; palette and type system; logo pack.
+- **Motion** (`docs/motion-implementation.md`): lemlist's measured transitions, sticky service stack, intro, reveals, mock-up playback, accordion, ring cursor, crew blink and drift; reduced-motion safe.
+- **Pages:** Home, Services (+5 detail pages with call-flow diagrams), Studio, Industries (+6, each with an example dashboard), Work (filters) and case-study pages (architecture diagram), Demos, About, Pricing, Contact, Join, Security, Compare, Receipts (live from Supabase when rows exist), Notes (+1 post), Roadmap, Crew, Privacy, Terms, 404 and error pages with crew moods.
+- **Working features** (all work with no keys; they say when they are in demo or file mode):
+  - Contact form: honeypot, speed trap, consent, rate limit, server validation.
+  - Newsletter signup.
+  - Aria demo: chat, browser voice in and out, English, Arabic and Urdu recognition, latency readout, live transcript.
+  - Missed-call calculator, with the working shown.
+  - Convene game: 60 seconds, keyboard 1 to 7, streaks, leaderboard with an impossible-score check.
+  - Four-question agent wizard, and the three-question agent picker on Services.
+- **Backend** (`backend/`, 11 tests passing): `/leads`, `/subscribe`, `/scores`, `/aria/chat`, `/health`. Supabase when configured, local files otherwise.
+- **Brick Crew v2** (`/crew`, `docs/mascot-research.md`): seven glossy toy-brick characters with blink, talk and four moods.
+- **SEO:** titles with "Conclave AI", canonical URLs, Organization, WebSite, FAQ, Service and Article structured data, sitemap, robots, share card.
+- **Fixes:** dev crash (Jest worker / EPIPE) and hydration warnings; accessibility (WCAG A and AA clean on all 34 routes); no broken internal links.
+- **Checks you can re-run** (in `tools/research`): `node verify.mjs` (overflow and errors, 3 widths), `node motion-verify.mjs` (22), `node axe.mjs` (accessibility and links), `node e2e.mjs` (forms, Aria, calculator, game, wizard, newsletter, against the running servers), and `pytest -q` in `backend`.
+- **Review pack:** `docs/review` and `docs/conclave-design-review.zip` (rebuild with `node review.mjs`).
 
 ## 4. Known gaps to be honest about
 
-- Everything marked "to be added", "being built", "soon" or "planned" on the site is exactly that. No fake numbers, clients, faces or quotes are shown.
-- The Aria window on the home page plays scripted example conversations, labelled as examples.
-- The pricing, receipts and stats sections show their method, not figures, until you send real ones.
+- Everything marked "to be added", "being built", "soon" or "planned" is exactly that. No fake numbers, clients, faces or quotes are shown.
+- The home Aria window plays scripted example conversations, labelled as examples. The real demo is on `/demos`.
+- Pricing, receipts and the stats band show their method, not figures, until you send real ones.
+- Example dashboards and mock-ups use sample figures and are labelled "Example".

@@ -1,41 +1,28 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
+import { PageCta } from "@/components/PageCta";
+import { WorkGrid } from "@/components/WorkGrid";
 import { getProjects } from "@/lib/projects";
 
-export const metadata: Metadata = { title: "Work", description: "Selected builds, outcome first." };
+export const metadata: Metadata = {
+  title: "Work: selected builds, outcome first",
+  description: "Voice agents, agent apps, automation and web platforms built by Conclave AI.",
+  alternates: { canonical: "/work" },
+};
 
 export default async function WorkPage() {
   const projects = await getProjects();
-  const tags = [...new Set(projects.flatMap((p) => p.tags))];
   return (
     <>
-      <PageHeader eyebrow="Work" title="Built, shipped, running." />
-      <div className="frame px-4 md:px-10 pb-24">
-        <ul className="mb-8 flex flex-wrap gap-2" aria-label="Project types">
-          {tags.map((t) => (
-            <li key={t} className="label rounded-chip bg-paper px-3 py-2 text-plum">
-              {t}
-            </li>
-          ))}
-        </ul>
-        <ul data-stagger className="grid gap-4 md:grid-cols-2">
-          {projects.map((p) => (
-            <li key={p.slug}>
-              <Link
-                href={`/work/${p.slug}`}
-                className="group block rounded-3xl border hair bg-paper p-6 transition-colors duration-150 hover:bg-chalk"
-              >
-                <div className="aspect-video rounded-2xl bg-mist" role="img" aria-label={`${p.title}, project video placeholder`} />
-                <h2 className="display mt-6 text-[clamp(1.5rem,3vw,2.75rem)] leading-none transition-colors group-hover:text-plum">{p.title}</h2>
-                <p className="mt-2 text-slate">{p.summary}</p>
-                <p className="label mt-4 text-plum">{p.stack.join(" / ")}</p>
-                <p className="label mt-1 text-slate">{p.role}</p>
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <PageHeader eyebrow="Work" title="Built, shipped, running." lead="One metric per project, once it is confirmed. Until then each card says so." />
+      <div className="frame border-t hair px-4 py-8 md:px-10">
+        <WorkGrid projects={projects} />
+        <section data-reveal className="mt-10 rounded-2xl border hair bg-paper p-6">
+          <p className="label text-plum">Testimonial</p>
+          <p className="mt-2 max-w-xl text-slate">Client quotes appear here with their permission. None are shown until a client agrees.</p>
+        </section>
       </div>
+      <PageCta />
     </>
   );
 }

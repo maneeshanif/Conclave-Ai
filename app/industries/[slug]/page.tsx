@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { PageCta } from "@/components/PageCta";
 import { Accordion } from "@/components/ui/Accordion";
 import { Character } from "@/components/Cast";
+import { IndustryDash } from "@/components/IndustryDash";
 import { industries } from "@/lib/content";
 import { services } from "@/lib/site";
 
@@ -48,6 +49,16 @@ export default async function IndustryPage({ params }: Params) {
           </div>
         </section>
 
+        <section data-reveal className="grid items-center gap-8 border-b hair bg-lime/25 px-4 py-12 md:grid-cols-[1fr_1fr] md:px-10">
+          <div>
+            <h2 className="head">What the week looks like</h2>
+            <p className="mt-2 max-w-sm text-slate">A sample weekly summary for {i.name.toLowerCase()}. Figures are examples to show the shape, not results.</p>
+          </div>
+          <div className="grid place-items-center">
+            <IndustryDash slug={i.slug} />
+          </div>
+        </section>
+
         <section data-reveal className="grid gap-8 border-b hair px-4 py-12 md:grid-cols-[1fr_2fr] md:px-10">
           <h2 className="head">Agents that do the work</h2>
           <ul className="grid gap-2 sm:grid-cols-2">
@@ -70,7 +81,7 @@ export default async function IndustryPage({ params }: Params) {
         </section>
 
         <p className="px-4 py-6 text-sm text-slate md:px-10">
-          Language: we build in English, Arabic and Urdu. A full {i.name.toLowerCase()} dashboard mock-up is added with the first real build in this field.
+          Language: we build in English, Arabic and Urdu. A real {i.name.toLowerCase()} case is added with the first build in this field.
         </p>
       </div>
       <PageCta />

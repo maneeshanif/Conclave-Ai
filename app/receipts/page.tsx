@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
 import { PageCta } from "@/components/PageCta";
+import { getReceipts } from "@/lib/receipts";
 
 export const metadata: Metadata = {
   title: "Receipts: our numbers, in public",
   description: "A running ledger of real numbers and build logs from Conclave AI demos and pilots.",
   alternates: { canonical: "/receipts" },
 };
+
+export const revalidate = 300;
 
 const ledger = [
   ["Time to answer a call", "Demo line call logs", "Starts with the first live demo"],
@@ -15,13 +18,44 @@ const ledger = [
   ["Build time per agent", "Our own build logs", "Published with each case"],
 ] as const;
 
-export default function ReceiptsPage() {
+export default async function ReceiptsPage() {
+  const rows = await getReceipts();
   return (
     <>
       <PageHeader eyebrow="Receipts" title="Receipts, not claims." lead="Big firms hide behind logos. We publish the numbers and the build logs, once they exist and are real." />
+
+      {rows.length > 0 && (
+        <section data-reveal className="frame border-t hair px-4 py-10 md:px-10">
+          <h2 className="head">Latest receipts</h2>
+          <div tabIndex={0} role="region" aria-label="Table, scrolls sideways" className="mt-6 overflow-x-auto rounded-2xl border hair bg-paper">
+            <table className="w-full min-w-[34rem] text-left text-sm">
+              <caption className="sr-only">Published numbers with their source and date</caption>
+              <thead className="bg-mist/60">
+                <tr className="label text-slate">
+                  <th scope="col" className="px-5 py-3 font-medium">Metric</th>
+                  <th scope="col" className="px-5 py-3 font-medium">Value</th>
+                  <th scope="col" className="px-5 py-3 font-medium">Source</th>
+                  <th scope="col" className="px-5 py-3 font-medium">Measured</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[rgb(11_21_18/0.12)]">
+                {rows.map((r) => (
+                  <tr key={r.id}>
+                    <th scope="row" className="px-5 py-3.5 font-medium">{r.metric}</th>
+                    <td className="px-5 py-3.5 font-semibold">{r.value}</td>
+                    <td className="px-5 py-3.5 text-slate">{r.link ? <a href={r.link} className="u-link hover:text-plum" rel="noopener">{r.source}</a> : r.source}</td>
+                    <td className="px-5 py-3.5 text-slate"><time dateTime={r.measured_on}>{r.measured_on}</time></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
       <div data-reveal className="frame border-t hair px-4 py-10 md:px-10">
-        <h2 className="head">The ledger</h2>
-        <div className="mt-6 overflow-x-auto rounded-2xl border hair bg-paper">
+        <h2 className="head">{rows.length ? "What else we will publish" : "The ledger"}</h2>
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways" className="mt-6 overflow-x-auto rounded-2xl border hair bg-paper">
           <table className="w-full min-w-[34rem] text-left text-sm">
             <caption className="sr-only">Metrics we will publish, their source and status</caption>
             <thead className="bg-mist/60">

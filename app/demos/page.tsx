@@ -2,37 +2,59 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
 import { PageCta } from "@/components/PageCta";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { AriaDemo } from "@/components/demos/AriaDemo";
+import { Calculator } from "@/components/demos/Calculator";
+import { Convene } from "@/components/demos/Convene";
+import { Wizard } from "@/components/demos/Wizard";
 
 export const metadata: Metadata = {
   title: "Demos: talk to a live voice agent",
-  description: "Hear a live voice agent, try the missed-call calculator, ring the demo line and play Convene.",
+  description: "Talk to Aria, try the missed-call calculator, play Convene and build your own agent in four questions.",
   alternates: { canonical: "/demos" },
 };
 
-/** Status is honest: only the example conversations on the home page exist today. */
-const demos = [
-  { id: "aria", tag: "Talk to Aria", title: "Live voice agent.", body: "Speak to the agent from your browser, with a language switch (English, Arabic, Urdu), a latency readout and a transcript that fills as you talk. A text-chat fallback sits beside it.", status: "Being built", tone: "bg-lime" },
-  { id: "line", tag: "Demo line", title: "Call our demo line.", body: "A real phone number you can ring from your own phone and hear the agent answer.", status: "Number to be added", tone: "bg-paper" },
-  { id: "calculator", tag: "Calculator", title: "Missed-call calculator.", body: "Put in how many calls you miss and what a visit is worth. See the cost of the gap, with the working shown.", status: "Being built", tone: "bg-paper" },
-  { id: "convene", tag: "Convene", title: "60-second game.", body: "Drag agents onto incoming calls before they go cold. The leaderboard feeds the careers page: top scorers get an interview.", status: "Being built", tone: "bg-moss text-paper" },
-  { id: "wizard", tag: "Wizard", title: "Build your own agent.", body: "Four questions about your business. It ends with a suggested agent and a booking link.", status: "Being built", tone: "bg-paper" },
-];
+function Block({ id, tag, title, lead, children }: { id: string; tag: string; title: string; lead: string; children: React.ReactNode }) {
+  return (
+    <section id={id} className="scroll-mt-28 border-b hair px-4 py-12 md:px-10">
+      <div data-reveal>
+        <Eyebrow>{tag}</Eyebrow>
+        <h2 className="head mt-4">{title}</h2>
+        <p className="mt-2 max-w-2xl text-slate">{lead}</p>
+      </div>
+      <div data-reveal className="mt-8">
+        {children}
+      </div>
+    </section>
+  );
+}
 
 export default function DemosPage() {
   return (
     <>
-      <PageHeader eyebrow="Demos" title="Try it, don't take our word." lead="Hear it, count it, play it. Each demo says plainly whether it is live yet." />
-      <div data-stagger className="frame grid gap-4 border-t hair px-4 py-8 md:grid-cols-2 md:px-10">
-        {demos.map((d) => (
-          <section key={d.id} id={d.id} className={`scroll-mt-28 rounded-3xl border hair p-6 md:p-8 ${d.tone}`}>
-            <div className="flex items-center justify-between gap-3">
-              <Eyebrow>{d.tag}</Eyebrow>
-              <span className="label opacity-70">{d.status}</span>
-            </div>
-            <h2 className="display mt-6 text-[clamp(1.125rem,5.4vw,2.5rem)]">{d.title}</h2>
-            <p className="mt-4 max-w-md opacity-90">{d.body}</p>
-          </section>
-        ))}
+      <PageHeader eyebrow="Demos" title="Try it, don't take our word." lead="Talk to it, count it, play it. Each demo says plainly what it is." />
+      <div className="frame border-t hair">
+        <Block id="aria" tag="Talk to Aria" title="A voice agent for a sample clinic" lead="Type or use the mic. It answers, says how fast, and hands over to a person when asked. Nothing is booked for real.">
+          <AriaDemo />
+        </Block>
+
+        <Block id="calculator" tag="Calculator" title="What does a missed call cost you?" lead="Your numbers in, the working shown line by line.">
+          <Calculator />
+        </Block>
+
+        <Block id="convene" tag="Convene" title="The 60-second game" lead="Send each call to the right crew member before it goes cold. Top scorers get an interview.">
+          <Convene />
+        </Block>
+
+        <Block id="wizard" tag="Wizard" title="Build your own agent in four questions" lead="It ends with a suggested first agent and a link to book.">
+          <Wizard />
+        </Block>
+
+        <section id="line" className="scroll-mt-28 px-4 py-12 md:px-10">
+          <Eyebrow>Demo line</Eyebrow>
+          <h2 className="head mt-4">Call our demo line</h2>
+          <p className="mt-2 max-w-2xl text-slate">A real phone number you can ring from your own phone and hear the agent answer. The number is added when the line is live.</p>
+          <p className="label mt-4 text-slate">Number to be added</p>
+        </section>
       </div>
       <PageCta title="Prefer to talk to a person?" body="Book a call and we will walk through it live." />
     </>

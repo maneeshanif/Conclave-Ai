@@ -139,7 +139,9 @@ function Eye({ cx, cy, dark, r = 7.5, lid }: { cx: number; cy: number; dark: boo
 }
 
 /** The art alone, in 220 x 220 coordinates, so it can sit inside any svg (the hero scene reuses it). */
-export function CharacterArt({ id }: { id: CastId }) {
+export type Mood = "happy" | "oops" | "sleepy" | "wow";
+
+export function CharacterArt({ id, mood = "happy" }: { id: CastId; mood?: Mood }) {
   const s = spec(id);
   const dark = isDark(s.fill);
   const [hx, hy, hw, hh] = s.head;
@@ -210,19 +212,28 @@ export function CharacterArt({ id }: { id: CastId }) {
 
       {/* face: eyes blink (`.crew-eye`), mouth and brows give each its mood */}
       <g className="crew-eye">
-        {id === "ledger" ? (
+        {mood === "sleepy" ? (
+          <g fill="none" stroke={dark ? PAPER : INK} strokeWidth="4" strokeLinecap="round">
+            <path d={`M${ex[0] - 8} ${ey}q8 7 16 0`} />
+            <path d={`M${ex[1] - 8} ${ey}q8 7 16 0`} />
+          </g>
+        ) : mood === "oops" ? (
+          <g fill="none" stroke={dark ? PAPER : INK} strokeWidth="4" strokeLinecap="round">
+            <path d={`M${ex[0] - 6} ${ey - 6}l12 12m0 -12l-12 12`} />
+            <path d={`M${ex[1] - 6} ${ey - 6}l12 12m0 -12l-12 12`} />
+          </g>
+        ) : id === "ledger" ? (
           <>
             <Eye cx={ex[0]} cy={ey} dark={dark} lid />
             <Eye cx={ex[1]} cy={ey} dark={dark} lid />
           </>
         ) : (
           <>
-            <Eye cx={ex[0]} cy={ey} dark={dark} r={id === "echo" ? 8.5 : 7.5} />
-            <Eye cx={ex[1]} cy={ey} dark={dark} r={id === "echo" ? 8.5 : 7.5} />
+            <Eye cx={ex[0]} cy={ey} dark={dark} r={mood === "wow" ? 9.5 : id === "echo" ? 8.5 : 7.5} />
+            <Eye cx={ex[1]} cy={ey} dark={dark} r={mood === "wow" ? 9.5 : id === "echo" ? 8.5 : 7.5} />
           </>
         )}
-      </g>
-      {id === "slot" && [ex[0], ex[1]].map((x) => <path key={x} d={`M${x - 9} ${ey - 13}h18`} stroke={PAPER} strokeWidth="3.5" strokeLinecap="round" />)}
+      </g>      {id === "slot" && [ex[0], ex[1]].map((x) => <path key={x} d={`M${x - 9} ${ey - 13}h18`} stroke={PAPER} strokeWidth="3.5" strokeLinecap="round" />)}
       {id === "boomerang" && (
         <>
           <path d={`M${ex[0] - 8} ${ey - 11}l14 -2`} stroke={PAPER} strokeWidth="3.5" strokeLinecap="round" />
@@ -237,6 +248,20 @@ export function CharacterArt({ id }: { id: CastId }) {
           <path d={`M${ex[0] + 11.5} ${ey}h${ex[1] - ex[0] - 23}M${ex[0] - 11.5} ${ey}l-8 -3M${ex[1] + 11.5} ${ey}l8 -3`} strokeLinecap="round" />
         </g>
       )}
+      {mood === "wow" ? (
+        <ellipse cx={cx} cy={my + 1} rx="7" ry="8.5" fill={INK} stroke={INK} strokeWidth="2" />
+      ) : mood === "oops" ? (
+        <path d={`M${cx - 13} ${my + 3}q4.3 -7 8.7 0t8.7 0t8.7 0`} fill="none" stroke={line} strokeWidth="3.6" strokeLinecap="round" />
+      ) : mood === "sleepy" ? (
+        <g>
+          <path d={`M${cx - 8} ${my}h16`} stroke={line} strokeWidth="4" strokeLinecap="round" />
+          <g fill="none" stroke={INK} strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" opacity=".85">
+            <path d={`M${hx + hw + 4} ${hy - 4}h12l-12 14h12`} />
+            <path d={`M${hx + hw + 22} ${hy - 22}h9l-9 10h9`} />
+          </g>
+        </g>
+      ) : (
+        <>
       {id === "aria" ? (
         <g data-wave>
           {[8, 15, 22, 15, 8].map((h, i) => <rect key={i} x={cx - 26 + i * 11.5} y={my - h / 2 + 1} width="6" height={h} rx="3" fill={INK} />)}
@@ -246,6 +271,8 @@ export function CharacterArt({ id }: { id: CastId }) {
       ) : id !== "ledger" ? (
         smile(id === "gate" ? 18 : 22, id === "slot" ? 5 : 8)
       ) : null}
+        </>
+      )}
       {/* soft cheek on the lighter heads */}
       {!dark && id !== "tally" && [ex[0] - 5, ex[1] + 5].map((x) => <ellipse key={x} cx={x} cy={ey + 12} rx="5.5" ry="3.4" fill={INK} opacity=".1" />)}
 
@@ -292,11 +319,11 @@ export function CharacterArt({ id }: { id: CastId }) {
 }
 
 /** One crew member as a stand-alone illustration. */
-export function Character({ id, className, label }: { id: CastId; className?: string; label?: string }) {
+export function Character({ id, className, label, mood }: { id: CastId; className?: string; label?: string; mood?: Mood }) {
   const c = cast.find((x) => x.id === id)!;
   return (
     <svg viewBox="0 0 220 220" className={className} role="img" aria-label={label ?? `${c.name}: ${c.job}`}>
-      <CharacterArt id={id} />
+      <CharacterArt id={id} mood={mood} />
     </svg>
   );
 }

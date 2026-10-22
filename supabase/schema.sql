@@ -46,3 +46,26 @@ create policy "scores are public"   on scores   for select using (true);
 -- No policies on leads: anon cannot read or write. FastAPI uses the service role key.
 
 -- Storage: create a public bucket named "media" for project videos and images.
+
+-- Added in the upgrade pass ----------------------------------------------------------------------
+
+create table if not exists subscribers (
+  id          uuid primary key default gen_random_uuid(),
+  email       text not null unique,
+  created_at  timestamptz not null default now()
+);
+alter table subscribers enable row level security;
+-- No policies: written by the API with the service role key only.
+
+-- Receipts: the public ledger. Only real numbers, each with a source and a date.
+create table if not exists receipts (
+  id          uuid primary key default gen_random_uuid(),
+  metric      text not null,
+  value       text not null,
+  source      text not null,
+  measured_on date not null,
+  link        text,
+  created_at  timestamptz not null default now()
+);
+alter table receipts enable row level security;
+create policy "receipts are public" on receipts for select using (true);

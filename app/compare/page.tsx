@@ -15,7 +15,7 @@ export default function ComparePage() {
     <>
       <PageHeader eyebrow="Compare" title="Pick the right tool, even if it is not us." lead="A flow, a freelancer, an agency and a receptionist each fit some jobs. Here is where." />
       <div data-reveal className="frame border-t hair px-4 py-10 md:px-10">
-        <div className="overflow-x-auto rounded-2xl border hair bg-paper">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways" className="overflow-x-auto rounded-2xl border hair bg-paper">
           <table className="w-full min-w-[46rem] text-left text-sm">
             <caption className="sr-only">Comparison of Conclave AI with four alternatives</caption>
             <thead>

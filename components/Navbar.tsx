@@ -116,7 +116,7 @@ export function Navbar() {
               type="button"
               onClick={() => setPaletteOpen(true)}
               className="label hidden h-11 items-center rounded-xl border hair px-3 text-slate transition-colors hover:bg-mist xl:flex"
-              aria-label="Open command palette"
+              aria-label="Ctrl K: open command palette"
             >
               Ctrl K
             </button>

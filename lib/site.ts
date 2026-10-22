@@ -29,6 +29,7 @@ export const company = [
   { href: "/receipts", label: "Receipts", note: "Real numbers, in public" },
   { href: "/compare", label: "Compare", note: "Us versus the alternatives" },
   { href: "/security", label: "Security", note: "How we handle data" },
+  { href: "/roadmap", label: "Roadmap", note: "What shipped, what is next" },
 ] as const;
 
 export const allRoutes = [

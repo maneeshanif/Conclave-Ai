@@ -51,7 +51,7 @@ export function ReceiptsTeaser() {
       <div className="frame border-t hair">
         <Head eyebrow="Receipts">Numbers in public, only when they are real</Head>
         <div data-reveal className="px-4 py-8 md:px-10">
-          <div className="overflow-x-auto rounded-2xl border hair bg-paper">
+          <div tabIndex={0} role="region" aria-label="Table, scrolls sideways" className="overflow-x-auto rounded-2xl border hair bg-paper">
             <table className="w-full min-w-[34rem] text-left text-sm">
               <caption className="sr-only">What we will publish, where it comes from and its status</caption>
               <thead className="bg-mist/60">

@@ -91,7 +91,7 @@ export function BookingVisual() {
           <span
             key={i}
             data-fill={v === 2 ? "" : undefined} className={cn("h-9 rounded-md border hair", v === 1 && "border-transparent bg-mist", v === 2 && "border-transparent bg-lime")}
-            aria-label={v === 2 ? "Booked slot" : v === 1 ? "Busy" : "Free"}
+            role="img" aria-label={v === 2 ? "Booked slot" : v === 1 ? "Busy" : "Free"}
           />
         ))}
       </div>

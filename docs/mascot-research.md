@@ -36,3 +36,12 @@ Common rules from the practitioner guides: a **postage-stamp test** (expression 
 - **Rules:** flat fills from the palette only, 4px ink outline, hard offset shadow (the toy-brick weight, no gradients), minimal faces, one stud style across the whole set. Dark characters get paper eyes.
 - **Behaviour (see `docs/motion-implementation.md`):** in the hero they snap in like bricks being placed, then drift around the Conclave mark and lean away from the pointer. Over time they appear inside the product moments (demo, empty states, errors), which is where Duolingo gets its value.
 - **Not yet:** naming-story and personality copy, a sticker pack and expression variants (blink, talk, celebrate). The Flow prompts in `docs/google-flow-prompts.md` describe the brick style for the video and sticker assets.
+
+## Update: v2 (glossy, detailed)
+Feedback was 5/10: a good start, but wanted more detail and gloss. v2 adds:
+- 2.5D bricks with a lit top face, cylinder studs with a specular dot, a specular streak and a shaded underside (flat translucent shapes plus tints and shades of the palette colour, no gradient definitions).
+- Hands, foot plates and a contact shadow.
+- Glossy eyes with a highlight, cheek shading on light heads, and a distinct face per character (headset, glasses, flat brows, raised brow, half-lids).
+- A chest panel per character (speaker grille, ripple, calendar, loop arrow, chart, door and badge, ruled page with a stamp).
+- Motion: the eyes blink on their own rhythm and Aria's mouth talks (MotionRoot).
+- Moods: `happy`, `oops`, `sleepy`, `wow`, used on the 404 page, the error page, the contact success state and the empty leaderboard.

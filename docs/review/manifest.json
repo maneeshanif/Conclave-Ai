@@ -14,7 +14,7 @@
     ],
     "file": "shots/home/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 13178
+    "height": 13305
   },
   {
     "page": "home",
@@ -303,7 +303,7 @@
     ],
     "file": "shots/home/desktop/17-footer.jpg",
     "width": 1440,
-    "height": 556
+    "height": 684
   },
   {
     "page": "services",
@@ -320,7 +320,7 @@
     ],
     "file": "shots/services/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 5706
+    "height": 5833
   },
   {
     "page": "services",
@@ -422,7 +422,7 @@
     ],
     "file": "shots/services/desktop/06-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 685
   },
   {
     "page": "service-detail",
@@ -439,7 +439,7 @@
     ],
     "file": "shots/service-detail/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 3027
+    "height": 3022
   },
   {
     "page": "service-detail",
@@ -490,7 +490,7 @@
     ],
     "file": "shots/service-detail/desktop/03-how-a-call-flows.jpg",
     "width": 1278,
-    "height": 456
+    "height": 325
   },
   {
     "page": "service-detail",
@@ -524,7 +524,7 @@
     ],
     "file": "shots/service-detail/desktop/05-price-and-timeline.jpg",
     "width": 1278,
-    "height": 150
+    "height": 149
   },
   {
     "page": "service-detail",
@@ -541,7 +541,7 @@
     ],
     "file": "shots/service-detail/desktop/06-questions-plus-3-more.jpg",
     "width": 1278,
-    "height": 176
+    "height": 177
   },
   {
     "page": "service-detail",
@@ -558,7 +558,7 @@
     ],
     "file": "shots/service-detail/desktop/07-hear-it-on-the-demo-page-then-see-the-cl.jpg",
     "width": 1278,
-    "height": 91
+    "height": 90
   },
   {
     "page": "service-detail",
@@ -575,7 +575,7 @@
     ],
     "file": "shots/service-detail/desktop/08-hear-it-then-book-it.jpg",
     "width": 1280,
-    "height": 317
+    "height": 318
   },
   {
     "page": "service-detail",
@@ -592,7 +592,7 @@
     ],
     "file": "shots/service-detail/desktop/09-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 684
   },
   {
     "page": "studio",
@@ -609,7 +609,7 @@
     ],
     "file": "shots/studio/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 2996
+    "height": 3123
   },
   {
     "page": "studio",
@@ -762,7 +762,7 @@
     ],
     "file": "shots/studio/desktop/09-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 684
   },
   {
     "page": "industry",
@@ -779,7 +779,7 @@
     ],
     "file": "shots/industry/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 2497
+    "height": 3031
   },
   {
     "page": "industry",
@@ -804,16 +804,16 @@
     "route": "/industries/clinics",
     "viewport": "desktop",
     "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry/desktop/02-three-workflows-we-set-up-first-plus-3-m",
+    "id": "industry/desktop/02-three-workflows-we-set-up-first",
     "kind": "section",
-    "name": "Three workflows we set up first plus 3 more",
-    "heading": "Three workflows we set up first plus 3 more",
+    "name": "Three workflows we set up first",
+    "heading": "Three workflows we set up first",
     "source": [
       "app/industries/[slug]/page.tsx"
     ],
-    "file": "shots/industry/desktop/02-three-workflows-we-set-up-first-plus-3-m.jpg",
-    "width": 1280,
-    "height": 940
+    "file": "shots/industry/desktop/02-three-workflows-we-set-up-first.jpg",
+    "width": 1278,
+    "height": 381
   },
   {
     "page": "industry",
@@ -821,14 +821,82 @@
     "route": "/industries/clinics",
     "viewport": "desktop",
     "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry/desktop/03-hear-it-then-book-it",
+    "id": "industry/desktop/03-what-the-week-looks-like",
+    "kind": "section",
+    "name": "What the week looks like",
+    "heading": "What the week looks like",
+    "source": [
+      "app/industries/[slug]/page.tsx"
+    ],
+    "file": "shots/industry/desktop/03-what-the-week-looks-like.jpg",
+    "width": 1278,
+    "height": 408
+  },
+  {
+    "page": "industry",
+    "pageTitle": "Industry page",
+    "route": "/industries/clinics",
+    "viewport": "desktop",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry/desktop/04-agents-that-do-the-work",
+    "kind": "section",
+    "name": "Agents that do the work",
+    "heading": "Agents that do the work",
+    "source": [
+      "app/industries/[slug]/page.tsx"
+    ],
+    "file": "shots/industry/desktop/04-agents-that-do-the-work.jpg",
+    "width": 1278,
+    "height": 345
+  },
+  {
+    "page": "industry",
+    "pageTitle": "Industry page",
+    "route": "/industries/clinics",
+    "viewport": "desktop",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry/desktop/05-the-usual-objection-plus-1-more",
+    "kind": "section",
+    "name": "The usual objection plus 1 more",
+    "heading": "The usual objection plus 1 more",
+    "source": [
+      "app/industries/[slug]/page.tsx"
+    ],
+    "file": "shots/industry/desktop/05-the-usual-objection-plus-1-more.jpg",
+    "width": 1278,
+    "height": 147
+  },
+  {
+    "page": "industry",
+    "pageTitle": "Industry page",
+    "route": "/industries/clinics",
+    "viewport": "desktop",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry/desktop/06-language-we-build-in-english-arabic-and-",
+    "kind": "section",
+    "name": "Language: we build in English, Arabic and Urdu. ",
+    "heading": "Language: we build in English, Arabic and Urdu. ",
+    "source": [
+      "app/industries/[slug]/page.tsx"
+    ],
+    "file": "shots/industry/desktop/06-language-we-build-in-english-arabic-and-.jpg",
+    "width": 1278,
+    "height": 69
+  },
+  {
+    "page": "industry",
+    "pageTitle": "Industry page",
+    "route": "/industries/clinics",
+    "viewport": "desktop",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry/desktop/07-hear-it-then-book-it",
     "kind": "section",
     "name": "Hear it, then book it.",
     "heading": "Hear it, then book it.",
     "source": [
       "app/industries/[slug]/page.tsx"
     ],
-    "file": "shots/industry/desktop/03-hear-it-then-book-it.jpg",
+    "file": "shots/industry/desktop/07-hear-it-then-book-it.jpg",
     "width": 1280,
     "height": 318
   },
@@ -838,16 +906,16 @@
     "route": "/industries/clinics",
     "viewport": "desktop",
     "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry/desktop/04-footer",
+    "id": "industry/desktop/08-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/industry/desktop/04-footer.jpg",
+    "file": "shots/industry/desktop/08-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 684
   },
   {
     "page": "crew",
@@ -864,7 +932,7 @@
     ],
     "file": "shots/crew/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 2983
+    "height": 3110
   },
   {
     "page": "crew",
@@ -949,7 +1017,7 @@
     ],
     "file": "shots/crew/desktop/05-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 684
   },
   {
     "page": "work",
@@ -966,7 +1034,7 @@
     ],
     "file": "shots/work/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 2384
+    "height": 3035
   },
   {
     "page": "work",
@@ -983,7 +1051,7 @@
     ],
     "file": "shots/work/desktop/01-built-shipped-running.jpg",
     "width": 1280,
-    "height": 536
+    "height": 591
   },
   {
     "page": "work",
@@ -991,16 +1059,33 @@
     "route": "/work",
     "viewport": "desktop",
     "pageFile": "app/work/page.tsx",
-    "id": "work/desktop/02-bazar-flow-plus-3-more",
+    "id": "work/desktop/02-filter-by-type",
+    "kind": "section",
+    "name": "Filter by type",
+    "heading": "Filter by type",
+    "source": [
+      "app/work/page.tsx"
+    ],
+    "file": "shots/work/desktop/02-filter-by-type.jpg",
+    "width": 1198,
+    "height": 45
+  },
+  {
+    "page": "work",
+    "pageTitle": "Work",
+    "route": "/work",
+    "viewport": "desktop",
+    "pageFile": "app/work/page.tsx",
+    "id": "work/desktop/03-bazar-flow-plus-3-more",
     "kind": "section",
     "name": "Bazar Flow plus 3 more",
     "heading": "Bazar Flow plus 3 more",
     "source": [
       "app/work/page.tsx"
     ],
-    "file": "shots/work/desktop/02-bazar-flow-plus-3-more.jpg",
-    "width": 1280,
-    "height": 1294
+    "file": "shots/work/desktop/03-bazar-flow-plus-3-more.jpg",
+    "width": 1198,
+    "height": 1136
   },
   {
     "page": "work",
@@ -1008,16 +1093,50 @@
     "route": "/work",
     "viewport": "desktop",
     "pageFile": "app/work/page.tsx",
-    "id": "work/desktop/03-footer",
+    "id": "work/desktop/04-testimonial-client-quotes-appear-here-wi",
+    "kind": "section",
+    "name": "TESTIMONIAL Client quotes appear here with their",
+    "heading": "TESTIMONIAL Client quotes appear here with their",
+    "source": [
+      "app/work/page.tsx"
+    ],
+    "file": "shots/work/desktop/04-testimonial-client-quotes-appear-here-wi.jpg",
+    "width": 1198,
+    "height": 129
+  },
+  {
+    "page": "work",
+    "pageTitle": "Work",
+    "route": "/work",
+    "viewport": "desktop",
+    "pageFile": "app/work/page.tsx",
+    "id": "work/desktop/05-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/work/page.tsx"
+    ],
+    "file": "shots/work/desktop/05-hear-it-then-book-it.jpg",
+    "width": 1280,
+    "height": 318
+  },
+  {
+    "page": "work",
+    "pageTitle": "Work",
+    "route": "/work",
+    "viewport": "desktop",
+    "pageFile": "app/work/page.tsx",
+    "id": "work/desktop/06-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/work/desktop/03-footer.jpg",
+    "file": "shots/work/desktop/06-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 684
   },
   {
     "page": "work-detail",
@@ -1034,7 +1153,7 @@
     ],
     "file": "shots/work-detail/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 2327
+    "height": 3124
   },
   {
     "page": "work-detail",
@@ -1076,16 +1195,33 @@
     "route": "/work/bazar-flow",
     "viewport": "desktop",
     "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/03-the-problem",
+    "id": "work-detail/desktop/03-result",
+    "kind": "section",
+    "name": "Result",
+    "heading": "Result",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/desktop/03-result.jpg",
+    "width": 1198,
+    "height": 149
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/04-the-problem",
     "kind": "section",
     "name": "The problem",
     "heading": "The problem",
     "source": [
       "app/work/[slug]/page.tsx"
     ],
-    "file": "shots/work-detail/desktop/03-the-problem.jpg",
+    "file": "shots/work-detail/desktop/04-the-problem.jpg",
     "width": 1198,
-    "height": 124
+    "height": 147
   },
   {
     "page": "work-detail",
@@ -1093,16 +1229,16 @@
     "route": "/work/bazar-flow",
     "viewport": "desktop",
     "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/04-the-solution",
+    "id": "work-detail/desktop/05-the-solution",
     "kind": "section",
     "name": "The solution",
     "heading": "The solution",
     "source": [
       "app/work/[slug]/page.tsx"
     ],
-    "file": "shots/work-detail/desktop/04-the-solution.jpg",
+    "file": "shots/work-detail/desktop/05-the-solution.jpg",
     "width": 1198,
-    "height": 123
+    "height": 146
   },
   {
     "page": "work-detail",
@@ -1110,16 +1246,16 @@
     "route": "/work/bazar-flow",
     "viewport": "desktop",
     "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/05-architecture",
+    "id": "work-detail/desktop/06-architecture",
     "kind": "section",
     "name": "Architecture",
     "heading": "Architecture",
     "source": [
       "app/work/[slug]/page.tsx"
     ],
-    "file": "shots/work-detail/desktop/05-architecture.jpg",
+    "file": "shots/work-detail/desktop/06-architecture.jpg",
     "width": 1198,
-    "height": 124
+    "height": 172
   },
   {
     "page": "work-detail",
@@ -1127,16 +1263,16 @@
     "route": "/work/bazar-flow",
     "viewport": "desktop",
     "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/06-results",
+    "id": "work-detail/desktop/07-what-we-would-do-differently",
     "kind": "section",
-    "name": "Results",
-    "heading": "Results",
+    "name": "What we would do differently",
+    "heading": "What we would do differently",
     "source": [
       "app/work/[slug]/page.tsx"
     ],
-    "file": "shots/work-detail/desktop/06-results.jpg",
+    "file": "shots/work-detail/desktop/07-what-we-would-do-differently.jpg",
     "width": 1198,
-    "height": 124
+    "height": 195
   },
   {
     "page": "work-detail",
@@ -1144,16 +1280,16 @@
     "route": "/work/bazar-flow",
     "viewport": "desktop",
     "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/07-book-a-call-nextcodenexus-ai",
+    "id": "work-detail/desktop/08-next-project-codenexus-ai",
     "kind": "section",
-    "name": "Book a call NEXTCODENEXUS AI",
-    "heading": "Book a call NEXTCODENEXUS AI",
+    "name": "NEXT PROJECT CODENEXUS AI",
+    "heading": "NEXT PROJECT CODENEXUS AI",
     "source": [
       "app/work/[slug]/page.tsx"
     ],
-    "file": "shots/work-detail/desktop/07-book-a-call-nextcodenexus-ai.jpg",
+    "file": "shots/work-detail/desktop/08-next-project-codenexus-ai.jpg",
     "width": 1198,
-    "height": 162
+    "height": 161
   },
   {
     "page": "work-detail",
@@ -1161,16 +1297,33 @@
     "route": "/work/bazar-flow",
     "viewport": "desktop",
     "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/08-footer",
+    "id": "work-detail/desktop/09-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/desktop/09-hear-it-then-book-it.jpg",
+    "width": 1280,
+    "height": 317
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/10-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/work-detail/desktop/08-footer.jpg",
+    "file": "shots/work-detail/desktop/10-footer.jpg",
     "width": 1440,
-    "height": 556
+    "height": 685
   },
   {
     "page": "demos",
@@ -1187,7 +1340,7 @@
     ],
     "file": "shots/demos/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 2524
+    "height": 4504
   },
   {
     "page": "demos",
@@ -1212,16 +1365,16 @@
     "route": "/demos",
     "viewport": "desktop",
     "pageFile": "app/demos/page.tsx",
-    "id": "demos/desktop/02-live-voice-agent",
+    "id": "demos/desktop/02-a-voice-agent-for-a-sample-clinic",
     "kind": "section",
-    "name": "Live voice agent.",
-    "heading": "Live voice agent.",
+    "name": "A voice agent for a sample clinic",
+    "heading": "A voice agent for a sample clinic",
     "source": [
       "app/demos/page.tsx"
     ],
-    "file": "shots/demos/desktop/02-live-voice-agent.jpg",
-    "width": 591,
-    "height": 339
+    "file": "shots/demos/desktop/02-a-voice-agent-for-a-sample-clinic.jpg",
+    "width": 1278,
+    "height": 762
   },
   {
     "page": "demos",
@@ -1229,16 +1382,16 @@
     "route": "/demos",
     "viewport": "desktop",
     "pageFile": "app/demos/page.tsx",
-    "id": "demos/desktop/03-call-our-demo-line",
+    "id": "demos/desktop/03-what-does-a-missed-call-cost-you",
     "kind": "section",
-    "name": "Call our demo line.",
-    "heading": "Call our demo line.",
+    "name": "What does a missed call cost you?",
+    "heading": "What does a missed call cost you?",
     "source": [
       "app/demos/page.tsx"
     ],
-    "file": "shots/demos/desktop/03-call-our-demo-line.jpg",
-    "width": 591,
-    "height": 339
+    "file": "shots/demos/desktop/03-what-does-a-missed-call-cost-you.jpg",
+    "width": 1278,
+    "height": 977
   },
   {
     "page": "demos",
@@ -1246,16 +1399,16 @@
     "route": "/demos",
     "viewport": "desktop",
     "pageFile": "app/demos/page.tsx",
-    "id": "demos/desktop/04-missed-call-calculator",
+    "id": "demos/desktop/04-the-60-second-game-plus-1-more",
     "kind": "section",
-    "name": "Missed-call calculator.",
-    "heading": "Missed-call calculator.",
+    "name": "The 60-second game plus 1 more",
+    "heading": "The 60-second game plus 1 more",
     "source": [
       "app/demos/page.tsx"
     ],
-    "file": "shots/demos/desktop/04-missed-call-calculator.jpg",
-    "width": 591,
-    "height": 339
+    "file": "shots/demos/desktop/04-the-60-second-game-plus-1-more.jpg",
+    "width": 1278,
+    "height": 426
   },
   {
     "page": "demos",
@@ -1263,16 +1416,16 @@
     "route": "/demos",
     "viewport": "desktop",
     "pageFile": "app/demos/page.tsx",
-    "id": "demos/desktop/05-60-second-game",
+    "id": "demos/desktop/05-build-your-own-agent-in-four-questions",
     "kind": "section",
-    "name": "60-second game.",
-    "heading": "60-second game.",
+    "name": "Build your own agent in four questions",
+    "heading": "Build your own agent in four questions",
     "source": [
       "app/demos/page.tsx"
     ],
-    "file": "shots/demos/desktop/05-60-second-game.jpg",
-    "width": 591,
-    "height": 339
+    "file": "shots/demos/desktop/05-build-your-own-agent-in-four-questions.jpg",
+    "width": 1278,
+    "height": 494
   },
   {
     "page": "demos",
@@ -1280,16 +1433,16 @@
     "route": "/demos",
     "viewport": "desktop",
     "pageFile": "app/demos/page.tsx",
-    "id": "demos/desktop/06-build-your-own-agent",
+    "id": "demos/desktop/06-call-our-demo-line",
     "kind": "section",
-    "name": "Build your own agent.",
-    "heading": "Build your own agent.",
+    "name": "Call our demo line",
+    "heading": "Call our demo line",
     "source": [
       "app/demos/page.tsx"
     ],
-    "file": "shots/demos/desktop/06-build-your-own-agent.jpg",
-    "width": 591,
-    "height": 314
+    "file": "shots/demos/desktop/06-call-our-demo-line.jpg",
+    "width": 1278,
+    "height": 285
   },
   {
     "page": "demos",
@@ -1323,7 +1476,7 @@
     ],
     "file": "shots/demos/desktop/08-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 684
   },
   {
     "page": "about",
@@ -1340,7 +1493,7 @@
     ],
     "file": "shots/about/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 2343
+    "height": 2470
   },
   {
     "page": "about",
@@ -1408,7 +1561,7 @@
     ],
     "file": "shots/about/desktop/04-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 684
   },
   {
     "page": "pricing",
@@ -1425,7 +1578,7 @@
     ],
     "file": "shots/pricing/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 2928
+    "height": 3055
   },
   {
     "page": "pricing",
@@ -1527,7 +1680,7 @@
     ],
     "file": "shots/pricing/desktop/06-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 685
   },
   {
     "page": "contact",
@@ -1544,7 +1697,7 @@
     ],
     "file": "shots/contact/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 1348
+    "height": 1806
   },
   {
     "page": "contact",
@@ -1560,8 +1713,8 @@
       "app/contact/page.tsx"
     ],
     "file": "shots/contact/desktop/01-let-s-talk.jpg",
-    "width": 1280,
-    "height": 792
+    "width": 575,
+    "height": 868
   },
   {
     "page": "contact",
@@ -1569,16 +1722,33 @@
     "route": "/contact",
     "viewport": "desktop",
     "pageFile": "app/contact/page.tsx",
-    "id": "contact/desktop/02-footer",
+    "id": "contact/desktop/02-tell-us-what-you-need",
+    "kind": "section",
+    "name": "Tell us what you need",
+    "heading": "Tell us what you need",
+    "source": [
+      "app/contact/page.tsx"
+    ],
+    "file": "shots/contact/desktop/02-tell-us-what-you-need.jpg",
+    "width": 575,
+    "height": 868
+  },
+  {
+    "page": "contact",
+    "pageTitle": "Contact",
+    "route": "/contact",
+    "viewport": "desktop",
+    "pageFile": "app/contact/page.tsx",
+    "id": "contact/desktop/03-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/contact/desktop/02-footer.jpg",
+    "file": "shots/contact/desktop/03-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 684
   },
   {
     "page": "join",
@@ -1595,7 +1765,7 @@
     ],
     "file": "shots/join/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 2425
+    "height": 2552
   },
   {
     "page": "join",
@@ -1663,7 +1833,7 @@
     ],
     "file": "shots/join/desktop/04-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 684
   },
   {
     "page": "security",
@@ -1680,7 +1850,7 @@
     ],
     "file": "shots/security/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 2114
+    "height": 2241
   },
   {
     "page": "security",
@@ -1748,7 +1918,7 @@
     ],
     "file": "shots/security/desktop/04-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 684
   },
   {
     "page": "compare",
@@ -1765,7 +1935,7 @@
     ],
     "file": "shots/compare/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 2071
+    "height": 2198
   },
   {
     "page": "compare",
@@ -1790,14 +1960,14 @@
     "route": "/compare",
     "viewport": "desktop",
     "pageFile": "app/compare/page.tsx",
-    "id": "compare/desktop/02-comparison-of-conclave-ai-with-four-alte",
+    "id": "compare/desktop/02-table-scrolls-sideways",
     "kind": "section",
-    "name": "Comparison of Conclave AI with four alternatives",
-    "heading": "Comparison of Conclave AI with four alternatives",
+    "name": "Table, scrolls sideways",
+    "heading": "Table, scrolls sideways",
     "source": [
       "app/compare/page.tsx"
     ],
-    "file": "shots/compare/desktop/02-comparison-of-conclave-ai-with-four-alte.jpg",
+    "file": "shots/compare/desktop/02-table-scrolls-sideways.jpg",
     "width": 1280,
     "height": 509
   },
@@ -1833,7 +2003,7 @@
     ],
     "file": "shots/compare/desktop/04-footer.jpg",
     "width": 1440,
-    "height": 556
+    "height": 684
   },
   {
     "page": "receipts",
@@ -1850,7 +2020,7 @@
     ],
     "file": "shots/receipts/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 2003
+    "height": 2130
   },
   {
     "page": "receipts",
@@ -1935,7 +2105,7 @@
     ],
     "file": "shots/receipts/desktop/05-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 684
   },
   {
     "page": "notes",
@@ -1952,7 +2122,7 @@
     ],
     "file": "shots/notes/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 2043
+    "height": 2194
   },
   {
     "page": "notes",
@@ -1977,16 +2147,16 @@
     "route": "/notes",
     "viewport": "desktop",
     "pageFile": "app/notes/page.tsx",
-    "id": "notes/desktop/02-what-a-missed-call-really-costs-a-clinic",
+    "id": "notes/desktop/02-what-a-voice-agent-costs-to-run-line-by-",
     "kind": "section",
-    "name": "What a missed call really costs a clinic plus 4 more",
-    "heading": "What a missed call really costs a clinic plus 4 more",
+    "name": "What a voice agent costs to run, line by line plus 3 more",
+    "heading": "What a voice agent costs to run, line by line plus 3 more",
     "source": [
       "app/notes/page.tsx"
     ],
-    "file": "shots/notes/desktop/02-what-a-missed-call-really-costs-a-clinic.jpg",
+    "file": "shots/notes/desktop/02-what-a-voice-agent-costs-to-run-line-by-.jpg",
     "width": 1280,
-    "height": 455
+    "height": 479
   },
   {
     "page": "notes",
@@ -2020,7 +2190,347 @@
     ],
     "file": "shots/notes/desktop/04-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 684
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "desktop",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/notes/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/note/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 3426
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "desktop",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/desktop/01-what-a-missed-call-really-costs-a-clinic",
+    "kind": "section",
+    "name": "What a missed call really costs a clinic",
+    "heading": "What a missed call really costs a clinic",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/desktop/01-what-a-missed-call-really-costs-a-clinic.jpg",
+    "width": 1280,
+    "height": 812
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "desktop",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/desktop/02-most-owners-know-calls-are-being-missed-",
+    "kind": "section",
+    "name": "Most owners know calls are being missed. Few kno",
+    "heading": "Most owners know calls are being missed. Few kno",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/desktop/02-most-owners-know-calls-are-being-missed-.jpg",
+    "width": 672,
+    "height": 55
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "desktop",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/desktop/03-the-formula",
+    "kind": "section",
+    "name": "The formula",
+    "heading": "The formula",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/desktop/03-the-formula.jpg",
+    "width": 672,
+    "height": 65
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "desktop",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/desktop/04-missed-calls-per-week-share-that-would-h",
+    "kind": "section",
+    "name": "Missed calls per week × share that would have bo",
+    "heading": "Missed calls per week × share that would have bo",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/desktop/04-missed-calls-per-week-share-that-would-h.jpg",
+    "width": 672,
+    "height": 198
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "desktop",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/desktop/05-a-worked-example-made-up-round-numbers-n",
+    "kind": "section",
+    "name": "A worked example (made-up round numbers, not our",
+    "heading": "A worked example (made-up round numbers, not our",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/desktop/05-a-worked-example-made-up-round-numbers-n.jpg",
+    "width": 672,
+    "height": 114
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "desktop",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/desktop/06-10-missed-calls-30-3-bookings-lost-per-w",
+    "kind": "section",
+    "name": "10 missed calls × 30% 3 bookings lost per week 3",
+    "heading": "10 missed calls × 30% 3 bookings lost per week 3",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/desktop/06-10-missed-calls-30-3-bookings-lost-per-w.jpg",
+    "width": 672,
+    "height": 198
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "desktop",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/desktop/07-those-inputs-are-examples-to-show-the-me",
+    "kind": "section",
+    "name": "Those inputs are examples to show the method. Yo",
+    "heading": "Those inputs are examples to show the method. Yo",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/desktop/07-those-inputs-are-examples-to-show-the-me.jpg",
+    "width": 672,
+    "height": 73
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "desktop",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/desktop/08-where-each-input-comes-from",
+    "kind": "section",
+    "name": "Where each input comes from",
+    "heading": "Where each input comes from",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/desktop/08-where-each-input-comes-from.jpg",
+    "width": 672,
+    "height": 65
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "desktop",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/desktop/09-missed-calls-per-week-your-phone-provide",
+    "kind": "section",
+    "name": "Missed calls per week: your phone provider's cal",
+    "heading": "Missed calls per week: your phone provider's cal",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/desktop/09-missed-calls-per-week-your-phone-provide.jpg",
+    "width": 672,
+    "height": 181
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "desktop",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/desktop/10-what-an-agent-changes-and-what-it-does-n",
+    "kind": "section",
+    "name": "What an agent changes, and what it does not",
+    "heading": "What an agent changes, and what it does not",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/desktop/10-what-an-agent-changes-and-what-it-does-n.jpg",
+    "width": 672,
+    "height": 113
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "desktop",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/desktop/11-a-voice-agent-answers-the-call-in-one-ri",
+    "kind": "section",
+    "name": "A voice agent answers the call in one ring, so f",
+    "heading": "A voice agent answers the call in one ring, so f",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/desktop/11-a-voice-agent-answers-the-call-in-one-ri.jpg",
+    "width": 672,
+    "height": 110
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "desktop",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/desktop/12-run-it-on-your-own-numbers",
+    "kind": "section",
+    "name": "Run it on your own numbers",
+    "heading": "Run it on your own numbers",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/desktop/12-run-it-on-your-own-numbers.jpg",
+    "width": 672,
+    "height": 61
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "desktop",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/desktop/13-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/desktop/13-hear-it-then-book-it.jpg",
+    "width": 1280,
+    "height": 318
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "desktop",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/desktop/14-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/note/desktop/14-footer.jpg",
+    "width": 1440,
+    "height": 684
+  },
+  {
+    "page": "roadmap",
+    "pageTitle": "Roadmap",
+    "route": "/roadmap",
+    "viewport": "desktop",
+    "pageFile": "app/roadmap/page.tsx",
+    "id": "roadmap/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/roadmap/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/roadmap/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2238
+  },
+  {
+    "page": "roadmap",
+    "pageTitle": "Roadmap",
+    "route": "/roadmap",
+    "viewport": "desktop",
+    "pageFile": "app/roadmap/page.tsx",
+    "id": "roadmap/desktop/01-what-shipped-what-is-next",
+    "kind": "section",
+    "name": "What shipped, what is next.",
+    "heading": "What shipped, what is next.",
+    "source": [
+      "app/roadmap/page.tsx"
+    ],
+    "file": "shots/roadmap/desktop/01-what-shipped-what-is-next.jpg",
+    "width": 1280,
+    "height": 686
+  },
+  {
+    "page": "roadmap",
+    "pageTitle": "Roadmap",
+    "route": "/roadmap",
+    "viewport": "desktop",
+    "pageFile": "app/roadmap/page.tsx",
+    "id": "roadmap/desktop/02-shipped-voice-follow-up-booking-reactiva",
+    "kind": "section",
+    "name": "SHIPPED Voice, follow-up, booking, reactivation ",
+    "heading": "SHIPPED Voice, follow-up, booking, reactivation ",
+    "source": [
+      "app/roadmap/page.tsx"
+    ],
+    "file": "shots/roadmap/desktop/02-shipped-voice-follow-up-booking-reactiva.jpg",
+    "width": 1280,
+    "height": 554
+  },
+  {
+    "page": "roadmap",
+    "pageTitle": "Roadmap",
+    "route": "/roadmap",
+    "viewport": "desktop",
+    "pageFile": "app/roadmap/page.tsx",
+    "id": "roadmap/desktop/03-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/roadmap/page.tsx"
+    ],
+    "file": "shots/roadmap/desktop/03-hear-it-then-book-it.jpg",
+    "width": 1280,
+    "height": 317
+  },
+  {
+    "page": "roadmap",
+    "pageTitle": "Roadmap",
+    "route": "/roadmap",
+    "viewport": "desktop",
+    "pageFile": "app/roadmap/page.tsx",
+    "id": "roadmap/desktop/04-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/roadmap/desktop/04-footer.jpg",
+    "width": 1440,
+    "height": 684
   },
   {
     "page": "privacy",
@@ -2037,7 +2547,7 @@
     ],
     "file": "shots/privacy/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 1022
+    "height": 1149
   },
   {
     "page": "privacy",
@@ -2088,7 +2598,7 @@
     ],
     "file": "shots/privacy/desktop/03-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 685
   },
   {
     "page": "terms",
@@ -2105,7 +2615,7 @@
     ],
     "file": "shots/terms/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 1022
+    "height": 1149
   },
   {
     "page": "terms",
@@ -2156,7 +2666,7 @@
     ],
     "file": "shots/terms/desktop/03-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 685
   },
   {
     "page": "not-found",
@@ -2173,7 +2683,7 @@
     ],
     "file": "shots/not-found/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 1115
+    "height": 1283
   },
   {
     "page": "not-found",
@@ -2190,7 +2700,7 @@
     ],
     "file": "shots/not-found/desktop/01-nothing-here.jpg",
     "width": 1280,
-    "height": 559
+    "height": 601
   },
   {
     "page": "not-found",
@@ -2207,7 +2717,7 @@
     ],
     "file": "shots/not-found/desktop/02-footer.jpg",
     "width": 1440,
-    "height": 557
+    "height": 684
   },
   {
     "page": "states",
@@ -2405,7 +2915,7 @@
     ],
     "file": "shots/home/mobile/00-full-page-part6.jpg",
     "width": 780,
-    "height": 4516
+    "height": 4846
   },
   {
     "page": "home",
@@ -2694,7 +3204,7 @@
     ],
     "file": "shots/home/mobile/17-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
   },
   {
     "page": "services",
@@ -2711,7 +3221,7 @@
     ],
     "file": "shots/services/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 14316
+    "height": 14646
   },
   {
     "page": "services",
@@ -2813,7 +3323,7 @@
     ],
     "file": "shots/services/mobile/06-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
   },
   {
     "page": "service-detail",
@@ -2830,7 +3340,7 @@
     ],
     "file": "shots/service-detail/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 8680
+    "height": 9374
   },
   {
     "page": "service-detail",
@@ -2881,7 +3391,7 @@
     ],
     "file": "shots/service-detail/mobile/03-how-a-call-flows.jpg",
     "width": 776,
-    "height": 1130
+    "height": 1494
   },
   {
     "page": "service-detail",
@@ -2898,7 +3408,7 @@
     ],
     "file": "shots/service-detail/mobile/04-works-with.jpg",
     "width": 776,
-    "height": 586
+    "height": 584
   },
   {
     "page": "service-detail",
@@ -2915,7 +3425,7 @@
     ],
     "file": "shots/service-detail/mobile/05-price-and-timeline.jpg",
     "width": 776,
-    "height": 474
+    "height": 476
   },
   {
     "page": "service-detail",
@@ -2983,7 +3493,7 @@
     ],
     "file": "shots/service-detail/mobile/09-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3334
   },
   {
     "page": "studio",
@@ -3000,7 +3510,7 @@
     ],
     "file": "shots/studio/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 9644
+    "height": 9976
   },
   {
     "page": "studio",
@@ -3153,7 +3663,7 @@
     ],
     "file": "shots/studio/mobile/09-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
   },
   {
     "page": "industry",
@@ -3170,7 +3680,7 @@
     ],
     "file": "shots/industry/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 7520
+    "height": 8870
   },
   {
     "page": "industry",
@@ -3212,14 +3722,31 @@
     "route": "/industries/clinics",
     "viewport": "mobile",
     "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry/mobile/03-agents-that-do-the-work",
+    "id": "industry/mobile/03-what-the-week-looks-like",
+    "kind": "section",
+    "name": "What the week looks like",
+    "heading": "What the week looks like",
+    "source": [
+      "app/industries/[slug]/page.tsx"
+    ],
+    "file": "shots/industry/mobile/03-what-the-week-looks-like.jpg",
+    "width": 776,
+    "height": 1060
+  },
+  {
+    "page": "industry",
+    "pageTitle": "Industry page",
+    "route": "/industries/clinics",
+    "viewport": "mobile",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry/mobile/04-agents-that-do-the-work",
     "kind": "section",
     "name": "Agents that do the work",
     "heading": "Agents that do the work",
     "source": [
       "app/industries/[slug]/page.tsx"
     ],
-    "file": "shots/industry/mobile/03-agents-that-do-the-work.jpg",
+    "file": "shots/industry/mobile/04-agents-that-do-the-work.jpg",
     "width": 776,
     "height": 1158
   },
@@ -3229,14 +3756,14 @@
     "route": "/industries/clinics",
     "viewport": "mobile",
     "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry/mobile/04-the-usual-objection-plus-1-more",
+    "id": "industry/mobile/05-the-usual-objection-plus-1-more",
     "kind": "section",
     "name": "The usual objection plus 1 more",
     "heading": "The usual objection plus 1 more",
     "source": [
       "app/industries/[slug]/page.tsx"
     ],
-    "file": "shots/industry/mobile/04-the-usual-objection-plus-1-more.jpg",
+    "file": "shots/industry/mobile/05-the-usual-objection-plus-1-more.jpg",
     "width": 776,
     "height": 344
   },
@@ -3246,16 +3773,16 @@
     "route": "/industries/clinics",
     "viewport": "mobile",
     "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry/mobile/05-language-we-build-in-english-arabic-and-",
+    "id": "industry/mobile/06-language-we-build-in-english-arabic-and-",
     "kind": "section",
     "name": "Language: we build in English, Arabic and Urdu. ",
     "heading": "Language: we build in English, Arabic and Urdu. ",
     "source": [
       "app/industries/[slug]/page.tsx"
     ],
-    "file": "shots/industry/mobile/05-language-we-build-in-english-arabic-and-.jpg",
+    "file": "shots/industry/mobile/06-language-we-build-in-english-arabic-and-.jpg",
     "width": 776,
-    "height": 218
+    "height": 178
   },
   {
     "page": "industry",
@@ -3263,14 +3790,14 @@
     "route": "/industries/clinics",
     "viewport": "mobile",
     "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry/mobile/06-hear-it-then-book-it",
+    "id": "industry/mobile/07-hear-it-then-book-it",
     "kind": "section",
     "name": "Hear it, then book it.",
     "heading": "Hear it, then book it.",
     "source": [
       "app/industries/[slug]/page.tsx"
     ],
-    "file": "shots/industry/mobile/06-hear-it-then-book-it.jpg",
+    "file": "shots/industry/mobile/07-hear-it-then-book-it.jpg",
     "width": 780,
     "height": 600
   },
@@ -3280,16 +3807,16 @@
     "route": "/industries/clinics",
     "viewport": "mobile",
     "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry/mobile/07-footer",
+    "id": "industry/mobile/08-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/industry/mobile/07-footer.jpg",
+    "file": "shots/industry/mobile/08-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3334
   },
   {
     "page": "crew",
@@ -3306,7 +3833,7 @@
     ],
     "file": "shots/crew/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 11094
+    "height": 11424
   },
   {
     "page": "crew",
@@ -3391,7 +3918,7 @@
     ],
     "file": "shots/crew/mobile/05-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
   },
   {
     "page": "work",
@@ -3408,7 +3935,7 @@
     ],
     "file": "shots/work/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 7112
+    "height": 8582
   },
   {
     "page": "work",
@@ -3425,7 +3952,7 @@
     ],
     "file": "shots/work/mobile/01-built-shipped-running.jpg",
     "width": 780,
-    "height": 658
+    "height": 814
   },
   {
     "page": "work",
@@ -3433,16 +3960,16 @@
     "route": "/work",
     "viewport": "mobile",
     "pageFile": "app/work/page.tsx",
-    "id": "work/mobile/02-project-types",
+    "id": "work/mobile/02-filter-by-type",
     "kind": "section",
-    "name": "Project types",
-    "heading": "Project types",
+    "name": "Filter by type",
+    "heading": "Filter by type",
     "source": [
       "app/work/page.tsx"
     ],
-    "file": "shots/work/mobile/02-project-types.jpg",
+    "file": "shots/work/mobile/02-filter-by-type.jpg",
     "width": 712,
-    "height": 158
+    "height": 194
   },
   {
     "page": "work",
@@ -3459,7 +3986,7 @@
     ],
     "file": "shots/work/mobile/03-bazar-flow-plus-3-more.jpg",
     "width": 712,
-    "height": 3044
+    "height": 3066
   },
   {
     "page": "work",
@@ -3467,16 +3994,50 @@
     "route": "/work",
     "viewport": "mobile",
     "pageFile": "app/work/page.tsx",
-    "id": "work/mobile/04-footer",
+    "id": "work/mobile/04-testimonial-client-quotes-appear-here-wi",
+    "kind": "section",
+    "name": "TESTIMONIAL Client quotes appear here with their",
+    "heading": "TESTIMONIAL Client quotes appear here with their",
+    "source": [
+      "app/work/page.tsx"
+    ],
+    "file": "shots/work/mobile/04-testimonial-client-quotes-appear-here-wi.jpg",
+    "width": 712,
+    "height": 310
+  },
+  {
+    "page": "work",
+    "pageTitle": "Work",
+    "route": "/work",
+    "viewport": "mobile",
+    "pageFile": "app/work/page.tsx",
+    "id": "work/mobile/05-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/work/page.tsx"
+    ],
+    "file": "shots/work/mobile/05-hear-it-then-book-it.jpg",
+    "width": 780,
+    "height": 600
+  },
+  {
+    "page": "work",
+    "pageTitle": "Work",
+    "route": "/work",
+    "viewport": "mobile",
+    "pageFile": "app/work/page.tsx",
+    "id": "work/mobile/06-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/work/mobile/04-footer.jpg",
+    "file": "shots/work/mobile/06-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
   },
   {
     "page": "work-detail",
@@ -3493,7 +4054,7 @@
     ],
     "file": "shots/work-detail/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 5854
+    "height": 7708
   },
   {
     "page": "work-detail",
@@ -3535,16 +4096,33 @@
     "route": "/work/bazar-flow",
     "viewport": "mobile",
     "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/03-the-problem",
+    "id": "work-detail/mobile/03-result",
+    "kind": "section",
+    "name": "Result",
+    "heading": "Result",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/mobile/03-result.jpg",
+    "width": 712,
+    "height": 460
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/mobile/04-the-problem",
     "kind": "section",
     "name": "The problem",
     "heading": "The problem",
     "source": [
       "app/work/[slug]/page.tsx"
     ],
-    "file": "shots/work-detail/mobile/03-the-problem.jpg",
+    "file": "shots/work-detail/mobile/04-the-problem.jpg",
     "width": 712,
-    "height": 334
+    "height": 408
   },
   {
     "page": "work-detail",
@@ -3552,16 +4130,16 @@
     "route": "/work/bazar-flow",
     "viewport": "mobile",
     "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/04-the-solution",
+    "id": "work-detail/mobile/05-the-solution",
     "kind": "section",
     "name": "The solution",
     "heading": "The solution",
     "source": [
       "app/work/[slug]/page.tsx"
     ],
-    "file": "shots/work-detail/mobile/04-the-solution.jpg",
+    "file": "shots/work-detail/mobile/05-the-solution.jpg",
     "width": 712,
-    "height": 334
+    "height": 408
   },
   {
     "page": "work-detail",
@@ -3569,16 +4147,16 @@
     "route": "/work/bazar-flow",
     "viewport": "mobile",
     "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/05-architecture",
+    "id": "work-detail/mobile/06-architecture",
     "kind": "section",
     "name": "Architecture",
     "heading": "Architecture",
     "source": [
       "app/work/[slug]/page.tsx"
     ],
-    "file": "shots/work-detail/mobile/05-architecture.jpg",
+    "file": "shots/work-detail/mobile/06-architecture.jpg",
     "width": 712,
-    "height": 332
+    "height": 484
   },
   {
     "page": "work-detail",
@@ -3586,16 +4164,16 @@
     "route": "/work/bazar-flow",
     "viewport": "mobile",
     "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/06-results",
+    "id": "work-detail/mobile/07-what-we-would-do-differently",
     "kind": "section",
-    "name": "Results",
-    "heading": "Results",
+    "name": "What we would do differently",
+    "heading": "What we would do differently",
     "source": [
       "app/work/[slug]/page.tsx"
     ],
-    "file": "shots/work-detail/mobile/06-results.jpg",
+    "file": "shots/work-detail/mobile/07-what-we-would-do-differently.jpg",
     "width": 712,
-    "height": 334
+    "height": 470
   },
   {
     "page": "work-detail",
@@ -3603,16 +4181,16 @@
     "route": "/work/bazar-flow",
     "viewport": "mobile",
     "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/07-book-a-call-nextcodenexus-ai",
+    "id": "work-detail/mobile/08-next-project-codenexus-ai",
     "kind": "section",
-    "name": "Book a call NEXTCODENEXUS AI",
-    "heading": "Book a call NEXTCODENEXUS AI",
+    "name": "NEXT PROJECT CODENEXUS AI",
+    "heading": "NEXT PROJECT CODENEXUS AI",
     "source": [
       "app/work/[slug]/page.tsx"
     ],
-    "file": "shots/work-detail/mobile/07-book-a-call-nextcodenexus-ai.jpg",
+    "file": "shots/work-detail/mobile/08-next-project-codenexus-ai.jpg",
     "width": 712,
-    "height": 380
+    "height": 328
   },
   {
     "page": "work-detail",
@@ -3620,16 +4198,33 @@
     "route": "/work/bazar-flow",
     "viewport": "mobile",
     "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/08-footer",
+    "id": "work-detail/mobile/09-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/mobile/09-hear-it-then-book-it.jpg",
+    "width": 780,
+    "height": 600
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/mobile/10-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/work-detail/mobile/08-footer.jpg",
+    "file": "shots/work-detail/mobile/10-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
   },
   {
     "page": "demos",
@@ -3646,7 +4241,7 @@
     ],
     "file": "shots/demos/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 7288
+    "height": 12690
   },
   {
     "page": "demos",
@@ -3671,16 +4266,16 @@
     "route": "/demos",
     "viewport": "mobile",
     "pageFile": "app/demos/page.tsx",
-    "id": "demos/mobile/02-live-voice-agent",
+    "id": "demos/mobile/02-a-voice-agent-for-a-sample-clinic",
     "kind": "section",
-    "name": "Live voice agent.",
-    "heading": "Live voice agent.",
+    "name": "A voice agent for a sample clinic",
+    "heading": "A voice agent for a sample clinic",
     "source": [
       "app/demos/page.tsx"
     ],
-    "file": "shots/demos/mobile/02-live-voice-agent.jpg",
-    "width": 712,
-    "height": 628
+    "file": "shots/demos/mobile/02-a-voice-agent-for-a-sample-clinic.jpg",
+    "width": 776,
+    "height": 2468
   },
   {
     "page": "demos",
@@ -3688,16 +4283,16 @@
     "route": "/demos",
     "viewport": "mobile",
     "pageFile": "app/demos/page.tsx",
-    "id": "demos/mobile/03-call-our-demo-line",
+    "id": "demos/mobile/03-what-does-a-missed-call-cost-you",
     "kind": "section",
-    "name": "Call our demo line.",
-    "heading": "Call our demo line.",
+    "name": "What does a missed call cost you?",
+    "heading": "What does a missed call cost you?",
     "source": [
       "app/demos/page.tsx"
     ],
-    "file": "shots/demos/mobile/03-call-our-demo-line.jpg",
-    "width": 712,
-    "height": 526
+    "file": "shots/demos/mobile/03-what-does-a-missed-call-cost-you.jpg",
+    "width": 776,
+    "height": 2576
   },
   {
     "page": "demos",
@@ -3705,16 +4300,16 @@
     "route": "/demos",
     "viewport": "mobile",
     "pageFile": "app/demos/page.tsx",
-    "id": "demos/mobile/04-missed-call-calculator",
+    "id": "demos/mobile/04-the-60-second-game-plus-1-more",
     "kind": "section",
-    "name": "Missed-call calculator.",
-    "heading": "Missed-call calculator.",
+    "name": "The 60-second game plus 1 more",
+    "heading": "The 60-second game plus 1 more",
     "source": [
       "app/demos/page.tsx"
     ],
-    "file": "shots/demos/mobile/04-missed-call-calculator.jpg",
-    "width": 712,
-    "height": 524
+    "file": "shots/demos/mobile/04-the-60-second-game-plus-1-more.jpg",
+    "width": 776,
+    "height": 1184
   },
   {
     "page": "demos",
@@ -3722,16 +4317,16 @@
     "route": "/demos",
     "viewport": "mobile",
     "pageFile": "app/demos/page.tsx",
-    "id": "demos/mobile/05-60-second-game",
+    "id": "demos/mobile/05-build-your-own-agent-in-four-questions",
     "kind": "section",
-    "name": "60-second game.",
-    "heading": "60-second game.",
+    "name": "Build your own agent in four questions",
+    "heading": "Build your own agent in four questions",
     "source": [
       "app/demos/page.tsx"
     ],
-    "file": "shots/demos/mobile/05-60-second-game.jpg",
-    "width": 712,
-    "height": 526
+    "file": "shots/demos/mobile/05-build-your-own-agent-in-four-questions.jpg",
+    "width": 776,
+    "height": 1192
   },
   {
     "page": "demos",
@@ -3739,16 +4334,16 @@
     "route": "/demos",
     "viewport": "mobile",
     "pageFile": "app/demos/page.tsx",
-    "id": "demos/mobile/06-build-your-own-agent",
+    "id": "demos/mobile/06-call-our-demo-line",
     "kind": "section",
-    "name": "Build your own agent.",
-    "heading": "Build your own agent.",
+    "name": "Call our demo line",
+    "heading": "Call our demo line",
     "source": [
       "app/demos/page.tsx"
     ],
-    "file": "shots/demos/mobile/06-build-your-own-agent.jpg",
-    "width": 712,
-    "height": 474
+    "file": "shots/demos/mobile/06-call-our-demo-line.jpg",
+    "width": 776,
+    "height": 584
   },
   {
     "page": "demos",
@@ -3765,7 +4360,7 @@
     ],
     "file": "shots/demos/mobile/07-prefer-to-talk-to-a-person.jpg",
     "width": 780,
-    "height": 550
+    "height": 548
   },
   {
     "page": "demos",
@@ -3782,7 +4377,7 @@
     ],
     "file": "shots/demos/mobile/08-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
   },
   {
     "page": "about",
@@ -3799,7 +4394,7 @@
     ],
     "file": "shots/about/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 8260
+    "height": 8590
   },
   {
     "page": "about",
@@ -3935,7 +4530,7 @@
     ],
     "file": "shots/about/mobile/08-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
   },
   {
     "page": "pricing",
@@ -3952,7 +4547,7 @@
     ],
     "file": "shots/pricing/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 9394
+    "height": 9724
   },
   {
     "page": "pricing",
@@ -4088,7 +4683,7 @@
     ],
     "file": "shots/pricing/mobile/08-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
   },
   {
     "page": "contact",
@@ -4105,7 +4700,7 @@
     ],
     "file": "shots/contact/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 4574
+    "height": 7316
   },
   {
     "page": "contact",
@@ -4121,8 +4716,8 @@
       "app/contact/page.tsx"
     ],
     "file": "shots/contact/mobile/01-let-s-talk.jpg",
-    "width": 780,
-    "height": 1574
+    "width": 712,
+    "height": 1272
   },
   {
     "page": "contact",
@@ -4130,16 +4725,101 @@
     "route": "/contact",
     "viewport": "mobile",
     "pageFile": "app/contact/page.tsx",
-    "id": "contact/mobile/02-footer",
+    "id": "contact/mobile/02-name-email-company-optional",
+    "kind": "section",
+    "name": "Name Email Company (optional)",
+    "heading": "Name Email Company (optional)",
+    "source": [
+      "app/contact/page.tsx"
+    ],
+    "file": "shots/contact/mobile/02-name-email-company-optional.jpg",
+    "width": 612,
+    "height": 526
+  },
+  {
+    "page": "contact",
+    "pageTitle": "Contact",
+    "route": "/contact",
+    "viewport": "mobile",
+    "pageFile": "app/contact/page.tsx",
+    "id": "contact/mobile/03-what-would-help-most-voice-agents-follow",
+    "kind": "section",
+    "name": "What would help most? Voice agents Follow-up Boo",
+    "heading": "What would help most? Voice agents Follow-up Boo",
+    "source": [
+      "app/contact/page.tsx"
+    ],
+    "file": "shots/contact/mobile/03-what-would-help-most-voice-agents-follow.jpg",
+    "width": 612,
+    "height": 458
+  },
+  {
+    "page": "contact",
+    "pageTitle": "Contact",
+    "route": "/contact",
+    "viewport": "mobile",
+    "pageFile": "app/contact/page.tsx",
+    "id": "contact/mobile/04-where-would-you-like-to-start-choose-one",
+    "kind": "section",
+    "name": "Where would you like to start? Choose one Not su",
+    "heading": "Where would you like to start? Choose one Not su",
+    "source": [
+      "app/contact/page.tsx"
+    ],
+    "file": "shots/contact/mobile/04-where-would-you-like-to-start-choose-one.jpg",
+    "width": 612,
+    "height": 150
+  },
+  {
+    "page": "contact",
+    "pageTitle": "Contact",
+    "route": "/contact",
+    "viewport": "mobile",
+    "pageFile": "app/contact/page.tsx",
+    "id": "contact/mobile/05-message",
+    "kind": "section",
+    "name": "Message",
+    "heading": "Message",
+    "source": [
+      "app/contact/page.tsx"
+    ],
+    "file": "shots/contact/mobile/05-message.jpg",
+    "width": 612,
+    "height": 288
+  },
+  {
+    "page": "contact",
+    "pageTitle": "Contact",
+    "route": "/contact",
+    "viewport": "mobile",
+    "pageFile": "app/contact/page.tsx",
+    "id": "contact/mobile/06-send-message",
+    "kind": "section",
+    "name": "Send message",
+    "heading": "Send message",
+    "source": [
+      "app/contact/page.tsx"
+    ],
+    "file": "shots/contact/mobile/06-send-message.jpg",
+    "width": 300,
+    "height": 98
+  },
+  {
+    "page": "contact",
+    "pageTitle": "Contact",
+    "route": "/contact",
+    "viewport": "mobile",
+    "pageFile": "app/contact/page.tsx",
+    "id": "contact/mobile/07-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/contact/mobile/02-footer.jpg",
+    "file": "shots/contact/mobile/07-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
   },
   {
     "page": "join",
@@ -4156,7 +4836,7 @@
     ],
     "file": "shots/join/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 6898
+    "height": 7230
   },
   {
     "page": "join",
@@ -4292,7 +4972,7 @@
     ],
     "file": "shots/join/mobile/08-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
   },
   {
     "page": "security",
@@ -4309,7 +4989,7 @@
     ],
     "file": "shots/security/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 6706
+    "height": 7038
   },
   {
     "page": "security",
@@ -4394,7 +5074,7 @@
     ],
     "file": "shots/security/mobile/05-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3334
   },
   {
     "page": "compare",
@@ -4411,7 +5091,7 @@
     ],
     "file": "shots/compare/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 5896
+    "height": 6228
   },
   {
     "page": "compare",
@@ -4436,14 +5116,14 @@
     "route": "/compare",
     "viewport": "mobile",
     "pageFile": "app/compare/page.tsx",
-    "id": "compare/mobile/02-comparison-of-conclave-ai-with-four-alte",
+    "id": "compare/mobile/02-table-scrolls-sideways",
     "kind": "section",
-    "name": "Comparison of Conclave AI with four alternatives",
-    "heading": "Comparison of Conclave AI with four alternatives",
+    "name": "Table, scrolls sideways",
+    "heading": "Table, scrolls sideways",
     "source": [
       "app/compare/page.tsx"
     ],
-    "file": "shots/compare/mobile/02-comparison-of-conclave-ai-with-four-alte.jpg",
+    "file": "shots/compare/mobile/02-table-scrolls-sideways.jpg",
     "width": 780,
     "height": 1378
   },
@@ -4479,7 +5159,7 @@
     ],
     "file": "shots/compare/mobile/04-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
   },
   {
     "page": "receipts",
@@ -4496,7 +5176,7 @@
     ],
     "file": "shots/receipts/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 6134
+    "height": 6466
   },
   {
     "page": "receipts",
@@ -4581,7 +5261,7 @@
     ],
     "file": "shots/receipts/mobile/05-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
   },
   {
     "page": "notes",
@@ -4598,7 +5278,7 @@
     ],
     "file": "shots/notes/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 6152
+    "height": 6570
   },
   {
     "page": "notes",
@@ -4623,16 +5303,16 @@
     "route": "/notes",
     "viewport": "mobile",
     "pageFile": "app/notes/page.tsx",
-    "id": "notes/mobile/02-what-a-missed-call-really-costs-a-clinic",
+    "id": "notes/mobile/02-what-a-voice-agent-costs-to-run-line-by-",
     "kind": "section",
-    "name": "What a missed call really costs a clinic plus 4 more",
-    "heading": "What a missed call really costs a clinic plus 4 more",
+    "name": "What a voice agent costs to run, line by line plus 3 more",
+    "heading": "What a voice agent costs to run, line by line plus 3 more",
     "source": [
       "app/notes/page.tsx"
     ],
-    "file": "shots/notes/mobile/02-what-a-missed-call-really-costs-a-clinic.jpg",
+    "file": "shots/notes/mobile/02-what-a-voice-agent-costs-to-run-line-by-.jpg",
     "width": 780,
-    "height": 1634
+    "height": 1722
   },
   {
     "page": "notes",
@@ -4666,7 +5346,398 @@
     ],
     "file": "shots/notes/mobile/04-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "mobile",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/notes/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/note/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 8788
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "mobile",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/mobile/01-what-a-missed-call-really-costs-a-clinic",
+    "kind": "section",
+    "name": "What a missed call really costs a clinic",
+    "heading": "What a missed call really costs a clinic",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/mobile/01-what-a-missed-call-really-costs-a-clinic.jpg",
+    "width": 780,
+    "height": 920
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "mobile",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/mobile/02-most-owners-know-calls-are-being-missed-",
+    "kind": "section",
+    "name": "Most owners know calls are being missed. Few kno",
+    "heading": "Most owners know calls are being missed. Few kno",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/mobile/02-most-owners-know-calls-are-being-missed-.jpg",
+    "width": 712,
+    "height": 218
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "mobile",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/mobile/03-the-formula",
+    "kind": "section",
+    "name": "The formula",
+    "heading": "The formula",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/mobile/03-the-formula.jpg",
+    "width": 712,
+    "height": 96
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "mobile",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/mobile/04-missed-calls-per-week-share-that-would-h",
+    "kind": "section",
+    "name": "Missed calls per week × share that would have bo",
+    "heading": "Missed calls per week × share that would have bo",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/mobile/04-missed-calls-per-week-share-that-would-h.jpg",
+    "width": 712,
+    "height": 716
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "mobile",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/mobile/05-a-worked-example-made-up-round-numbers-n",
+    "kind": "section",
+    "name": "A worked example (made-up round numbers, not our",
+    "heading": "A worked example (made-up round numbers, not our",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/mobile/05-a-worked-example-made-up-round-numbers-n.jpg",
+    "width": 712,
+    "height": 158
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "mobile",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/mobile/06-10-missed-calls-30-3-bookings-lost-per-w",
+    "kind": "section",
+    "name": "10 missed calls × 30% 3 bookings lost per week 3",
+    "heading": "10 missed calls × 30% 3 bookings lost per week 3",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/mobile/06-10-missed-calls-30-3-bookings-lost-per-w.jpg",
+    "width": 712,
+    "height": 396
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "mobile",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/mobile/07-those-inputs-are-examples-to-show-the-me",
+    "kind": "section",
+    "name": "Those inputs are examples to show the method. Yo",
+    "heading": "Those inputs are examples to show the method. Yo",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/mobile/07-those-inputs-are-examples-to-show-the-me.jpg",
+    "width": 712,
+    "height": 194
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "mobile",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/mobile/08-where-each-input-comes-from",
+    "kind": "section",
+    "name": "Where each input comes from",
+    "heading": "Where each input comes from",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/mobile/08-where-each-input-comes-from.jpg",
+    "width": 712,
+    "height": 156
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "mobile",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/mobile/09-missed-calls-per-week-your-phone-provide",
+    "kind": "section",
+    "name": "Missed calls per week: your phone provider's cal",
+    "heading": "Missed calls per week: your phone provider's cal",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/mobile/09-missed-calls-per-week-your-phone-provide.jpg",
+    "width": 712,
+    "height": 524
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "mobile",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/mobile/10-what-an-agent-changes-and-what-it-does-n",
+    "kind": "section",
+    "name": "What an agent changes, and what it does not",
+    "heading": "What an agent changes, and what it does not",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/mobile/10-what-an-agent-changes-and-what-it-does-n.jpg",
+    "width": 712,
+    "height": 158
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "mobile",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/mobile/11-a-voice-agent-answers-the-call-in-one-ri",
+    "kind": "section",
+    "name": "A voice agent answers the call in one ring, so f",
+    "heading": "A voice agent answers the call in one ring, so f",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/mobile/11-a-voice-agent-answers-the-call-in-one-ri.jpg",
+    "width": 712,
+    "height": 436
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "mobile",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/mobile/12-run-it-on-your-own-numbers",
+    "kind": "section",
+    "name": "Run it on your own numbers",
+    "heading": "Run it on your own numbers",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/mobile/12-run-it-on-your-own-numbers.jpg",
+    "width": 712,
+    "height": 122
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "mobile",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/mobile/13-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/notes/[slug]/page.tsx"
+    ],
+    "file": "shots/note/mobile/13-hear-it-then-book-it.jpg",
+    "width": 780,
+    "height": 600
+  },
+  {
+    "page": "note",
+    "pageTitle": "Note (post)",
+    "route": "/notes/missed-call-cost",
+    "viewport": "mobile",
+    "pageFile": "app/notes/[slug]/page.tsx",
+    "id": "note/mobile/14-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/note/mobile/14-footer.jpg",
+    "width": 780,
+    "height": 3336
+  },
+  {
+    "page": "roadmap",
+    "pageTitle": "Roadmap",
+    "route": "/roadmap",
+    "viewport": "mobile",
+    "pageFile": "app/roadmap/page.tsx",
+    "id": "roadmap/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/roadmap/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/roadmap/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 7076
+  },
+  {
+    "page": "roadmap",
+    "pageTitle": "Roadmap",
+    "route": "/roadmap",
+    "viewport": "mobile",
+    "pageFile": "app/roadmap/page.tsx",
+    "id": "roadmap/mobile/01-what-shipped-what-is-next",
+    "kind": "section",
+    "name": "What shipped, what is next.",
+    "heading": "What shipped, what is next.",
+    "source": [
+      "app/roadmap/page.tsx"
+    ],
+    "file": "shots/roadmap/mobile/01-what-shipped-what-is-next.jpg",
+    "width": 780,
+    "height": 814
+  },
+  {
+    "page": "roadmap",
+    "pageTitle": "Roadmap",
+    "route": "/roadmap",
+    "viewport": "mobile",
+    "pageFile": "app/roadmap/page.tsx",
+    "id": "roadmap/mobile/02-shipped-voice-follow-up-booking-reactiva",
+    "kind": "section",
+    "name": "SHIPPED Voice, follow-up, booking, reactivation ",
+    "heading": "SHIPPED Voice, follow-up, booking, reactivation ",
+    "source": [
+      "app/roadmap/page.tsx"
+    ],
+    "file": "shots/roadmap/mobile/02-shipped-voice-follow-up-booking-reactiva.jpg",
+    "width": 776,
+    "height": 934
+  },
+  {
+    "page": "roadmap",
+    "pageTitle": "Roadmap",
+    "route": "/roadmap",
+    "viewport": "mobile",
+    "pageFile": "app/roadmap/page.tsx",
+    "id": "roadmap/mobile/03-building-now-live-voice-with-the-ai-mode",
+    "kind": "section",
+    "name": "BUILDING NOW Live voice with the AI model and a ",
+    "heading": "BUILDING NOW Live voice with the AI model and a ",
+    "source": [
+      "app/roadmap/page.tsx"
+    ],
+    "file": "shots/roadmap/mobile/03-building-now-live-voice-with-the-ai-mode.jpg",
+    "width": 776,
+    "height": 592
+  },
+  {
+    "page": "roadmap",
+    "pageTitle": "Roadmap",
+    "route": "/roadmap",
+    "viewport": "mobile",
+    "pageFile": "app/roadmap/page.tsx",
+    "id": "roadmap/mobile/04-later-public-build-logs-and-bounties-ope",
+    "kind": "section",
+    "name": "LATER Public build logs and bounties Open-source",
+    "heading": "LATER Public build logs and bounties Open-source",
+    "source": [
+      "app/roadmap/page.tsx"
+    ],
+    "file": "shots/roadmap/mobile/04-later-public-build-logs-and-bounties-ope.jpg",
+    "width": 776,
+    "height": 668
+  },
+  {
+    "page": "roadmap",
+    "pageTitle": "Roadmap",
+    "route": "/roadmap",
+    "viewport": "mobile",
+    "pageFile": "app/roadmap/page.tsx",
+    "id": "roadmap/mobile/05-something-you-need-that-is-not-here-tell",
+    "kind": "section",
+    "name": "Something you need that is not here? Tell us.",
+    "heading": "Something you need that is not here? Tell us.",
+    "source": [
+      "app/roadmap/page.tsx"
+    ],
+    "file": "shots/roadmap/mobile/05-something-you-need-that-is-not-here-tell.jpg",
+    "width": 776,
+    "height": 140
+  },
+  {
+    "page": "roadmap",
+    "pageTitle": "Roadmap",
+    "route": "/roadmap",
+    "viewport": "mobile",
+    "pageFile": "app/roadmap/page.tsx",
+    "id": "roadmap/mobile/06-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/roadmap/page.tsx"
+    ],
+    "file": "shots/roadmap/mobile/06-hear-it-then-book-it.jpg",
+    "width": 780,
+    "height": 600
+  },
+  {
+    "page": "roadmap",
+    "pageTitle": "Roadmap",
+    "route": "/roadmap",
+    "viewport": "mobile",
+    "pageFile": "app/roadmap/page.tsx",
+    "id": "roadmap/mobile/07-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/roadmap/mobile/07-footer.jpg",
+    "width": 780,
+    "height": 3334
   },
   {
     "page": "privacy",
@@ -4683,7 +5754,7 @@
     ],
     "file": "shots/privacy/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 3796
+    "height": 4126
   },
   {
     "page": "privacy",
@@ -4734,7 +5805,7 @@
     ],
     "file": "shots/privacy/mobile/03-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
   },
   {
     "page": "terms",
@@ -4751,7 +5822,7 @@
     ],
     "file": "shots/terms/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 3796
+    "height": 4126
   },
   {
     "page": "terms",
@@ -4802,7 +5873,7 @@
     ],
     "file": "shots/terms/mobile/03-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
   },
   {
     "page": "not-found",
@@ -4819,7 +5890,7 @@
     ],
     "file": "shots/not-found/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 3842
+    "height": 4820
   },
   {
     "page": "not-found",
@@ -4836,7 +5907,7 @@
     ],
     "file": "shots/not-found/mobile/01-nothing-here.jpg",
     "width": 780,
-    "height": 842
+    "height": 1488
   },
   {
     "page": "not-found",
@@ -4853,7 +5924,7 @@
     ],
     "file": "shots/not-found/mobile/02-footer.jpg",
     "width": 780,
-    "height": 3004
+    "height": 3336
   },
   {
     "page": "states",

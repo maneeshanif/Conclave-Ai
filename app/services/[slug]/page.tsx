@@ -5,6 +5,8 @@ import { PageHeader } from "@/components/PageHeader";
 import { PageCta } from "@/components/PageCta";
 import { Accordion } from "@/components/ui/Accordion";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { FlowDiagram } from "@/components/Diagrams";
+import { site } from "@/lib/site";
 import { panelColours, serviceVisuals } from "@/components/home/visuals";
 import { serviceDetail } from "@/lib/content";
 import { services } from "@/lib/site";
@@ -33,6 +35,19 @@ export default async function ServicePage({ params }: Params) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: s.title,
+            description: s.body,
+            provider: { "@type": "Organization", name: site.name, url: site.url },
+            areaServed: ["US", "Gulf", "Europe"],
+          }),
+        }}
+      />
       <PageHeader eyebrow={`Service ${s.n}`} title={s.title} lead={s.body} />
 
       <div className="frame border-t hair">
@@ -46,16 +61,11 @@ export default async function ServicePage({ params }: Params) {
           </div>
         </section>
 
-        <section data-reveal className="grid gap-8 border-b hair px-4 py-12 md:grid-cols-[1fr_2fr] md:px-10">
-          <h2 className="head">How a call flows</h2>
-          <ol className="space-y-3">
-            {d.flow.map((step, n) => (
-              <li key={step} className="flex gap-4 rounded-xl border hair bg-paper p-4">
-                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-ink text-xs font-semibold text-paper">{n + 1}</span>
-                <span>{step}</span>
-              </li>
-            ))}
-          </ol>
+        <section className="border-b hair px-4 py-12 md:px-10">
+          <h2 data-reveal className="head">How a call flows</h2>
+          <div className="mt-8">
+            <FlowDiagram steps={d.flow} />
+          </div>
         </section>
 
         <section data-reveal className="grid gap-8 border-b hair px-4 py-12 md:grid-cols-[1fr_2fr] md:px-10">

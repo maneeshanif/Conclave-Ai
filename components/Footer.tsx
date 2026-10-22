@@ -2,6 +2,7 @@ import Link from "next/link";
 import { services, site } from "@/lib/site";
 import { studio } from "@/lib/content";
 import { Logo } from "./Logo";
+import { NewsletterForm } from "./NewsletterForm";
 
 const columns: { title: string; links: [string, string][] }[] = [
   { title: "Services", links: services.map((s) => [s.short, `/services/${s.slug}`]) },
@@ -69,6 +70,9 @@ export function Footer() {
           <p className="mt-3 text-sm text-steel">
             {site.city}, serving {site.serving}.
           </p>
+          <div className="mt-8">
+            <NewsletterForm />
+          </div>
         </div>
         {columns.map((c) => (
           <nav key={c.title} aria-label={c.title}>

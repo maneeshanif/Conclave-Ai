@@ -61,6 +61,8 @@ const PAGES = [
   { slug: "compare", route: "/compare", title: "Compare", file: "app/compare/page.tsx" },
   { slug: "receipts", route: "/receipts", title: "Receipts", file: "app/receipts/page.tsx" },
   { slug: "notes", route: "/notes", title: "Notes", file: "app/notes/page.tsx" },
+  { slug: "note", route: "/notes/missed-call-cost", title: "Note (post)", file: "app/notes/[slug]/page.tsx" },
+  { slug: "roadmap", route: "/roadmap", title: "Roadmap", file: "app/roadmap/page.tsx" },
   { slug: "privacy", route: "/privacy", title: "Privacy", file: "app/privacy/page.tsx" },
   { slug: "terms", route: "/terms", title: "Terms", file: "app/terms/page.tsx" },
   { slug: "not-found", route: "/no-such-page", title: "404", file: "app/not-found.tsx" },
