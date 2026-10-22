@@ -1,0 +1,40 @@
+{
+  "url": "https://immersive-g.com/",
+  "title": "Immersive Garden",
+  "sections": [
+    {
+      "file": "scroll-00.png",
+      "scrollY": 0,
+      "headings": [
+        ""
+      ]
+    },
+    {
+      "file": "scroll-01.png",
+      "scrollY": 700,
+      "headings": [
+        ""
+      ]
+    }
+  ],
+  "hovers": [
+    {
+      "file": "hover-00.png",
+      "label": "See all projects"
+    }
+  ],
+  "pageHeight": 900,
+  "stack": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "lenis": true,
+    "three": false,
+    "videos": 0,
+    "canvases": 12,
+    "fonts": [
+      "PSTimes"
+    ],
+    "navPosition": "absolute",
+    "cursorHidden": "auto"
+  }
+}

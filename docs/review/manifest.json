@@ -1,0 +1,2307 @@
+[
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "app/page.tsx",
+    "id": "home/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/home/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 9354
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "app/page.tsx",
+    "id": "home/desktop/01-hero",
+    "kind": "section",
+    "name": "hero",
+    "heading": "Agentsconvened.",
+    "source": [
+      "components/home/sections.tsx (Hero), components/home/visuals.tsx (HeroScene)"
+    ],
+    "file": "shots/home/desktop/01-hero.jpg",
+    "width": 1440,
+    "height": 828
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "app/page.tsx",
+    "id": "home/desktop/02-live-agent",
+    "kind": "section",
+    "name": "live-agent",
+    "heading": "Talk to Aria yourself",
+    "source": [
+      "components/home/sections.tsx (LiveAgent), components/home/AriaWindow.tsx"
+    ],
+    "file": "shots/home/desktop/02-live-agent.jpg",
+    "width": 1440,
+    "height": 539
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "app/page.tsx",
+    "id": "home/desktop/03-proof",
+    "kind": "section",
+    "name": "proof",
+    "heading": "OpenAI STACK Vapi Supabase Next.js FastAPI Cal.c",
+    "source": [
+      "components/home/sections.tsx (Proof)"
+    ],
+    "file": "shots/home/desktop/03-proof.jpg",
+    "width": 1440,
+    "height": 288
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "app/page.tsx",
+    "id": "home/desktop/04-services",
+    "kind": "section",
+    "name": "services",
+    "heading": "From the first ring to the booked slot, one agen plus 5 more",
+    "source": [
+      "components/home/sections.tsx (Services), components/home/visuals.tsx (service mock-ups)"
+    ],
+    "file": "shots/home/desktop/04-services.jpg",
+    "width": 1440,
+    "height": 2375
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "app/page.tsx",
+    "id": "home/desktop/05-built-for",
+    "kind": "section",
+    "name": "built-for",
+    "heading": "Made for teams who live on the phone",
+    "source": [
+      "components/home/sections.tsx (BuiltFor), components/home/visuals.tsx (PersonaFigure)"
+    ],
+    "file": "shots/home/desktop/05-built-for.jpg",
+    "width": 1440,
+    "height": 532
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "app/page.tsx",
+    "id": "home/desktop/06-work",
+    "kind": "section",
+    "name": "work",
+    "heading": "Selected builds, outcome first plus 3 more",
+    "source": [
+      "components/home/sections.tsx (WorkReel), lib/projects.ts"
+    ],
+    "file": "shots/home/desktop/06-work.jpg",
+    "width": 1440,
+    "height": 1048
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "app/page.tsx",
+    "id": "home/desktop/07-manifesto",
+    "kind": "section",
+    "name": "manifesto",
+    "heading": "MANIFESTO A conclave is a closed room where a sm",
+    "source": [
+      "components/home/sections.tsx (Manifesto)"
+    ],
+    "file": "shots/home/desktop/07-manifesto.jpg",
+    "width": 1440,
+    "height": 609
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "app/page.tsx",
+    "id": "home/desktop/08-process",
+    "kind": "section",
+    "name": "process",
+    "heading": "Three steps, no surprises plus 3 more",
+    "source": [
+      "components/home/sections.tsx (Process)"
+    ],
+    "file": "shots/home/desktop/08-process.jpg",
+    "width": 1440,
+    "height": 489
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "app/page.tsx",
+    "id": "home/desktop/09-demos",
+    "kind": "section",
+    "name": "demos",
+    "heading": "Try it before you talk to us",
+    "source": [
+      "components/home/sections.tsx (DemosTeaser)"
+    ],
+    "file": "shots/home/desktop/09-demos.jpg",
+    "width": 1440,
+    "height": 596
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "app/page.tsx",
+    "id": "home/desktop/10-pricing",
+    "kind": "section",
+    "name": "pricing",
+    "heading": "Start small, scale when it works plus 3 more",
+    "source": [
+      "components/home/sections.tsx (PricingTeaser)"
+    ],
+    "file": "shots/home/desktop/10-pricing.jpg",
+    "width": 1440,
+    "height": 603
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "app/page.tsx",
+    "id": "home/desktop/11-faq",
+    "kind": "section",
+    "name": "faq",
+    "heading": "Frequently asked questions",
+    "source": [
+      "components/home/sections.tsx (Faq)"
+    ],
+    "file": "shots/home/desktop/11-faq.jpg",
+    "width": 1440,
+    "height": 334
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "app/page.tsx",
+    "id": "home/desktop/12-final-cta",
+    "kind": "section",
+    "name": "final-cta",
+    "heading": "Hear it.Then book it.",
+    "source": [
+      "components/home/sections.tsx (FinalCta)"
+    ],
+    "file": "shots/home/desktop/12-final-cta.jpg",
+    "width": 1440,
+    "height": 631
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "app/page.tsx",
+    "id": "home/desktop/13-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/home/desktop/13-footer.jpg",
+    "width": 1440,
+    "height": 557
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "desktop",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/services/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 4059
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "desktop",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/desktop/01-five-jobs-one-agent-each",
+    "kind": "section",
+    "name": "Five jobs. One agent each.",
+    "heading": "Five jobs. One agent each.",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/desktop/01-five-jobs-one-agent-each.jpg",
+    "width": 1280,
+    "height": 621
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "desktop",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/desktop/02-voice-agents-that-answer-every-call",
+    "kind": "section",
+    "name": "Voice agents that answer every call",
+    "heading": "Voice agents that answer every call",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/desktop/02-voice-agents-that-answer-every-call.jpg",
+    "width": 1198,
+    "height": 594
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "desktop",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/desktop/03-follow-up-in-seconds-not-days",
+    "kind": "section",
+    "name": "Follow-up in seconds, not days",
+    "heading": "Follow-up in seconds, not days",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/desktop/03-follow-up-in-seconds-not-days.jpg",
+    "width": 1198,
+    "height": 465
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "desktop",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/desktop/04-bookings-straight-into-your-calendar",
+    "kind": "section",
+    "name": "Bookings straight into your calendar",
+    "heading": "Bookings straight into your calendar",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/desktop/04-bookings-straight-into-your-calendar.jpg",
+    "width": 1198,
+    "height": 530
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "desktop",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/desktop/05-reactivation-of-lapsed-customers",
+    "kind": "section",
+    "name": "Reactivation of lapsed customers",
+    "heading": "Reactivation of lapsed customers",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/desktop/05-reactivation-of-lapsed-customers.jpg",
+    "width": 1198,
+    "height": 530
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "desktop",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/desktop/06-reporting-you-can-read-in-a-minute",
+    "kind": "section",
+    "name": "Reporting you can read in a minute",
+    "heading": "Reporting you can read in a minute",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/desktop/06-reporting-you-can-read-in-a-minute.jpg",
+    "width": 1198,
+    "height": 530
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "desktop",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/desktop/07-need-a-custom-ai-agent-or-a-full-stack-w",
+    "kind": "section",
+    "name": "Need a custom AI agent or a full-stack web app? ",
+    "heading": "Need a custom AI agent or a full-stack web app? ",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/desktop/07-need-a-custom-ai-agent-or-a-full-stack-w.jpg",
+    "width": 1198,
+    "height": 75
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "desktop",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/desktop/08-book-a-call",
+    "kind": "section",
+    "name": "Book a call",
+    "heading": "Book a call",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/desktop/08-book-a-call.jpg",
+    "width": 112,
+    "height": 45
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "desktop",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/desktop/09-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/services/desktop/09-footer.jpg",
+    "width": 1440,
+    "height": 557
+  },
+  {
+    "page": "work",
+    "pageTitle": "Work",
+    "route": "/work",
+    "viewport": "desktop",
+    "pageFile": "app/work/page.tsx",
+    "id": "work/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2384
+  },
+  {
+    "page": "work",
+    "pageTitle": "Work",
+    "route": "/work",
+    "viewport": "desktop",
+    "pageFile": "app/work/page.tsx",
+    "id": "work/desktop/01-built-shipped-running",
+    "kind": "section",
+    "name": "Built, shipped, running.",
+    "heading": "Built, shipped, running.",
+    "source": [
+      "app/work/page.tsx"
+    ],
+    "file": "shots/work/desktop/01-built-shipped-running.jpg",
+    "width": 1280,
+    "height": 536
+  },
+  {
+    "page": "work",
+    "pageTitle": "Work",
+    "route": "/work",
+    "viewport": "desktop",
+    "pageFile": "app/work/page.tsx",
+    "id": "work/desktop/02-bazar-flow-plus-3-more",
+    "kind": "section",
+    "name": "Bazar Flow plus 3 more",
+    "heading": "Bazar Flow plus 3 more",
+    "source": [
+      "app/work/page.tsx"
+    ],
+    "file": "shots/work/desktop/02-bazar-flow-plus-3-more.jpg",
+    "width": 1280,
+    "height": 1294
+  },
+  {
+    "page": "work",
+    "pageTitle": "Work",
+    "route": "/work",
+    "viewport": "desktop",
+    "pageFile": "app/work/page.tsx",
+    "id": "work/desktop/03-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/work/desktop/03-footer.jpg",
+    "width": 1440,
+    "height": 557
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work-detail/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2327
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/01-bazar-flow",
+    "kind": "section",
+    "name": "Bazar Flow",
+    "heading": "Bazar Flow",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/desktop/01-bazar-flow.jpg",
+    "width": 1280,
+    "height": 446
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/02-project-hero-video-placeholder",
+    "kind": "section",
+    "name": "Project hero video placeholder",
+    "heading": "Project hero video placeholder",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/desktop/02-project-hero-video-placeholder.jpg",
+    "width": 1198,
+    "height": 675
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/03-the-problem",
+    "kind": "section",
+    "name": "The problem",
+    "heading": "The problem",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/desktop/03-the-problem.jpg",
+    "width": 1198,
+    "height": 124
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/04-the-solution",
+    "kind": "section",
+    "name": "The solution",
+    "heading": "The solution",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/desktop/04-the-solution.jpg",
+    "width": 1198,
+    "height": 123
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/05-architecture",
+    "kind": "section",
+    "name": "Architecture",
+    "heading": "Architecture",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/desktop/05-architecture.jpg",
+    "width": 1198,
+    "height": 124
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/06-results",
+    "kind": "section",
+    "name": "Results",
+    "heading": "Results",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/desktop/06-results.jpg",
+    "width": 1198,
+    "height": 124
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/07-book-a-call-nextcodenexus-ai",
+    "kind": "section",
+    "name": "Book a call NEXTCODENEXUS AI",
+    "heading": "Book a call NEXTCODENEXUS AI",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/desktop/07-book-a-call-nextcodenexus-ai.jpg",
+    "width": 1198,
+    "height": 162
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/08-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/work-detail/desktop/08-footer.jpg",
+    "width": 1440,
+    "height": 556
+  },
+  {
+    "page": "demos",
+    "pageTitle": "Demos",
+    "route": "/demos",
+    "viewport": "desktop",
+    "pageFile": "app/demos/page.tsx",
+    "id": "demos/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/demos/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/demos/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 1532
+  },
+  {
+    "page": "demos",
+    "pageTitle": "Demos",
+    "route": "/demos",
+    "viewport": "desktop",
+    "pageFile": "app/demos/page.tsx",
+    "id": "demos/desktop/01-try-it-don-t-take-our-word",
+    "kind": "section",
+    "name": "Try it, don't take our word.",
+    "heading": "Try it, don't take our word.",
+    "source": [
+      "app/demos/page.tsx"
+    ],
+    "file": "shots/demos/desktop/01-try-it-don-t-take-our-word.jpg",
+    "width": 1280,
+    "height": 536
+  },
+  {
+    "page": "demos",
+    "pageTitle": "Demos",
+    "route": "/demos",
+    "viewport": "desktop",
+    "pageFile": "app/demos/page.tsx",
+    "id": "demos/desktop/02-live-voice-agent-plus-1-more",
+    "kind": "section",
+    "name": "Live voice agent. plus 1 more",
+    "heading": "Live voice agent. plus 1 more",
+    "source": [
+      "app/demos/page.tsx"
+    ],
+    "file": "shots/demos/desktop/02-live-voice-agent-plus-1-more.jpg",
+    "width": 1280,
+    "height": 442
+  },
+  {
+    "page": "demos",
+    "pageTitle": "Demos",
+    "route": "/demos",
+    "viewport": "desktop",
+    "pageFile": "app/demos/page.tsx",
+    "id": "demos/desktop/03-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/demos/desktop/03-footer.jpg",
+    "width": 1440,
+    "height": 556
+  },
+  {
+    "page": "about",
+    "pageTitle": "About",
+    "route": "/about",
+    "viewport": "desktop",
+    "pageFile": "app/about/page.tsx",
+    "id": "about/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/about/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/about/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 1433
+  },
+  {
+    "page": "about",
+    "pageTitle": "About",
+    "route": "/about",
+    "viewport": "desktop",
+    "pageFile": "app/about/page.tsx",
+    "id": "about/desktop/01-agents-convened",
+    "kind": "section",
+    "name": "Agents, convened.",
+    "heading": "Agents, convened.",
+    "source": [
+      "app/about/page.tsx"
+    ],
+    "file": "shots/about/desktop/01-agents-convened.jpg",
+    "width": 1280,
+    "height": 495
+  },
+  {
+    "page": "about",
+    "pageTitle": "About",
+    "route": "/about",
+    "viewport": "desktop",
+    "pageFile": "app/about/page.tsx",
+    "id": "about/desktop/02-fixed-scope-plus-2-more",
+    "kind": "section",
+    "name": "Fixed scope plus 2 more",
+    "heading": "Fixed scope plus 2 more",
+    "source": [
+      "app/about/page.tsx"
+    ],
+    "file": "shots/about/desktop/02-fixed-scope-plus-2-more.jpg",
+    "width": 1280,
+    "height": 384
+  },
+  {
+    "page": "about",
+    "pageTitle": "About",
+    "route": "/about",
+    "viewport": "desktop",
+    "pageFile": "app/about/page.tsx",
+    "id": "about/desktop/03-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/about/desktop/03-footer.jpg",
+    "width": 1440,
+    "height": 557
+  },
+  {
+    "page": "pricing",
+    "pageTitle": "Pricing",
+    "route": "/pricing",
+    "viewport": "desktop",
+    "pageFile": "app/pricing/page.tsx",
+    "id": "pricing/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/pricing/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/pricing/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 1499
+  },
+  {
+    "page": "pricing",
+    "pageTitle": "Pricing",
+    "route": "/pricing",
+    "viewport": "desktop",
+    "pageFile": "app/pricing/page.tsx",
+    "id": "pricing/desktop/01-pilot-build-retainer",
+    "kind": "section",
+    "name": "Pilot, Build, Retainer.",
+    "heading": "Pilot, Build, Retainer.",
+    "source": [
+      "app/pricing/page.tsx"
+    ],
+    "file": "shots/pricing/desktop/01-pilot-build-retainer.jpg",
+    "width": 1280,
+    "height": 495
+  },
+  {
+    "page": "pricing",
+    "pageTitle": "Pricing",
+    "route": "/pricing",
+    "viewport": "desktop",
+    "pageFile": "app/pricing/page.tsx",
+    "id": "pricing/desktop/02-pilot-plus-2-more",
+    "kind": "section",
+    "name": "Pilot plus 2 more",
+    "heading": "Pilot plus 2 more",
+    "source": [
+      "app/pricing/page.tsx"
+    ],
+    "file": "shots/pricing/desktop/02-pilot-plus-2-more.jpg",
+    "width": 1280,
+    "height": 449
+  },
+  {
+    "page": "pricing",
+    "pageTitle": "Pricing",
+    "route": "/pricing",
+    "viewport": "desktop",
+    "pageFile": "app/pricing/page.tsx",
+    "id": "pricing/desktop/03-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/pricing/desktop/03-footer.jpg",
+    "width": 1440,
+    "height": 557
+  },
+  {
+    "page": "contact",
+    "pageTitle": "Contact",
+    "route": "/contact",
+    "viewport": "desktop",
+    "pageFile": "app/contact/page.tsx",
+    "id": "contact/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/contact/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/contact/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 1348
+  },
+  {
+    "page": "contact",
+    "pageTitle": "Contact",
+    "route": "/contact",
+    "viewport": "desktop",
+    "pageFile": "app/contact/page.tsx",
+    "id": "contact/desktop/01-let-s-talk",
+    "kind": "section",
+    "name": "Let's talk",
+    "heading": "Let's talk",
+    "source": [
+      "app/contact/page.tsx"
+    ],
+    "file": "shots/contact/desktop/01-let-s-talk.jpg",
+    "width": 1280,
+    "height": 792
+  },
+  {
+    "page": "contact",
+    "pageTitle": "Contact",
+    "route": "/contact",
+    "viewport": "desktop",
+    "pageFile": "app/contact/page.tsx",
+    "id": "contact/desktop/02-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/contact/desktop/02-footer.jpg",
+    "width": 1440,
+    "height": 557
+  },
+  {
+    "page": "privacy",
+    "pageTitle": "Privacy",
+    "route": "/privacy",
+    "viewport": "desktop",
+    "pageFile": "app/privacy/page.tsx",
+    "id": "privacy/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/privacy/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/privacy/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 1022
+  },
+  {
+    "page": "privacy",
+    "pageTitle": "Privacy",
+    "route": "/privacy",
+    "viewport": "desktop",
+    "pageFile": "app/privacy/page.tsx",
+    "id": "privacy/desktop/01-privacy",
+    "kind": "section",
+    "name": "Privacy",
+    "heading": "Privacy",
+    "source": [
+      "app/privacy/page.tsx"
+    ],
+    "file": "shots/privacy/desktop/01-privacy.jpg",
+    "width": 1280,
+    "height": 345
+  },
+  {
+    "page": "privacy",
+    "pageTitle": "Privacy",
+    "route": "/privacy",
+    "viewport": "desktop",
+    "pageFile": "app/privacy/page.tsx",
+    "id": "privacy/desktop/02-text-to-be-added-before-launch",
+    "kind": "section",
+    "name": "Text to be added before launch.",
+    "heading": "Text to be added before launch.",
+    "source": [
+      "app/privacy/page.tsx"
+    ],
+    "file": "shots/privacy/desktop/02-text-to-be-added-before-launch.jpg",
+    "width": 1280,
+    "height": 122
+  },
+  {
+    "page": "privacy",
+    "pageTitle": "Privacy",
+    "route": "/privacy",
+    "viewport": "desktop",
+    "pageFile": "app/privacy/page.tsx",
+    "id": "privacy/desktop/03-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/privacy/desktop/03-footer.jpg",
+    "width": 1440,
+    "height": 557
+  },
+  {
+    "page": "terms",
+    "pageTitle": "Terms",
+    "route": "/terms",
+    "viewport": "desktop",
+    "pageFile": "app/terms/page.tsx",
+    "id": "terms/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/terms/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/terms/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 1022
+  },
+  {
+    "page": "terms",
+    "pageTitle": "Terms",
+    "route": "/terms",
+    "viewport": "desktop",
+    "pageFile": "app/terms/page.tsx",
+    "id": "terms/desktop/01-terms",
+    "kind": "section",
+    "name": "Terms",
+    "heading": "Terms",
+    "source": [
+      "app/terms/page.tsx"
+    ],
+    "file": "shots/terms/desktop/01-terms.jpg",
+    "width": 1280,
+    "height": 345
+  },
+  {
+    "page": "terms",
+    "pageTitle": "Terms",
+    "route": "/terms",
+    "viewport": "desktop",
+    "pageFile": "app/terms/page.tsx",
+    "id": "terms/desktop/02-text-to-be-added-before-launch",
+    "kind": "section",
+    "name": "Text to be added before launch.",
+    "heading": "Text to be added before launch.",
+    "source": [
+      "app/terms/page.tsx"
+    ],
+    "file": "shots/terms/desktop/02-text-to-be-added-before-launch.jpg",
+    "width": 1280,
+    "height": 122
+  },
+  {
+    "page": "terms",
+    "pageTitle": "Terms",
+    "route": "/terms",
+    "viewport": "desktop",
+    "pageFile": "app/terms/page.tsx",
+    "id": "terms/desktop/03-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/terms/desktop/03-footer.jpg",
+    "width": 1440,
+    "height": 557
+  },
+  {
+    "page": "not-found",
+    "pageTitle": "404",
+    "route": "/no-such-page",
+    "viewport": "desktop",
+    "pageFile": "app/not-found.tsx",
+    "id": "not-found/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/not-found.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/not-found/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 1115
+  },
+  {
+    "page": "not-found",
+    "pageTitle": "404",
+    "route": "/no-such-page",
+    "viewport": "desktop",
+    "pageFile": "app/not-found.tsx",
+    "id": "not-found/desktop/01-nothing-here",
+    "kind": "section",
+    "name": "Nothing here.",
+    "heading": "Nothing here.",
+    "source": [
+      "app/not-found.tsx"
+    ],
+    "file": "shots/not-found/desktop/01-nothing-here.jpg",
+    "width": 1280,
+    "height": 559
+  },
+  {
+    "page": "not-found",
+    "pageTitle": "404",
+    "route": "/no-such-page",
+    "viewport": "desktop",
+    "pageFile": "app/not-found.tsx",
+    "id": "not-found/desktop/02-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/not-found/desktop/02-footer.jpg",
+    "width": 1440,
+    "height": 557
+  },
+  {
+    "page": "states",
+    "pageTitle": "Interactive states",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "components",
+    "id": "states/desktop/aria-tab-answer-calls",
+    "kind": "state",
+    "name": "Aria window, tab \"Answer calls\"",
+    "source": [
+      "components/home/AriaWindow.tsx"
+    ],
+    "file": "shots/states/desktop/01-aria-tab-answer-calls.jpg",
+    "width": 1440,
+    "height": 539
+  },
+  {
+    "page": "states",
+    "pageTitle": "Interactive states",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "components",
+    "id": "states/desktop/aria-tab-follow-up-fast",
+    "kind": "state",
+    "name": "Aria window, tab \"Follow up fast\"",
+    "source": [
+      "components/home/AriaWindow.tsx"
+    ],
+    "file": "shots/states/desktop/02-aria-tab-follow-up-fast.jpg",
+    "width": 1440,
+    "height": 539
+  },
+  {
+    "page": "states",
+    "pageTitle": "Interactive states",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "components",
+    "id": "states/desktop/aria-tab-book-the-slot",
+    "kind": "state",
+    "name": "Aria window, tab \"Book the slot\"",
+    "source": [
+      "components/home/AriaWindow.tsx"
+    ],
+    "file": "shots/states/desktop/03-aria-tab-book-the-slot.jpg",
+    "width": 1440,
+    "height": 539
+  },
+  {
+    "page": "states",
+    "pageTitle": "Interactive states",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "components",
+    "id": "states/desktop/aria-tab-win-back",
+    "kind": "state",
+    "name": "Aria window, tab \"Win back\"",
+    "source": [
+      "components/home/AriaWindow.tsx"
+    ],
+    "file": "shots/states/desktop/04-aria-tab-win-back.jpg",
+    "width": 1440,
+    "height": 539
+  },
+  {
+    "page": "states",
+    "pageTitle": "Interactive states",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "components",
+    "id": "states/desktop/command-palette",
+    "kind": "state",
+    "name": "Command palette (Ctrl+K)",
+    "source": [
+      "components/CommandPalette.tsx"
+    ],
+    "file": "shots/states/desktop/05-command-palette.jpg",
+    "width": 1440,
+    "height": 900
+  },
+  {
+    "page": "states",
+    "pageTitle": "Interactive states",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "components",
+    "id": "states/desktop/nav-hover",
+    "kind": "state",
+    "name": "Nav item hover",
+    "source": [
+      "components/Navbar.tsx"
+    ],
+    "file": "shots/states/desktop/06-nav-hover.jpg",
+    "width": 1440,
+    "height": 110
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/home/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 28866
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/01-hero",
+    "kind": "section",
+    "name": "hero",
+    "heading": "Agentsconvened.",
+    "source": [
+      "components/home/sections.tsx (Hero), components/home/visuals.tsx (HeroScene)"
+    ],
+    "file": "shots/home/mobile/01-hero.jpg",
+    "width": 780,
+    "height": 1554
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/02-live-agent",
+    "kind": "section",
+    "name": "live-agent",
+    "heading": "Talk to Aria yourself",
+    "source": [
+      "components/home/sections.tsx (LiveAgent), components/home/AriaWindow.tsx"
+    ],
+    "file": "shots/home/mobile/02-live-agent.jpg",
+    "width": 780,
+    "height": 2040
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/03-proof",
+    "kind": "section",
+    "name": "proof",
+    "heading": "OpenAI STACK Vapi Supabase Next.js FastAPI Cal.c",
+    "source": [
+      "components/home/sections.tsx (Proof)"
+    ],
+    "file": "shots/home/mobile/03-proof.jpg",
+    "width": 780,
+    "height": 1016
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/04-services",
+    "kind": "section",
+    "name": "services",
+    "heading": "From the first ring to the booked slot, one agen plus 5 more",
+    "source": [
+      "components/home/sections.tsx (Services), components/home/visuals.tsx (service mock-ups)"
+    ],
+    "file": "shots/home/mobile/04-services.jpg",
+    "width": 780,
+    "height": 6936
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/05-built-for",
+    "kind": "section",
+    "name": "built-for",
+    "heading": "Made for teams who live on the phone",
+    "source": [
+      "components/home/sections.tsx (BuiltFor), components/home/visuals.tsx (PersonaFigure)"
+    ],
+    "file": "shots/home/mobile/05-built-for.jpg",
+    "width": 780,
+    "height": 1602
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/06-work",
+    "kind": "section",
+    "name": "work",
+    "heading": "Selected builds, outcome first plus 3 more",
+    "source": [
+      "components/home/sections.tsx (WorkReel), lib/projects.ts"
+    ],
+    "file": "shots/home/mobile/06-work.jpg",
+    "width": 780,
+    "height": 4486
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/07-manifesto",
+    "kind": "section",
+    "name": "manifesto",
+    "heading": "MANIFESTO A conclave is a closed room where a sm",
+    "source": [
+      "components/home/sections.tsx (Manifesto)"
+    ],
+    "file": "shots/home/mobile/07-manifesto.jpg",
+    "width": 780,
+    "height": 948
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/08-process",
+    "kind": "section",
+    "name": "process",
+    "heading": "Three steps, no surprises plus 3 more",
+    "source": [
+      "components/home/sections.tsx (Process)"
+    ],
+    "file": "shots/home/mobile/08-process.jpg",
+    "width": 780,
+    "height": 1718
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/09-demos",
+    "kind": "section",
+    "name": "demos",
+    "heading": "Try it before you talk to us",
+    "source": [
+      "components/home/sections.tsx (DemosTeaser)"
+    ],
+    "file": "shots/home/mobile/09-demos.jpg",
+    "width": 780,
+    "height": 1796
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/10-pricing",
+    "kind": "section",
+    "name": "pricing",
+    "heading": "Start small, scale when it works plus 3 more",
+    "source": [
+      "components/home/sections.tsx (PricingTeaser)"
+    ],
+    "file": "shots/home/mobile/10-pricing.jpg",
+    "width": 780,
+    "height": 2446
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/11-faq",
+    "kind": "section",
+    "name": "faq",
+    "heading": "Frequently asked questions",
+    "source": [
+      "components/home/sections.tsx (Faq)"
+    ],
+    "file": "shots/home/mobile/11-faq.jpg",
+    "width": 780,
+    "height": 1104
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/12-final-cta",
+    "kind": "section",
+    "name": "final-cta",
+    "heading": "Hear it.Then book it.",
+    "source": [
+      "components/home/sections.tsx (FinalCta)"
+    ],
+    "file": "shots/home/mobile/12-final-cta.jpg",
+    "width": 780,
+    "height": 1184
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/13-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/home/mobile/13-footer.jpg",
+    "width": 780,
+    "height": 2188
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "mobile",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/services/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 9978
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "mobile",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/mobile/01-five-jobs-one-agent-each",
+    "kind": "section",
+    "name": "Five jobs. One agent each.",
+    "heading": "Five jobs. One agent each.",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/mobile/01-five-jobs-one-agent-each.jpg",
+    "width": 780,
+    "height": 814
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "mobile",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/mobile/02-voice-agents-that-answer-every-call",
+    "kind": "section",
+    "name": "Voice agents that answer every call",
+    "heading": "Voice agents that answer every call",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/mobile/02-voice-agents-that-answer-every-call.jpg",
+    "width": 712,
+    "height": 1338
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "mobile",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/mobile/03-follow-up-in-seconds-not-days",
+    "kind": "section",
+    "name": "Follow-up in seconds, not days",
+    "heading": "Follow-up in seconds, not days",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/mobile/03-follow-up-in-seconds-not-days.jpg",
+    "width": 712,
+    "height": 1280
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "mobile",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/mobile/04-bookings-straight-into-your-calendar",
+    "kind": "section",
+    "name": "Bookings straight into your calendar",
+    "heading": "Bookings straight into your calendar",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/mobile/04-bookings-straight-into-your-calendar.jpg",
+    "width": 712,
+    "height": 1306
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "mobile",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/mobile/05-reactivation-of-lapsed-customers",
+    "kind": "section",
+    "name": "Reactivation of lapsed customers",
+    "heading": "Reactivation of lapsed customers",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/mobile/05-reactivation-of-lapsed-customers.jpg",
+    "width": 712,
+    "height": 1268
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "mobile",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/mobile/06-reporting-you-can-read-in-a-minute",
+    "kind": "section",
+    "name": "Reporting you can read in a minute",
+    "heading": "Reporting you can read in a minute",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/mobile/06-reporting-you-can-read-in-a-minute.jpg",
+    "width": 712,
+    "height": 1268
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "mobile",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/mobile/07-need-a-custom-ai-agent-or-a-full-stack-w",
+    "kind": "section",
+    "name": "Need a custom AI agent or a full-stack web app? ",
+    "heading": "Need a custom AI agent or a full-stack web app? ",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/mobile/07-need-a-custom-ai-agent-or-a-full-stack-w.jpg",
+    "width": 712,
+    "height": 202
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "mobile",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/mobile/08-book-a-call",
+    "kind": "section",
+    "name": "Book a call",
+    "heading": "Book a call",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/mobile/08-book-a-call.jpg",
+    "width": 224,
+    "height": 90
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "mobile",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/mobile/09-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/services/mobile/09-footer.jpg",
+    "width": 780,
+    "height": 2188
+  },
+  {
+    "page": "work",
+    "pageTitle": "Work",
+    "route": "/work",
+    "viewport": "mobile",
+    "pageFile": "app/work/page.tsx",
+    "id": "work/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 6296
+  },
+  {
+    "page": "work",
+    "pageTitle": "Work",
+    "route": "/work",
+    "viewport": "mobile",
+    "pageFile": "app/work/page.tsx",
+    "id": "work/mobile/01-built-shipped-running",
+    "kind": "section",
+    "name": "Built, shipped, running.",
+    "heading": "Built, shipped, running.",
+    "source": [
+      "app/work/page.tsx"
+    ],
+    "file": "shots/work/mobile/01-built-shipped-running.jpg",
+    "width": 780,
+    "height": 658
+  },
+  {
+    "page": "work",
+    "pageTitle": "Work",
+    "route": "/work",
+    "viewport": "mobile",
+    "pageFile": "app/work/page.tsx",
+    "id": "work/mobile/02-project-types",
+    "kind": "section",
+    "name": "Project types",
+    "heading": "Project types",
+    "source": [
+      "app/work/page.tsx"
+    ],
+    "file": "shots/work/mobile/02-project-types.jpg",
+    "width": 712,
+    "height": 158
+  },
+  {
+    "page": "work",
+    "pageTitle": "Work",
+    "route": "/work",
+    "viewport": "mobile",
+    "pageFile": "app/work/page.tsx",
+    "id": "work/mobile/03-bazar-flow-plus-3-more",
+    "kind": "section",
+    "name": "Bazar Flow plus 3 more",
+    "heading": "Bazar Flow plus 3 more",
+    "source": [
+      "app/work/page.tsx"
+    ],
+    "file": "shots/work/mobile/03-bazar-flow-plus-3-more.jpg",
+    "width": 712,
+    "height": 3044
+  },
+  {
+    "page": "work",
+    "pageTitle": "Work",
+    "route": "/work",
+    "viewport": "mobile",
+    "pageFile": "app/work/page.tsx",
+    "id": "work/mobile/04-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/work/mobile/04-footer.jpg",
+    "width": 780,
+    "height": 2188
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work-detail/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 5038
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/mobile/01-bazar-flow",
+    "kind": "section",
+    "name": "Bazar Flow",
+    "heading": "Bazar Flow",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/mobile/01-bazar-flow.jpg",
+    "width": 780,
+    "height": 748
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/mobile/02-project-hero-video-placeholder",
+    "kind": "section",
+    "name": "Project hero video placeholder",
+    "heading": "Project hero video placeholder",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/mobile/02-project-hero-video-placeholder.jpg",
+    "width": 712,
+    "height": 402
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/mobile/03-the-problem",
+    "kind": "section",
+    "name": "The problem",
+    "heading": "The problem",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/mobile/03-the-problem.jpg",
+    "width": 712,
+    "height": 334
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/mobile/04-the-solution",
+    "kind": "section",
+    "name": "The solution",
+    "heading": "The solution",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/mobile/04-the-solution.jpg",
+    "width": 712,
+    "height": 334
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/mobile/05-architecture",
+    "kind": "section",
+    "name": "Architecture",
+    "heading": "Architecture",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/mobile/05-architecture.jpg",
+    "width": 712,
+    "height": 332
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/mobile/06-results",
+    "kind": "section",
+    "name": "Results",
+    "heading": "Results",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/mobile/06-results.jpg",
+    "width": 712,
+    "height": 334
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/mobile/07-book-a-call-nextcodenexus-ai",
+    "kind": "section",
+    "name": "Book a call NEXTCODENEXUS AI",
+    "heading": "Book a call NEXTCODENEXUS AI",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/mobile/07-book-a-call-nextcodenexus-ai.jpg",
+    "width": 712,
+    "height": 380
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project detail",
+    "route": "/work/bazar-flow",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/mobile/08-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/work-detail/mobile/08-footer.jpg",
+    "width": 780,
+    "height": 2188
+  },
+  {
+    "page": "demos",
+    "pageTitle": "Demos",
+    "route": "/demos",
+    "viewport": "mobile",
+    "pageFile": "app/demos/page.tsx",
+    "id": "demos/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/demos/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/demos/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 3970
+  },
+  {
+    "page": "demos",
+    "pageTitle": "Demos",
+    "route": "/demos",
+    "viewport": "mobile",
+    "pageFile": "app/demos/page.tsx",
+    "id": "demos/mobile/01-try-it-don-t-take-our-word",
+    "kind": "section",
+    "name": "Try it, don't take our word.",
+    "heading": "Try it, don't take our word.",
+    "source": [
+      "app/demos/page.tsx"
+    ],
+    "file": "shots/demos/mobile/01-try-it-don-t-take-our-word.jpg",
+    "width": 780,
+    "height": 658
+  },
+  {
+    "page": "demos",
+    "pageTitle": "Demos",
+    "route": "/demos",
+    "viewport": "mobile",
+    "pageFile": "app/demos/page.tsx",
+    "id": "demos/mobile/02-live-voice-agent-plus-1-more",
+    "kind": "section",
+    "name": "Live voice agent. plus 1 more",
+    "heading": "Live voice agent. plus 1 more",
+    "source": [
+      "app/demos/page.tsx"
+    ],
+    "file": "shots/demos/mobile/02-live-voice-agent-plus-1-more.jpg",
+    "width": 780,
+    "height": 1128
+  },
+  {
+    "page": "demos",
+    "pageTitle": "Demos",
+    "route": "/demos",
+    "viewport": "mobile",
+    "pageFile": "app/demos/page.tsx",
+    "id": "demos/mobile/03-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/demos/mobile/03-footer.jpg",
+    "width": 780,
+    "height": 2188
+  },
+  {
+    "page": "about",
+    "pageTitle": "About",
+    "route": "/about",
+    "viewport": "mobile",
+    "pageFile": "app/about/page.tsx",
+    "id": "about/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/about/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/about/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 4260
+  },
+  {
+    "page": "about",
+    "pageTitle": "About",
+    "route": "/about",
+    "viewport": "mobile",
+    "pageFile": "app/about/page.tsx",
+    "id": "about/mobile/01-agents-convened",
+    "kind": "section",
+    "name": "Agents, convened.",
+    "heading": "Agents, convened.",
+    "source": [
+      "app/about/page.tsx"
+    ],
+    "file": "shots/about/mobile/01-agents-convened.jpg",
+    "width": 780,
+    "height": 760
+  },
+  {
+    "page": "about",
+    "pageTitle": "About",
+    "route": "/about",
+    "viewport": "mobile",
+    "pageFile": "app/about/page.tsx",
+    "id": "about/mobile/02-fixed-scope-plus-2-more",
+    "kind": "section",
+    "name": "Fixed scope plus 2 more",
+    "heading": "Fixed scope plus 2 more",
+    "source": [
+      "app/about/page.tsx"
+    ],
+    "file": "shots/about/mobile/02-fixed-scope-plus-2-more.jpg",
+    "width": 780,
+    "height": 1316
+  },
+  {
+    "page": "about",
+    "pageTitle": "About",
+    "route": "/about",
+    "viewport": "mobile",
+    "pageFile": "app/about/page.tsx",
+    "id": "about/mobile/03-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/about/mobile/03-footer.jpg",
+    "width": 780,
+    "height": 2188
+  },
+  {
+    "page": "pricing",
+    "pageTitle": "Pricing",
+    "route": "/pricing",
+    "viewport": "mobile",
+    "pageFile": "app/pricing/page.tsx",
+    "id": "pricing/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/pricing/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/pricing/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 5132
+  },
+  {
+    "page": "pricing",
+    "pageTitle": "Pricing",
+    "route": "/pricing",
+    "viewport": "mobile",
+    "pageFile": "app/pricing/page.tsx",
+    "id": "pricing/mobile/01-pilot-build-retainer",
+    "kind": "section",
+    "name": "Pilot, Build, Retainer.",
+    "heading": "Pilot, Build, Retainer.",
+    "source": [
+      "app/pricing/page.tsx"
+    ],
+    "file": "shots/pricing/mobile/01-pilot-build-retainer.jpg",
+    "width": 780,
+    "height": 706
+  },
+  {
+    "page": "pricing",
+    "pageTitle": "Pricing",
+    "route": "/pricing",
+    "viewport": "mobile",
+    "pageFile": "app/pricing/page.tsx",
+    "id": "pricing/mobile/02-pilot",
+    "kind": "section",
+    "name": "Pilot",
+    "heading": "Pilot",
+    "source": [
+      "app/pricing/page.tsx"
+    ],
+    "file": "shots/pricing/mobile/02-pilot.jpg",
+    "width": 712,
+    "height": 664
+  },
+  {
+    "page": "pricing",
+    "pageTitle": "Pricing",
+    "route": "/pricing",
+    "viewport": "mobile",
+    "pageFile": "app/pricing/page.tsx",
+    "id": "pricing/mobile/03-build",
+    "kind": "section",
+    "name": "Build",
+    "heading": "Build",
+    "source": [
+      "app/pricing/page.tsx"
+    ],
+    "file": "shots/pricing/mobile/03-build.jpg",
+    "width": 712,
+    "height": 664
+  },
+  {
+    "page": "pricing",
+    "pageTitle": "Pricing",
+    "route": "/pricing",
+    "viewport": "mobile",
+    "pageFile": "app/pricing/page.tsx",
+    "id": "pricing/mobile/04-retainer",
+    "kind": "section",
+    "name": "Retainer",
+    "heading": "Retainer",
+    "source": [
+      "app/pricing/page.tsx"
+    ],
+    "file": "shots/pricing/mobile/04-retainer.jpg",
+    "width": 712,
+    "height": 664
+  },
+  {
+    "page": "pricing",
+    "pageTitle": "Pricing",
+    "route": "/pricing",
+    "viewport": "mobile",
+    "pageFile": "app/pricing/page.tsx",
+    "id": "pricing/mobile/05-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/pricing/mobile/05-footer.jpg",
+    "width": 780,
+    "height": 2188
+  },
+  {
+    "page": "contact",
+    "pageTitle": "Contact",
+    "route": "/contact",
+    "viewport": "mobile",
+    "pageFile": "app/contact/page.tsx",
+    "id": "contact/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/contact/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/contact/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 3758
+  },
+  {
+    "page": "contact",
+    "pageTitle": "Contact",
+    "route": "/contact",
+    "viewport": "mobile",
+    "pageFile": "app/contact/page.tsx",
+    "id": "contact/mobile/01-let-s-talk",
+    "kind": "section",
+    "name": "Let's talk",
+    "heading": "Let's talk",
+    "source": [
+      "app/contact/page.tsx"
+    ],
+    "file": "shots/contact/mobile/01-let-s-talk.jpg",
+    "width": 780,
+    "height": 1574
+  },
+  {
+    "page": "contact",
+    "pageTitle": "Contact",
+    "route": "/contact",
+    "viewport": "mobile",
+    "pageFile": "app/contact/page.tsx",
+    "id": "contact/mobile/02-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/contact/mobile/02-footer.jpg",
+    "width": 780,
+    "height": 2188
+  },
+  {
+    "page": "privacy",
+    "pageTitle": "Privacy",
+    "route": "/privacy",
+    "viewport": "mobile",
+    "pageFile": "app/privacy/page.tsx",
+    "id": "privacy/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/privacy/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/privacy/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 2980
+  },
+  {
+    "page": "privacy",
+    "pageTitle": "Privacy",
+    "route": "/privacy",
+    "viewport": "mobile",
+    "pageFile": "app/privacy/page.tsx",
+    "id": "privacy/mobile/01-privacy",
+    "kind": "section",
+    "name": "Privacy",
+    "heading": "Privacy",
+    "source": [
+      "app/privacy/page.tsx"
+    ],
+    "file": "shots/privacy/mobile/01-privacy.jpg",
+    "width": 780,
+    "height": 552
+  },
+  {
+    "page": "privacy",
+    "pageTitle": "Privacy",
+    "route": "/privacy",
+    "viewport": "mobile",
+    "pageFile": "app/privacy/page.tsx",
+    "id": "privacy/mobile/02-text-to-be-added-before-launch",
+    "kind": "section",
+    "name": "Text to be added before launch.",
+    "heading": "Text to be added before launch.",
+    "source": [
+      "app/privacy/page.tsx"
+    ],
+    "file": "shots/privacy/mobile/02-text-to-be-added-before-launch.jpg",
+    "width": 780,
+    "height": 244
+  },
+  {
+    "page": "privacy",
+    "pageTitle": "Privacy",
+    "route": "/privacy",
+    "viewport": "mobile",
+    "pageFile": "app/privacy/page.tsx",
+    "id": "privacy/mobile/03-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/privacy/mobile/03-footer.jpg",
+    "width": 780,
+    "height": 2188
+  },
+  {
+    "page": "terms",
+    "pageTitle": "Terms",
+    "route": "/terms",
+    "viewport": "mobile",
+    "pageFile": "app/terms/page.tsx",
+    "id": "terms/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/terms/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/terms/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 2980
+  },
+  {
+    "page": "terms",
+    "pageTitle": "Terms",
+    "route": "/terms",
+    "viewport": "mobile",
+    "pageFile": "app/terms/page.tsx",
+    "id": "terms/mobile/01-terms",
+    "kind": "section",
+    "name": "Terms",
+    "heading": "Terms",
+    "source": [
+      "app/terms/page.tsx"
+    ],
+    "file": "shots/terms/mobile/01-terms.jpg",
+    "width": 780,
+    "height": 552
+  },
+  {
+    "page": "terms",
+    "pageTitle": "Terms",
+    "route": "/terms",
+    "viewport": "mobile",
+    "pageFile": "app/terms/page.tsx",
+    "id": "terms/mobile/02-text-to-be-added-before-launch",
+    "kind": "section",
+    "name": "Text to be added before launch.",
+    "heading": "Text to be added before launch.",
+    "source": [
+      "app/terms/page.tsx"
+    ],
+    "file": "shots/terms/mobile/02-text-to-be-added-before-launch.jpg",
+    "width": 780,
+    "height": 244
+  },
+  {
+    "page": "terms",
+    "pageTitle": "Terms",
+    "route": "/terms",
+    "viewport": "mobile",
+    "pageFile": "app/terms/page.tsx",
+    "id": "terms/mobile/03-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/terms/mobile/03-footer.jpg",
+    "width": 780,
+    "height": 2188
+  },
+  {
+    "page": "not-found",
+    "pageTitle": "404",
+    "route": "/no-such-page",
+    "viewport": "mobile",
+    "pageFile": "app/not-found.tsx",
+    "id": "not-found/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/not-found.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/not-found/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 3026
+  },
+  {
+    "page": "not-found",
+    "pageTitle": "404",
+    "route": "/no-such-page",
+    "viewport": "mobile",
+    "pageFile": "app/not-found.tsx",
+    "id": "not-found/mobile/01-nothing-here",
+    "kind": "section",
+    "name": "Nothing here.",
+    "heading": "Nothing here.",
+    "source": [
+      "app/not-found.tsx"
+    ],
+    "file": "shots/not-found/mobile/01-nothing-here.jpg",
+    "width": 780,
+    "height": 842
+  },
+  {
+    "page": "not-found",
+    "pageTitle": "404",
+    "route": "/no-such-page",
+    "viewport": "mobile",
+    "pageFile": "app/not-found.tsx",
+    "id": "not-found/mobile/02-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/not-found/mobile/02-footer.jpg",
+    "width": 780,
+    "height": 2188
+  },
+  {
+    "page": "states",
+    "pageTitle": "Interactive states",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "components",
+    "id": "states/mobile/mobile-menu",
+    "kind": "state",
+    "name": "Mobile menu open",
+    "source": [
+      "components/Navbar.tsx"
+    ],
+    "file": "shots/states/mobile/01-mobile-menu.jpg",
+    "width": 780,
+    "height": 1688
+  }
+]

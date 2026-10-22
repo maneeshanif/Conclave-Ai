@@ -1,0 +1,232 @@
+{
+  "url": "https://preview.treethemes.com/elementor/willows/jane/",
+  "title": "Jane – Creative Agency & Portfolio WordPress Theme",
+  "sections": [
+    {
+      "file": "scroll-00.png",
+      "scrollY": 0,
+      "headings": [
+        "JANE GARCIA",
+        "JANE GARCIA",
+        "CREATIVE",
+        "CREATIVE",
+        "STUDIO",
+        "STUDIO"
+      ]
+    },
+    {
+      "file": "scroll-01.png",
+      "scrollY": 700,
+      "headings": []
+    },
+    {
+      "file": "scroll-02.png",
+      "scrollY": 1400,
+      "headings": [
+        "EVOLUTION​",
+        "EVOLUTION​",
+        "001",
+        "002",
+        "THROUGH",
+        "THROUGH",
+        "DESIGN",
+        "DESIGN",
+        "003"
+      ]
+    },
+    {
+      "file": "scroll-03.png",
+      "scrollY": 2100,
+      "headings": [
+        "ESTABLISHED",
+        "ESTABLISHED",
+        "IN 2019",
+        "IN 2019"
+      ]
+    },
+    {
+      "file": "scroll-04.png",
+      "scrollY": 2800,
+      "headings": [
+        "IN 2019",
+        "IN 2019"
+      ]
+    },
+    {
+      "file": "scroll-05.png",
+      "scrollY": 3500,
+      "headings": [
+        "WHAT WE DO"
+      ]
+    },
+    {
+      "file": "scroll-06.png",
+      "scrollY": 4200,
+      "headings": [
+        "WHAT WE DO"
+      ]
+    },
+    {
+      "file": "scroll-07.png",
+      "scrollY": 4900,
+      "headings": [
+        "WHAT WE DO"
+      ]
+    },
+    {
+      "file": "scroll-08.png",
+      "scrollY": 5600,
+      "headings": [
+        "WHAT WE DO"
+      ]
+    },
+    {
+      "file": "scroll-09.png",
+      "scrollY": 6300,
+      "headings": [
+        "WHAT WE DO"
+      ]
+    },
+    {
+      "file": "scroll-10.png",
+      "scrollY": 7000,
+      "headings": [
+        "Testimonials"
+      ]
+    },
+    {
+      "file": "scroll-11.png",
+      "scrollY": 7700,
+      "headings": [
+        "SELECTED",
+        "SELECTED",
+        "WORKS",
+        "WORKS"
+      ]
+    },
+    {
+      "file": "scroll-12.png",
+      "scrollY": 8400,
+      "headings": [
+        "SUPER AWARDS"
+      ]
+    },
+    {
+      "file": "scroll-13.png",
+      "scrollY": 9100,
+      "headings": [
+        "THE RISE OF DESIGN"
+      ]
+    },
+    {
+      "file": "scroll-14.png",
+      "scrollY": 9800,
+      "headings": [
+        "MEDIUM SCENE"
+      ]
+    },
+    {
+      "file": "scroll-15.png",
+      "scrollY": 10500,
+      "headings": [
+        "THE TEAM",
+        "THE TEAM"
+      ]
+    },
+    {
+      "file": "scroll-16.png",
+      "scrollY": 11200,
+      "headings": []
+    },
+    {
+      "file": "scroll-17.png",
+      "scrollY": 11900,
+      "headings": [
+        "LATEST",
+        "LATEST",
+        "NEWS",
+        "NEWS"
+      ]
+    },
+    {
+      "file": "scroll-18.png",
+      "scrollY": 12600,
+      "headings": [
+        "Natura Insects Series: Crafting Insects Made by Flowers",
+        "Minimalistic Design Concept for Balmain Online Store",
+        "Stylish Newspaper Cover Illustration by New York Design Band"
+      ]
+    },
+    {
+      "file": "scroll-19.png",
+      "scrollY": 13300,
+      "headings": []
+    },
+    {
+      "file": "scroll-20.png",
+      "scrollY": 14000,
+      "headings": [
+        "WIIIOW"
+      ]
+    }
+  ],
+  "hovers": [
+    {
+      "file": "hover-00.png",
+      "label": "LET'S TALK LET'S TALK"
+    },
+    {
+      "file": "hover-01.png",
+      "label": "LEARN MORE"
+    },
+    {
+      "file": "hover-02.png",
+      "label": "DISCOVER MORE DISCOVER MORE"
+    },
+    {
+      "file": "hover-03.png",
+      "label": "SEE ALL PROJECTS SEE ALL PROJECTS"
+    },
+    {
+      "file": "hover-04.png",
+      "label": "VIEW ALL NEWS VIEW ALL NEWS"
+    },
+    {
+      "file": "hover-05.png",
+      "label": "LET'S TALK"
+    },
+    {
+      "file": "hover-06.png",
+      "label": "Youtube Youtube"
+    },
+    {
+      "file": "hover-07.png",
+      "label": "Dribbble Dribbble"
+    },
+    {
+      "file": "hover-08.png",
+      "label": "Instagram Instagram"
+    },
+    {
+      "file": "hover-09.png",
+      "label": "LinkedIn LinkedIn"
+    }
+  ],
+  "pageHeight": 14584,
+  "stack": {
+    "gsap": true,
+    "scrollTrigger": true,
+    "lenis": false,
+    "three": false,
+    "videos": 2,
+    "canvases": 1,
+    "fonts": [
+      "\"Plus Jakarta Sans\"",
+      "Inter",
+      "\"Clash Grotesk\"",
+      "\"Overused Grotesk\""
+    ],
+    "navPosition": null,
+    "cursorHidden": "default"
+  }
+}

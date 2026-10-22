@@ -1,0 +1,10 @@
+node_modules
+.next
+.env*.local
+tools/research/node_modules
+__pycache__
+.venv
+
+tsconfig.tsbuildinfo
+docs/conclave-design-review.zip
+.env

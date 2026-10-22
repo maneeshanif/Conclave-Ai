@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conclave AI design review board</title>
+<style>
+  :root { --ink:#0B1512; --moss:#14302A; --chalk:#F1F4EC; --lime:#C8F169; --steel:#8FA39A; --paper:#FBFCF8; --plum:#5B3FD6; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #DADFD3; font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); }
+  #bar { position: fixed; z-index: 10; inset: 0 0 auto 0; height: 52px; display: flex; align-items: center; gap: 10px; padding: 0 16px; background: var(--ink); color: var(--chalk); }
+  #bar b { color: var(--lime); letter-spacing: .02em; }
+  #bar .sp { flex: 1; }
+  #bar button, #bar label { height: 32px; padding: 0 12px; border-radius: 8px; border: 1px solid #ffffff30; background: transparent; color: var(--chalk); font: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+  #bar button:hover, #bar label:hover { background: #ffffff18; }
+  #bar button.primary { background: var(--lime); color: var(--ink); border-color: var(--lime); font-weight: 600; }
+  #bar small { opacity: .65; }
+  #view { position: absolute; inset: 52px 0 0 0; overflow: hidden; cursor: grab; touch-action: none; }
+  #view.drag { cursor: grabbing; }
+  #world { position: absolute; left: 0; top: 0; transform-origin: 0 0; padding: 48px; display: flex; flex-direction: column; gap: 72px; width: max-content; }
+  .page { display: flex; flex-direction: column; gap: 24px; }
+  .page > h2 { margin: 0; font-size: 28px; display: flex; align-items: baseline; gap: 14px; }
+  .page > h2 small { font: 13px monospace; color: #52645D; }
+  .row { display: flex; gap: 24px; align-items: flex-start; }
+  .rowlabel { width: 120px; flex: none; font: 12px monospace; text-transform: uppercase; letter-spacing: .08em; color: #52645D; padding-top: 8px; }
+  .tile { flex: none; background: var(--paper); border: 1px solid #0b151f22; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 0 #0b15121a; }
+  .tile header { display: flex; align-items: center; gap: 8px; padding: 8px 10px; background: var(--ink); color: var(--chalk); font: 11px monospace; }
+  .tile header .kind { background: var(--lime); color: var(--ink); border-radius: 4px; padding: 1px 6px; text-transform: uppercase; }
+  .tile header .id { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: copy; }
+  .tile img { display: block; width: 100%; height: auto; cursor: zoom-in; user-select: none; -webkit-user-drag: none; }
+  .tile footer { padding: 8px; border-top: 1px solid #0b151f22; }
+  .tile .src { font: 11px monospace; color: #52645D; margin: 0 0 6px; word-break: break-all; }
+  .tile textarea { width: 100%; min-height: 56px; resize: vertical; border: 1px solid #0b151f33; border-radius: 8px; padding: 6px 8px; font: 13px/1.4 system-ui; background: #fff; }
+  .tile.has-note { outline: 3px solid var(--plum); }
+  .hide-desktop .row.desktop, .hide-mobile .row.mobile { display: none; }
+  #toast { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--lime); padding: 10px 16px; border-radius: 10px; opacity: 0; transition: opacity .2s; pointer-events: none; z-index: 20; }
+  #toast.on { opacity: 1; }
+  #help { position: fixed; z-index: 10; right: 16px; bottom: 16px; background: #0B1512e6; color: var(--chalk); padding: 10px 14px; border-radius: 10px; font-size: 12px; max-width: 320px; }
+</style>
+</head>
+<body>
+<div id="bar">
+  <b>Conclave AI</b><span>design review board</span><small id="count"></small>
+  <span class="sp"></span>
+  <label><input type="checkbox" id="showDesktop" checked> Desktop</label>
+  <label><input type="checkbox" id="showMobile" checked> Mobile</label>
+  <button id="zout" title="Zoom out">-</button><button id="zin" title="Zoom in">+</button>
+  <button id="fit">Fit</button><button id="z100">100%</button>
+  <button id="clear">Clear notes</button>
+  <button id="export" class="primary">Export feedback</button>
+</div>
+<div id="view"><div id="world"></div></div>
+<div id="help">Drag to pan. Scroll to zoom. Click a tile's ID to copy it. Double-click a picture to open it full size. Type notes under any tile, then press <b>Export feedback</b>.</div>
+<div id="toast"></div>
+<script>
+const MANIFEST = /*__MANIFEST__*/[];
+const PAGE_ORDER = [...new Set(MANIFEST.map(m => m.page))];
+const TILE_W = { desktop: 520, mobile: 210 };
+const world = document.getElementById("world"), view = document.getElementById("view");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
+const key = id => "note:" + id;
+const get = id => { try { return localStorage.getItem(key(id)) || ""; } catch { return ""; } };
+const set = (id, v) => { try { v ? localStorage.setItem(key(id), v) : localStorage.removeItem(key(id)); } catch {} };
+
+for (const slug of PAGE_ORDER) {
+  const items = MANIFEST.filter(m => m.page === slug);
+  const first = items[0];
+  const sec = document.createElement("section");
+  sec.className = "page";
+  sec.innerHTML = `<h2>${esc(first.pageTitle)} <small>${esc(first.route)} &middot; ${esc(first.pageFile)}</small></h2>`;
+  for (const vp of ["desktop", "mobile"]) {
+    const rowItems = items.filter(m => m.viewport === vp);
+    if (!rowItems.length) continue;
+    const row = document.createElement("div");
+    row.className = "row " + vp;
+    row.innerHTML = `<div class="rowlabel">${vp}<br>${vp === "desktop" ? "1440px" : "390px"}</div>`;
+    for (const m of rowItems) {
+      const t = document.createElement("div");
+      t.className = "tile";
+      t.style.width = TILE_W[vp] + "px";
+      t.dataset.id = m.id;
+      t.innerHTML = `<header><span class="kind">${esc(m.kind)}</span><span class="id" title="Click to copy">${esc(m.id)}</span></header>
+        <img loading="lazy" src="${esc(m.file)}" alt="${esc(m.name)}" width="${m.width}" height="${m.height}">
+        <footer><p class="src">${esc(m.source.join(" | "))}</p><textarea placeholder="Feedback for ${esc(m.id)}"></textarea></footer>`;
+      const ta = t.querySelector("textarea");
+      ta.value = get(m.id);
+      if (ta.value) t.classList.add("has-note");
+      ta.addEventListener("input", () => { set(m.id, ta.value.trim()); t.classList.toggle("has-note", !!ta.value.trim()); count(); });
+      ta.addEventListener("pointerdown", e => e.stopPropagation());
+      ta.addEventListener("wheel", e => e.stopPropagation());
+      t.querySelector(".id").addEventListener("click", () => navigator.clipboard?.writeText(m.id).then(() => toast("Copied " + m.id)));
+      t.querySelector("img").addEventListener("dblclick", () => window.open(m.file, "_blank"));
+      row.appendChild(t);
+    }
+    sec.appendChild(row);
+  }
+  world.appendChild(sec);
+}
+
+function count() {
+  const n = MANIFEST.filter(m => get(m.id)).length;
+  document.getElementById("count").textContent = `${MANIFEST.length} shots, ${PAGE_ORDER.length} groups, ${n} notes`;
+}
+count();
+
+function toast(msg) { const t = document.getElementById("toast"); t.textContent = msg; t.classList.add("on"); setTimeout(() => t.classList.remove("on"), 1800); }
+
+/* pan and zoom */
+let s = 0.35, x = 20, y = 20;
+const apply = () => { world.style.transform = `translate(${x}px, ${y}px) scale(${s})`; };
+const zoomAt = (f, cx, cy) => { const ns = Math.min(2, Math.max(0.05, s * f)); x = cx - (cx - x) * (ns / s); y = cy - (cy - y) * (ns / s); s = ns; apply(); };
+view.addEventListener("wheel", e => { e.preventDefault(); const r = view.getBoundingClientRect(); zoomAt(e.deltaY < 0 ? 1.12 : 1 / 1.12, e.clientX - r.left, e.clientY - r.top); }, { passive: false });
+let drag = null;
+view.addEventListener("pointerdown", e => { drag = { px: e.clientX, py: e.clientY, x, y }; view.classList.add("drag"); view.setPointerCapture(e.pointerId); });
+view.addEventListener("pointermove", e => { if (!drag) return; x = drag.x + e.clientX - drag.px; y = drag.y + e.clientY - drag.py; apply(); });
+view.addEventListener("pointerup", () => { drag = null; view.classList.remove("drag"); });
+const mid = () => { const r = view.getBoundingClientRect(); return [r.width / 2, r.height / 2]; };
+document.getElementById("zin").onclick = () => zoomAt(1.25, ...mid());
+document.getElementById("zout").onclick = () => zoomAt(1 / 1.25, ...mid());
+document.getElementById("z100").onclick = () => { s = 1; x = 20; y = 20; apply(); };
+document.getElementById("fit").onclick = () => { const r = view.getBoundingClientRect(); s = Math.min(1, r.width / (world.offsetWidth + 40)); x = 20; y = 20; apply(); };
+for (const [id, cls] of [["showDesktop", "hide-desktop"], ["showMobile", "hide-mobile"]])
+  document.getElementById(id).onchange = e => world.classList.toggle(cls, !e.target.checked);
+apply();
+
+/* feedback export */
+document.getElementById("export").onclick = () => {
+  const notes = MANIFEST.filter(m => get(m.id));
+  if (!notes.length) return toast("No notes yet. Type feedback under a tile first.");
+  const md = ["# Design feedback: Conclave AI", "", `Generated ${new Date().toISOString().slice(0, 10)}. Each item names the shot ID and the source file to edit.`, ""]
+    .concat(notes.map(m => `## ${m.id}\n- Where: ${m.route} (${m.viewport}), ${m.name}\n- Edit: ${m.source.join(" | ")}\n- Feedback: ${get(m.id).replace(/\n/g, "\n  ")}\n`)).join("\n");
+  navigator.clipboard?.writeText(md).catch(() => {});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([md], { type: "text/markdown" }));
+  a.download = "feedback.md"; a.click();
+  toast(`Exported ${notes.length} notes (also copied to clipboard)`);
+};
+document.getElementById("clear").onclick = () => {
+  if (!confirm("Delete all notes on this board?")) return;
+  MANIFEST.forEach(m => set(m.id, ""));
+  document.querySelectorAll(".tile textarea").forEach(t => { t.value = ""; t.closest(".tile").classList.remove("has-note"); });
+  count();
+};
+/* start fitted */
+document.getElementById("fit").click();
+</script>
+</body>
+</html>

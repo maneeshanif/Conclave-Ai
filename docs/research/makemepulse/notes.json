@@ -1,0 +1,186 @@
+{
+  "url": "https://www.makemepulse.com/",
+  "title": "makemepulse — Global Creative Studio",
+  "sections": [
+    {
+      "file": "scroll-00.png",
+      "scrollY": 0,
+      "headings": [
+        "global creative studio",
+        "",
+        "Cookie settings"
+      ]
+    },
+    {
+      "file": "scroll-01.png",
+      "scrollY": 700,
+      "headings": [
+        "global creative studio",
+        "",
+        "Cookie settings"
+      ]
+    },
+    {
+      "file": "scroll-02.png",
+      "scrollY": 1400,
+      "headings": [
+        "global creative studio",
+        "",
+        "Cookie settings"
+      ]
+    },
+    {
+      "file": "scroll-03.png",
+      "scrollY": 2100,
+      "headings": [
+        "Brunello Cucinelli - Human-Centred AI E-commerce",
+        "",
+        "Cookie settings"
+      ]
+    },
+    {
+      "file": "scroll-04.png",
+      "scrollY": 2800,
+      "headings": [
+        "Brunello Cucinelli - Human-Centred AI E-commerce",
+        "",
+        "Cookie settings"
+      ]
+    },
+    {
+      "file": "scroll-05.png",
+      "scrollY": 3500,
+      "headings": [
+        "Brunello Cucinelli - Human-Centred AI E-commerce",
+        "",
+        "Cookie settings"
+      ]
+    },
+    {
+      "file": "scroll-06.png",
+      "scrollY": 4200,
+      "headings": [
+        "Brunello Cucinelli - Human-Centred AI E-commerce",
+        "",
+        "Cookie settings"
+      ]
+    },
+    {
+      "file": "scroll-07.png",
+      "scrollY": 4900,
+      "headings": [
+        "Brunello Cucinelli - Human-Centred AI E-commerce",
+        "Airelles Careers Website",
+        "McDonald’s Rösti Fall",
+        "",
+        "Cookie settings"
+      ]
+    },
+    {
+      "file": "scroll-08.png",
+      "scrollY": 5600,
+      "headings": [
+        "Brunello Cucinelli - Human-Centred AI E-commerce",
+        "Airelles Careers Website",
+        "McDonald’s Rösti Fall",
+        "",
+        "Cookie settings"
+      ]
+    },
+    {
+      "file": "scroll-09.png",
+      "scrollY": 6300,
+      "headings": [
+        "Brunello Cucinelli - Human-Centred AI E-commerce",
+        "Airelles Careers Website",
+        "McDonald’s Rösti Fall",
+        "",
+        "Cookie settings"
+      ]
+    },
+    {
+      "file": "scroll-10.png",
+      "scrollY": 7000,
+      "headings": [
+        "Brunello Cucinelli - Human-Centred AI E-commerce",
+        "Airelles Careers Website",
+        "McDonald’s Rösti Fall",
+        "",
+        "Cookie settings"
+      ]
+    },
+    {
+      "file": "scroll-11.png",
+      "scrollY": 7700,
+      "headings": [
+        "Airelles Careers Website",
+        "McDonald’s Rösti Fall",
+        "",
+        "Cookie settings"
+      ]
+    },
+    {
+      "file": "scroll-12.png",
+      "scrollY": 8400,
+      "headings": [
+        "Airelles Careers Website",
+        "McDonald’s Rösti Fall",
+        "",
+        "Cookie settings"
+      ]
+    }
+  ],
+  "hovers": [
+    {
+      "file": "hover-00.png",
+      "label": "ALLOW ALL"
+    },
+    {
+      "file": "hover-01.png",
+      "label": "DENY"
+    },
+    {
+      "file": "hover-02.png",
+      "label": "SHOW DETAILS"
+    },
+    {
+      "file": "hover-03.png",
+      "label": ""
+    },
+    {
+      "file": "hover-04.png",
+      "label": ""
+    },
+    {
+      "file": "hover-05.png",
+      "label": "home"
+    },
+    {
+      "file": "hover-06.png",
+      "label": "case studies"
+    },
+    {
+      "file": "hover-07.png",
+      "label": "what we do"
+    },
+    {
+      "file": "hover-08.png",
+      "label": "who we are"
+    }
+  ],
+  "pageHeight": 8834,
+  "stack": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "lenis": true,
+    "three": false,
+    "videos": 0,
+    "canvases": 3,
+    "fonts": [
+      "Biotif",
+      "sans-serif"
+    ],
+    "navPosition": "static",
+    "cursorHidden": "auto"
+  }
+}

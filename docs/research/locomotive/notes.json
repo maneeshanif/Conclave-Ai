@@ -1,0 +1,134 @@
+{
+  "url": "https://locomotive.ca/en",
+  "title": "Locomotive | Montreal web agency",
+  "sections": [
+    {
+      "file": "scroll-00.png",
+      "scrollY": 0,
+      "headings": [
+        "🔶 Locomotive® Digital-first Design Agency🍺🔞"
+      ]
+    },
+    {
+      "file": "scroll-01.png",
+      "scrollY": 700,
+      "headings": [
+        "🔶 Locomotive® Digital-first Design Agency🍺🔞"
+      ]
+    },
+    {
+      "file": "scroll-02.png",
+      "scrollY": 1400,
+      "headings": [
+        "Featured work",
+        "Lightship",
+        "Wolverine Worldwide",
+        "The Drake Hotel"
+      ]
+    },
+    {
+      "file": "scroll-03.png",
+      "scrollY": 2100,
+      "headings": [
+        "The Drake Hotel",
+        "Dulcedo",
+        "Scout Motors",
+        "All Work"
+      ]
+    },
+    {
+      "file": "scroll-04.png",
+      "scrollY": 2800,
+      "headings": []
+    },
+    {
+      "file": "scroll-05.png",
+      "scrollY": 3500,
+      "headings": [
+        "Extras (13)",
+        "Articles"
+      ]
+    },
+    {
+      "file": "scroll-06.png",
+      "scrollY": 4200,
+      "headings": [
+        "Culture",
+        "Store"
+      ]
+    },
+    {
+      "file": "scroll-07.png",
+      "scrollY": 4900,
+      "headings": [
+        "Pros de l'internet White T-Shirt",
+        "Pros de l'internet Sand Hat"
+      ]
+    },
+    {
+      "file": "scroll-08.png",
+      "scrollY": 5600,
+      "headings": [
+        "Pros de l'internet White T-Shirt",
+        "Menu",
+        "Social",
+        "External"
+      ]
+    },
+    {
+      "file": "scroll-09.png",
+      "scrollY": 6300,
+      "headings": [
+        "Pros de l'internet White T-Shirt",
+        "Menu",
+        "Social",
+        "External"
+      ]
+    }
+  ],
+  "hovers": [
+    {
+      "file": "hover-00.png",
+      "label": "Locomotive®"
+    },
+    {
+      "file": "hover-01.png",
+      "label": "Work"
+    },
+    {
+      "file": "hover-02.png",
+      "label": "Agency"
+    },
+    {
+      "file": "hover-03.png",
+      "label": "Careers"
+    },
+    {
+      "file": "hover-04.png",
+      "label": "Store"
+    },
+    {
+      "file": "hover-05.png",
+      "label": "Let's talk"
+    },
+    {
+      "file": "hover-06.png",
+      "label": "The dynasty"
+    }
+  ],
+  "pageHeight": 6598,
+  "stack": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "lenis": true,
+    "three": false,
+    "videos": 1,
+    "canvases": 2,
+    "fonts": [
+      "HelveticaNowDisplay",
+      "LocomotiveNew"
+    ],
+    "navPosition": "static",
+    "cursorHidden": "auto"
+  }
+}

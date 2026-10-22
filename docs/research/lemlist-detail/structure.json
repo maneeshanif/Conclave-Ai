@@ -1,0 +1,246 @@
+{
+  "sections": [
+    {
+      "i": 0,
+      "tag": "MAIN",
+      "cls": "",
+      "top": 0,
+      "h": 10077,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(24, 24, 26)",
+      "padTop": "0px",
+      "heading": "Welcome, Secret users 👋",
+      "hFont": "Manrope 40px/44px w700 lsnormal",
+      "btn": {
+        "text": "",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(24, 24, 26)",
+        "radius": "8px",
+        "h": 0
+      }
+    },
+    {
+      "i": 1,
+      "tag": "SECTION",
+      "cls": "w-full mt-[calc(var(--navbar-height)+var(--banner-height,0px))] xl:mt-0",
+      "top": 0,
+      "h": 1515,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(24, 24, 26)",
+      "padTop": "0px",
+      "heading": "The only platform you need to make Outbound work.",
+      "hFont": "Manrope 56px/64px w600 ls-2.24px",
+      "btn": {
+        "text": "Start free trial",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(24, 24, 26)",
+        "radius": "12px",
+        "h": 44
+      }
+    },
+    {
+      "i": 2,
+      "tag": "SECTION",
+      "cls": "relative scroll-mt-24 overflow-x-clip",
+      "top": 1515,
+      "h": 281,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(24, 24, 26)",
+      "padTop": "0px",
+      "heading": null,
+      "hFont": null,
+      "btn": null
+    },
+    {
+      "i": 3,
+      "tag": "SECTION",
+      "cls": "relative scroll-mt-24 overflow-x-clip",
+      "top": 1955,
+      "h": 3953,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(24, 24, 26)",
+      "padTop": "0px",
+      "heading": "From full TAM coverage to your top accounts, run outreach that still feels 1:1",
+      "hFont": "Manrope 40px/44px w600 ls-0.8px",
+      "btn": null
+    },
+    {
+      "i": 4,
+      "tag": "SECTION",
+      "cls": "relative scroll-mt-24 overflow-x-clip",
+      "top": 6067,
+      "h": 523,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(24, 24, 26)",
+      "padTop": "0px",
+      "heading": "Built to back outbound pros like you",
+      "hFont": "Manrope 40px/44px w600 ls-0.8px",
+      "btn": null
+    },
+    {
+      "i": 5,
+      "tag": "SECTION",
+      "cls": "relative scroll-mt-24 overflow-x-clip",
+      "top": 6749,
+      "h": 280,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(24, 24, 26)",
+      "padTop": "0px",
+      "heading": "Recognized by G2. Trusted by thousands.",
+      "hFont": "Manrope 32px/40px w600 ls-0.64px",
+      "btn": null
+    },
+    {
+      "i": 6,
+      "tag": "SECTION",
+      "cls": "relative scroll-mt-24 overflow-x-clip",
+      "top": 7188,
+      "h": 725,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(24, 24, 26)",
+      "padTop": "0px",
+      "heading": "Here’s what they say about us",
+      "hFont": "Manrope 40px/44px w600 ls-0.8px",
+      "btn": {
+        "text": "Learn more\n: Elevenlabs GTM se",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(24, 24, 26)",
+        "radius": "10px",
+        "h": 36
+      }
+    },
+    {
+      "i": 7,
+      "tag": "SECTION",
+      "cls": "relative scroll-mt-24 overflow-x-clip",
+      "top": 8072,
+      "h": 619,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(24, 24, 26)",
+      "padTop": "0px",
+      "heading": "Fits your workflow, Not the other way around.",
+      "hFont": "Manrope 40px/44px w600 ls-0.8px",
+      "btn": {
+        "text": "Explore 500+ integrations",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "12px",
+        "h": 44
+      }
+    },
+    {
+      "i": 8,
+      "tag": "SECTION",
+      "cls": "relative scroll-mt-24 overflow-x-clip",
+      "top": 8850,
+      "h": 654,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(24, 24, 26)",
+      "padTop": "0px",
+      "heading": "Steal the outbound playbooks behind today’s top sales teams",
+      "hFont": "Manrope 40px/44px w600 ls-0.8px",
+      "btn": {
+        "text": "Get the playbook",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(24, 24, 26)",
+        "radius": "10px",
+        "h": 36
+      }
+    },
+    {
+      "i": 9,
+      "tag": "SECTION",
+      "cls": "relative scroll-mt-24 overflow-x-clip",
+      "top": 9663,
+      "h": 414,
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(24, 24, 26)",
+      "padTop": "0px",
+      "heading": "Frequently Asked Questions",
+      "hFont": "Manrope 40px/44px w600 ls-0.8px",
+      "btn": {
+        "text": "What is lemlist?",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(24, 24, 26)",
+        "radius": "0px",
+        "h": 68
+      }
+    },
+    {
+      "i": 10,
+      "tag": "FOOTER",
+      "cls": "relative text-white lg:[--scene-h:700px] lg:[--scene-fw:1024] lg:[--scene-fh:700",
+      "top": 10116,
+      "h": 1358,
+      "bg": "rgb(1, 1, 19)",
+      "color": "rgb(255, 255, 255)",
+      "padTop": "0px",
+      "heading": "Your next deal is no longer light-years away.",
+      "hFont": "Manrope 40px/44px w600 ls-0.8px",
+      "btn": {
+        "text": "Start free trial",
+        "bg": "rgba(0, 0, 0, 0)",
+        "color": "rgb(24, 24, 26)",
+        "radius": "12px",
+        "h": 44
+      }
+    }
+  ],
+  "tokens": {
+    "bodyBg": "rgba(0, 0, 0, 0)",
+    "bodyColor": "rgb(0, 0, 0)",
+    "bodyFont": "Inter",
+    "bodySize": "16px",
+    "nav": {
+      "bg": "rgb(255, 255, 255)",
+      "radius": "16px",
+      "w": 1240,
+      "h": 68,
+      "top": 16,
+      "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0"
+    },
+    "h1": "56px/64px w600 ls-2.24px",
+    "h2": "40px/44px w700 lsnormal",
+    "colors": [
+      "rgb(255, 255, 255)",
+      "rgb(222, 222, 222)",
+      "rgb(239, 239, 239)",
+      "oklab(0.217214 0.00459527 -0.0107754 / 0.5)",
+      "rgb(216, 106, 51)",
+      "rgb(250, 250, 250)",
+      "rgb(255, 95, 87)",
+      "rgb(254, 188, 46)",
+      "rgb(40, 200, 64)",
+      "",
+      "rgb(230, 230, 230)",
+      "rgb(247, 248, 250)",
+      "rgb(238, 238, 238)",
+      "rgb(26, 25, 31)"
+    ],
+    "textColors": [
+      "rgb(24, 24, 26)",
+      "rgb(125, 125, 125)",
+      "rgb(255, 255, 255)",
+      "oklab(0.209884 0.00108881 -0.00374515 / 0.8)",
+      "lab(44.0605 29.0279 -86.0352)",
+      "rgb(245, 245, 245)",
+      "oklab(0.999994 0.0000455678 0.0000200868 / 0.75)",
+      "rgb(177, 177, 177)",
+      "rgb(0, 0, 0)"
+    ],
+    "radii": [
+      "12px",
+      "10px",
+      "3.35544e+07px",
+      "8px 8px 0px 0px",
+      "0px 0px 12px 12px",
+      "24px",
+      "",
+      "0px 10px 10px",
+      "8px",
+      "10px 0px 10px 10px",
+      "10px 10px 0px 0px",
+      "0px 0px 10px 10px"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+const c={Ink:"#0B1512",Moss:"#14302A",Chalk:"#F1F4EC",Paper:"#FBFCF8",Mist:"#E4E9DD",Slate:"#4A5C55",Steel:"#8FA39A",Lime:"#C8F169",Violet:"#7C5CFF",Lilac:"#CFC4FF",Plum:"#5B3FD6"};
+const lum=h=>{const v=[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)/255).map(x=>x<=.03928?x/12.92:((x+.055)/1.055)**2.4);return .2126*v[0]+.7152*v[1]+.0722*v[2]};
+const cr=(a,b)=>{const[x,y]=[lum(c[a]),lum(c[b])].sort((p,q)=>q-p);return (x+.05)/(y+.05)};
+for(const[a,b]of [["Ink","Paper"],["Ink","Chalk"],["Ink","Mist"],["Slate","Paper"],["Slate","Chalk"],["Slate","Mist"],["Moss","Paper"],["Plum","Paper"],["Plum","Chalk"],["Violet","Paper"],["Ink","Lime"],["Paper","Ink"],["Steel","Ink"],["Lime","Ink"],["Lilac","Ink"],["Paper","Plum"]]){const r=cr(a,b);console.log(`${a} on ${b}`.padEnd(16),r.toFixed(2).padStart(6),r>=7?"AAA":r>=4.5?"AA":r>=3?"large/UI only":"FAIL")}
