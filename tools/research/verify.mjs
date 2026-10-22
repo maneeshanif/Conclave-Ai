@@ -15,11 +15,18 @@ for (let i = 0; i < 40; i++) {
   await new Promise((r) => setTimeout(r, 500));
 }
 
-const routes = ["", "services", "work", "work/bazar-flow", "demos", "about", "pricing", "contact", "privacy"];
+/* Chrome cannot capture a page taller than about 16k px in one go, so tall pages are saved in 7000px parts. */
+async function shoot(p, base, w) {
+  const h = await p.evaluate(() => document.documentElement.scrollHeight);
+  if (h <= 12000) return p.screenshot({ path: `${base}.png`, fullPage: true });
+  for (let y = 0, n = 1; y < h; y += 7000, n++) await p.screenshot({ path: `${base}-part${n}.png`, fullPage: true, clip: { x: 0, y, width: w, height: Math.min(7000, h - y) } });
+}
+
+const routes = ["", "services", "services/voice", "services/reporting", "studio", "industries/clinics", "industries/startups", "work", "work/bazar-flow", "demos", "about", "pricing", "contact", "join", "security", "compare", "receipts", "notes", "privacy", "terms"];
 const b = await chromium.launch();
 let bad = 0;
-for (const [name, w, h] of [["desktop", 1440, 900], ["mobile", 390, 844]]) {
-  const p = await (await b.newContext({ viewport: { width: w, height: h } })).newPage();
+for (const [name, w, h] of [["desktop", 1440, 900], ["mobile", 390, 844], ["narrow", 360, 740]]) {
+  const p = await (await b.newContext({ viewport: { width: w, height: h }, reducedMotion: "reduce" })).newPage();
   const errors = [];
   p.on("pageerror", (e) => errors.push(e.message));
   p.on("console", (m) => m.type() === "error" && errors.push(m.text()));
@@ -32,7 +39,7 @@ for (const [name, w, h] of [["desktop", 1440, 900], ["mobile", 390, 844]]) {
     });
     if (o.over || o.imgs) bad++;
     console.log(name.padEnd(8), ("/" + r).padEnd(18), o.over ? "OVERFLOW " + o.wide.join(",") : "ok", "h1", o.h1, o.imgs ? "BROKEN IMG " + o.imgs : "");
-    await p.screenshot({ path: `${out}/${name}-${r.replace("/", "-") || "home"}.png`, fullPage: true });
+    await shoot(p, `${out}/${name}-${r.replaceAll("/", "-") || "home"}`, w);
   }
   if (errors.length) console.log(name, "console errors:", [...new Set(errors)].slice(0, 5));
 }

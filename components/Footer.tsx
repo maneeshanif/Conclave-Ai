@@ -1,24 +1,29 @@
 import Link from "next/link";
 import { services, site } from "@/lib/site";
+import { studio } from "@/lib/content";
 import { Logo } from "./Logo";
 
 const columns: { title: string; links: [string, string][] }[] = [
-  { title: "Services", links: services.map((s) => [s.short, `/services#${s.slug}`]) },
+  { title: "Services", links: services.map((s) => [s.short, `/services/${s.slug}`]) },
+  { title: "Studio", links: studio.map((s) => [s.name, `/studio#${s.slug}`]) },
   {
-    title: "Company",
+    title: "Resources",
     links: [
-      ["Work", "/work"],
+      ["Notes", "/notes"],
+      ["Receipts", "/receipts"],
+      ["Compare", "/compare"],
+      ["Security", "/security"],
       ["Demos", "/demos"],
-      ["About", "/about"],
-      ["Pricing", "/pricing"],
-      ["Contact", "/contact"],
     ],
   },
   {
-    title: "Legal",
+    title: "Company",
     links: [
-      ["Privacy", "/privacy"],
-      ["Terms", "/terms"],
+      ["About", "/about"],
+      ["Work", "/work"],
+      ["Pricing", "/pricing"],
+      ["Join the guild", "/join"],
+      ["Contact", "/contact"],
     ],
   },
 ];
@@ -54,13 +59,16 @@ export function Footer() {
   return (
     <footer className="on-ink bg-ink text-paper">
       <WordBand />
-      <div className="mx-auto grid max-w-[1280px] gap-12 px-4 py-16 md:grid-cols-[1.4fr_repeat(3,1fr)] md:px-10">
+      <div className="mx-auto grid max-w-[1280px] gap-12 px-4 py-16 md:grid-cols-[1.5fr_repeat(4,1fr)] md:px-10">
         <div>
           <Logo tone="dark" />
           <p className="mt-6 max-w-xs text-steel">Agents, convened. Voice agents, automation and full-stack builds.</p>
           <a href={`mailto:${site.email}`} className="mt-4 block text-chalk underline-offset-4 hover:text-lime hover:underline">
             {site.email}
           </a>
+          <p className="mt-3 text-sm text-steel">
+            {site.city}, serving {site.serving}.
+          </p>
         </div>
         {columns.map((c) => (
           <nav key={c.title} aria-label={c.title}>
@@ -77,9 +85,19 @@ export function Footer() {
           </nav>
         ))}
       </div>
-      <p className="mx-auto max-w-[1280px] border-t border-paper/15 px-4 py-6 text-sm text-steel md:px-10">
-        © {new Date().getFullYear()} {site.name}
-      </p>
+      <div className="mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-paper/15 px-4 py-6 text-sm text-steel md:px-10">
+        <p>
+          © {new Date().getFullYear()} {site.name}
+        </p>
+        <p className="flex gap-5">
+          <Link href="/privacy" className="hover:text-lime">
+            Privacy
+          </Link>
+          <Link href="/terms" className="hover:text-lime">
+            Terms
+          </Link>
+        </p>
+      </div>
     </footer>
   );
 }

@@ -1,23 +1,39 @@
 export const site = {
   name: "Conclave AI",
   tagline: "Agents, convened.",
-  email: "hello@conclave.ai",
-  url: "https://conclave.ai",
+  // Domain from the upgrade plan ("we agreed hello@conclaveai.com"). One constant, so a change is one line.
+  email: "hello@conclaveai.com",
+  url: "https://conclaveai.com",
+  city: "Karachi",
+  serving: "US, Gulf and Europe",
   calLink: process.env.NEXT_PUBLIC_CAL_LINK ?? "",
   apiUrl: process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8010",
+  /** One line used in titles, social bios and JSON-LD so the brand phrase repeats the same way everywhere. */
+  description: "Voice agents, AI automation and full-stack software for clinics, local businesses and startups.",
 };
 
+/** Seven top-level items is the ceiling (upgrade plan section 4). */
 export const nav = [
   { href: "/services", label: "Services" },
+  { href: "/studio", label: "Studio" },
   { href: "/work", label: "Work" },
   { href: "/demos", label: "Demos" },
-  { href: "/about", label: "About" },
+  { href: "/pricing", label: "Pricing" },
+] as const;
+
+export const company = [
+  { href: "/about", label: "About", note: "Who we are and how we work" },
+  { href: "/join", label: "Join", note: "Careers, guild, open source" },
+  { href: "/notes", label: "Notes", note: "Playbooks and engineering posts" },
+  { href: "/receipts", label: "Receipts", note: "Real numbers, in public" },
+  { href: "/compare", label: "Compare", note: "Us versus the alternatives" },
+  { href: "/security", label: "Security", note: "How we handle data" },
 ] as const;
 
 export const allRoutes = [
   { href: "/", label: "Home" },
   ...nav,
-  { href: "/pricing", label: "Pricing" },
+  ...company.map(({ href, label }) => ({ href, label })),
   { href: "/contact", label: "Contact" },
 ] as const;
 

@@ -28,31 +28,42 @@ for (let i = 0; i < 60; i++) { try { if ((await fetch(BASE + "/")).ok) break; } 
 const HOME = [
   ["hero", "components/home/sections.tsx (Hero), components/home/visuals.tsx (HeroScene)"],
   ["live-agent", "components/home/sections.tsx (LiveAgent), components/home/AriaWindow.tsx"],
-  ["proof", "components/home/sections.tsx (Proof)"],
+  ["proof", "components/home/sections.tsx (Proof), lib/content.ts (trust)"],
   ["services", "components/home/sections.tsx (Services), components/home/visuals.tsx (service mock-ups)"],
-  ["built-for", "components/home/sections.tsx (BuiltFor), components/home/visuals.tsx (PersonaFigure)"],
+  ["studio", "components/home/sections2.tsx (StudioSection), lib/content.ts (studio)"],
+  ["built-for", "components/home/sections.tsx (BuiltFor), components/Cast.tsx, lib/content.ts (industries)"],
   ["work", "components/home/sections.tsx (WorkReel), lib/projects.ts"],
-  ["manifesto", "components/home/sections.tsx (Manifesto)"],
-  ["process", "components/home/sections.tsx (Process)"],
+  ["receipts", "components/home/sections2.tsx (ReceiptsTeaser)"],
+  ["manifesto", "components/home/sections.tsx (Manifesto), components/Cast.tsx (CastRow)"],
+  ["process", "components/home/sections.tsx (Process), lib/content.ts (processSteps)"],
   ["demos", "components/home/sections.tsx (DemosTeaser)"],
+  ["stack-scale", "components/home/sections2.tsx (StackScale)"],
   ["pricing", "components/home/sections.tsx (PricingTeaser)"],
-  ["faq", "components/home/sections.tsx (Faq)"],
+  ["join-guild", "components/home/sections2.tsx (JoinGuild), lib/content.ts (guild)"],
+  ["faq", "components/home/sections.tsx (Faq), components/ui/Accordion.tsx"],
   ["final-cta", "components/home/sections.tsx (FinalCta)"],
 ];
 const PAGES = [
   { slug: "home", route: "/", title: "Home", file: "app/page.tsx" },
   { slug: "services", route: "/services", title: "Services", file: "app/services/page.tsx" },
+  { slug: "service-detail", route: "/services/voice", title: "Service detail", file: "app/services/[slug]/page.tsx" },
+  { slug: "studio", route: "/studio", title: "Studio", file: "app/studio/page.tsx" },
+  { slug: "industry", route: "/industries/clinics", title: "Industry page", file: "app/industries/[slug]/page.tsx" },
   { slug: "work", route: "/work", title: "Work", file: "app/work/page.tsx" },
   { slug: "work-detail", route: "/work/bazar-flow", title: "Project detail", file: "app/work/[slug]/page.tsx" },
   { slug: "demos", route: "/demos", title: "Demos", file: "app/demos/page.tsx" },
   { slug: "about", route: "/about", title: "About", file: "app/about/page.tsx" },
   { slug: "pricing", route: "/pricing", title: "Pricing", file: "app/pricing/page.tsx" },
   { slug: "contact", route: "/contact", title: "Contact", file: "app/contact/page.tsx" },
+  { slug: "join", route: "/join", title: "Join", file: "app/join/page.tsx" },
+  { slug: "security", route: "/security", title: "Security", file: "app/security/page.tsx" },
+  { slug: "compare", route: "/compare", title: "Compare", file: "app/compare/page.tsx" },
+  { slug: "receipts", route: "/receipts", title: "Receipts", file: "app/receipts/page.tsx" },
+  { slug: "notes", route: "/notes", title: "Notes", file: "app/notes/page.tsx" },
   { slug: "privacy", route: "/privacy", title: "Privacy", file: "app/privacy/page.tsx" },
   { slug: "terms", route: "/terms", title: "Terms", file: "app/terms/page.tsx" },
   { slug: "not-found", route: "/no-such-page", title: "404", file: "app/not-found.tsx" },
-];
-const VIEWPORTS = [["desktop", 1440, 900], ["mobile", 390, 844]];
+];const VIEWPORTS = [["desktop", 1440, 900], ["mobile", 390, 844]];
 
 const manifest = [];
 const pad = (n) => String(n).padStart(2, "0");
@@ -82,7 +93,7 @@ function readJpegSize(file) {
 const browser = await chromium.launch();
 
 for (const [vp, w, h] of VIEWPORTS) {
-  const ctx = await browser.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: vp === "mobile" ? 2 : 1 });
+  const ctx = await browser.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: vp === "mobile" ? 2 : 1, reducedMotion: "reduce" /* so reveal animations never hide content in a still */ });
   const page = await ctx.newPage();
 
   for (const pg of PAGES) {
@@ -91,9 +102,16 @@ for (const [vp, w, h] of VIEWPORTS) {
     await page.waitForTimeout(300);
     const base = { page: pg.slug, pageTitle: pg.title, route: pg.route, viewport: vp, pageFile: pg.file };
 
-    // 1. full page
-    await save(page, null, `${pg.slug}/${vp}/00-full-page.jpg`, { ...base, id: `${pg.slug}/${vp}/full-page`, kind: "full", name: "Full page", source: [pg.file, "app/layout.tsx"] }, { fullPage: true });
-
+    // 1. full page. Chrome cannot capture past about 16k device px, so tall pages are saved in parts.
+    const fullH = (await page.evaluate(() => document.documentElement.scrollHeight)) * (vp === "mobile" ? 2 : 1);
+    if (fullH <= 15000) {
+      await save(page, null, `${pg.slug}/${vp}/00-full-page.jpg`, { ...base, id: `${pg.slug}/${vp}/full-page`, kind: "full", name: "Full page", source: [pg.file, "app/layout.tsx"] }, { fullPage: true });
+    } else {
+      const step = 6000, cssH = fullH / (vp === "mobile" ? 2 : 1);
+      for (let y = 0, n = 1; y < cssH; y += step, n++) {
+        await save(page, null, `${pg.slug}/${vp}/00-full-page-part${n}.jpg`, { ...base, id: `${pg.slug}/${vp}/full-page-part${n}`, kind: "full", name: `Full page, part ${n}`, source: [pg.file, "app/layout.tsx"] }, { fullPage: true, clip: { x: 0, y, width: w, height: Math.min(step, cssH - y) } });
+      }
+    }
     // 2. sections: direct children of <main>; split a single wrapper into its sections
     // blocks: top-level children of <main>; wrappers (article, tall div) are expanded into their blocks, <section> stays whole
     const arr = await page.evaluateHandle(() => {

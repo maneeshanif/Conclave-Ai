@@ -2,14 +2,16 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { services } from "@/lib/site";
+import { Character, CastRow } from "@/components/Cast";
+import { industries, processSteps, trust } from "@/lib/content";
 import type { Project } from "@/lib/projects";
 import { Accordion } from "@/components/ui/Accordion";
 import { AriaWindow } from "./AriaWindow";
-import { HeroScene, PersonaFigure, panelColours, serviceVisuals } from "./visuals";
+import { HeroScene, panelColours, serviceVisuals } from "./visuals";
 import { cn } from "@/lib/utils";
 
 /** Section header used across the page: pill label, then a sentence-case headline (lemlist pattern). */
-function Head({ eyebrow, children, className }: { eyebrow: string; children: React.ReactNode; className?: string }) {
+export function Head({ eyebrow, children, className }: { eyebrow: string; children: React.ReactNode; className?: string }) {
   return (
     <div className={cn("border-b hair px-4 py-14 text-center md:px-10", className)}>
       <div data-reveal>
@@ -88,36 +90,34 @@ export function LiveAgent() {
   );
 }
 
-/* 3. Proof: the tools we build on, in a hairline grid with diamond joints. Real customer numbers are added when they exist. */
-const stack = ["OpenAI", "Vapi", "Supabase", "Next.js", "FastAPI", "Cal.com", "Resend", "Twilio"];
+/* 3. Proof: four plain commitments, then the stack as a slim strip. A stats band replaces this only when real numbers exist. */
+const stack = ["OpenAI", "Vapi", "LiveKit", "Supabase", "Next.js", "FastAPI", "Cal.com", "Twilio"];
 
 export function Proof() {
   return (
     <section>
       <div className="frame border-y hair">
         <div data-stagger className="grid grid-cols-2 md:grid-cols-4">
-          {stack.map((s, i) => (
-            <div
-              key={s}
-              className={cn(
-                "relative grid h-24 place-items-center border-b hair bg-paper text-lg font-semibold tracking-tight text-slate md:border-r",
-                i % 4 === 3 && "md:border-r-0",
-                i >= 4 && "md:border-b-0",
-              )}
-            >
-              {s}
-              {i === 0 && <span className="pill-label absolute -top-3 left-4">Stack</span>}
+          {trust.map(([t, b], i) => (
+            <div key={t} className={cn("border-b hair bg-paper p-6 md:border-b-0 md:p-8", i > 0 && "md:border-l", i % 2 === 1 && "border-l md:border-l")}>
+              <p className="label text-plum">{String(i + 1).padStart(2, "0")}</p>
+              <h3 className="mt-4 text-lg font-semibold tracking-tight">{t}</h3>
+              <p className="mt-2 text-sm text-slate">{b}</p>
             </div>
           ))}
         </div>
-        <p className="border-t hair bg-paper px-4 py-8 text-center text-lg font-medium md:px-10">
-          Built on tools you already trust. Fixed scope, fixed fee.
-        </p>
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 border-t hair bg-mist/60 px-4 py-4 md:px-10">
+          <span className="pill-label">Built on</span>
+          {stack.map((s) => (
+            <span key={s} className="text-sm font-medium text-slate">
+              {s}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
-
 /* 4. Services: five numbered cards on a light band, alternating sides, each with a product mock-up. */
 export function Services() {
   return (
@@ -142,7 +142,7 @@ export function Services() {
                     <span className="grid h-8 w-8 place-items-center rounded-full bg-ink text-xs font-semibold text-paper">{s.n}</span>
                     <h3 className="mt-6 text-[clamp(1.5rem,2.6vw,2.125rem)] font-semibold leading-tight tracking-tight">{s.title}</h3>
                     <p className="mt-4 max-w-md text-slate">{s.body}</p>
-                    <Link href={`/services#${s.slug}`} className="u-link mt-6 w-fit text-sm font-medium hover:text-plum">
+                    <Link href={`/services/${s.slug}`} className="u-link mt-6 w-fit text-sm font-medium hover:text-plum">
                       How it works
                     </Link>
                   </div>
@@ -159,31 +159,31 @@ export function Services() {
   );
 }
 
-/* 5. Built for: four personas on light tiles, pill label on each. */
-const personas = ["For clinics", "For local businesses", "For startups", "For founders"];
-
+/* 5. Built for: the cast, one character per trade, each with the pain it fixes. */
 export function BuiltFor() {
   return (
     <section>
       <div className="frame border-t hair">
         <Head eyebrow="Built for">Made for teams who live on the phone</Head>
-        <div data-stagger className="grid grid-cols-2 md:grid-cols-4">
-          {personas.map((p, i) => (
-            <div key={p} className={cn("group relative flex h-72 items-end justify-center bg-mist px-4 pb-16 pt-8 md:h-80", i > 0 && "border-l hair")}>
+        <div data-stagger className="grid gap-px bg-[rgb(11_21_18/0.12)] sm:grid-cols-2 lg:grid-cols-3">
+          {industries.map((p, i) => (
+            <Link
+              key={p.slug}
+              href={`/industries/${p.slug}`}
+              className="group relative flex flex-col bg-mist p-6 transition-colors duration-150 hover:bg-chalk md:p-8">
               <div className="lift-on-hover">
-                <PersonaFigure variant={i as 0 | 1 | 2 | 3} />
+                <Character id={p.figure} className="h-32 w-32 md:h-36 md:w-36" />
               </div>
-              <span className="absolute bottom-5 rounded-lg border hair bg-paper px-3 py-1.5 text-sm font-medium shadow-[0_1px_0_rgb(11_21_18/0.06)]">
-                {p}
-              </span>
-            </div>
+              <span className="pill-label mt-6 w-fit">{p.name}</span>
+              <p className="mt-3 max-w-xs text-slate">{p.pain}</p>
+              <span className="u-link mt-4 w-fit text-sm font-medium group-hover:text-plum">See how it works for {p.name.toLowerCase()}</span>
+            </Link>
           ))}
         </div>
       </div>
     </section>
   );
 }
-
 /* 6. Work: three project cards, outcome first. Becomes a pinned horizontal reel in the implementation step. */
 export function WorkReel({ projects }: { projects: Project[] }) {
   return (
@@ -231,28 +231,34 @@ export function Manifesto() {
           A conclave is a closed room where a small group reaches one decision. We convene small, specific agents the same way:
           each with one job, working together so your business never misses a call.
         </p>
+        <div className="mt-14 border-t hair pt-10">
+          <p className="label text-slate">The council</p>
+          <CastRow className="mt-6 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 lg:grid-cols-7" />
+        </div>
       </div>
     </section>
   );
 }
 
-/* 8. Process: Audit, Build, Run. */
+/* 8. Process: Audit, Build, Run, each with a duration and a deliverable. */
 export function Process() {
-  const steps = [
-    ["001", "Audit", "We listen to a week of your calls and find where revenue leaks."],
-    ["002", "Build", "One agent, one job, wired into your phone line and calendar."],
-    ["003", "Run", "We monitor, tune and report every week. You keep the results."],
-  ];
   return (
     <section>
       <div className="frame border-t hair">
         <Head eyebrow="Process">Three steps, no surprises</Head>
         <ol data-stagger className="grid md:grid-cols-3">
-          {steps.map(([n, t, b], i) => (
-            <li key={n} className={cn("bg-paper p-8 md:p-10", i > 0 && "border-t hair md:border-l md:border-t-0")}>
-              <span className="label text-plum">{n}</span>
+          {processSteps.map(([n, t, when, b, out], i) => (
+            <li key={n} className={cn("flex flex-col bg-paper p-8 md:p-10", i > 0 && "border-t hair md:border-l md:border-t-0")}>
+              <span className="flex items-center justify-between">
+                <span className="label text-plum">{n}</span>
+                <span className="pill-label">{when}</span>
+              </span>
               <h3 className="display mt-10 text-display-m">{t}</h3>
               <p className="mt-4 max-w-xs text-slate">{b}</p>
+              <p className="mt-6 border-t hair pt-4 text-sm">
+                <span className="label mr-2 text-slate">You get</span>
+                {out}
+              </p>
             </li>
           ))}
         </ol>
@@ -260,7 +266,6 @@ export function Process() {
     </section>
   );
 }
-
 /* 9. Demos teaser. */
 export function DemosTeaser() {
   return (
@@ -282,6 +287,20 @@ export function DemosTeaser() {
               <span className="mt-3 block max-w-sm text-chalk">A 60-second game. Answer every call before it goes cold.</span>
             </span>
           </Link>
+          <Link href="/demos#calculator" className="group flex min-h-48 flex-col justify-between rounded-3xl border hair bg-paper p-8 transition-colors hover:bg-chalk">
+            <span className="pill-label w-fit">Soon</span>
+            <span>
+              <span className="display block text-[clamp(1.25rem,2.4vw,2rem)]">Missed-call calculator</span>
+              <span className="mt-3 block max-w-sm text-slate">Put in your calls and your average visit. See what the missed ones cost.</span>
+            </span>
+          </Link>
+          <Link href="/demos#line" className="group flex min-h-48 flex-col justify-between rounded-3xl border hair bg-paper p-8 transition-colors hover:bg-chalk">
+            <span className="pill-label w-fit">Soon</span>
+            <span>
+              <span className="display block text-[clamp(1.25rem,2.4vw,2rem)]">Call our demo line</span>
+              <span className="mt-3 block max-w-sm text-slate">A real phone number you can ring and talk to the agent.</span>
+            </span>
+          </Link>
         </div>
       </div>
     </section>
@@ -290,7 +309,7 @@ export function DemosTeaser() {
 
 /* 10. Pricing: no invented prices; scope is agreed on a call. */
 export const tiers = [
-  { name: "Pilot", for: "Prove it on one line", points: ["One agent, one job", "A short, scoped trial", "Weekly summary"] },
+  { name: "Pilot", for: "Prove it on one line", points: ["One agent, one job", "A 14-day pilot, scoped up front", "Weekly summary"] },
   { name: "Build", for: "Fixed scope, fixed fee", points: ["Agent plus integrations", "Your calendar and CRM", "Handover and training"] },
   { name: "Retainer", for: "We run it for you", points: ["Monitoring and tuning", "New flows each month", "Priority support"] },
 ];
@@ -328,7 +347,12 @@ export const faqs = [
   ["What happens when the agent cannot help?", "It takes a message, flags it as urgent if needed, and passes the call to a person on your team."],
   ["Does it work with our calendar and booking tool?", "We connect to the tool you already use. If an integration does not exist, we build it as part of the project."],
   ["How is patient or customer data handled?", "Only what the agent needs is stored, in an access-controlled database. The specifics are agreed in writing before we start."],
-  ["How long until it is live?", "The timeline is agreed on the call and written into the scope, so you know before we start."],
+  ["How long until it is live?", "A pilot is planned for 14 days. The exact timeline is written into the scope before we start."],
+  ["Which languages does it speak?", "English, Arabic and Urdu. Other languages are scoped on request."],
+  ["Do you handle health data, and what about HIPAA?", "We design for privacy and agree data handling in writing before we start. We do not claim a certification we do not hold; any compliance requirement is scoped first."],
+  ["Do I own the code?", "Yes. No lock-in: handover and training are part of every build."],
+  ["What if the agent is wrong?", "It hands over to a person when unsure, every conversation is logged, and we review the log with you each week."],
+  ["How is this different from a freelancer or an n8n flow?", "A flow works until it fails at 6pm on a Friday. We ship monitoring, retries and handover, and we use n8n where it fits and code you own where it does not."],
 ];
 
 export function Faq() {

@@ -15,12 +15,14 @@ const plex = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variabl
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: `${site.name}: ${site.tagline}`, template: `%s | ${site.name}` },
-  description:
-    "Voice agents, AI agents, workflow automation and full-stack builds for clinics, local businesses and startups. Hear a live agent, then book a call.",
+  // "Conclave AI" is always two words in titles so the brand phrase repeats; never just "Conclave".
+  title: { default: `${site.name} | Voice agents, AI automation and full-stack software`, template: `%s | ${site.name}` },
+  description: `${site.description} Hear a live agent, then book a call.`,
+  alternates: { canonical: "/" },
   openGraph: {
-    title: site.name,
-    description: site.tagline,
+    title: `${site.name}: ${site.tagline}`,
+    description: site.description,
+    siteName: site.name,
     type: "website",
     images: [{ url: "/brand/conclave-logo-on-dark-bg.png" }],
   },
@@ -37,6 +39,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{
             __html:
               'var d=document.documentElement;if(!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("motion-ok");setTimeout(function(){if(!window.__motion)d.classList.remove("motion-ok")},4000)}',
+          }}
+        />
+        {/* Organization and WebSite structured data. sameAs is added when the profiles (LinkedIn, GitHub, X) exist. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                { "@type": "Organization", "@id": `${site.url}/#org`, name: site.name, url: site.url, logo: `${site.url}/brand/conclave-logo-on-light.svg`, email: site.email, description: site.description, address: { "@type": "PostalAddress", addressLocality: site.city } },
+                { "@type": "WebSite", "@id": `${site.url}/#site`, url: site.url, name: site.name, publisher: { "@id": `${site.url}/#org` } },
+              ],
+            }),
           }}
         />
         <a
