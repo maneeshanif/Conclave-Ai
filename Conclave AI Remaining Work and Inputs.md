@@ -31,7 +31,7 @@ Updated 23 Oct 2026, after Change Spec v3. Repo: `C:\code\concave-ai` (nothing p
 | **Team**: photos and a one-line story for both founders | About (`team` array in `app/about/page.tsx`) | The block is hidden |
 | **WhatsApp number** and **reply time** | Contact (`NEXT_PUBLIC_WHATSAPP`, `NEXT_PUBLIC_REPLY_TIME`) | Not shown |
 | **"From" prices** for Pilot, Build, Retainer and the Studio offers | Home, Pricing, Studio (`from` in `components/home/sections.tsx`) | "Scoped on a call" |
-| **At least one real case**: screenshot or loop, one metric, stack | Work and the home Work section (`lib/projects.ts` or the Supabase `projects` table; needs a screenshot and a result) | A note says case studies are being written; case pages 404 |
+| **For each of Bazar Flow, CodeNexus AI, ScaleNexus AI, Task Whisper**: confirm or correct what I labelled (type, stack, role), one line on what it does, a screenshot (drop `public/work/<slug>.png`), and one real metric if there is one | Work, home, case pages (`lib/projects.ts`) | Cards show the name, my working labels and a stud glyph; no metric |
 | **Legal text**: Privacy and Terms, reviewed by a professional | `/privacy`, `/terms` | Placeholder text, noindexed |
 | **Social profile URLs** | Footer and the `sameAs` in structured data | Not shown |
 | **Testimonials and logos**, in writing | Home, Work | None shown |
@@ -59,7 +59,7 @@ The six prompts from the spec are in `docs/google-flow-prompts.md` ("Revision 4"
 | Aria on the **live AI model** | Code written (OpenAI Agents SDK with availability and booking tools). **Never run against a real key** | OpenAI key |
 | **Phone-quality voice** and **demo phone line** | The line was removed from Demos per the spec. Vapi or Retell not added | Keys and a number |
 | **Calendar booking** | The closing block and Contact switch to Cal.com when the link is set | Cal.com link |
-| Hero **"settle into the Aria card"** on scroll | Not built. The C splits into the seven tiles and stays | Your call; it needs a pinned scene |
+| Hero **"settle into the Aria card"** on scroll | Not built. The hero is held 300px while the C splits into the seven tiles, then scrolls on | Your call |
 | **Convene game and the wizard** | Built and tested, hidden behind `NEXT_PUBLIC_SHOW_EXTRA_DEMOS=1` | Polish, then flip the flag |
 | **Rich Results check** | Structure verified by script; Google's own tool needs the live URL | Deploy |
 | **Cross-browser pass** (Safari, Firefox) | Chromium only so far | Nothing |
@@ -67,7 +67,7 @@ The six prompts from the spec are in `docs/google-flow-prompts.md` ("Revision 4"
 
 ## 3. Done
 
-- **v3** (see `docs/v3-change-log.md`): 11-section home (7,037px), Systems in place of Studio/CMS, five studio sub-pages, clean Demos, Work hidden until real, Crew page, the stud system (`StudGlyph`, `StudMark`, `StudCrew`, the hero assembly), favicon and Apple icon from the stud C, per-page share images, breadcrumb, Service, FAQ and Article data, noindex on placeholder pages.
+- **v3** (see `docs/v3-change-log.md`): 11-section home (7,969px with the hero hold), Systems in place of Studio/CMS, five studio sub-pages, clean Demos, your four projects on Work and home, Crew page, the stud system (`StudGlyph`, `StudMark`, `StudCrew`, the hero assembly), favicon and Apple icon from the stud C, per-page share images, breadcrumb, Service, FAQ and Article data, noindex on placeholder pages.
 - **Working features** (all work with no keys and say when they are in demo or file mode): contact form, closing "request a call", newsletter, Aria demo (chat, browser voice, language switch, latency, transcript), missed-call calculator.
 - **Backend** (`backend/`, 11 tests): `/leads`, `/subscribe`, `/scores`, `/aria/chat`, `/health`; Supabase when configured, local files otherwise.
 - **Quality:** WCAG A and AA clean on all 33 pages, no broken links, no horizontal overflow at 1440, 390 and 360, LCP 1.5s on a throttled phone, CLS 0, SEO structure checks, 22 motion checks, 16 end-to-end checks.

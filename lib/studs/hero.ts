@@ -2,7 +2,7 @@ import { AGENTS, AGENT_IDS, TOKENS, cellXY, type AgentId } from "./patterns";
 import { markStuds } from "./mark";
 
 /**
- * Geometry for the hero scene (viewBox 480 x 300): the C of studs in the upper middle, and a row of seven agent tiles below it.
+ * Geometry for the hero scene (viewBox 480 x 430): the C of studs at the top, and a row of seven agent tiles just below it.
  * Every stud has a C position and, on scroll, a target stud in one of the seven tiles. The two sets are paired in x order so
  * the morph reads as one flock moving, not as shuffling. Extra studs fade in or out when the counts differ.
  */
@@ -10,7 +10,8 @@ export const HERO_VIEW = { w: 480, h: 300 } as const;
 const C = { cx: 240, cy: 112, R: 96 };
 const TILE = 56, GAP = 10;
 const ROW_X = (HERO_VIEW.w - (7 * TILE + 6 * GAP)) / 2;
-const ROW_Y = 232;
+/* The tile row sits just below the C. The hero is pinned while the C splits, so nothing scrolls under the floating nav and the row stays clear of the headline and the waveform pill. */
+const ROW_Y = 212;
 
 export interface HeroTile {
   id: AgentId;

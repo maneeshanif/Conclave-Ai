@@ -45,11 +45,16 @@ await p.waitForTimeout(1500);
 const C0 = await studPos();
 const vis = C0.filter((s) => s[2] > 0.4);
 check("hero studs assemble into the C (77 studs, inside the C's bounds)", vis.length === 77 && vis.every((s) => s[0] >= 135 && s[0] <= 345 && s[1] >= 10 && s[1] <= 215), `${vis.length} visible of ${C0.length}`);
-await p.evaluate(() => scrollTo(0, 260)); await p.waitForTimeout(1600);
+await p.evaluate(() => scrollTo(0, 150)); await p.waitForTimeout(900);
+const pinnedTop = await p.evaluate(() => Math.round(document.querySelector("[data-hero]").getBoundingClientRect().top));
+check("hero is held still while the C splits (pinned)", pinnedTop === 0, `hero top ${pinnedTop}px at 150px of scroll`);
+await p.evaluate(() => scrollTo(0, 340)); await p.waitForTimeout(1800);
 const C1 = await studPos();
 const moved = C1.filter((s, i) => Math.abs(s[0] - C0[i][0]) + Math.abs(s[1] - C0[i][1]) > 30).length;
 const tilesShown = await p.evaluate(() => [...document.querySelectorAll("[data-tile]")].filter((g) => +getComputedStyle(g).opacity > 0.9).length);
+const tileBox = await p.evaluate(() => { const r = [...document.querySelectorAll("[data-tile]")].map((g) => g.getBoundingClientRect()); const pill = document.querySelector("[data-hero-pill]").getBoundingClientRect(); return { top: Math.round(Math.min(...r.map((x) => x.top))), bottom: Math.round(Math.max(...r.map((x) => x.bottom))), pillTop: Math.round(pill.top) }; });
 check("on scroll the C splits into the crew (studs move, seven tiles appear)", moved > 50 && tilesShown === 7, `${moved} studs moved, ${tilesShown} tiles`);
+check("the seven tiles clear the floating nav and the waveform pill", tileBox.top > 100 && tileBox.bottom < tileBox.pillTop, JSON.stringify(tileBox));
 await p.evaluate(() => scrollTo(0, 0)); await p.waitForTimeout(1200);
 /* waveform breathes */
 const bar = () => p.evaluate(() => getComputedStyle(document.querySelector("[data-hero-pill] span")).transform);
@@ -122,7 +127,7 @@ await rp.goto(URL, { waitUntil: "networkidle" });
 const red = await rp.evaluate(() => ({ armed: document.documentElement.classList.contains("motion-ok"), hidden: [...document.querySelectorAll("[data-reveal],[data-hero-line],[data-stagger]>*")].filter((e) => +getComputedStyle(e).opacity < 1).length, ring: !!document.querySelector("body > div.fixed[aria-hidden]") && +getComputedStyle(document.querySelector("body > div.fixed[aria-hidden]")).opacity }));
 check("reduced motion: not armed, nothing hidden, cursor ring stays off", !red.armed && red.hidden === 0 && red.ring === 0, JSON.stringify(red));
 const rs = () => rp.evaluate(() => [...document.querySelectorAll("[data-stud]")].map((e) => [Math.round(+e.getAttribute("cx")), Math.round(+e.getAttribute("cy")), +getComputedStyle(e).opacity]));
-const rA = await rs(); await rp.evaluate(() => scrollTo(0, 260)); await rp.waitForTimeout(800); const rB = await rs();
+const rA = await rs(); await rp.evaluate(() => scrollTo(0, 340)); await rp.waitForTimeout(800); const rB = await rs();
 check("reduced motion: the stud C is static (77 studs, no scatter, no split on scroll)", rA.filter((s) => s[2] > 0.4).length === 77 && JSON.stringify(rA) === JSON.stringify(rB));
 await rctx.close();
 
@@ -145,7 +150,7 @@ check("mobile: services cards not sticky, cursor ring off", mob.sticky !== "stic
 check("mobile: no page errors", merr.length === 0, merr.join("|"));
 const ms = () => mp.evaluate(() => [...document.querySelectorAll("[data-stud]")].map((e) => [Math.round(+e.getAttribute("cx")), Math.round(+e.getAttribute("cy"))]));
 await mp.waitForTimeout(3500); /* let the load assembly finish */
-const mA = await ms(); await mp.evaluate(() => scrollTo(0, 260)); await mp.waitForTimeout(900); const mB = await ms();
+const mA = await ms(); await mp.evaluate(() => scrollTo(0, 340)); await mp.waitForTimeout(900); const mB = await ms();
 check("mobile: the stud C stays assembled (no scroll split)", JSON.stringify(mA) === JSON.stringify(mB));
 await mp.screenshot({ path: `${OUT}/mobile-top.png` });
 await mp.evaluate(() => document.querySelector('[role="tablist"]').scrollIntoView({ block: "center" })); await mp.waitForTimeout(900);

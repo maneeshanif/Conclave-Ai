@@ -7,8 +7,8 @@ import type { HeroStud } from "./hero";
 /**
  * Hero stud motion (spec section 5).
  *  1. On load the studs start scattered and assemble into the C in about 1.2s with a stagger, centre stud last.
- *  2. On scroll (wide screens only) the C splits into the seven agent glyphs, one flock moving into seven tiles, within the first 240px
- *     so the move finishes while the scene is still on screen.
+ *  2. On scroll (wide screens only) the hero is held still for 300px while the C splits into the seven agent glyphs, one flock moving
+ *     into seven tiles just below it. Pinning keeps the C where it is and keeps the tiles clear of the floating nav and the headline.
  * Phones and reduced motion get the assembled C only. `trigger` is the hero section the scroll morph is tied to.
  */
 export function useStudAssemble(svg: RefObject<SVGSVGElement | null>, studs: HeroStud[], trigger: () => Element | null) {
@@ -42,7 +42,7 @@ export function useStudAssemble(svg: RefObject<SVGSVGElement | null>, studs: Her
       const host = trigger();
       if (wide && host) {
         load.eventCallback("onComplete", () => {
-          const tl = gsap.timeline({ scrollTrigger: { trigger: host, start: "top top", end: "+=240", scrub: 0.6 } });
+          const tl = gsap.timeline({ scrollTrigger: { trigger: host, start: "top top", end: "+=300", scrub: 0.6, pin: true, anticipatePin: 1 } });
           els.forEach((el, i) => {
             const s = studs[i];
             if (s.t) tl.to(el, { attr: { cx: s.t.x, cy: s.t.y, r: s.t.r }, fill: s.t.fill, opacity: 1, ease: "power2.inOut", duration: 1 }, 0);

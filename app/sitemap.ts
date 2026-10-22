@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next";
 import { site, services, allRoutes } from "@/lib/site";
 import { industries, studio } from "@/lib/content";
-import { getRealProjects } from "@/lib/projects";
+import { getShowcaseProjects, hasWriteUp } from "@/lib/projects";
 import { posts } from "@/lib/notes";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const projects = await getRealProjects();
+  const projects = (await getShowcaseProjects()).filter(hasWriteUp);
   const paths = [
     ...allRoutes.map((r) => r.href),
     ...services.map((s) => `/services/${s.slug}`),

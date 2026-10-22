@@ -32,10 +32,10 @@ const HOME = [
   ["services", "components/home/sections.tsx (Services), components/home/visuals.tsx (mock-ups), components/studs/StudGlyph.tsx"],
   ["systems", "components/home/sections.tsx (Systems), lib/content.ts (studio)"],
   ["built-for", "components/home/sections.tsx (BuiltFor), lib/content.ts (industries), lib/studs/patterns.ts"],
+  ["work", "components/home/sections.tsx (WorkReel), components/work/ProjectCover.tsx, lib/projects.ts"],
   ["process", "components/home/sections.tsx (Process), lib/content.ts (processSteps)"],
   ["pricing", "components/home/sections.tsx (PricingTeaser)"],
   ["faq", "components/home/sections.tsx (Faq), components/ui/Accordion.tsx"],
-  ["guild-strip", "components/home/sections.tsx (GuildStrip)"],
   ["final-cta", "components/home/sections.tsx (FinalCta), components/QuickBook.tsx"],
 ];
 const PAGES = [
@@ -60,6 +60,10 @@ const PAGES = [
   { slug: "industry-startups", route: "/industries/startups", title: "Industry: startups", file: "app/industries/[slug]/page.tsx", compact: true },
   { slug: "crew", route: "/crew", title: "The Crew", file: "app/crew/page.tsx" },
   { slug: "work", route: "/work", title: "Work", file: "app/work/page.tsx" },
+  { slug: "work-detail", route: "/work/bazar-flow", title: "Project page", file: "app/work/[slug]/page.tsx" },
+  { slug: "work-codenexus-ai", route: "/work/codenexus-ai", title: "Project: CodeNexus AI", file: "app/work/[slug]/page.tsx", compact: true },
+  { slug: "work-scalenexus-ai", route: "/work/scalenexus-ai", title: "Project: ScaleNexus AI", file: "app/work/[slug]/page.tsx", compact: true },
+  { slug: "work-task-whisper", route: "/work/task-whisper", title: "Project: Task Whisper", file: "app/work/[slug]/page.tsx", compact: true },
   { slug: "demos", route: "/demos", title: "Demos", file: "app/demos/page.tsx" },
   { slug: "about", route: "/about", title: "About", file: "app/about/page.tsx" },
   { slug: "pricing", route: "/pricing", title: "Pricing", file: "app/pricing/page.tsx" },
@@ -212,9 +216,9 @@ for (const [vp, w, h] of VIEWPORTS) {
   await save(hp, null, "states/desktop/07-hero-studs-scatter.jpg", { ...st, id: "states/desktop/hero-studs-scatter", kind: "state", name: "Hero: studs scattering into the C (0.9s after load)", source: ["components/home/HeroStuds.tsx", "lib/studs/useStudAssemble.ts"] }, { clip: { x: 0, y: 0, width: 1440, height: 820 } });
   await hp.waitForTimeout(3500);
   await save(hp, null, "states/desktop/08-hero-studs-assembled.jpg", { ...st, id: "states/desktop/hero-studs-assembled", kind: "state", name: "Hero: the stud C assembled", source: ["components/home/HeroStuds.tsx", "lib/studs/mark.ts"] }, { clip: { x: 0, y: 0, width: 1440, height: 820 } });
-  await hp.evaluate(() => scrollTo(0, 240));
+  await hp.evaluate(() => scrollTo(0, 340));
   await hp.waitForTimeout(1800);
-  await save(hp, null, "states/desktop/09-hero-studs-crew.jpg", { ...st, id: "states/desktop/hero-studs-crew", kind: "state", name: "Hero: the C split into the seven agents (after 240px of scroll)", source: ["lib/studs/hero.ts", "lib/studs/useStudAssemble.ts"] }, { clip: { x: 0, y: 0, width: 1440, height: 820 } });
+  await save(hp, null, "states/desktop/09-hero-studs-crew.jpg", { ...st, id: "states/desktop/hero-studs-crew", kind: "state", name: "Hero: the C split into the seven agents (hero pinned, 300px of scroll)", source: ["lib/studs/hero.ts", "lib/studs/useStudAssemble.ts"] }, { clip: { x: 0, y: 0, width: 1440, height: 820 } });
   await hb.close();
 }await browser.close();
 stop();

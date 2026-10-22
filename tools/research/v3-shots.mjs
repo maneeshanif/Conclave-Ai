@@ -14,10 +14,10 @@ await p.goto(ROOT + "/", { waitUntil: "commit" });
 for (const t of [600, 1100, 1900]) { await p.waitForTimeout(t === 600 ? 600 : t - (t === 1100 ? 600 : 1100)); await p.screenshot({ path: `${OUT}/hero-${t}ms.png`, clip: { x: 800, y: 60, width: 640, height: 420 } }); }
 await p.waitForTimeout(2500);
 await p.screenshot({ path: `${OUT}/hero-assembled.png` });
-for (const y of [160, 320, 520]) {
+for (const y of [0, 100, 200, 300, 420, 700]) {
   await p.evaluate((v) => scrollTo(0, v), y);
   await p.waitForTimeout(1200);
-  await p.screenshot({ path: `${OUT}/hero-scroll-${y}.png`, clip: { x: 800, y: 0, width: 640, height: 480 } });
+  await p.screenshot({ path: `${OUT}/hero-scroll-${y}.png`, clip: { x: 0, y: 0, width: 1440, height: 900 } });
 }
 console.log("errors:", errs.length ? errs.slice(0, 5) : "none");
 await b.close();

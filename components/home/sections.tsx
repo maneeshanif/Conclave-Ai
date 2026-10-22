@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Accordion } from "@/components/ui/Accordion";
 import { StudGlyph } from "@/components/studs/StudGlyph";
+import { ProjectCover } from "@/components/work/ProjectCover";
 import { QuickBook } from "@/components/QuickBook";
 import { industries, processSteps, studio, trust } from "@/lib/content";
 import { services } from "@/lib/site";
@@ -209,29 +210,38 @@ export function BuiltFor() {
   );
 }
 
-/* 07 Work: shown only when at least one real case has a screenshot and a metric. Not placed on the home page until then. */
+/* 07 Work: the builds we can show openly. Cards use a screenshot when public/work/<slug>.png exists, else the project's stud glyph. */
 export function WorkReel({ projects }: { projects: Project[] }) {
   return (
     <section>
       <div className="frame border-t hair">
-        <Head eyebrow="Work">Selected builds, outcome first</Head>
-        <div data-stagger className="grid gap-4 px-4 py-6 md:grid-cols-3 md:px-6 md:py-8">
-          {projects.slice(0, 3).map((p) => (
+        <Head eyebrow="Work">Things we have built</Head>
+        <div data-stagger className="grid gap-4 px-4 py-6 sm:grid-cols-2 md:px-6 md:py-8 lg:grid-cols-4">
+          {projects.slice(0, 4).map((p, i) => (
             <Link key={p.slug} href={`/work/${p.slug}`} className="group flex flex-col overflow-hidden rounded-3xl border hair bg-paper transition-colors duration-150 hover:bg-chalk">
-              <div className="aspect-[4/3] bg-mist" role="img" aria-label={`${p.title} screenshot`} />
-              <div className="p-5">
+              <ProjectCover project={p} index={i} className="aspect-[4/3]" />
+              <div className="flex flex-1 flex-col p-5">
                 <p className="label text-plum">{p.tags.join(" / ")}</p>
-                <h3 className="mt-2 text-xl font-semibold tracking-tight">{p.title}</h3>
-                <p className="mt-1 text-slate">{p.summary}</p>
+                <h3 className="mt-2 text-xl font-semibold tracking-tight transition-colors group-hover:text-plum">{p.title}</h3>
+                {p.summary && <p className="mt-1 text-sm text-slate">{p.summary}</p>}
+                {p.results[0] && (
+                  <p className="mt-3 w-fit rounded-lg bg-lime px-2.5 py-1 text-sm text-ink">
+                    <b>{p.results[0].value}</b> {p.results[0].label}
+                  </p>
+                )}
               </div>
             </Link>
           ))}
+        </div>
+        <div className="flex justify-center border-t hair py-5">
+          <Button href="/work" variant="ghost">
+            See all work
+          </Button>
         </div>
       </div>
     </section>
   );
 }
-
 /* 08 Process: Audit, Build, Run, each with a duration and a deliverable. */
 export function Process() {
   return (
@@ -327,23 +337,6 @@ export function Faq() {
         <div data-reveal className="border-t hair bg-paper md:border-l md:border-t-0">
           <Accordion items={faqs} />
         </div>
-      </div>
-    </section>
-  );
-}
-
-/* Guild: one line above the closing block. */
-export function GuildStrip() {
-  return (
-    <section>
-      <div className="frame flex flex-wrap items-center justify-between gap-3 border-t hair bg-mist/60 px-4 py-4 md:px-10">
-        <p className="text-sm">
-          <span className="label mr-3 text-plum">Developers</span>
-          Join the Conclave AI Guild: careers, open-source starters and bounties.
-        </p>
-        <Link href="/join" className="u-link text-sm font-medium hover:text-plum">
-          Join the guild
-        </Link>
       </div>
     </section>
   );

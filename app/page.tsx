@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
-import { Hero, LiveAgent, Proof, Services, Systems, BuiltFor, Process, PricingTeaser, Faq, faqs, GuildStrip, FinalCta } from "@/components/home/sections";
+import { Hero, LiveAgent, Proof, Services, Systems, BuiltFor, WorkReel, Process, PricingTeaser, Faq, faqs, FinalCta } from "@/components/home/sections";
+import { getShowcaseProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: { absolute: `${site.name} | Voice agents, AI automation and full-stack software` },
@@ -9,11 +10,12 @@ export const metadata: Metadata = {
 };
 
 /**
- * Home, Change Spec v3: eleven sections or fewer, about 7,000 to 8,000px at 1440 wide.
- * Receipts, Stack and scale, the full Guild block, the Manifesto and the Demos teaser moved to their own pages.
- * The Work section returns when at least one real case has a screenshot and a metric.
+ * Home, Change Spec v3: eleven sections, about 7,000 to 8,000px at 1440 wide.
+ * Receipts, Stack and scale, the Guild block, the Manifesto and the Demos teaser live on their own pages.
+ * Work shows the builds the owner has marked showable (lib/projects.ts), with screenshots when public/work/<slug>.png exists.
  */
-export default function Home() {
+export default async function Home() {
+  const projects = await getShowcaseProjects();
   return (
     <>
       <script
@@ -32,10 +34,10 @@ export default function Home() {
       <Services />
       <Systems />
       <BuiltFor />
+      {projects.length > 0 && <WorkReel projects={projects} />}
       <Process />
       <PricingTeaser />
       <Faq />
-      <GuildStrip />
       <FinalCta />
     </>
   );

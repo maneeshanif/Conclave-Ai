@@ -14,7 +14,7 @@
     ],
     "file": "shots/home/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 7037
+    "height": 7669
   },
   {
     "page": "home",
@@ -124,16 +124,16 @@
     "route": "/",
     "viewport": "desktop",
     "pageFile": "app/page.tsx",
-    "id": "home/desktop/07-process",
+    "id": "home/desktop/07-work",
     "kind": "section",
-    "name": "process",
-    "heading": "Three steps, no surprises plus 3 more",
+    "name": "work",
+    "heading": "Things we have built plus 4 more",
     "source": [
-      "components/home/sections.tsx (Process), lib/content.ts (processSteps)"
+      "components/home/sections.tsx (WorkReel), components/work/ProjectCover.tsx, lib/projects.ts"
     ],
-    "file": "shots/home/desktop/07-process.jpg",
+    "file": "shots/home/desktop/07-work.jpg",
     "width": 1440,
-    "height": 500
+    "height": 686
   },
   {
     "page": "home",
@@ -141,14 +141,31 @@
     "route": "/",
     "viewport": "desktop",
     "pageFile": "app/page.tsx",
-    "id": "home/desktop/08-pricing",
+    "id": "home/desktop/08-process",
+    "kind": "section",
+    "name": "process",
+    "heading": "Three steps, no surprises plus 3 more",
+    "source": [
+      "components/home/sections.tsx (Process), lib/content.ts (processSteps)"
+    ],
+    "file": "shots/home/desktop/08-process.jpg",
+    "width": 1440,
+    "height": 499
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "app/page.tsx",
+    "id": "home/desktop/09-pricing",
     "kind": "section",
     "name": "pricing",
     "heading": "Start small, scale when it works plus 3 more",
     "source": [
       "components/home/sections.tsx (PricingTeaser)"
     ],
-    "file": "shots/home/desktop/08-pricing.jpg",
+    "file": "shots/home/desktop/09-pricing.jpg",
     "width": 1440,
     "height": 646
   },
@@ -158,33 +175,16 @@
     "route": "/",
     "viewport": "desktop",
     "pageFile": "app/page.tsx",
-    "id": "home/desktop/09-faq",
+    "id": "home/desktop/10-faq",
     "kind": "section",
     "name": "faq",
     "heading": "Frequently asked questions plus 10 more",
     "source": [
       "components/home/sections.tsx (Faq), components/ui/Accordion.tsx"
     ],
-    "file": "shots/home/desktop/09-faq.jpg",
+    "file": "shots/home/desktop/10-faq.jpg",
     "width": 1440,
     "height": 587
-  },
-  {
-    "page": "home",
-    "pageTitle": "Home",
-    "route": "/",
-    "viewport": "desktop",
-    "pageFile": "app/page.tsx",
-    "id": "home/desktop/10-guild-strip",
-    "kind": "section",
-    "name": "guild-strip",
-    "heading": "DEVELOPERSJoin the Conclave AI Guild: careers, o",
-    "source": [
-      "components/home/sections.tsx (GuildStrip)"
-    ],
-    "file": "shots/home/desktop/10-guild-strip.jpg",
-    "width": 1440,
-    "height": 54
   },
   {
     "page": "home",
@@ -218,7 +218,7 @@
     ],
     "file": "shots/home/desktop/12-footer.jpg",
     "width": 1440,
-    "height": 684
+    "height": 685
   },
   {
     "page": "services",
@@ -1935,7 +1935,7 @@
     ],
     "file": "shots/work/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 1884
+    "height": 2865
   },
   {
     "page": "work",
@@ -1952,7 +1952,7 @@
     ],
     "file": "shots/work/desktop/01-built-shipped-running.jpg",
     "width": 1280,
-    "height": 591
+    "height": 621
   },
   {
     "page": "work",
@@ -1960,16 +1960,16 @@
     "route": "/work",
     "viewport": "desktop",
     "pageFile": "app/work/page.tsx",
-    "id": "work/desktop/02-what-you-will-find-here-plus-1-more",
+    "id": "work/desktop/02-filter-by-type",
     "kind": "section",
-    "name": "What you will find here plus 1 more",
-    "heading": "What you will find here plus 1 more",
+    "name": "Filter by type",
+    "heading": "Filter by type",
     "source": [
       "app/work/page.tsx"
     ],
-    "file": "shots/work/desktop/02-what-you-will-find-here-plus-1-more.jpg",
-    "width": 1280,
-    "height": 294
+    "file": "shots/work/desktop/02-filter-by-type.jpg",
+    "width": 1198,
+    "height": 45
   },
   {
     "page": "work",
@@ -1977,14 +1977,31 @@
     "route": "/work",
     "viewport": "desktop",
     "pageFile": "app/work/page.tsx",
-    "id": "work/desktop/03-hear-it-then-book-it",
+    "id": "work/desktop/03-bazar-flow-plus-3-more",
+    "kind": "section",
+    "name": "Bazar Flow plus 3 more",
+    "heading": "Bazar Flow plus 3 more",
+    "source": [
+      "app/work/page.tsx"
+    ],
+    "file": "shots/work/desktop/03-bazar-flow-plus-3-more.jpg",
+    "width": 1198,
+    "height": 1053
+  },
+  {
+    "page": "work",
+    "pageTitle": "Work",
+    "route": "/work",
+    "viewport": "desktop",
+    "pageFile": "app/work/page.tsx",
+    "id": "work/desktop/04-hear-it-then-book-it",
     "kind": "section",
     "name": "Hear it, then book it.",
     "heading": "Hear it, then book it.",
     "source": [
       "app/work/page.tsx"
     ],
-    "file": "shots/work/desktop/03-hear-it-then-book-it.jpg",
+    "file": "shots/work/desktop/04-hear-it-then-book-it.jpg",
     "width": 1280,
     "height": 318
   },
@@ -1994,16 +2011,186 @@
     "route": "/work",
     "viewport": "desktop",
     "pageFile": "app/work/page.tsx",
-    "id": "work/desktop/04-footer",
+    "id": "work/desktop/05-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/work/desktop/04-footer.jpg",
+    "file": "shots/work/desktop/05-footer.jpg",
     "width": 1440,
     "height": 684
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project page",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work-detail/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2483
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project page",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/01-bazar-flow",
+    "kind": "section",
+    "name": "Bazar Flow",
+    "heading": "Bazar Flow",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/desktop/01-bazar-flow.jpg",
+    "width": 1280,
+    "height": 438
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project page",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/02-div",
+    "kind": "section",
+    "name": "DIV",
+    "heading": "DIV",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/desktop/02-div.jpg",
+    "width": 1198,
+    "height": 675
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project page",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/03-built-with",
+    "kind": "section",
+    "name": "Built with",
+    "heading": "Built with",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/desktop/03-built-with.jpg",
+    "width": 1198,
+    "height": 172
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project page",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/04-next-project-codenexus-ai",
+    "kind": "section",
+    "name": "NEXT PROJECT CODENEXUS AI",
+    "heading": "NEXT PROJECT CODENEXUS AI",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/desktop/04-next-project-codenexus-ai.jpg",
+    "width": 1198,
+    "height": 161
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project page",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/05-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/desktop/05-hear-it-then-book-it.jpg",
+    "width": 1280,
+    "height": 318
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project page",
+    "route": "/work/bazar-flow",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/desktop/06-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/work-detail/desktop/06-footer.jpg",
+    "width": 1440,
+    "height": 684
+  },
+  {
+    "page": "work-codenexus-ai",
+    "pageTitle": "Project: CodeNexus AI",
+    "route": "/work/codenexus-ai",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-codenexus-ai/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work-codenexus-ai/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2579
+  },
+  {
+    "page": "work-scalenexus-ai",
+    "pageTitle": "Project: ScaleNexus AI",
+    "route": "/work/scalenexus-ai",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-scalenexus-ai/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work-scalenexus-ai/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2579
+  },
+  {
+    "page": "work-task-whisper",
+    "pageTitle": "Project: Task Whisper",
+    "route": "/work/task-whisper",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-task-whisper/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work-task-whisper/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2579
   },
   {
     "page": "demos",
@@ -3527,7 +3714,7 @@
     ],
     "file": "shots/home/mobile/00-full-page-part4.jpg",
     "width": 780,
-    "height": 1294
+    "height": 4894
   },
   {
     "page": "home",
@@ -3637,14 +3824,31 @@
     "route": "/",
     "viewport": "mobile",
     "pageFile": "app/page.tsx",
-    "id": "home/mobile/07-process",
+    "id": "home/mobile/07-work",
+    "kind": "section",
+    "name": "work",
+    "heading": "Things we have built plus 4 more",
+    "source": [
+      "components/home/sections.tsx (WorkReel), components/work/ProjectCover.tsx, lib/projects.ts"
+    ],
+    "file": "shots/home/mobile/07-work.jpg",
+    "width": 780,
+    "height": 3812
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/08-process",
     "kind": "section",
     "name": "process",
     "heading": "Three steps, no surprises plus 3 more",
     "source": [
       "components/home/sections.tsx (Process), lib/content.ts (processSteps)"
     ],
-    "file": "shots/home/mobile/07-process.jpg",
+    "file": "shots/home/mobile/08-process.jpg",
     "width": 780,
     "height": 1894
   },
@@ -3654,14 +3858,14 @@
     "route": "/",
     "viewport": "mobile",
     "pageFile": "app/page.tsx",
-    "id": "home/mobile/08-pricing",
+    "id": "home/mobile/09-pricing",
     "kind": "section",
     "name": "pricing",
     "heading": "Start small, scale when it works plus 3 more",
     "source": [
       "components/home/sections.tsx (PricingTeaser)"
     ],
-    "file": "shots/home/mobile/08-pricing.jpg",
+    "file": "shots/home/mobile/09-pricing.jpg",
     "width": 780,
     "height": 2440
   },
@@ -3671,33 +3875,16 @@
     "route": "/",
     "viewport": "mobile",
     "pageFile": "app/page.tsx",
-    "id": "home/mobile/09-faq",
+    "id": "home/mobile/10-faq",
     "kind": "section",
     "name": "faq",
     "heading": "Frequently asked questions plus 10 more",
     "source": [
       "components/home/sections.tsx (Faq), components/ui/Accordion.tsx"
     ],
-    "file": "shots/home/mobile/09-faq.jpg",
+    "file": "shots/home/mobile/10-faq.jpg",
     "width": 780,
     "height": 1732
-  },
-  {
-    "page": "home",
-    "pageTitle": "Home",
-    "route": "/",
-    "viewport": "mobile",
-    "pageFile": "app/page.tsx",
-    "id": "home/mobile/10-guild-strip",
-    "kind": "section",
-    "name": "guild-strip",
-    "heading": "DEVELOPERSJoin the Conclave AI Guild: careers, o",
-    "source": [
-      "components/home/sections.tsx (GuildStrip)"
-    ],
-    "file": "shots/home/mobile/10-guild-strip.jpg",
-    "width": 780,
-    "height": 212
   },
   {
     "page": "home",
@@ -3714,7 +3901,7 @@
     ],
     "file": "shots/home/mobile/11-final-cta.jpg",
     "width": 780,
-    "height": 1542
+    "height": 1544
   },
   {
     "page": "home",
@@ -3731,7 +3918,7 @@
     ],
     "file": "shots/home/mobile/12-footer.jpg",
     "width": 780,
-    "height": 3336
+    "height": 3334
   },
   {
     "page": "services",
@@ -5448,7 +5635,7 @@
     ],
     "file": "shots/work/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 5768
+    "height": 8432
   },
   {
     "page": "work",
@@ -5465,7 +5652,7 @@
     ],
     "file": "shots/work/mobile/01-built-shipped-running.jpg",
     "width": 780,
-    "height": 814
+    "height": 868
   },
   {
     "page": "work",
@@ -5473,16 +5660,16 @@
     "route": "/work",
     "viewport": "mobile",
     "pageFile": "app/work/page.tsx",
-    "id": "work/mobile/02-what-you-will-find-here-plus-1-more",
+    "id": "work/mobile/02-filter-by-type",
     "kind": "section",
-    "name": "What you will find here plus 1 more",
-    "heading": "What you will find here plus 1 more",
+    "name": "Filter by type",
+    "heading": "Filter by type",
     "source": [
       "app/work/page.tsx"
     ],
-    "file": "shots/work/mobile/02-what-you-will-find-here-plus-1-more.jpg",
-    "width": 780,
-    "height": 1026
+    "file": "shots/work/mobile/02-filter-by-type.jpg",
+    "width": 712,
+    "height": 194
   },
   {
     "page": "work",
@@ -5490,16 +5677,33 @@
     "route": "/work",
     "viewport": "mobile",
     "pageFile": "app/work/page.tsx",
-    "id": "work/mobile/03-hear-it-then-book-it",
+    "id": "work/mobile/03-bazar-flow-plus-3-more",
+    "kind": "section",
+    "name": "Bazar Flow plus 3 more",
+    "heading": "Bazar Flow plus 3 more",
+    "source": [
+      "app/work/page.tsx"
+    ],
+    "file": "shots/work/mobile/03-bazar-flow-plus-3-more.jpg",
+    "width": 712,
+    "height": 3104
+  },
+  {
+    "page": "work",
+    "pageTitle": "Work",
+    "route": "/work",
+    "viewport": "mobile",
+    "pageFile": "app/work/page.tsx",
+    "id": "work/mobile/04-hear-it-then-book-it",
     "kind": "section",
     "name": "Hear it, then book it.",
     "heading": "Hear it, then book it.",
     "source": [
       "app/work/page.tsx"
     ],
-    "file": "shots/work/mobile/03-hear-it-then-book-it.jpg",
+    "file": "shots/work/mobile/04-hear-it-then-book-it.jpg",
     "width": 780,
-    "height": 600
+    "height": 598
   },
   {
     "page": "work",
@@ -5507,16 +5711,152 @@
     "route": "/work",
     "viewport": "mobile",
     "pageFile": "app/work/page.tsx",
-    "id": "work/mobile/04-footer",
+    "id": "work/mobile/05-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/work/mobile/04-footer.jpg",
+    "file": "shots/work/mobile/05-footer.jpg",
     "width": 780,
-    "height": 3334
+    "height": 3336
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project page",
+    "route": "/work/bazar-flow",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work-detail/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 5954
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project page",
+    "route": "/work/bazar-flow",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/mobile/01-bazar-flow",
+    "kind": "section",
+    "name": "Bazar Flow",
+    "heading": "Bazar Flow",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/mobile/01-bazar-flow.jpg",
+    "width": 780,
+    "height": 732
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project page",
+    "route": "/work/bazar-flow",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/mobile/02-built-with",
+    "kind": "section",
+    "name": "Built with",
+    "heading": "Built with",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/mobile/02-built-with.jpg",
+    "width": 780,
+    "height": 1294
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project page",
+    "route": "/work/bazar-flow",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/mobile/03-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/work/[slug]/page.tsx"
+    ],
+    "file": "shots/work-detail/mobile/03-hear-it-then-book-it.jpg",
+    "width": 780,
+    "height": 600
+  },
+  {
+    "page": "work-detail",
+    "pageTitle": "Project page",
+    "route": "/work/bazar-flow",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-detail/mobile/04-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/work-detail/mobile/04-footer.jpg",
+    "width": 780,
+    "height": 3336
+  },
+  {
+    "page": "work-codenexus-ai",
+    "pageTitle": "Project: CodeNexus AI",
+    "route": "/work/codenexus-ai",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-codenexus-ai/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work-codenexus-ai/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 5954
+  },
+  {
+    "page": "work-scalenexus-ai",
+    "pageTitle": "Project: ScaleNexus AI",
+    "route": "/work/scalenexus-ai",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-scalenexus-ai/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work-scalenexus-ai/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 6008
+  },
+  {
+    "page": "work-task-whisper",
+    "pageTitle": "Project: Task Whisper",
+    "route": "/work/task-whisper",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-task-whisper/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work-task-whisper/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 5954
   },
   {
     "page": "demos",
@@ -7208,7 +7548,7 @@
     "pageFile": "components",
     "id": "states/desktop/hero-studs-crew",
     "kind": "state",
-    "name": "Hero: the C split into the seven agents (after 240px of scroll)",
+    "name": "Hero: the C split into the seven agents (hero pinned, 300px of scroll)",
     "source": [
       "lib/studs/hero.ts",
       "lib/studs/useStudAssemble.ts"

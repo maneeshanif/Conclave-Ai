@@ -43,7 +43,9 @@ for (const r of ["/privacy", "/terms"]) {
   const html = await (await fetch(BASE + r)).text();
   check(`${r} is noindex and not in the sitemap`, /noindex/.test(/<meta name="robots" content="([^"]+)"/.exec(html)?.[1] ?? "") && !routes.includes(r));
 }
-check("no placeholder case studies are public (/work/bazar-flow is a 404)", (await fetch(BASE + "/work/bazar-flow")).status === 404);
+const wk = await fetch(BASE + "/work/bazar-flow");
+check("project pages are live but noindexed until they have a write-up", wk.status === 200 && /noindex/.test(/<meta name="robots" content="([^"]+)"/.exec(await wk.text())?.[1] ?? ""));
+check("noindexed project pages stay out of the sitemap", !routes.includes("/work/bazar-flow"));
 const robotsTxt = await (await fetch(`${BASE}/robots.txt`)).text();
 check("robots.txt points at the sitemap", /Sitemap:/i.test(robotsTxt));
 check("404 page returns 404", (await fetch(BASE + "/no-such-page")).status === 404);
