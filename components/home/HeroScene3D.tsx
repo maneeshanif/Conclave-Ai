@@ -185,7 +185,7 @@ function Crew({ id, eyesRef }: { id: CastId; eyesRef: (g: THREE.Group | null) =>
 
 /** Ring layout around the core; depth drives how far each leans with the pointer. */
 const spots: [CastId, number, number, number][] = [
-  ["aria", -3.1, 2.0, 0.1], ["echo", -0.1, 2.9, -0.5], ["slot", 3.2, 1.8, 0.2], ["boomerang", 3.6, -0.5, -0.2], ["tally", 2.2, -2.5, 0.3], ["gate", -0.2, -2.75, 0.1], ["ledger", -3.75, -0.95, -0.3],
+  ["aria", -3.1, 2.0, 0.1], ["echo", -0.1, 2.9, -0.5], ["slot", 3.2, 1.8, 0.2], ["boomerang", 3.6, -0.5, -0.2], ["tally", 2.75, -2.45, 0.3], ["gate", -0.75, -2.8, 0.1], ["ledger", -3.75, -0.95, -0.3],
 ];
 
 const easeBack = (p: number) => 1 + 2.1 * Math.pow(p - 1, 3) + 1.1 * Math.pow(p - 1, 2);

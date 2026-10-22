@@ -1340,7 +1340,7 @@
     ],
     "file": "shots/demos/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 4504
+    "height": 4576
   },
   {
     "page": "demos",
@@ -1408,7 +1408,7 @@
     ],
     "file": "shots/demos/desktop/04-the-60-second-game-plus-1-more.jpg",
     "width": 1278,
-    "height": 426
+    "height": 498
   },
   {
     "page": "demos",
@@ -2667,6 +2667,210 @@
     "file": "shots/terms/desktop/03-footer.jpg",
     "width": 1440,
     "height": 685
+  },
+  {
+    "page": "service-follow-up",
+    "pageTitle": "Service: follow-up",
+    "route": "/services/follow-up",
+    "viewport": "desktop",
+    "pageFile": "app/services/[slug]/page.tsx",
+    "id": "service-follow-up/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/service-follow-up/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2895
+  },
+  {
+    "page": "service-booking",
+    "pageTitle": "Service: booking",
+    "route": "/services/booking",
+    "viewport": "desktop",
+    "pageFile": "app/services/[slug]/page.tsx",
+    "id": "service-booking/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/service-booking/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 3033
+  },
+  {
+    "page": "service-reactivation",
+    "pageTitle": "Service: reactivation",
+    "route": "/services/reactivation",
+    "viewport": "desktop",
+    "pageFile": "app/services/[slug]/page.tsx",
+    "id": "service-reactivation/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/service-reactivation/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2918
+  },
+  {
+    "page": "service-reporting",
+    "pageTitle": "Service: reporting",
+    "route": "/services/reporting",
+    "viewport": "desktop",
+    "pageFile": "app/services/[slug]/page.tsx",
+    "id": "service-reporting/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/service-reporting/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 3014
+  },
+  {
+    "page": "industry-med-spas",
+    "pageTitle": "Industry: med spas",
+    "route": "/industries/med-spas",
+    "viewport": "desktop",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-med-spas/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-med-spas/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 3127
+  },
+  {
+    "page": "industry-dental",
+    "pageTitle": "Industry: dental",
+    "route": "/industries/dental",
+    "viewport": "desktop",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-dental/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-dental/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2936
+  },
+  {
+    "page": "industry-real-estate",
+    "pageTitle": "Industry: real estate",
+    "route": "/industries/real-estate",
+    "viewport": "desktop",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-real-estate/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-real-estate/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2936
+  },
+  {
+    "page": "industry-home-services",
+    "pageTitle": "Industry: home services",
+    "route": "/industries/home-services",
+    "viewport": "desktop",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-home-services/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-home-services/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 3031
+  },
+  {
+    "page": "industry-startups",
+    "pageTitle": "Industry: startups",
+    "route": "/industries/startups",
+    "viewport": "desktop",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-startups/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-startups/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 3031
+  },
+  {
+    "page": "work-codenexus-ai",
+    "pageTitle": "Project: CodeNexus AI",
+    "route": "/work/codenexus-ai",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-codenexus-ai/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work-codenexus-ai/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 3220
+  },
+  {
+    "page": "work-scalenexus-ai",
+    "pageTitle": "Project: ScaleNexus AI",
+    "route": "/work/scalenexus-ai",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-scalenexus-ai/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work-scalenexus-ai/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 3220
+  },
+  {
+    "page": "work-task-whisper",
+    "pageTitle": "Project: Task Whisper",
+    "route": "/work/task-whisper",
+    "viewport": "desktop",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-task-whisper/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work-task-whisper/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 3220
   },
   {
     "page": "not-found",
@@ -4241,7 +4445,7 @@
     ],
     "file": "shots/demos/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 12690
+    "height": 12890
   },
   {
     "page": "demos",
@@ -4309,7 +4513,7 @@
     ],
     "file": "shots/demos/mobile/04-the-60-second-game-plus-1-more.jpg",
     "width": 776,
-    "height": 1184
+    "height": 1384
   },
   {
     "page": "demos",
@@ -5876,6 +6080,210 @@
     "height": 3336
   },
   {
+    "page": "service-follow-up",
+    "pageTitle": "Service: follow-up",
+    "route": "/services/follow-up",
+    "viewport": "mobile",
+    "pageFile": "app/services/[slug]/page.tsx",
+    "id": "service-follow-up/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/service-follow-up/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 9100
+  },
+  {
+    "page": "service-booking",
+    "pageTitle": "Service: booking",
+    "route": "/services/booking",
+    "viewport": "mobile",
+    "pageFile": "app/services/[slug]/page.tsx",
+    "id": "service-booking/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/service-booking/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 9298
+  },
+  {
+    "page": "service-reactivation",
+    "pageTitle": "Service: reactivation",
+    "route": "/services/reactivation",
+    "viewport": "mobile",
+    "pageFile": "app/services/[slug]/page.tsx",
+    "id": "service-reactivation/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/service-reactivation/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 8988
+  },
+  {
+    "page": "service-reporting",
+    "pageTitle": "Service: reporting",
+    "route": "/services/reporting",
+    "viewport": "mobile",
+    "pageFile": "app/services/[slug]/page.tsx",
+    "id": "service-reporting/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/service-reporting/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 8988
+  },
+  {
+    "page": "industry-med-spas",
+    "pageTitle": "Industry: med spas",
+    "route": "/industries/med-spas",
+    "viewport": "mobile",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-med-spas/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-med-spas/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 9068
+  },
+  {
+    "page": "industry-dental",
+    "pageTitle": "Industry: dental",
+    "route": "/industries/dental",
+    "viewport": "mobile",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-dental/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-dental/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 8962
+  },
+  {
+    "page": "industry-real-estate",
+    "pageTitle": "Industry: real estate",
+    "route": "/industries/real-estate",
+    "viewport": "mobile",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-real-estate/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-real-estate/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 8962
+  },
+  {
+    "page": "industry-home-services",
+    "pageTitle": "Industry: home services",
+    "route": "/industries/home-services",
+    "viewport": "mobile",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-home-services/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-home-services/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 9006
+  },
+  {
+    "page": "industry-startups",
+    "pageTitle": "Industry: startups",
+    "route": "/industries/startups",
+    "viewport": "mobile",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-startups/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-startups/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 9016
+  },
+  {
+    "page": "work-codenexus-ai",
+    "pageTitle": "Project: CodeNexus AI",
+    "route": "/work/codenexus-ai",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-codenexus-ai/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work-codenexus-ai/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 7708
+  },
+  {
+    "page": "work-scalenexus-ai",
+    "pageTitle": "Project: ScaleNexus AI",
+    "route": "/work/scalenexus-ai",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-scalenexus-ai/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work-scalenexus-ai/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 7760
+  },
+  {
+    "page": "work-task-whisper",
+    "pageTitle": "Project: Task Whisper",
+    "route": "/work/task-whisper",
+    "viewport": "mobile",
+    "pageFile": "app/work/[slug]/page.tsx",
+    "id": "work-task-whisper/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/work/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/work-task-whisper/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 7708
+  },
+  {
     "page": "not-found",
     "pageTitle": "404",
     "route": "/no-such-page",
@@ -5941,5 +6349,22 @@
     "file": "shots/states/mobile/01-mobile-menu.jpg",
     "width": 780,
     "height": 1688
+  },
+  {
+    "page": "states",
+    "pageTitle": "Interactive states",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "components",
+    "id": "states/desktop/hero-webgl",
+    "kind": "state",
+    "name": "Hero in WebGL (3D crew, shown on wide screens with a mouse)",
+    "source": [
+      "components/home/HeroScene3D.tsx",
+      "components/home/HeroStage.tsx"
+    ],
+    "file": "shots/states/desktop/07-hero-webgl.jpg",
+    "width": 1440,
+    "height": 820
   }
 ]

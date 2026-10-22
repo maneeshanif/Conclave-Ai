@@ -1,6 +1,6 @@
 # Conclave AI: design review pack
 
-You are reviewing the current look of the Conclave AI website. This folder is a visual snapshot of **every page and every section**, at desktop (1440px) and mobile (390px), plus interactive states. Generated 2026-10-22. 350 shots across 23 groups.
+You are reviewing the current look of the Conclave AI website. This folder is a visual snapshot of **every page and every section**, at desktop (1440px) and mobile (390px), plus interactive states. Generated 2026-10-22. 375 shots across 35 groups.
 
 ## Files
 
@@ -217,196 +217,221 @@ This builds the production site, starts a temporary server, recaptures everythin
 | 156 | `terms/desktop/01-terms` | section | /terms | app/terms/page.tsx |
 | 157 | `terms/desktop/02-text-to-be-added-before-launch` | section | /terms | app/terms/page.tsx |
 | 158 | `terms/desktop/03-footer` | section | /terms | components/Footer.tsx |
-| 159 | `not-found/desktop/full-page` | full | /no-such-page | app/not-found.tsx; app/layout.tsx |
-| 160 | `not-found/desktop/01-nothing-here` | section | /no-such-page | app/not-found.tsx |
-| 161 | `not-found/desktop/02-footer` | section | /no-such-page | components/Footer.tsx |
-| 162 | `states/desktop/aria-tab-answer-calls` | state | / | components/home/AriaWindow.tsx |
-| 163 | `states/desktop/aria-tab-follow-up-fast` | state | / | components/home/AriaWindow.tsx |
-| 164 | `states/desktop/aria-tab-book-the-slot` | state | / | components/home/AriaWindow.tsx |
-| 165 | `states/desktop/aria-tab-win-back` | state | / | components/home/AriaWindow.tsx |
-| 166 | `states/desktop/command-palette` | state | / | components/CommandPalette.tsx |
-| 167 | `states/desktop/nav-hover` | state | / | components/Navbar.tsx |
-| 168 | `home/mobile/full-page-part1` | full | / | app/page.tsx; app/layout.tsx |
-| 169 | `home/mobile/full-page-part2` | full | / | app/page.tsx; app/layout.tsx |
-| 170 | `home/mobile/full-page-part3` | full | / | app/page.tsx; app/layout.tsx |
-| 171 | `home/mobile/full-page-part4` | full | / | app/page.tsx; app/layout.tsx |
-| 172 | `home/mobile/full-page-part5` | full | / | app/page.tsx; app/layout.tsx |
-| 173 | `home/mobile/full-page-part6` | full | / | app/page.tsx; app/layout.tsx |
-| 174 | `home/mobile/01-hero` | section | / | components/home/sections.tsx (Hero), components/home/visuals.tsx (HeroScene) |
-| 175 | `home/mobile/02-live-agent` | section | / | components/home/sections.tsx (LiveAgent), components/home/AriaWindow.tsx |
-| 176 | `home/mobile/03-proof` | section | / | components/home/sections.tsx (Proof), lib/content.ts (trust) |
-| 177 | `home/mobile/04-services` | section | / | components/home/sections.tsx (Services), components/home/visuals.tsx (service mock-ups) |
-| 178 | `home/mobile/05-studio` | section | / | components/home/sections2.tsx (StudioSection), lib/content.ts (studio) |
-| 179 | `home/mobile/06-built-for` | section | / | components/home/sections.tsx (BuiltFor), components/Cast.tsx, lib/content.ts (industries) |
-| 180 | `home/mobile/07-work` | section | / | components/home/sections.tsx (WorkReel), lib/projects.ts |
-| 181 | `home/mobile/08-receipts` | section | / | components/home/sections2.tsx (ReceiptsTeaser) |
-| 182 | `home/mobile/09-manifesto` | section | / | components/home/sections.tsx (Manifesto), components/Cast.tsx (CastRow) |
-| 183 | `home/mobile/10-process` | section | / | components/home/sections.tsx (Process), lib/content.ts (processSteps) |
-| 184 | `home/mobile/11-demos` | section | / | components/home/sections.tsx (DemosTeaser) |
-| 185 | `home/mobile/12-stack-scale` | section | / | components/home/sections2.tsx (StackScale) |
-| 186 | `home/mobile/13-pricing` | section | / | components/home/sections.tsx (PricingTeaser) |
-| 187 | `home/mobile/14-join-guild` | section | / | components/home/sections2.tsx (JoinGuild), lib/content.ts (guild) |
-| 188 | `home/mobile/15-faq` | section | / | components/home/sections.tsx (Faq), components/ui/Accordion.tsx |
-| 189 | `home/mobile/16-final-cta` | section | / | components/home/sections.tsx (FinalCta) |
-| 190 | `home/mobile/17-footer` | section | / | components/Footer.tsx |
-| 191 | `services/mobile/full-page` | full | /services | app/services/page.tsx; app/layout.tsx |
-| 192 | `services/mobile/01-five-jobs-one-agent-each` | section | /services | app/services/page.tsx |
-| 193 | `services/mobile/02-voice-agents-that-answer-every-call-plus` | section | /services | app/services/page.tsx |
-| 194 | `services/mobile/03-which-agent-do-i-need` | section | /services | app/services/page.tsx |
-| 195 | `services/mobile/04-works-with-the-tools-you-already-use` | section | /services | app/services/page.tsx |
-| 196 | `services/mobile/05-hear-it-then-book-it` | section | /services | app/services/page.tsx |
-| 197 | `services/mobile/06-footer` | section | /services | components/Footer.tsx |
-| 198 | `service-detail/mobile/full-page` | full | /services/voice | app/services/[slug]/page.tsx; app/layout.tsx |
-| 199 | `service-detail/mobile/01-voice-agents-that-answer-every-call` | section | /services/voice | app/services/[slug]/page.tsx |
-| 200 | `service-detail/mobile/02-voice-waveform` | section | /services/voice | app/services/[slug]/page.tsx |
-| 201 | `service-detail/mobile/03-how-a-call-flows` | section | /services/voice | app/services/[slug]/page.tsx |
-| 202 | `service-detail/mobile/04-works-with` | section | /services/voice | app/services/[slug]/page.tsx |
-| 203 | `service-detail/mobile/05-price-and-timeline` | section | /services/voice | app/services/[slug]/page.tsx |
-| 204 | `service-detail/mobile/06-questions-plus-3-more` | section | /services/voice | app/services/[slug]/page.tsx |
-| 205 | `service-detail/mobile/07-hear-it-on-the-demo-page-then-see-the-cl` | section | /services/voice | app/services/[slug]/page.tsx |
-| 206 | `service-detail/mobile/08-hear-it-then-book-it` | section | /services/voice | app/services/[slug]/page.tsx |
-| 207 | `service-detail/mobile/09-footer` | section | /services/voice | components/Footer.tsx |
-| 208 | `studio/mobile/full-page` | full | /studio | app/studio/page.tsx; app/layout.tsx |
-| 209 | `studio/mobile/01-agent-first-software-built-like-a-platfo` | section | /studio | app/studio/page.tsx |
-| 210 | `studio/mobile/02-agents` | section | /studio | app/studio/page.tsx |
-| 211 | `studio/mobile/03-agent-apps` | section | /studio | app/studio/page.tsx |
-| 212 | `studio/mobile/04-websites-with-cms` | section | /studio | app/studio/page.tsx |
-| 213 | `studio/mobile/05-mobile-apps` | section | /studio | app/studio/page.tsx |
-| 214 | `studio/mobile/06-platforms` | section | /studio | app/studio/page.tsx |
-| 215 | `studio/mobile/07-we-list-a-tool-here-only-when-we-can-dem` | section | /studio | app/studio/page.tsx |
-| 216 | `studio/mobile/08-have-a-build-in-mind` | section | /studio | app/studio/page.tsx |
-| 217 | `studio/mobile/09-footer` | section | /studio | components/Footer.tsx |
-| 218 | `industry/mobile/full-page` | full | /industries/clinics | app/industries/[slug]/page.tsx; app/layout.tsx |
-| 219 | `industry/mobile/01-a-front-desk-that-never-steps-away` | section | /industries/clinics | app/industries/[slug]/page.tsx |
-| 220 | `industry/mobile/02-three-workflows-we-set-up-first` | section | /industries/clinics | app/industries/[slug]/page.tsx |
-| 221 | `industry/mobile/03-what-the-week-looks-like` | section | /industries/clinics | app/industries/[slug]/page.tsx |
-| 222 | `industry/mobile/04-agents-that-do-the-work` | section | /industries/clinics | app/industries/[slug]/page.tsx |
-| 223 | `industry/mobile/05-the-usual-objection-plus-1-more` | section | /industries/clinics | app/industries/[slug]/page.tsx |
-| 224 | `industry/mobile/06-language-we-build-in-english-arabic-and-` | section | /industries/clinics | app/industries/[slug]/page.tsx |
-| 225 | `industry/mobile/07-hear-it-then-book-it` | section | /industries/clinics | app/industries/[slug]/page.tsx |
-| 226 | `industry/mobile/08-footer` | section | /industries/clinics | components/Footer.tsx |
-| 227 | `crew/mobile/full-page` | full | /crew | app/crew/page.tsx; app/layout.tsx |
-| 228 | `crew/mobile/01-seven-bricks-one-job-each` | section | /crew | app/crew/page.tsx |
-| 229 | `crew/mobile/02-aria-plus-6-more` | section | /crew | app/crew/page.tsx |
-| 230 | `crew/mobile/03-built-from-one-kit-so-they-read-as-a-fam` | section | /crew | app/crew/page.tsx |
-| 231 | `crew/mobile/04-want-a-crew-of-your-own` | section | /crew | app/crew/page.tsx |
-| 232 | `crew/mobile/05-footer` | section | /crew | components/Footer.tsx |
-| 233 | `work/mobile/full-page` | full | /work | app/work/page.tsx; app/layout.tsx |
-| 234 | `work/mobile/01-built-shipped-running` | section | /work | app/work/page.tsx |
-| 235 | `work/mobile/02-filter-by-type` | section | /work | app/work/page.tsx |
-| 236 | `work/mobile/03-bazar-flow-plus-3-more` | section | /work | app/work/page.tsx |
-| 237 | `work/mobile/04-testimonial-client-quotes-appear-here-wi` | section | /work | app/work/page.tsx |
-| 238 | `work/mobile/05-hear-it-then-book-it` | section | /work | app/work/page.tsx |
-| 239 | `work/mobile/06-footer` | section | /work | components/Footer.tsx |
-| 240 | `work-detail/mobile/full-page` | full | /work/bazar-flow | app/work/[slug]/page.tsx; app/layout.tsx |
-| 241 | `work-detail/mobile/01-bazar-flow` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
-| 242 | `work-detail/mobile/02-bazar-flow-preview` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
-| 243 | `work-detail/mobile/03-result` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
-| 244 | `work-detail/mobile/04-the-problem` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
-| 245 | `work-detail/mobile/05-the-solution` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
-| 246 | `work-detail/mobile/06-architecture` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
-| 247 | `work-detail/mobile/07-what-we-would-do-differently` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
-| 248 | `work-detail/mobile/08-next-project-codenexus-ai` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
-| 249 | `work-detail/mobile/09-hear-it-then-book-it` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
-| 250 | `work-detail/mobile/10-footer` | section | /work/bazar-flow | components/Footer.tsx |
-| 251 | `demos/mobile/full-page` | full | /demos | app/demos/page.tsx; app/layout.tsx |
-| 252 | `demos/mobile/01-try-it-don-t-take-our-word` | section | /demos | app/demos/page.tsx |
-| 253 | `demos/mobile/02-a-voice-agent-for-a-sample-clinic` | section | /demos | app/demos/page.tsx |
-| 254 | `demos/mobile/03-what-does-a-missed-call-cost-you` | section | /demos | app/demos/page.tsx |
-| 255 | `demos/mobile/04-the-60-second-game-plus-1-more` | section | /demos | app/demos/page.tsx |
-| 256 | `demos/mobile/05-build-your-own-agent-in-four-questions` | section | /demos | app/demos/page.tsx |
-| 257 | `demos/mobile/06-call-our-demo-line` | section | /demos | app/demos/page.tsx |
-| 258 | `demos/mobile/07-prefer-to-talk-to-a-person` | section | /demos | app/demos/page.tsx |
-| 259 | `demos/mobile/08-footer` | section | /demos | components/Footer.tsx |
-| 260 | `about/mobile/full-page` | full | /about | app/about/page.tsx; app/layout.tsx |
-| 261 | `about/mobile/01-agents-convened` | section | /about | app/about/page.tsx |
-| 262 | `about/mobile/02-fixed-scope-plus-2-more` | section | /about | app/about/page.tsx |
-| 263 | `about/mobile/03-the-brick-crew` | section | /about | app/about/page.tsx |
-| 264 | `about/mobile/04-the-people` | section | /about | app/about/page.tsx |
-| 265 | `about/mobile/05-where-we-are` | section | /about | app/about/page.tsx |
-| 266 | `about/mobile/06-conclave-ai-is-an-agent-studio-not-affil` | section | /about | app/about/page.tsx |
-| 267 | `about/mobile/07-hear-it-then-book-it` | section | /about | app/about/page.tsx |
-| 268 | `about/mobile/08-footer` | section | /about | components/Footer.tsx |
-| 269 | `pricing/mobile/full-page` | full | /pricing | app/pricing/page.tsx; app/layout.tsx |
-| 270 | `pricing/mobile/01-pilot-build-retainer` | section | /pricing | app/pricing/page.tsx |
-| 271 | `pricing/mobile/02-pilot` | section | /pricing | app/pricing/page.tsx |
-| 272 | `pricing/mobile/03-build` | section | /pricing | app/pricing/page.tsx |
-| 273 | `pricing/mobile/04-retainer` | section | /pricing | app/pricing/page.tsx |
-| 274 | `pricing/mobile/05-what-is-included` | section | /pricing | app/pricing/page.tsx |
-| 275 | `pricing/mobile/06-questions-about-pricing-plus-10-more` | section | /pricing | app/pricing/page.tsx |
-| 276 | `pricing/mobile/07-hear-it-then-book-it` | section | /pricing | app/pricing/page.tsx |
-| 277 | `pricing/mobile/08-footer` | section | /pricing | components/Footer.tsx |
-| 278 | `contact/mobile/full-page` | full | /contact | app/contact/page.tsx; app/layout.tsx |
-| 279 | `contact/mobile/01-let-s-talk` | section | /contact | app/contact/page.tsx |
-| 280 | `contact/mobile/02-name-email-company-optional` | section | /contact | app/contact/page.tsx |
-| 281 | `contact/mobile/03-what-would-help-most-voice-agents-follow` | section | /contact | app/contact/page.tsx |
-| 282 | `contact/mobile/04-where-would-you-like-to-start-choose-one` | section | /contact | app/contact/page.tsx |
-| 283 | `contact/mobile/05-message` | section | /contact | app/contact/page.tsx |
-| 284 | `contact/mobile/06-send-message` | section | /contact | app/contact/page.tsx |
-| 285 | `contact/mobile/07-footer` | section | /contact | components/Footer.tsx |
-| 286 | `join/mobile/full-page` | full | /join | app/join/page.tsx; app/layout.tsx |
-| 287 | `join/mobile/01-the-conclave-guild` | section | /join | app/join/page.tsx |
-| 288 | `join/mobile/02-careers` | section | /join | app/join/page.tsx |
-| 289 | `join/mobile/03-partner-programme` | section | /join | app/join/page.tsx |
-| 290 | `join/mobile/04-open-source-templates` | section | /join | app/join/page.tsx |
-| 291 | `join/mobile/05-bounties` | section | /join | app/join/page.tsx |
-| 292 | `join/mobile/06-the-convene-leaderboard` | section | /join | app/join/page.tsx |
-| 293 | `join/mobile/07-prefer-to-hire-us` | section | /join | app/join/page.tsx |
-| 294 | `join/mobile/08-footer` | section | /join | components/Footer.tsx |
-| 295 | `security/mobile/full-page` | full | /security | app/security/page.tsx; app/layout.tsx |
-| 296 | `security/mobile/01-calm-answers-to-the-risky-questions` | section | /security | app/security/page.tsx |
-| 297 | `security/mobile/02-data-we-handle-only-what-the-agent-needs` | section | /security | app/security/page.tsx |
-| 298 | `security/mobile/03-this-page-is-a-plain-language-summary-no` | section | /security | app/security/page.tsx |
-| 299 | `security/mobile/04-need-it-in-writing` | section | /security | app/security/page.tsx |
-| 300 | `security/mobile/05-footer` | section | /security | components/Footer.tsx |
-| 301 | `compare/mobile/full-page` | full | /compare | app/compare/page.tsx; app/layout.tsx |
-| 302 | `compare/mobile/01-pick-the-right-tool-even-if-it-is-not-us` | section | /compare | app/compare/page.tsx |
-| 303 | `compare/mobile/02-table-scrolls-sideways` | section | /compare | app/compare/page.tsx |
-| 304 | `compare/mobile/03-not-sure-which-fits` | section | /compare | app/compare/page.tsx |
-| 305 | `compare/mobile/04-footer` | section | /compare | components/Footer.tsx |
-| 306 | `receipts/mobile/full-page` | full | /receipts | app/receipts/page.tsx; app/layout.tsx |
-| 307 | `receipts/mobile/01-receipts-not-claims` | section | /receipts | app/receipts/page.tsx |
-| 308 | `receipts/mobile/02-the-ledger` | section | /receipts | app/receipts/page.tsx |
-| 309 | `receipts/mobile/03-build-logs-plus-1-more` | section | /receipts | app/receipts/page.tsx |
-| 310 | `receipts/mobile/04-hear-it-then-book-it` | section | /receipts | app/receipts/page.tsx |
-| 311 | `receipts/mobile/05-footer` | section | /receipts | components/Footer.tsx |
-| 312 | `notes/mobile/full-page` | full | /notes | app/notes/page.tsx; app/layout.tsx |
-| 313 | `notes/mobile/01-short-posts-with-a-real-number-or-a-diag` | section | /notes | app/notes/page.tsx |
-| 314 | `notes/mobile/02-what-a-voice-agent-costs-to-run-line-by-` | section | /notes | app/notes/page.tsx |
-| 315 | `notes/mobile/03-hear-it-then-book-it` | section | /notes | app/notes/page.tsx |
-| 316 | `notes/mobile/04-footer` | section | /notes | components/Footer.tsx |
-| 317 | `note/mobile/full-page` | full | /notes/missed-call-cost | app/notes/[slug]/page.tsx; app/layout.tsx |
-| 318 | `note/mobile/01-what-a-missed-call-really-costs-a-clinic` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
-| 319 | `note/mobile/02-most-owners-know-calls-are-being-missed-` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
-| 320 | `note/mobile/03-the-formula` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
-| 321 | `note/mobile/04-missed-calls-per-week-share-that-would-h` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
-| 322 | `note/mobile/05-a-worked-example-made-up-round-numbers-n` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
-| 323 | `note/mobile/06-10-missed-calls-30-3-bookings-lost-per-w` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
-| 324 | `note/mobile/07-those-inputs-are-examples-to-show-the-me` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
-| 325 | `note/mobile/08-where-each-input-comes-from` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
-| 326 | `note/mobile/09-missed-calls-per-week-your-phone-provide` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
-| 327 | `note/mobile/10-what-an-agent-changes-and-what-it-does-n` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
-| 328 | `note/mobile/11-a-voice-agent-answers-the-call-in-one-ri` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
-| 329 | `note/mobile/12-run-it-on-your-own-numbers` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
-| 330 | `note/mobile/13-hear-it-then-book-it` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
-| 331 | `note/mobile/14-footer` | section | /notes/missed-call-cost | components/Footer.tsx |
-| 332 | `roadmap/mobile/full-page` | full | /roadmap | app/roadmap/page.tsx; app/layout.tsx |
-| 333 | `roadmap/mobile/01-what-shipped-what-is-next` | section | /roadmap | app/roadmap/page.tsx |
-| 334 | `roadmap/mobile/02-shipped-voice-follow-up-booking-reactiva` | section | /roadmap | app/roadmap/page.tsx |
-| 335 | `roadmap/mobile/03-building-now-live-voice-with-the-ai-mode` | section | /roadmap | app/roadmap/page.tsx |
-| 336 | `roadmap/mobile/04-later-public-build-logs-and-bounties-ope` | section | /roadmap | app/roadmap/page.tsx |
-| 337 | `roadmap/mobile/05-something-you-need-that-is-not-here-tell` | section | /roadmap | app/roadmap/page.tsx |
-| 338 | `roadmap/mobile/06-hear-it-then-book-it` | section | /roadmap | app/roadmap/page.tsx |
-| 339 | `roadmap/mobile/07-footer` | section | /roadmap | components/Footer.tsx |
-| 340 | `privacy/mobile/full-page` | full | /privacy | app/privacy/page.tsx; app/layout.tsx |
-| 341 | `privacy/mobile/01-privacy` | section | /privacy | app/privacy/page.tsx |
-| 342 | `privacy/mobile/02-text-to-be-added-before-launch` | section | /privacy | app/privacy/page.tsx |
-| 343 | `privacy/mobile/03-footer` | section | /privacy | components/Footer.tsx |
-| 344 | `terms/mobile/full-page` | full | /terms | app/terms/page.tsx; app/layout.tsx |
-| 345 | `terms/mobile/01-terms` | section | /terms | app/terms/page.tsx |
-| 346 | `terms/mobile/02-text-to-be-added-before-launch` | section | /terms | app/terms/page.tsx |
-| 347 | `terms/mobile/03-footer` | section | /terms | components/Footer.tsx |
-| 348 | `not-found/mobile/full-page` | full | /no-such-page | app/not-found.tsx; app/layout.tsx |
-| 349 | `not-found/mobile/01-nothing-here` | section | /no-such-page | app/not-found.tsx |
-| 350 | `not-found/mobile/02-footer` | section | /no-such-page | components/Footer.tsx |
-| 351 | `states/mobile/mobile-menu` | state | / | components/Navbar.tsx |
+| 159 | `service-follow-up/desktop/full-page` | full | /services/follow-up | app/services/[slug]/page.tsx; app/layout.tsx |
+| 160 | `service-booking/desktop/full-page` | full | /services/booking | app/services/[slug]/page.tsx; app/layout.tsx |
+| 161 | `service-reactivation/desktop/full-page` | full | /services/reactivation | app/services/[slug]/page.tsx; app/layout.tsx |
+| 162 | `service-reporting/desktop/full-page` | full | /services/reporting | app/services/[slug]/page.tsx; app/layout.tsx |
+| 163 | `industry-med-spas/desktop/full-page` | full | /industries/med-spas | app/industries/[slug]/page.tsx; app/layout.tsx |
+| 164 | `industry-dental/desktop/full-page` | full | /industries/dental | app/industries/[slug]/page.tsx; app/layout.tsx |
+| 165 | `industry-real-estate/desktop/full-page` | full | /industries/real-estate | app/industries/[slug]/page.tsx; app/layout.tsx |
+| 166 | `industry-home-services/desktop/full-page` | full | /industries/home-services | app/industries/[slug]/page.tsx; app/layout.tsx |
+| 167 | `industry-startups/desktop/full-page` | full | /industries/startups | app/industries/[slug]/page.tsx; app/layout.tsx |
+| 168 | `work-codenexus-ai/desktop/full-page` | full | /work/codenexus-ai | app/work/[slug]/page.tsx; app/layout.tsx |
+| 169 | `work-scalenexus-ai/desktop/full-page` | full | /work/scalenexus-ai | app/work/[slug]/page.tsx; app/layout.tsx |
+| 170 | `work-task-whisper/desktop/full-page` | full | /work/task-whisper | app/work/[slug]/page.tsx; app/layout.tsx |
+| 171 | `not-found/desktop/full-page` | full | /no-such-page | app/not-found.tsx; app/layout.tsx |
+| 172 | `not-found/desktop/01-nothing-here` | section | /no-such-page | app/not-found.tsx |
+| 173 | `not-found/desktop/02-footer` | section | /no-such-page | components/Footer.tsx |
+| 174 | `states/desktop/aria-tab-answer-calls` | state | / | components/home/AriaWindow.tsx |
+| 175 | `states/desktop/aria-tab-follow-up-fast` | state | / | components/home/AriaWindow.tsx |
+| 176 | `states/desktop/aria-tab-book-the-slot` | state | / | components/home/AriaWindow.tsx |
+| 177 | `states/desktop/aria-tab-win-back` | state | / | components/home/AriaWindow.tsx |
+| 178 | `states/desktop/command-palette` | state | / | components/CommandPalette.tsx |
+| 179 | `states/desktop/nav-hover` | state | / | components/Navbar.tsx |
+| 180 | `home/mobile/full-page-part1` | full | / | app/page.tsx; app/layout.tsx |
+| 181 | `home/mobile/full-page-part2` | full | / | app/page.tsx; app/layout.tsx |
+| 182 | `home/mobile/full-page-part3` | full | / | app/page.tsx; app/layout.tsx |
+| 183 | `home/mobile/full-page-part4` | full | / | app/page.tsx; app/layout.tsx |
+| 184 | `home/mobile/full-page-part5` | full | / | app/page.tsx; app/layout.tsx |
+| 185 | `home/mobile/full-page-part6` | full | / | app/page.tsx; app/layout.tsx |
+| 186 | `home/mobile/01-hero` | section | / | components/home/sections.tsx (Hero), components/home/visuals.tsx (HeroScene) |
+| 187 | `home/mobile/02-live-agent` | section | / | components/home/sections.tsx (LiveAgent), components/home/AriaWindow.tsx |
+| 188 | `home/mobile/03-proof` | section | / | components/home/sections.tsx (Proof), lib/content.ts (trust) |
+| 189 | `home/mobile/04-services` | section | / | components/home/sections.tsx (Services), components/home/visuals.tsx (service mock-ups) |
+| 190 | `home/mobile/05-studio` | section | / | components/home/sections2.tsx (StudioSection), lib/content.ts (studio) |
+| 191 | `home/mobile/06-built-for` | section | / | components/home/sections.tsx (BuiltFor), components/Cast.tsx, lib/content.ts (industries) |
+| 192 | `home/mobile/07-work` | section | / | components/home/sections.tsx (WorkReel), lib/projects.ts |
+| 193 | `home/mobile/08-receipts` | section | / | components/home/sections2.tsx (ReceiptsTeaser) |
+| 194 | `home/mobile/09-manifesto` | section | / | components/home/sections.tsx (Manifesto), components/Cast.tsx (CastRow) |
+| 195 | `home/mobile/10-process` | section | / | components/home/sections.tsx (Process), lib/content.ts (processSteps) |
+| 196 | `home/mobile/11-demos` | section | / | components/home/sections.tsx (DemosTeaser) |
+| 197 | `home/mobile/12-stack-scale` | section | / | components/home/sections2.tsx (StackScale) |
+| 198 | `home/mobile/13-pricing` | section | / | components/home/sections.tsx (PricingTeaser) |
+| 199 | `home/mobile/14-join-guild` | section | / | components/home/sections2.tsx (JoinGuild), lib/content.ts (guild) |
+| 200 | `home/mobile/15-faq` | section | / | components/home/sections.tsx (Faq), components/ui/Accordion.tsx |
+| 201 | `home/mobile/16-final-cta` | section | / | components/home/sections.tsx (FinalCta) |
+| 202 | `home/mobile/17-footer` | section | / | components/Footer.tsx |
+| 203 | `services/mobile/full-page` | full | /services | app/services/page.tsx; app/layout.tsx |
+| 204 | `services/mobile/01-five-jobs-one-agent-each` | section | /services | app/services/page.tsx |
+| 205 | `services/mobile/02-voice-agents-that-answer-every-call-plus` | section | /services | app/services/page.tsx |
+| 206 | `services/mobile/03-which-agent-do-i-need` | section | /services | app/services/page.tsx |
+| 207 | `services/mobile/04-works-with-the-tools-you-already-use` | section | /services | app/services/page.tsx |
+| 208 | `services/mobile/05-hear-it-then-book-it` | section | /services | app/services/page.tsx |
+| 209 | `services/mobile/06-footer` | section | /services | components/Footer.tsx |
+| 210 | `service-detail/mobile/full-page` | full | /services/voice | app/services/[slug]/page.tsx; app/layout.tsx |
+| 211 | `service-detail/mobile/01-voice-agents-that-answer-every-call` | section | /services/voice | app/services/[slug]/page.tsx |
+| 212 | `service-detail/mobile/02-voice-waveform` | section | /services/voice | app/services/[slug]/page.tsx |
+| 213 | `service-detail/mobile/03-how-a-call-flows` | section | /services/voice | app/services/[slug]/page.tsx |
+| 214 | `service-detail/mobile/04-works-with` | section | /services/voice | app/services/[slug]/page.tsx |
+| 215 | `service-detail/mobile/05-price-and-timeline` | section | /services/voice | app/services/[slug]/page.tsx |
+| 216 | `service-detail/mobile/06-questions-plus-3-more` | section | /services/voice | app/services/[slug]/page.tsx |
+| 217 | `service-detail/mobile/07-hear-it-on-the-demo-page-then-see-the-cl` | section | /services/voice | app/services/[slug]/page.tsx |
+| 218 | `service-detail/mobile/08-hear-it-then-book-it` | section | /services/voice | app/services/[slug]/page.tsx |
+| 219 | `service-detail/mobile/09-footer` | section | /services/voice | components/Footer.tsx |
+| 220 | `studio/mobile/full-page` | full | /studio | app/studio/page.tsx; app/layout.tsx |
+| 221 | `studio/mobile/01-agent-first-software-built-like-a-platfo` | section | /studio | app/studio/page.tsx |
+| 222 | `studio/mobile/02-agents` | section | /studio | app/studio/page.tsx |
+| 223 | `studio/mobile/03-agent-apps` | section | /studio | app/studio/page.tsx |
+| 224 | `studio/mobile/04-websites-with-cms` | section | /studio | app/studio/page.tsx |
+| 225 | `studio/mobile/05-mobile-apps` | section | /studio | app/studio/page.tsx |
+| 226 | `studio/mobile/06-platforms` | section | /studio | app/studio/page.tsx |
+| 227 | `studio/mobile/07-we-list-a-tool-here-only-when-we-can-dem` | section | /studio | app/studio/page.tsx |
+| 228 | `studio/mobile/08-have-a-build-in-mind` | section | /studio | app/studio/page.tsx |
+| 229 | `studio/mobile/09-footer` | section | /studio | components/Footer.tsx |
+| 230 | `industry/mobile/full-page` | full | /industries/clinics | app/industries/[slug]/page.tsx; app/layout.tsx |
+| 231 | `industry/mobile/01-a-front-desk-that-never-steps-away` | section | /industries/clinics | app/industries/[slug]/page.tsx |
+| 232 | `industry/mobile/02-three-workflows-we-set-up-first` | section | /industries/clinics | app/industries/[slug]/page.tsx |
+| 233 | `industry/mobile/03-what-the-week-looks-like` | section | /industries/clinics | app/industries/[slug]/page.tsx |
+| 234 | `industry/mobile/04-agents-that-do-the-work` | section | /industries/clinics | app/industries/[slug]/page.tsx |
+| 235 | `industry/mobile/05-the-usual-objection-plus-1-more` | section | /industries/clinics | app/industries/[slug]/page.tsx |
+| 236 | `industry/mobile/06-language-we-build-in-english-arabic-and-` | section | /industries/clinics | app/industries/[slug]/page.tsx |
+| 237 | `industry/mobile/07-hear-it-then-book-it` | section | /industries/clinics | app/industries/[slug]/page.tsx |
+| 238 | `industry/mobile/08-footer` | section | /industries/clinics | components/Footer.tsx |
+| 239 | `crew/mobile/full-page` | full | /crew | app/crew/page.tsx; app/layout.tsx |
+| 240 | `crew/mobile/01-seven-bricks-one-job-each` | section | /crew | app/crew/page.tsx |
+| 241 | `crew/mobile/02-aria-plus-6-more` | section | /crew | app/crew/page.tsx |
+| 242 | `crew/mobile/03-built-from-one-kit-so-they-read-as-a-fam` | section | /crew | app/crew/page.tsx |
+| 243 | `crew/mobile/04-want-a-crew-of-your-own` | section | /crew | app/crew/page.tsx |
+| 244 | `crew/mobile/05-footer` | section | /crew | components/Footer.tsx |
+| 245 | `work/mobile/full-page` | full | /work | app/work/page.tsx; app/layout.tsx |
+| 246 | `work/mobile/01-built-shipped-running` | section | /work | app/work/page.tsx |
+| 247 | `work/mobile/02-filter-by-type` | section | /work | app/work/page.tsx |
+| 248 | `work/mobile/03-bazar-flow-plus-3-more` | section | /work | app/work/page.tsx |
+| 249 | `work/mobile/04-testimonial-client-quotes-appear-here-wi` | section | /work | app/work/page.tsx |
+| 250 | `work/mobile/05-hear-it-then-book-it` | section | /work | app/work/page.tsx |
+| 251 | `work/mobile/06-footer` | section | /work | components/Footer.tsx |
+| 252 | `work-detail/mobile/full-page` | full | /work/bazar-flow | app/work/[slug]/page.tsx; app/layout.tsx |
+| 253 | `work-detail/mobile/01-bazar-flow` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
+| 254 | `work-detail/mobile/02-bazar-flow-preview` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
+| 255 | `work-detail/mobile/03-result` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
+| 256 | `work-detail/mobile/04-the-problem` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
+| 257 | `work-detail/mobile/05-the-solution` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
+| 258 | `work-detail/mobile/06-architecture` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
+| 259 | `work-detail/mobile/07-what-we-would-do-differently` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
+| 260 | `work-detail/mobile/08-next-project-codenexus-ai` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
+| 261 | `work-detail/mobile/09-hear-it-then-book-it` | section | /work/bazar-flow | app/work/[slug]/page.tsx |
+| 262 | `work-detail/mobile/10-footer` | section | /work/bazar-flow | components/Footer.tsx |
+| 263 | `demos/mobile/full-page` | full | /demos | app/demos/page.tsx; app/layout.tsx |
+| 264 | `demos/mobile/01-try-it-don-t-take-our-word` | section | /demos | app/demos/page.tsx |
+| 265 | `demos/mobile/02-a-voice-agent-for-a-sample-clinic` | section | /demos | app/demos/page.tsx |
+| 266 | `demos/mobile/03-what-does-a-missed-call-cost-you` | section | /demos | app/demos/page.tsx |
+| 267 | `demos/mobile/04-the-60-second-game-plus-1-more` | section | /demos | app/demos/page.tsx |
+| 268 | `demos/mobile/05-build-your-own-agent-in-four-questions` | section | /demos | app/demos/page.tsx |
+| 269 | `demos/mobile/06-call-our-demo-line` | section | /demos | app/demos/page.tsx |
+| 270 | `demos/mobile/07-prefer-to-talk-to-a-person` | section | /demos | app/demos/page.tsx |
+| 271 | `demos/mobile/08-footer` | section | /demos | components/Footer.tsx |
+| 272 | `about/mobile/full-page` | full | /about | app/about/page.tsx; app/layout.tsx |
+| 273 | `about/mobile/01-agents-convened` | section | /about | app/about/page.tsx |
+| 274 | `about/mobile/02-fixed-scope-plus-2-more` | section | /about | app/about/page.tsx |
+| 275 | `about/mobile/03-the-brick-crew` | section | /about | app/about/page.tsx |
+| 276 | `about/mobile/04-the-people` | section | /about | app/about/page.tsx |
+| 277 | `about/mobile/05-where-we-are` | section | /about | app/about/page.tsx |
+| 278 | `about/mobile/06-conclave-ai-is-an-agent-studio-not-affil` | section | /about | app/about/page.tsx |
+| 279 | `about/mobile/07-hear-it-then-book-it` | section | /about | app/about/page.tsx |
+| 280 | `about/mobile/08-footer` | section | /about | components/Footer.tsx |
+| 281 | `pricing/mobile/full-page` | full | /pricing | app/pricing/page.tsx; app/layout.tsx |
+| 282 | `pricing/mobile/01-pilot-build-retainer` | section | /pricing | app/pricing/page.tsx |
+| 283 | `pricing/mobile/02-pilot` | section | /pricing | app/pricing/page.tsx |
+| 284 | `pricing/mobile/03-build` | section | /pricing | app/pricing/page.tsx |
+| 285 | `pricing/mobile/04-retainer` | section | /pricing | app/pricing/page.tsx |
+| 286 | `pricing/mobile/05-what-is-included` | section | /pricing | app/pricing/page.tsx |
+| 287 | `pricing/mobile/06-questions-about-pricing-plus-10-more` | section | /pricing | app/pricing/page.tsx |
+| 288 | `pricing/mobile/07-hear-it-then-book-it` | section | /pricing | app/pricing/page.tsx |
+| 289 | `pricing/mobile/08-footer` | section | /pricing | components/Footer.tsx |
+| 290 | `contact/mobile/full-page` | full | /contact | app/contact/page.tsx; app/layout.tsx |
+| 291 | `contact/mobile/01-let-s-talk` | section | /contact | app/contact/page.tsx |
+| 292 | `contact/mobile/02-name-email-company-optional` | section | /contact | app/contact/page.tsx |
+| 293 | `contact/mobile/03-what-would-help-most-voice-agents-follow` | section | /contact | app/contact/page.tsx |
+| 294 | `contact/mobile/04-where-would-you-like-to-start-choose-one` | section | /contact | app/contact/page.tsx |
+| 295 | `contact/mobile/05-message` | section | /contact | app/contact/page.tsx |
+| 296 | `contact/mobile/06-send-message` | section | /contact | app/contact/page.tsx |
+| 297 | `contact/mobile/07-footer` | section | /contact | components/Footer.tsx |
+| 298 | `join/mobile/full-page` | full | /join | app/join/page.tsx; app/layout.tsx |
+| 299 | `join/mobile/01-the-conclave-guild` | section | /join | app/join/page.tsx |
+| 300 | `join/mobile/02-careers` | section | /join | app/join/page.tsx |
+| 301 | `join/mobile/03-partner-programme` | section | /join | app/join/page.tsx |
+| 302 | `join/mobile/04-open-source-templates` | section | /join | app/join/page.tsx |
+| 303 | `join/mobile/05-bounties` | section | /join | app/join/page.tsx |
+| 304 | `join/mobile/06-the-convene-leaderboard` | section | /join | app/join/page.tsx |
+| 305 | `join/mobile/07-prefer-to-hire-us` | section | /join | app/join/page.tsx |
+| 306 | `join/mobile/08-footer` | section | /join | components/Footer.tsx |
+| 307 | `security/mobile/full-page` | full | /security | app/security/page.tsx; app/layout.tsx |
+| 308 | `security/mobile/01-calm-answers-to-the-risky-questions` | section | /security | app/security/page.tsx |
+| 309 | `security/mobile/02-data-we-handle-only-what-the-agent-needs` | section | /security | app/security/page.tsx |
+| 310 | `security/mobile/03-this-page-is-a-plain-language-summary-no` | section | /security | app/security/page.tsx |
+| 311 | `security/mobile/04-need-it-in-writing` | section | /security | app/security/page.tsx |
+| 312 | `security/mobile/05-footer` | section | /security | components/Footer.tsx |
+| 313 | `compare/mobile/full-page` | full | /compare | app/compare/page.tsx; app/layout.tsx |
+| 314 | `compare/mobile/01-pick-the-right-tool-even-if-it-is-not-us` | section | /compare | app/compare/page.tsx |
+| 315 | `compare/mobile/02-table-scrolls-sideways` | section | /compare | app/compare/page.tsx |
+| 316 | `compare/mobile/03-not-sure-which-fits` | section | /compare | app/compare/page.tsx |
+| 317 | `compare/mobile/04-footer` | section | /compare | components/Footer.tsx |
+| 318 | `receipts/mobile/full-page` | full | /receipts | app/receipts/page.tsx; app/layout.tsx |
+| 319 | `receipts/mobile/01-receipts-not-claims` | section | /receipts | app/receipts/page.tsx |
+| 320 | `receipts/mobile/02-the-ledger` | section | /receipts | app/receipts/page.tsx |
+| 321 | `receipts/mobile/03-build-logs-plus-1-more` | section | /receipts | app/receipts/page.tsx |
+| 322 | `receipts/mobile/04-hear-it-then-book-it` | section | /receipts | app/receipts/page.tsx |
+| 323 | `receipts/mobile/05-footer` | section | /receipts | components/Footer.tsx |
+| 324 | `notes/mobile/full-page` | full | /notes | app/notes/page.tsx; app/layout.tsx |
+| 325 | `notes/mobile/01-short-posts-with-a-real-number-or-a-diag` | section | /notes | app/notes/page.tsx |
+| 326 | `notes/mobile/02-what-a-voice-agent-costs-to-run-line-by-` | section | /notes | app/notes/page.tsx |
+| 327 | `notes/mobile/03-hear-it-then-book-it` | section | /notes | app/notes/page.tsx |
+| 328 | `notes/mobile/04-footer` | section | /notes | components/Footer.tsx |
+| 329 | `note/mobile/full-page` | full | /notes/missed-call-cost | app/notes/[slug]/page.tsx; app/layout.tsx |
+| 330 | `note/mobile/01-what-a-missed-call-really-costs-a-clinic` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
+| 331 | `note/mobile/02-most-owners-know-calls-are-being-missed-` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
+| 332 | `note/mobile/03-the-formula` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
+| 333 | `note/mobile/04-missed-calls-per-week-share-that-would-h` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
+| 334 | `note/mobile/05-a-worked-example-made-up-round-numbers-n` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
+| 335 | `note/mobile/06-10-missed-calls-30-3-bookings-lost-per-w` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
+| 336 | `note/mobile/07-those-inputs-are-examples-to-show-the-me` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
+| 337 | `note/mobile/08-where-each-input-comes-from` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
+| 338 | `note/mobile/09-missed-calls-per-week-your-phone-provide` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
+| 339 | `note/mobile/10-what-an-agent-changes-and-what-it-does-n` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
+| 340 | `note/mobile/11-a-voice-agent-answers-the-call-in-one-ri` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
+| 341 | `note/mobile/12-run-it-on-your-own-numbers` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
+| 342 | `note/mobile/13-hear-it-then-book-it` | section | /notes/missed-call-cost | app/notes/[slug]/page.tsx |
+| 343 | `note/mobile/14-footer` | section | /notes/missed-call-cost | components/Footer.tsx |
+| 344 | `roadmap/mobile/full-page` | full | /roadmap | app/roadmap/page.tsx; app/layout.tsx |
+| 345 | `roadmap/mobile/01-what-shipped-what-is-next` | section | /roadmap | app/roadmap/page.tsx |
+| 346 | `roadmap/mobile/02-shipped-voice-follow-up-booking-reactiva` | section | /roadmap | app/roadmap/page.tsx |
+| 347 | `roadmap/mobile/03-building-now-live-voice-with-the-ai-mode` | section | /roadmap | app/roadmap/page.tsx |
+| 348 | `roadmap/mobile/04-later-public-build-logs-and-bounties-ope` | section | /roadmap | app/roadmap/page.tsx |
+| 349 | `roadmap/mobile/05-something-you-need-that-is-not-here-tell` | section | /roadmap | app/roadmap/page.tsx |
+| 350 | `roadmap/mobile/06-hear-it-then-book-it` | section | /roadmap | app/roadmap/page.tsx |
+| 351 | `roadmap/mobile/07-footer` | section | /roadmap | components/Footer.tsx |
+| 352 | `privacy/mobile/full-page` | full | /privacy | app/privacy/page.tsx; app/layout.tsx |
+| 353 | `privacy/mobile/01-privacy` | section | /privacy | app/privacy/page.tsx |
+| 354 | `privacy/mobile/02-text-to-be-added-before-launch` | section | /privacy | app/privacy/page.tsx |
+| 355 | `privacy/mobile/03-footer` | section | /privacy | components/Footer.tsx |
+| 356 | `terms/mobile/full-page` | full | /terms | app/terms/page.tsx; app/layout.tsx |
+| 357 | `terms/mobile/01-terms` | section | /terms | app/terms/page.tsx |
+| 358 | `terms/mobile/02-text-to-be-added-before-launch` | section | /terms | app/terms/page.tsx |
+| 359 | `terms/mobile/03-footer` | section | /terms | components/Footer.tsx |
+| 360 | `service-follow-up/mobile/full-page` | full | /services/follow-up | app/services/[slug]/page.tsx; app/layout.tsx |
+| 361 | `service-booking/mobile/full-page` | full | /services/booking | app/services/[slug]/page.tsx; app/layout.tsx |
+| 362 | `service-reactivation/mobile/full-page` | full | /services/reactivation | app/services/[slug]/page.tsx; app/layout.tsx |
+| 363 | `service-reporting/mobile/full-page` | full | /services/reporting | app/services/[slug]/page.tsx; app/layout.tsx |
+| 364 | `industry-med-spas/mobile/full-page` | full | /industries/med-spas | app/industries/[slug]/page.tsx; app/layout.tsx |
+| 365 | `industry-dental/mobile/full-page` | full | /industries/dental | app/industries/[slug]/page.tsx; app/layout.tsx |
+| 366 | `industry-real-estate/mobile/full-page` | full | /industries/real-estate | app/industries/[slug]/page.tsx; app/layout.tsx |
+| 367 | `industry-home-services/mobile/full-page` | full | /industries/home-services | app/industries/[slug]/page.tsx; app/layout.tsx |
+| 368 | `industry-startups/mobile/full-page` | full | /industries/startups | app/industries/[slug]/page.tsx; app/layout.tsx |
+| 369 | `work-codenexus-ai/mobile/full-page` | full | /work/codenexus-ai | app/work/[slug]/page.tsx; app/layout.tsx |
+| 370 | `work-scalenexus-ai/mobile/full-page` | full | /work/scalenexus-ai | app/work/[slug]/page.tsx; app/layout.tsx |
+| 371 | `work-task-whisper/mobile/full-page` | full | /work/task-whisper | app/work/[slug]/page.tsx; app/layout.tsx |
+| 372 | `not-found/mobile/full-page` | full | /no-such-page | app/not-found.tsx; app/layout.tsx |
+| 373 | `not-found/mobile/01-nothing-here` | section | /no-such-page | app/not-found.tsx |
+| 374 | `not-found/mobile/02-footer` | section | /no-such-page | components/Footer.tsx |
+| 375 | `states/mobile/mobile-menu` | state | / | components/Navbar.tsx |
+| 376 | `states/desktop/hero-webgl` | state | / | components/home/HeroScene3D.tsx; components/home/HeroStage.tsx |

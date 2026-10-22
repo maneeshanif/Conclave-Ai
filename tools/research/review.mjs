@@ -65,7 +65,18 @@ const PAGES = [
   { slug: "roadmap", route: "/roadmap", title: "Roadmap", file: "app/roadmap/page.tsx" },
   { slug: "privacy", route: "/privacy", title: "Privacy", file: "app/privacy/page.tsx" },
   { slug: "terms", route: "/terms", title: "Terms", file: "app/terms/page.tsx" },
-  { slug: "not-found", route: "/no-such-page", title: "404", file: "app/not-found.tsx" },
+  { slug: "service-follow-up", route: "/services/follow-up", title: "Service: follow-up", file: "app/services/[slug]/page.tsx", compact: true },
+  { slug: "service-booking", route: "/services/booking", title: "Service: booking", file: "app/services/[slug]/page.tsx", compact: true },
+  { slug: "service-reactivation", route: "/services/reactivation", title: "Service: reactivation", file: "app/services/[slug]/page.tsx", compact: true },
+  { slug: "service-reporting", route: "/services/reporting", title: "Service: reporting", file: "app/services/[slug]/page.tsx", compact: true },
+  { slug: "industry-med-spas", route: "/industries/med-spas", title: "Industry: med spas", file: "app/industries/[slug]/page.tsx", compact: true },
+  { slug: "industry-dental", route: "/industries/dental", title: "Industry: dental", file: "app/industries/[slug]/page.tsx", compact: true },
+  { slug: "industry-real-estate", route: "/industries/real-estate", title: "Industry: real estate", file: "app/industries/[slug]/page.tsx", compact: true },
+  { slug: "industry-home-services", route: "/industries/home-services", title: "Industry: home services", file: "app/industries/[slug]/page.tsx", compact: true },
+  { slug: "industry-startups", route: "/industries/startups", title: "Industry: startups", file: "app/industries/[slug]/page.tsx", compact: true },
+  { slug: "work-codenexus-ai", route: "/work/codenexus-ai", title: "Project: CodeNexus AI", file: "app/work/[slug]/page.tsx", compact: true },
+  { slug: "work-scalenexus-ai", route: "/work/scalenexus-ai", title: "Project: ScaleNexus AI", file: "app/work/[slug]/page.tsx", compact: true },
+  { slug: "work-task-whisper", route: "/work/task-whisper", title: "Project: Task Whisper", file: "app/work/[slug]/page.tsx", compact: true },  { slug: "not-found", route: "/no-such-page", title: "404", file: "app/not-found.tsx" },
 ];const VIEWPORTS = [["desktop", 1440, 900], ["mobile", 390, 844]];
 
 const manifest = [];
@@ -118,6 +129,7 @@ for (const [vp, w, h] of VIEWPORTS) {
         await save(page, null, `${pg.slug}/${vp}/00-full-page-part${n}.jpg`, { ...base, id: `${pg.slug}/${vp}/full-page-part${n}`, kind: "full", name: `Full page, part ${n}`, source: [pg.file, "app/layout.tsx"] }, { fullPage: true, clip: { x: 0, y, width: w, height: Math.min(step, cssH - y) } });
       }
     }
+    if (pg.compact) continue; // sibling pages of a template already covered section by section: full page only
     // 2. sections: direct children of <main>; split a single wrapper into its sections
     // blocks: top-level children of <main>; wrappers (article, tall div) are expanded into their blocks, <section> stays whole
     const arr = await page.evaluateHandle(() => {
@@ -193,7 +205,17 @@ for (const [vp, w, h] of VIEWPORTS) {
   }
   await ctx.close();
 }
-await browser.close();
+// WebGL hero: the stills above use reduced motion (SVG hero), so capture the 3D hero separately with software GL.
+{
+  const gb = await chromium.launch({ args: ["--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"] });
+  const gp = await (await gb.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
+  await gp.goto(BASE + "/?hero3d=force", { waitUntil: "load" });
+  await gp.mouse.move(900, 300);
+  await gp.waitForTimeout(7000);
+  const st = { page: "states", pageTitle: "Interactive states", route: "/", viewport: "desktop", pageFile: "components" };
+  await save(gp, null, "states/desktop/07-hero-webgl.jpg", { ...st, id: "states/desktop/hero-webgl", kind: "state", name: "Hero in WebGL (3D crew, shown on wide screens with a mouse)", source: ["components/home/HeroScene3D.tsx", "components/home/HeroStage.tsx"] }, { clip: { x: 0, y: 0, width: 1440, height: 820 } });
+  await gb.close();
+}await browser.close();
 stop();
 
 fs.writeFileSync(path.join(OUT, "manifest.json"), JSON.stringify(manifest, null, 2));
@@ -213,7 +235,7 @@ const pages = manifest.map((m, i) => {
 });
 const css = pages.map((p) => `@page p${p.i}{size:${p.w}px ${p.h}px;margin:0}.p${p.i}{page:p${p.i};width:${p.w}px;height:${p.h}px}`).join("");
 const toc = PAGES.map((pg) => {
-  const rows = manifest.filter((m) => m.page === pg.slug && m.viewport === "desktop" && m.kind !== "full");
+  const rows = manifest.filter((m) => m.page === pg.slug && m.viewport === "desktop" && (m.kind !== "full" || pg.compact));
   return `<h3>${pg.title} <small>${pg.route}</small></h3><ol>${rows.map((r) => `<li>${r.id}</li>`).join("")}</ol>`;
 }).join("");
 const printHtml = `<!doctype html><meta charset="utf-8"><style>
