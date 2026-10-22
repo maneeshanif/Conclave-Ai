@@ -1,0 +1,42 @@
+// Records a Chrome trace of the home page on the throttled phone profile and sums main-thread work by type before first paint.
+// Usage: node trace-fcp.mjs [path=/]   (production server on :3100)
+import { chromium } from "playwright";
+import fs from "node:fs";
+const BASE = "http://localhost:3100";
+const PATHNAME = process.argv[2] ?? "/";
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, hasTouch: true, isMobile: true });
+const p = await ctx.newPage();
+const c = await ctx.newCDPSession(p);
+await c.send("Network.enable");
+await c.send("Network.emulateNetworkConditions", { offline: false, latency: 150, downloadThroughput: (1.6 * 1024 * 1024) / 8, uploadThroughput: (750 * 1024) / 8 });
+await c.send("Emulation.setCPUThrottlingRate", { rate: 4 });
+/* RW=nowrap: strip text-wrap rules from the CSS in flight to test their layout cost; RW=nofont: also drop font preload */
+if (process.env.RW) await p.route("**/*.css", async (route) => { const r = await route.fetch(); let css = await r.text(); if (process.env.RW.includes("wrap")) css = css.replace(/text-wrap:\s*(balance|pretty)\s*;?/g, "");
+  if (process.env.RW.includes("band")) css += "\n.band, .band * { display: none !important; }\n";
+  if (process.env.RW.includes("sticky")) css += "\n.sticky, [class*=sticky] { position: static !important; }\n"; await route.fulfill({ response: r, body: css }); });
+if (process.env.HTMLRW) await p.route(BASE + PATHNAME, async (route) => { const r = await route.fetch(); let h = await r.text(); const m = process.env.HTMLRW;
+  if (m.includes("footer")) h = h.replace(/<footer[\s\S]*?<\/footer>/, "");
+  if (m.includes("nav")) h = h.replace(/<header class="fixed[\s\S]*?<\/header>/, "");
+  if (m.includes("cursor")) h = h.replace(/<div aria-hidden="true" class="pointer-events-none fixed[\s\S]*?<\/div>/, "");
+  if (m.includes("main")) h = h.replace(/<main[\s\S]*?<\/main>/, "<main></main>");
+  await route.fulfill({ response: r, body: h }); });
+await b.startTracing(p, { path: "trace.json", categories: ["devtools.timeline", "disabled-by-default-devtools.timeline", "blink.user_timing", "loading", "v8.execute", "toplevel"] });
+await p.goto(BASE + PATHNAME, { waitUntil: "load" });
+await p.waitForTimeout(3000);
+await b.stopTracing();
+await b.close();
+const ev = JSON.parse(fs.readFileSync("trace.json", "utf8")).traceEvents ?? JSON.parse(fs.readFileSync("trace.json", "utf8"));
+fs.rmSync("trace.json");
+const fcpEv = ev.find((e) => e.name === "firstContentfulPaint" && e.args?.frame);
+const navStart = ev.find((e) => e.name === "navigationStart")?.ts ?? Math.min(...ev.filter((e) => e.ts).map((e) => e.ts));
+const fcpAt = fcpEv ? (fcpEv.ts - navStart) / 1000 : null;
+console.log("first contentful paint at", fcpAt ? Math.round(fcpAt) + "ms" : "?");
+const main = ev.filter((e) => e.ph === "X" && e.dur && (!fcpEv || e.ts < fcpEv.ts) && ["RunTask", "ParseHTML", "UpdateLayoutTree", "Layout", "Paint", "PrePaint", "Layerize", "Commit", "EvaluateScript", "FunctionCall", "v8.compile", "FontLoad", "ResourceFinish", "StyleRecalc", "IntersectionObserverController::computeIntersections", "RasterTask", "ImageDecodeTask"].includes(e.name));
+const by = {};
+for (const e of main) by[e.name] = (by[e.name] ?? 0) + e.dur / 1000;
+console.log("main-thread work before first paint (ms, summed):");
+for (const [k, v] of Object.entries(by).sort((a, b) => b[1] - a[1]).slice(0, 12)) console.log("  ", k.padEnd(28), Math.round(v));
+const longest = main.filter((e) => e.name !== "RunTask").sort((a, b) => b.dur - a.dur).slice(0, 8);
+console.log("longest single events:");
+for (const e of longest) console.log("  ", e.name.padEnd(20), Math.round(e.dur / 1000) + "ms", "at", Math.round((e.ts - navStart) / 1000) + "ms", e.args?.data?.url ? e.args.data.url.split("/").pop().slice(0, 30) : "");

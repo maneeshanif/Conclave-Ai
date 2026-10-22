@@ -33,10 +33,12 @@ export function Hero() {
   const pill = [10, 22, 14, 26, 12];
   return (
     <section data-hero className="relative flex min-h-[92svh] flex-col justify-end bg-lime pb-24 pt-28 text-ink md:pb-28">
-      <div data-hero-scene className="pointer-events-none absolute inset-x-4 top-24 h-56 md:inset-x-auto md:right-12 md:h-auto md:w-[36%] md:max-w-[480px] md:aspect-[8/5]">
+      {/* The stud scene is a full-hero overlay in the hero's own pixels. The headline and actions sit above it. */}
+      <div data-hero-scene className="pointer-events-none absolute inset-0 overflow-hidden">
         <HeroStuds />
       </div>
-      <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 md:px-10">
+        <div className="relative">
         <h1 className="display text-display-xl">
           <span className="block overflow-hidden pb-[0.06em]">
             <span data-hero-line className="block">
@@ -59,7 +61,10 @@ export function Hero() {
             </span>
           </span>
         </h1>
-        <div className="mt-10 grid gap-8 md:grid-cols-2 md:items-end">
+        {/* Invisible anchor for the crew row: directly under the headline, right aligned, clear of the supporting text on the left. */}
+        <div data-crew-slot aria-hidden="true" className="pointer-events-none absolute right-0 top-full mt-4 hidden h-[76px] w-[min(576px,calc(100%-31rem))] lg:block" />
+        </div>
+        <div className="mt-10 grid gap-8 md:grid-cols-2 md:items-end lg:mt-[4.5rem]">
           <div data-hero-fade>
             <p className="max-w-md text-lead">Voice agents, AI automation and full-stack software for clinics, local businesses and startups.</p>
             <p className="label mt-4 text-ink">Live in 14 days. Fixed price. Hear it first.</p>

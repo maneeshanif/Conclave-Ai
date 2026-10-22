@@ -18,7 +18,8 @@
   --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
 
-  --text-display-xl: clamp(2rem, 8.6vw, 9.5rem);
+  /* Capped at 8.25rem (132px): "CONVENED." is about 10 em wide and the content column is 1360px, so a larger size wraps the last letters onto a second line. */
+  --text-display-xl: clamp(2rem, 8.6vw, 8.25rem);
   --text-display-xl--line-height: 0.92;
   --text-display-l: clamp(1.75rem, 7vw, 6.5rem);
   --text-display-l--line-height: 0.95;
@@ -68,7 +69,12 @@ p { text-wrap: pretty; }
  * (it is never set under prefers-reduced-motion, and it is removed again if MotionRoot fails to boot),
  * so no-JS and reduced-motion visitors always see full content. GSAP owns the transform; CSS only hides.
  */
-.motion-ok :is([data-reveal], [data-stagger] > *, [data-hero-line], [data-hero-fade], [data-hero-scene], [data-hero-pill]) { opacity: 0; }
+.motion-ok :is([data-reveal], [data-stagger] > *) { opacity: 0; }
+/* The hero intro (headline, support text, actions, scene) runs on tablets and desktops only. On phones the text is visible from the first
+   paint: hiding it until the scripts load made the largest paint wait for JavaScript on slow connections. */
+@media (min-width: 768px) {
+  .motion-ok :is([data-hero-line], [data-hero-fade], [data-hero-scene], [data-hero-pill]) { opacity: 0; }
+}
 .motion-ok [data-visual] :is([data-pop], [data-bar], [data-fill]) { opacity: 0; }
 
 /* Micro-interactions measured on lemlist: 150ms colour, 200ms icon, 300ms image scale, 320ms accordion. */

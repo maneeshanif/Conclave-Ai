@@ -21,10 +21,14 @@ const state = () => p.evaluate(() => {
   const tShown = tiles.filter((g) => +getComputedStyle(g).opacity > 0.9).length;
   const tr = tiles.map((g) => g.getBoundingClientRect());
   const pill = document.querySelector("[data-hero-pill]").getBoundingClientRect();
+  const lines = [...document.querySelectorAll("[data-hero-line]")].map((l) => l.getBoundingClientRect());
+  const h1Bottom = Math.round(Math.max(...lines.map((r) => r.bottom)));
+  const sub = document.querySelector("[data-hero-fade] p").getBoundingClientRect();
+  const btn = document.querySelector("[data-hero-fade] a").getBoundingClientRect();
   return {
     y: Math.round(scrollY), heroTop: Math.round(hero.top), tiles: tShown,
     tileTop: tShown ? Math.round(Math.min(...tr.map((r) => r.top))) : null, tileBottom: tShown ? Math.round(Math.max(...tr.map((r) => r.bottom))) : null,
-    pillTop: Math.round(pill.top), studsVisible: vis.length, studsLowest: Math.round(lowest),
+    pillTop: Math.round(pill.top), h1Bottom, subTop: Math.round(sub.top), subRight: Math.round(sub.right), btnTop: Math.round(btn.top), studsVisible: vis.length, studsLowest: Math.round(lowest),
     sig: studs.slice(0, 12).map((s) => Math.round(+s.getAttribute("cx")) + "," + Math.round(+s.getAttribute("cy"))).join("|"),
   };
 });
@@ -33,7 +37,7 @@ await p.goto(ROOT + "/", { waitUntil: "load" });
 await p.mouse.move(700, 500);
 await p.waitForTimeout(4500); // assembly finishes
 const start = await state();
-console.log("assembled   ", JSON.stringify(start));
+console.log("assembled   ", JSON.stringify({ y: start.y, studsVisible: start.studsVisible, h1Bottom: start.h1Bottom, subTop: start.subTop, btnTop: start.btnTop }));
 await p.screenshot({ path: `${OUT}/00-assembled.png` });
 
 const rows = [];
@@ -46,7 +50,7 @@ for (let i = 1; i <= 16; i++) {
 }
 await p.waitForTimeout(900);
 console.log("\nscroll down (wheel 60px steps):");
-for (const s of rows) console.log(`  y ${String(s.y).padStart(4)} | hero top ${String(s.heroTop).padStart(5)} | tiles ${s.tiles} ${s.tileTop !== null ? `(${s.tileTop}-${s.tileBottom})` : ""} | studs visible ${s.studsVisible}`);
+for (const s of rows) console.log(`  y ${String(s.y).padStart(4)} | hero top ${String(s.heroTop).padStart(5)} | tiles ${s.tiles} ${s.tileTop !== null ? `(${s.tileTop}-${s.tileBottom})` : ""} | headline bottom ${s.h1Bottom} | studs ${s.studsVisible}`);
 
 // jumps: the hero should be pinned at 0 for the hold, then move smoothly. Look for any single-step jump bigger than the wheel step.
 const tops = rows.map((r) => r.heroTop);

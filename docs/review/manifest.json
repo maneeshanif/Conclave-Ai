@@ -7548,7 +7548,7 @@
     "pageFile": "components",
     "id": "states/desktop/hero-studs-crew",
     "kind": "state",
-    "name": "Hero: the C split into the seven agents (hero pinned, 300px of scroll)",
+    "name": "Hero: the C split into the seven agents, in a row directly below the headline (hero pinned, 300px of scroll)",
     "source": [
       "lib/studs/hero.ts",
       "lib/studs/useStudAssemble.ts"

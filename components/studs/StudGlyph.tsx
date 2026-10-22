@@ -148,6 +148,9 @@ export function StudGlyph({ agent, size = 160, animate = false, active = false, 
   }, [animate, active, agent, a.lit]);
 
   const o = TOKENS.origin, p = TOKENS.pitch;
+  /* Below about 56px the dim studs are under a pixel across. Leaving them out saves ~40 circles per glyph in the page. Gate's door
+     animation lights dim studs, so Gate keeps them. */
+  const showDim = typeof size !== "number" || size > 56 || agent === "gate";
   return (
     <svg
       ref={ref}
@@ -160,7 +163,7 @@ export function StudGlyph({ agent, size = 160, animate = false, active = false, 
       aria-hidden={decorative ? true : undefined}
     >
       {tile && <rect width={TOKENS.viewBox} height={TOKENS.viewBox} rx={TOKENS.tileRadius} fill={a.bg} />}
-      {cells.map(({ c, r, kind }) => (
+      {cells.filter(({ kind }) => showDim || kind !== "dim").map(({ c, r, kind }) => (
         <circle
           key={`${c}-${r}`}
           className="stud"

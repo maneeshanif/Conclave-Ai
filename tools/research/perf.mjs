@@ -31,7 +31,11 @@ async function run(label, opts, throttle) {
 }
 
 const desk = await run("desktop 1440, no throttling", { viewport: { width: 1440, height: 900 } });
-const phone = await run("phone 390, 4x CPU, slow 4G", { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, hasTouch: true, isMobile: true }, true);
+/* One reading on a busy machine can swing by 50%, so the phone is sampled three times and the median is judged. */
+const samples = [];
+for (let i = 0; i < 3; i++) samples.push(await run(`phone 390, 4x CPU, slow 4G (sample ${i + 1})`, { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, hasTouch: true, isMobile: true }, true));
+const phone = { ...samples.slice().sort((a, b) => a.lcp - b.lcp)[1], cls: Math.max(...samples.map((s) => s.cls)) };
+console.log(`phone median LCP ${phone.lcp}ms (samples ${samples.map((s) => s.lcp).join(", ")})`);
 console.log("");
 console.log(desk.h >= 7000 && desk.h <= 8000 ? "ok   home height is in the 7,000 to 8,000px target" : `NOTE home height ${desk.h}px is outside 7,000 to 8,000`);
 console.log(phone.lcp < 2500 ? "ok   LCP under 2.5s on a throttled mid phone" : `FAIL LCP ${phone.lcp}ms on a throttled phone`);

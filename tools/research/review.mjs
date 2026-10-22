@@ -218,7 +218,7 @@ for (const [vp, w, h] of VIEWPORTS) {
   await save(hp, null, "states/desktop/08-hero-studs-assembled.jpg", { ...st, id: "states/desktop/hero-studs-assembled", kind: "state", name: "Hero: the stud C assembled", source: ["components/home/HeroStuds.tsx", "lib/studs/mark.ts"] }, { clip: { x: 0, y: 0, width: 1440, height: 820 } });
   await hp.evaluate(() => scrollTo(0, 340));
   await hp.waitForTimeout(1800);
-  await save(hp, null, "states/desktop/09-hero-studs-crew.jpg", { ...st, id: "states/desktop/hero-studs-crew", kind: "state", name: "Hero: the C split into the seven agents (hero pinned, 300px of scroll)", source: ["lib/studs/hero.ts", "lib/studs/useStudAssemble.ts"] }, { clip: { x: 0, y: 0, width: 1440, height: 820 } });
+  await save(hp, null, "states/desktop/09-hero-studs-crew.jpg", { ...st, id: "states/desktop/hero-studs-crew", kind: "state", name: "Hero: the C split into the seven agents, in a row directly below the headline (hero pinned, 300px of scroll)", source: ["lib/studs/hero.ts", "lib/studs/useStudAssemble.ts"] }, { clip: { x: 0, y: 0, width: 1440, height: 820 } });
   await hb.close();
 }await browser.close();
 stop();

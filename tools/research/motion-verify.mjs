@@ -44,7 +44,9 @@ const studPos = () => p.evaluate(() => [...document.querySelectorAll("[data-stud
 await p.waitForTimeout(1500);
 const C0 = await studPos();
 const vis = C0.filter((s) => s[2] > 0.4);
-check("hero studs assemble into the C (77 studs, inside the C's bounds)", vis.length === 77 && vis.every((s) => s[0] >= 135 && s[0] <= 345 && s[1] >= 10 && s[1] <= 215), `${vis.length} visible of ${C0.length}`);
+const bx = [Math.min(...vis.map((s) => s[0])), Math.max(...vis.map((s) => s[0]))], by = [Math.min(...vis.map((s) => s[1])), Math.max(...vis.map((s) => s[1]))];
+/* at 1440 wide the C is centred near (1152, 208) with a radius of about 96px, in hero pixels */
+check("hero studs assemble into the C (77 studs, top right of the hero)", vis.length === 77 && bx[0] > 1000 && bx[1] < 1300 && by[0] > 90 && by[1] < 330, `${vis.length} visible of ${C0.length}; x ${bx.join("-")}, y ${by.join("-")}`);
 await p.evaluate(() => scrollTo(0, 150)); await p.waitForTimeout(900);
 const pinnedTop = await p.evaluate(() => Math.round(document.querySelector("[data-hero]").getBoundingClientRect().top));
 check("hero is held still while the C splits (pinned)", pinnedTop === 0, `hero top ${pinnedTop}px at 150px of scroll`);
@@ -52,9 +54,9 @@ await p.evaluate(() => scrollTo(0, 340)); await p.waitForTimeout(1800);
 const C1 = await studPos();
 const moved = C1.filter((s, i) => Math.abs(s[0] - C0[i][0]) + Math.abs(s[1] - C0[i][1]) > 30).length;
 const tilesShown = await p.evaluate(() => [...document.querySelectorAll("[data-tile]")].filter((g) => +getComputedStyle(g).opacity > 0.9).length);
-const tileBox = await p.evaluate(() => { const r = [...document.querySelectorAll("[data-tile]")].map((g) => g.getBoundingClientRect()); const pill = document.querySelector("[data-hero-pill]").getBoundingClientRect(); return { top: Math.round(Math.min(...r.map((x) => x.top))), bottom: Math.round(Math.max(...r.map((x) => x.bottom))), pillTop: Math.round(pill.top) }; });
+const tileBox = await p.evaluate(() => { const r = [...document.querySelectorAll("[data-tile]")].map((g) => g.getBoundingClientRect()); const lines = [...document.querySelectorAll("[data-hero-line]")].map((l) => l.getBoundingClientRect()); const btn = document.querySelector("[data-hero-fade] a").getBoundingClientRect(); return { top: Math.round(Math.min(...r.map((x) => x.top))), bottom: Math.round(Math.max(...r.map((x) => x.bottom))), h1Bottom: Math.round(Math.max(...lines.map((x) => x.bottom))), btnTop: Math.round(btn.top) }; });
 check("on scroll the C splits into the crew (studs move, seven tiles appear)", moved > 50 && tilesShown === 7, `${moved} studs moved, ${tilesShown} tiles`);
-check("the seven tiles clear the floating nav and the waveform pill", tileBox.top > 100 && tileBox.bottom < tileBox.pillTop, JSON.stringify(tileBox));
+check("the seven tiles sit below the headline, clear of the nav and the buttons", tileBox.top >= tileBox.h1Bottom + 8 && tileBox.top > 100 && tileBox.bottom <= tileBox.btnTop - 8, JSON.stringify(tileBox));
 await p.evaluate(() => scrollTo(0, 0)); await p.waitForTimeout(1200);
 /* waveform breathes */
 const bar = () => p.evaluate(() => getComputedStyle(document.querySelector("[data-hero-pill] span")).transform);

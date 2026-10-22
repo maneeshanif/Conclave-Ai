@@ -32,12 +32,12 @@ export function MotionRoot() {
 
     mm.add("(prefers-reduced-motion: no-preference)", () => {
       /* Hero intro: lines slide up out of a mask, pill grows, support and actions follow, scene settles. */
-      if (document.querySelector("[data-hero-line]")) {
+      if (document.querySelector("[data-hero-line]") && window.matchMedia("(min-width: 768px)").matches) {
         const tl = gsap.timeline({ defaults: { ease: ease.outExpo } });
         tl.fromTo("[data-hero-line]", { yPercent: 110, opacity: 0 }, { yPercent: 0, opacity: 1, duration: dur.hero, stagger: 0.12 })
           .fromTo("[data-hero-pill]", { scaleX: 0, opacity: 0, transformOrigin: "left center" }, { scaleX: 1, opacity: 1, duration: 0.8 }, 0.35)
           .fromTo("[data-hero-fade]", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, clearProps: "transform" }, 0.7)
-          .fromTo("[data-hero-scene]", { scale: 0.94, opacity: 0 }, { scale: 1, opacity: 1, duration: dur.hero }, 0.3);
+          .fromTo("[data-hero-scene]", { opacity: 0 }, { opacity: 1, duration: dur.hero }, 0.3);
       }
 
       /* Reveal: one batch per frame so items that enter together stagger. */
