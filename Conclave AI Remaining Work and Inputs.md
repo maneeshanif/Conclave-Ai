@@ -62,7 +62,7 @@ Prompts are in `docs/google-flow-prompts.md`: ten original assets plus six Brick
 | Aria on the **live AI model** | Code path written (OpenAI Agents SDK with availability and booking tools). **Not yet tried against a real key** | OpenAI key |
 | **Phone-quality voice** (Vapi or Retell) | Browser speech works now. Vendor SDK not added | Vapi or Retell keys |
 | **Calendar booking** on Contact | Link slot ready | Cal.com link |
-| **Hero in Three.js** | Skipped on purpose: the SVG crew scene is lighter and reads better. Say so if you still want a WebGL scene | Your call |
+| **Hero in Three.js** | **Built**, lazy-loaded with the SVG scene as fallback. Adds 241 KB gzip on wide screens with a mouse only. Frame rate on a real GPU not measured here; kill switch `NEXT_PUBLIC_HERO_3D=off` | Your confirmation that the weight is worth it |
 | **Hero Flow loop** in place of the SVG scene | Not started | Flow files |
 | **Crew assembling into the C on scroll**, sticker pack, more moods | Not started | Your verdict on the crew |
 | **Per-page social images** | One site-wide share card done; per-page not done | Nothing, low priority |
@@ -73,7 +73,7 @@ Prompts are in `docs/google-flow-prompts.md`: ten original assets plus six Brick
 ## 3. Done
 
 - **Foundation:** Next.js 16, Tailwind v4, GSAP, Lenis, zustand; light lemlist-style design; palette and type system; logo pack.
-- **Motion** (`docs/motion-implementation.md`): lemlist's measured transitions, sticky service stack, intro, reveals, mock-up playback, accordion, ring cursor, crew blink and drift; reduced-motion safe.
+- **Motion** (`docs/motion-implementation.md`): lemlist's measured transitions, sticky service stack, intro, reveals, mock-up playback, accordion, ring cursor, crew blink and drift; reduced-motion safe. **WebGL hero** with SVG fallback.
 - **Pages:** Home, Services (+5 detail pages with call-flow diagrams), Studio, Industries (+6, each with an example dashboard), Work (filters) and case-study pages (architecture diagram), Demos, About, Pricing, Contact, Join, Security, Compare, Receipts (live from Supabase when rows exist), Notes (+1 post), Roadmap, Crew, Privacy, Terms, 404 and error pages with crew moods.
 - **Working features** (all work with no keys; they say when they are in demo or file mode):
   - Contact form: honeypot, speed trap, consent, rate limit, server validation.

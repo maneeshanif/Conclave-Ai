@@ -7,7 +7,8 @@ import { industries, processSteps, trust } from "@/lib/content";
 import type { Project } from "@/lib/projects";
 import { Accordion } from "@/components/ui/Accordion";
 import { AriaWindow } from "./AriaWindow";
-import { HeroScene, panelColours, serviceVisuals } from "./visuals";
+import { panelColours, serviceVisuals } from "./visuals";
+import { HeroStage } from "./HeroStage";
 import { cn } from "@/lib/utils";
 
 /** Section header used across the page: pill label, then a sentence-case headline (lemlist pattern). */
@@ -33,7 +34,7 @@ export function Hero() {
         data-hero-scene
         className="pointer-events-none absolute inset-x-4 top-24 h-56 md:inset-x-auto md:right-12 md:top-28 md:h-[38%] md:w-[36%] md:max-w-[480px]"
       >
-        <HeroScene />
+        <HeroStage />
       </div>
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
         <h1 className="display text-display-xl">

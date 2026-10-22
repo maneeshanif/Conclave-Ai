@@ -45,3 +45,19 @@ Measured on lemlist.com with Playwright (`tools/research/motion-lemlist.mjs`, `m
 ## Verify
 
 `cd tools/research && node motion-verify.mjs` (starts and stops its own server; needs `npm run build` first). 22 checks: start states, hero intro, scene, waveform, cursor, reveals, sticky stack, mock-ups, manifesto, accordion, nothing stuck hidden, route change, reduced motion, mobile overflow and tab fit. Frames land in `docs/screens/motion/`.
+
+## WebGL hero (added)
+
+`components/home/HeroScene3D.tsx` renders the Brick Crew as real 3D toy bricks (rounded bricks, cylinder studs, clear-coat plastic, ink outline, glossy eyes that blink) around the Conclave mark. `HeroStage.tsx` decides whether to use it.
+
+| Rule | Detail |
+| --- | --- |
+| Baseline | The SVG crew scene always renders and is the fallback |
+| Loads only when likely good | width 900px or more, a mouse, no reduced-motion preference, WebGL2 available |
+| Never blocks first paint | Loaded in an idle callback after the page, as one lazy chunk |
+| Pauses off screen | IntersectionObserver sets the canvas to `frameloop="never"` |
+| Quality guard | If smoothed frame time stays above 24ms for 2s, it steps aside for the SVG scene and remembers for the session |
+| Kill switch | `NEXT_PUBLIC_HERO_3D=off`. Add `?hero3d=force` to skip the speed guard when testing on software GL |
+| Motion | Drop-in with overshoot, idle bob, pointer lean (lerp 0.08), blink, dashed links to the core |
+
+Measured on a production build (`node hero3d-weight.mjs` in `tools/research`): the 3D chunk is **241 KB gzip**, requested about 2 seconds after the page, so JavaScript at load stays at 234 KB and the load event is unchanged (about 330 to 360 ms in both cases). Phones, reduced motion and no-WebGL visitors never download it. Software rendering in headless Chrome runs about 5 frames per second, so frame-rate on real hardware was not measured here.
