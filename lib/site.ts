@@ -23,6 +23,7 @@ export const nav = [
 
 export const company = [
   { href: "/about", label: "About", note: "Who we are and how we work" },
+  { href: "/crew", label: "The crew", note: "Meet the seven agents" },
   { href: "/join", label: "Join", note: "Careers, guild, open source" },
   { href: "/notes", label: "Notes", note: "Playbooks and engineering posts" },
   { href: "/receipts", label: "Receipts", note: "Real numbers, in public" },

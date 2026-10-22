@@ -3,6 +3,8 @@
  * All data is sample data and every card says so ("Example"). Replaced by Flow recordings later.
  */
 import { cn } from "@/lib/utils";
+import { CharacterArt } from "@/components/Cast";
+import type { CastId } from "@/lib/content";
 
 const card = "rounded-xl border hair bg-paper shadow-[0_1px_0_rgb(11_21_18/0.06)]";
 
@@ -184,21 +186,16 @@ export function PersonaFigure({ variant }: { variant: 0 | 1 | 2 | 3 }) {
   );
 }
 
-/* Hero scene: agents (circles) connected to the Conclave mark. Flat, static for now; Three.js replaces it in Step 5. */
+/* Hero scene: the Brick Crew around the Conclave mark. Flat SVG; MotionRoot snaps them in, drifts them and leans them away from the pointer. */
+const crewSpots: [CastId, number, number][] = [
+  ["aria", 70, 78], ["echo", 215, 40], ["slot", 368, 78], ["boomerang", 396, 196], ["tally", 362, 326], ["gate", 250, 352], ["ledger", 50, 204],
+];
+
 export function HeroScene() {
-  const nodes: [number, number, number][] = [
-    [90, 70, 14], [210, 40, 9], [330, 90, 16], [60, 190, 10], [370, 210, 12], [120, 300, 15], [300, 310, 10], [230, 350, 8],
-  ];
   return (
-    <svg viewBox="0 0 440 400" className="h-full w-full" role="img" aria-label="Agents connecting to the Conclave mark">
-      {/* MotionRoot drifts each node (data-node) and its link (data-link) and leans them away from the pointer. */}
-      {nodes.map(([x, y], i) => (
+    <svg viewBox="0 0 440 400" className="h-full w-full" role="img" aria-label="The Brick Crew gathered around the Conclave mark">
+      {crewSpots.map(([, x, y], i) => (
         <line key={i} data-link={i} x1={x} y1={y} x2="220" y2="200" stroke="#0B1512" strokeOpacity="0.35" strokeWidth="1.5" strokeDasharray="4 6" />
-      ))}
-      {nodes.map(([x, y, r], i) => (
-        <g key={i} data-node={i} data-x={x} data-y={y} data-depth={0.6 + (i % 4) * 0.4}>
-          <circle cx={x} cy={y} r={r} fill={i % 3 === 0 ? "#FBFCF8" : i % 3 === 1 ? "#0B1512" : "#CFC4FF"} stroke="#0B1512" strokeWidth="2" />
-        </g>
       ))}
       <g data-core>
         <rect x="140" y="120" width="160" height="160" rx="40" fill="#FBFCF8" stroke="#0B1512" strokeWidth="2" />
@@ -206,6 +203,13 @@ export function HeroScene() {
         <image href="/brand/conclave-mark.svg" x="160" y="140" width="120" height="120" />
         <circle cx="300" cy="122" r="7" fill="#7C5CFF" />
       </g>
+      {crewSpots.map(([id, x, y], i) => (
+        <g key={id} data-node={i} data-x={x} data-y={y} data-depth={0.6 + (i % 4) * 0.4} transform={`translate(${x} ${y})`}>
+          <g transform="scale(0.4) translate(-110 -110)">
+            <CharacterArt id={id} />
+          </g>
+        </g>
+      ))}
     </svg>
   );
 }

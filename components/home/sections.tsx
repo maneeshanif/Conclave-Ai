@@ -31,7 +31,7 @@ export function Hero() {
     <section data-hero className="relative flex min-h-[92svh] flex-col justify-end bg-lime pb-24 pt-28 text-ink md:pb-28">
       <div
         data-hero-scene
-        className="pointer-events-none absolute inset-x-4 top-24 h-56 md:inset-x-auto md:right-12 md:top-20 md:h-[38%] md:w-[34%] md:max-w-[440px]"
+        className="pointer-events-none absolute inset-x-4 top-24 h-56 md:inset-x-auto md:right-12 md:top-28 md:h-[38%] md:w-[36%] md:max-w-[480px]"
       >
         <HeroScene />
       </div>
@@ -172,7 +172,7 @@ export function BuiltFor() {
               href={`/industries/${p.slug}`}
               className="group relative flex flex-col bg-mist p-6 transition-colors duration-150 hover:bg-chalk md:p-8">
               <div className="lift-on-hover">
-                <Character id={p.figure} className="h-32 w-32 md:h-36 md:w-36" />
+                <Character id={p.figure} className="h-36 w-36 md:h-40 md:w-40" />
               </div>
               <span className="pill-label mt-6 w-fit">{p.name}</span>
               <p className="mt-3 max-w-xs text-slate">{p.pain}</p>

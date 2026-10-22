@@ -33,7 +33,7 @@ export default async function IndustryPage({ params }: Params) {
       <div className="frame border-t hair">
         <section className="grid gap-8 border-b hair md:grid-cols-[1fr_2fr]">
           <div data-reveal className="grid place-items-center bg-mist p-8">
-            <Character id={i.figure} className="h-44 w-44" />
+            <Character id={i.figure} className="h-52 w-52" />
           </div>
           <div className="px-4 py-12 md:px-10">
             <h2 data-reveal className="head">Three workflows we set up first</h2>

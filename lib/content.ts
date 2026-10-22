@@ -18,17 +18,16 @@ export const trust = [
   ["Data stays yours", "Only what the agent needs, stored where you can audit it."],
 ] as const;
 
-/** The seven-character cast. Each is one circle so they combine into the C of the logo. */
+/** The Brick Crew: seven characters from one toy-brick kit (studs are the dots). Art in components/Cast.tsx, research in docs/mascot-research.md. */
 export const cast = [
-  { id: "aria", name: "Aria", job: "Answers calls", fill: "#C8F169", trait: "Warm, quick" },
-  { id: "echo", name: "Echo", job: "Follows up", fill: "#CFC4FF", trait: "Persistent, polite" },
-  { id: "slot", name: "Slot", job: "Books the slot", fill: "#0B1512", trait: "Precise" },
-  { id: "boomerang", name: "Boomerang", job: "Wins customers back", fill: "#7C5CFF", trait: "Cheeky" },
-  { id: "tally", name: "Tally", job: "Reports the week", fill: "#F1F4EC", trait: "Calm, nerdy" },
-  { id: "gate", name: "Gate", job: "Hands over to a human", fill: "#14302A", trait: "Honest" },
-  { id: "ledger", name: "Ledger", job: "Keeps the receipts", fill: "#8FA39A", trait: "Dry humour" },
-] as const;
-export type CastId = (typeof cast)[number]["id"];
+  { id: "aria", name: "Aria", job: "Answers calls", fill: "#C8F169", trait: "Warm, quick", sig: "Headset and a waveform smile", line: "Picks up in one ring." },
+  { id: "echo", name: "Echo", job: "Follows up", fill: "#CFC4FF", trait: "Persistent, polite", sig: "Ghost copies stepping away behind it", line: "Sent. Sending again, politely." },
+  { id: "slot", name: "Slot", job: "Books the slot", fill: "#0B1512", trait: "Precise", sig: "A calendar on its belly, one lime day", line: "Thursday, 10:30. Done." },
+  { id: "boomerang", name: "Boomerang", job: "Wins customers back", fill: "#7C5CFF", trait: "Cheeky", sig: "A curved lime boomerang tail", line: "Remember us? We saved you a seat." },
+  { id: "tally", name: "Tally", job: "Reports the week", fill: "#F1F4EC", trait: "Calm, nerdy", sig: "A rising three-bar chart for a belly", line: "Here is the week in one minute." },
+  { id: "gate", name: "Gate", job: "Hands over to a human", fill: "#14302A", trait: "Honest", sig: "An arch body with a lime door ajar", line: "This one needs a person. Passing it on." },
+  { id: "ledger", name: "Ledger", job: "Keeps the receipts", fill: "#8FA39A", trait: "Dry humour", sig: "A wide ruled page and a pen", line: "Every number has a source." },
+] as const;export type CastId = (typeof cast)[number]["id"];
 
 export const industries = [
   {

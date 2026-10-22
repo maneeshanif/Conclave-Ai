@@ -122,13 +122,14 @@ export function MotionRoot() {
         const nodes = Array.from(scene.querySelectorAll<SVGGElement>("[data-node]")).map((g, i) => ({
           g,
           line: scene.querySelector<SVGLineElement>(`[data-link="${g.dataset.node}"]`),
-          circle: g.querySelector("circle")!,
           bx: Number(g.dataset.x),
           by: Number(g.dataset.y),
           depth: Number(g.dataset.depth || 1),
           phase: i * 1.7,
+          enter: { v: 0 }, // 0 = hovering above and invisible, 1 = snapped into place
         }));
-        const core = scene.querySelector<SVGGElement>("[data-core]");
+        /* Crew snaps in like bricks being placed: drop, small overshoot, settle. */
+        nodes.forEach((n, i) => gsap.to(n.enter, { v: 1, duration: 0.9, delay: 0.55 + i * 0.09, ease: "back.out(1.8)" }));        const core = scene.querySelector<SVGGElement>("[data-core]");
         const pointer = { x: 0, y: 0, sx: 0, sy: 0 };
         const onMove = (e: PointerEvent) => {
           const r = heroSection.getBoundingClientRect();
@@ -143,10 +144,11 @@ export function MotionRoot() {
           for (const n of nodes) {
             const x = n.bx + Math.sin(t * 0.6 + n.phase) * 6 - pointer.sx * 14 * n.depth;
             const y = n.by + Math.cos(t * 0.5 + n.phase) * 6 - pointer.sy * 14 * n.depth;
-            n.circle.setAttribute("cx", String(x));
-            n.circle.setAttribute("cy", String(y));
+            const drop = (1 - n.enter.v) * -70;
+            n.g.setAttribute("transform", `translate(${x} ${y + drop})`);
+            n.g.setAttribute("opacity", String(Math.min(1, n.enter.v * 2)));
             n.line?.setAttribute("x1", String(x));
-            n.line?.setAttribute("y1", String(y));
+            n.line?.setAttribute("y1", String(y + drop));
           }
           const s = 1 + Math.sin(t * 0.8) * 0.012;
           core?.setAttribute("transform", `translate(${220 + pointer.sx * 6} ${200 + pointer.sy * 6}) scale(${s}) translate(-220 -200)`);

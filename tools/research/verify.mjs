@@ -22,7 +22,7 @@ async function shoot(p, base, w) {
   for (let y = 0, n = 1; y < h; y += 7000, n++) await p.screenshot({ path: `${base}-part${n}.png`, fullPage: true, clip: { x: 0, y, width: w, height: Math.min(7000, h - y) } });
 }
 
-const routes = ["", "services", "services/voice", "services/reporting", "studio", "industries/clinics", "industries/startups", "work", "work/bazar-flow", "demos", "about", "pricing", "contact", "join", "security", "compare", "receipts", "notes", "privacy", "terms"];
+const routes = ["", "services", "services/voice", "services/reporting", "studio", "crew", "industries/clinics", "industries/startups", "work", "work/bazar-flow", "demos", "about", "pricing", "contact", "join", "security", "compare", "receipts", "notes", "privacy", "terms"];
 const b = await chromium.launch();
 let bad = 0;
 for (const [name, w, h] of [["desktop", 1440, 900], ["mobile", 390, 844], ["narrow", 360, 740]]) {

@@ -14,7 +14,7 @@
     ],
     "file": "shots/home/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 13130
+    "height": 13178
   },
   {
     "page": "home",
@@ -116,7 +116,7 @@
     ],
     "file": "shots/home/desktop/06-built-for.jpg",
     "width": 1440,
-    "height": 930
+    "height": 962
   },
   {
     "page": "home",
@@ -161,13 +161,13 @@
     "id": "home/desktop/09-manifesto",
     "kind": "section",
     "name": "manifesto",
-    "heading": "The Conclave cast",
+    "heading": "The Brick Crew",
     "source": [
       "components/home/sections.tsx (Manifesto), components/Cast.tsx (CastRow)"
     ],
     "file": "shots/home/desktop/09-manifesto.jpg",
     "width": 1440,
-    "height": 927
+    "height": 943
   },
   {
     "page": "home",
@@ -850,6 +850,108 @@
     "height": 557
   },
   {
+    "page": "crew",
+    "pageTitle": "The crew",
+    "route": "/crew",
+    "viewport": "desktop",
+    "pageFile": "app/crew/page.tsx",
+    "id": "crew/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/crew/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/crew/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2983
+  },
+  {
+    "page": "crew",
+    "pageTitle": "The crew",
+    "route": "/crew",
+    "viewport": "desktop",
+    "pageFile": "app/crew/page.tsx",
+    "id": "crew/desktop/01-seven-bricks-one-job-each",
+    "kind": "section",
+    "name": "Seven bricks. One job each.",
+    "heading": "Seven bricks. One job each.",
+    "source": [
+      "app/crew/page.tsx"
+    ],
+    "file": "shots/crew/desktop/01-seven-bricks-one-job-each.jpg",
+    "width": 1280,
+    "height": 621
+  },
+  {
+    "page": "crew",
+    "pageTitle": "The crew",
+    "route": "/crew",
+    "viewport": "desktop",
+    "pageFile": "app/crew/page.tsx",
+    "id": "crew/desktop/02-aria-plus-6-more",
+    "kind": "section",
+    "name": "Aria plus 6 more",
+    "heading": "Aria plus 6 more",
+    "source": [
+      "app/crew/page.tsx"
+    ],
+    "file": "shots/crew/desktop/02-aria-plus-6-more.jpg",
+    "width": 1278,
+    "height": 1421
+  },
+  {
+    "page": "crew",
+    "pageTitle": "The crew",
+    "route": "/crew",
+    "viewport": "desktop",
+    "pageFile": "app/crew/page.tsx",
+    "id": "crew/desktop/03-built-from-one-kit-so-they-read-as-a-fam",
+    "kind": "section",
+    "name": "Built from one kit so they read as a family at a",
+    "heading": "Built from one kit so they read as a family at a",
+    "source": [
+      "app/crew/page.tsx"
+    ],
+    "file": "shots/crew/desktop/03-built-from-one-kit-so-they-read-as-a-fam.jpg",
+    "width": 1278,
+    "height": 70
+  },
+  {
+    "page": "crew",
+    "pageTitle": "The crew",
+    "route": "/crew",
+    "viewport": "desktop",
+    "pageFile": "app/crew/page.tsx",
+    "id": "crew/desktop/04-want-a-crew-of-your-own",
+    "kind": "section",
+    "name": "Want a crew of your own?",
+    "heading": "Want a crew of your own?",
+    "source": [
+      "app/crew/page.tsx"
+    ],
+    "file": "shots/crew/desktop/04-want-a-crew-of-your-own.jpg",
+    "width": 1280,
+    "height": 318
+  },
+  {
+    "page": "crew",
+    "pageTitle": "The crew",
+    "route": "/crew",
+    "viewport": "desktop",
+    "pageFile": "app/crew/page.tsx",
+    "id": "crew/desktop/05-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/crew/desktop/05-footer.jpg",
+    "width": 1440,
+    "height": 557
+  },
+  {
     "page": "work",
     "pageTitle": "Work",
     "route": "/work",
@@ -1238,7 +1340,7 @@
     ],
     "file": "shots/about/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 2327
+    "height": 2343
   },
   {
     "page": "about",
@@ -1272,7 +1374,7 @@
     ],
     "file": "shots/about/desktop/02-fixed-scope-plus-4-more.jpg",
     "width": 1280,
-    "height": 931
+    "height": 947
   },
   {
     "page": "about",
@@ -2218,7 +2320,7 @@
     ],
     "file": "shots/home/mobile/00-full-page-part1.jpg",
     "width": 780,
-    "height": 12000
+    "height": 8000
   },
   {
     "page": "home",
@@ -2235,7 +2337,7 @@
     ],
     "file": "shots/home/mobile/00-full-page-part2.jpg",
     "width": 780,
-    "height": 12000
+    "height": 8000
   },
   {
     "page": "home",
@@ -2252,7 +2354,7 @@
     ],
     "file": "shots/home/mobile/00-full-page-part3.jpg",
     "width": 780,
-    "height": 12000
+    "height": 8000
   },
   {
     "page": "home",
@@ -2269,7 +2371,41 @@
     ],
     "file": "shots/home/mobile/00-full-page-part4.jpg",
     "width": 780,
-    "height": 8196
+    "height": 8000
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/full-page-part5",
+    "kind": "full",
+    "name": "Full page, part 5",
+    "source": [
+      "app/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/home/mobile/00-full-page-part5.jpg",
+    "width": 780,
+    "height": 8000
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/full-page-part6",
+    "kind": "full",
+    "name": "Full page, part 6",
+    "source": [
+      "app/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/home/mobile/00-full-page-part6.jpg",
+    "width": 780,
+    "height": 4516
   },
   {
     "page": "home",
@@ -2371,7 +2507,7 @@
     ],
     "file": "shots/home/mobile/06-built-for.jpg",
     "width": 780,
-    "height": 4382
+    "height": 4574
   },
   {
     "page": "home",
@@ -2416,13 +2552,13 @@
     "id": "home/mobile/09-manifesto",
     "kind": "section",
     "name": "manifesto",
-    "heading": "The Conclave cast",
+    "heading": "The Brick Crew",
     "source": [
       "components/home/sections.tsx (Manifesto), components/Cast.tsx (CastRow)"
     ],
     "file": "shots/home/mobile/09-manifesto.jpg",
     "width": 780,
-    "height": 2604
+    "height": 2732
   },
   {
     "page": "home",
@@ -3034,7 +3170,7 @@
     ],
     "file": "shots/industry/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 7456
+    "height": 7520
   },
   {
     "page": "industry",
@@ -3068,7 +3204,7 @@
     ],
     "file": "shots/industry/mobile/02-three-workflows-we-set-up-first.jpg",
     "width": 776,
-    "height": 1330
+    "height": 1394
   },
   {
     "page": "industry",
@@ -3152,6 +3288,108 @@
       "components/Footer.tsx"
     ],
     "file": "shots/industry/mobile/07-footer.jpg",
+    "width": 780,
+    "height": 3004
+  },
+  {
+    "page": "crew",
+    "pageTitle": "The crew",
+    "route": "/crew",
+    "viewport": "mobile",
+    "pageFile": "app/crew/page.tsx",
+    "id": "crew/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/crew/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/crew/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 11094
+  },
+  {
+    "page": "crew",
+    "pageTitle": "The crew",
+    "route": "/crew",
+    "viewport": "mobile",
+    "pageFile": "app/crew/page.tsx",
+    "id": "crew/mobile/01-seven-bricks-one-job-each",
+    "kind": "section",
+    "name": "Seven bricks. One job each.",
+    "heading": "Seven bricks. One job each.",
+    "source": [
+      "app/crew/page.tsx"
+    ],
+    "file": "shots/crew/mobile/01-seven-bricks-one-job-each.jpg",
+    "width": 780,
+    "height": 868
+  },
+  {
+    "page": "crew",
+    "pageTitle": "The crew",
+    "route": "/crew",
+    "viewport": "mobile",
+    "pageFile": "app/crew/page.tsx",
+    "id": "crew/mobile/02-aria-plus-6-more",
+    "kind": "section",
+    "name": "Aria plus 6 more",
+    "heading": "Aria plus 6 more",
+    "source": [
+      "app/crew/page.tsx"
+    ],
+    "file": "shots/crew/mobile/02-aria-plus-6-more.jpg",
+    "width": 776,
+    "height": 6408
+  },
+  {
+    "page": "crew",
+    "pageTitle": "The crew",
+    "route": "/crew",
+    "viewport": "mobile",
+    "pageFile": "app/crew/page.tsx",
+    "id": "crew/mobile/03-built-from-one-kit-so-they-read-as-a-fam",
+    "kind": "section",
+    "name": "Built from one kit so they read as a family at a",
+    "heading": "Built from one kit so they read as a family at a",
+    "source": [
+      "app/crew/page.tsx"
+    ],
+    "file": "shots/crew/mobile/03-built-from-one-kit-so-they-read-as-a-fam.jpg",
+    "width": 776,
+    "height": 220
+  },
+  {
+    "page": "crew",
+    "pageTitle": "The crew",
+    "route": "/crew",
+    "viewport": "mobile",
+    "pageFile": "app/crew/page.tsx",
+    "id": "crew/mobile/04-want-a-crew-of-your-own",
+    "kind": "section",
+    "name": "Want a crew of your own?",
+    "heading": "Want a crew of your own?",
+    "source": [
+      "app/crew/page.tsx"
+    ],
+    "file": "shots/crew/mobile/04-want-a-crew-of-your-own.jpg",
+    "width": 780,
+    "height": 600
+  },
+  {
+    "page": "crew",
+    "pageTitle": "The crew",
+    "route": "/crew",
+    "viewport": "mobile",
+    "pageFile": "app/crew/page.tsx",
+    "id": "crew/mobile/05-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/crew/mobile/05-footer.jpg",
     "width": 780,
     "height": 3004
   },
@@ -3561,7 +3799,7 @@
     ],
     "file": "shots/about/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 8132
+    "height": 8260
   },
   {
     "page": "about",
@@ -3603,16 +3841,16 @@
     "route": "/about",
     "viewport": "mobile",
     "pageFile": "app/about/page.tsx",
-    "id": "about/mobile/03-the-conclave-cast",
+    "id": "about/mobile/03-the-brick-crew",
     "kind": "section",
-    "name": "The Conclave cast",
-    "heading": "The Conclave cast",
+    "name": "The Brick Crew",
+    "heading": "The Brick Crew",
     "source": [
       "app/about/page.tsx"
     ],
-    "file": "shots/about/mobile/03-the-conclave-cast.jpg",
+    "file": "shots/about/mobile/03-the-brick-crew.jpg",
     "width": 776,
-    "height": 1692
+    "height": 1820
   },
   {
     "page": "about",

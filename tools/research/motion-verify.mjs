@@ -40,7 +40,7 @@ check("hero lines start hidden and end visible", Number(frames[0].lines[0]) < 0.
 await p.waitForLoadState("networkidle");
 
 /* hero scene drifts */
-const cx = () => p.evaluate(() => document.querySelector("[data-node] circle")?.getAttribute("cx"));
+const cx = () => p.evaluate(() => document.querySelector("[data-node]")?.getAttribute("transform"));
 const a = await cx(); await p.mouse.move(300, 200); await p.waitForTimeout(700); const c = await cx();
 check("hero scene nodes move with time and pointer", a !== c, `${a} -> ${c}`);
 

@@ -49,6 +49,7 @@ const PAGES = [
   { slug: "service-detail", route: "/services/voice", title: "Service detail", file: "app/services/[slug]/page.tsx" },
   { slug: "studio", route: "/studio", title: "Studio", file: "app/studio/page.tsx" },
   { slug: "industry", route: "/industries/clinics", title: "Industry page", file: "app/industries/[slug]/page.tsx" },
+  { slug: "crew", route: "/crew", title: "The crew", file: "app/crew/page.tsx" },
   { slug: "work", route: "/work", title: "Work", file: "app/work/page.tsx" },
   { slug: "work-detail", route: "/work/bazar-flow", title: "Project detail", file: "app/work/[slug]/page.tsx" },
   { slug: "demos", route: "/demos", title: "Demos", file: "app/demos/page.tsx" },
@@ -73,7 +74,10 @@ async function save(page, handleOrNull, rel, meta, opts = {}) {
   const file = path.join(SHOTS, rel);
   fs.mkdirSync(path.dirname(file), { recursive: true });
   const o = { path: file, type: "jpeg", quality: 82, ...opts };
-  if (handleOrNull) await handleOrNull.screenshot(o); else await page.screenshot(o);
+  for (let attempt = 1; ; attempt++) {
+    try { if (handleOrNull) await handleOrNull.screenshot(o); else await page.screenshot(o); break; }
+    catch (e) { if (attempt >= 3) throw e; await page.waitForTimeout(800); }
+  }
   const dim = readJpegSize(file);
   manifest.push({ ...meta, file: "shots/" + rel.replace(/\\/g, "/"), width: dim.w, height: dim.h });
 }
@@ -107,7 +111,7 @@ for (const [vp, w, h] of VIEWPORTS) {
     if (fullH <= 15000) {
       await save(page, null, `${pg.slug}/${vp}/00-full-page.jpg`, { ...base, id: `${pg.slug}/${vp}/full-page`, kind: "full", name: "Full page", source: [pg.file, "app/layout.tsx"] }, { fullPage: true });
     } else {
-      const step = 6000, cssH = fullH / (vp === "mobile" ? 2 : 1);
+      const step = 4000, cssH = fullH / (vp === "mobile" ? 2 : 1);
       for (let y = 0, n = 1; y < cssH; y += step, n++) {
         await save(page, null, `${pg.slug}/${vp}/00-full-page-part${n}.jpg`, { ...base, id: `${pg.slug}/${vp}/full-page-part${n}`, kind: "full", name: `Full page, part ${n}`, source: [pg.file, "app/layout.tsx"] }, { fullPage: true, clip: { x: 0, y, width: w, height: Math.min(step, cssH - y) } });
       }

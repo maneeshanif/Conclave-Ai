@@ -107,3 +107,16 @@ ffmpeg -i hero-converge.mp4 -vf "fps=min(source_fps\,60),scale=1920:-2" -c:v lib
 - Colours are close to the six hex values. I will snap near-matches to the exact tokens in post if needed.
 - Loops: last frame matches the first frame.
 - No text or logos inside the images.
+
+---
+
+## Revision 3: Brick Crew prompts (replaces the round-dot cast prompts)
+
+Direction: the crew is built from one toy-brick kit, in the spirit of the lemlist-style brick look (see `docs/mascot-research.md`). Same style block as above (flat colour, palette only, 4px ink outline, hard offset shadow, no gradients, no text). Generate, then send the files back.
+
+1. **Crew sheet (image):** "Flat vector character sheet of seven toy-brick characters standing in a row on a lime (#C8F169) background. Each is built from stacked bricks with round studs on top, two dot eyes and a tiny smile, thick ink (#0B1512) outline, hard offset shadow, flat fills, no gradients. Aria lime with a headset and waveform smile. Echo lilac (#CFC4FF) with two ghost copies behind. Slot ink with a small calendar on its belly. Boomerang violet (#7C5CFF) with a curved lime tail. Tally chalk (#F1F4EC) with a three-bar chart belly. Gate dark green (#14302A) arch-shaped with a lime door ajar. Ledger steel (#8FA39A) wide with ruled lines and a pen. No text."
+2. **Snap into the C (video, 6s loop):** "Seven flat toy-brick characters drop in one by one with a small bounce and snap into a ring around a rounded white square holding a bold letter C. Then they gently bob. Lime background, flat vector, thick ink outline, hard shadow, smooth easing, no text."
+3. **Call to calendar (image):** "Flat vector illustration: a toy-brick character with a headset answers a ringing phone, a calendar made of bricks fills with one lime day. Lime and violet palette, thick ink outline, hard offset shadow, sticker style, no text."
+4. **Founders (image):** "Two friendly toy-brick characters at a table with laptops, studs on their heads, flat vector, ink outline, lime background, no text."
+5. **Brick badges (image):** "Shield-shaped badge built from toy bricks in lime, violet and ink with a blank plate, flat vector, hard shadow, transparent background, no text." (for Receipts and proof, like lemlist's brick award badges)
+6. **Sticker pack (images, 12):** "Twelve sticker-style reactions of the brick characters (thumbs up, phone ringing, calendar done, sleeping, celebrating, thinking, error, handover), flat vector, white outline border, transparent background."
