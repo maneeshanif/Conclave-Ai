@@ -22,7 +22,7 @@ export default async function ReceiptsPage() {
   const rows = await getReceipts();
   return (
     <>
-      <PageHeader eyebrow="Receipts" title="Receipts, not claims." lead="Big firms hide behind logos. We publish the numbers and the build logs, once they exist and are real." />
+      <PageHeader path="/receipts" eyebrow="Receipts" title="Receipts, not claims." lead="Big firms hide behind logos. We publish the numbers and the build logs, once they exist and are real." />
 
       {rows.length > 0 && (
         <section data-reveal className="frame border-t hair px-4 py-10 md:px-10">

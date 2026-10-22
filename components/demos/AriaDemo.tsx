@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { api } from "@/lib/api";
-import { Character } from "@/components/Cast";
+import { StudGlyph } from "@/components/studs/StudGlyph";
 import { cn } from "@/lib/utils";
 
 type Msg = { role: "user" | "assistant"; content: string };
@@ -204,7 +204,7 @@ export function AriaDemo() {
       </div>
 
       <aside className="rounded-2xl border hair bg-chalk p-5">
-        <Character id="aria" className={cn("mx-auto h-36 w-36 transition-transform duration-200", speaking && "scale-105")} label="Aria" />
+        <StudGlyph agent="aria" size={144} animate active={speaking || listening || busy} className="mx-auto" label="Aria, answers calls" />
         <dl className="mt-4 space-y-3 text-sm">
           <div>
             <dt className="label text-slate">Answered in</dt>

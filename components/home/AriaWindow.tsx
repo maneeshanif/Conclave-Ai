@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { ease } from "@/lib/motion";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { Button } from "@/components/ui/Button";
+import { StudGlyph } from "@/components/studs/StudGlyph";
 
 const bars = [10, 24, 14, 36, 20, 44, 18, 30, 12, 26, 16, 38, 22, 10, 28, 16];
 
@@ -63,14 +64,17 @@ export function AriaWindow() {
   const tab = tabs.find((t) => t.id === active)!;
   const lines = useRef<HTMLOListElement>(null);
   const reduced = useReducedMotion();
+  const [speaking, setSpeaking] = useState(false);
 
   /* Each tab plays its conversation in: lines rise in turn like messages arriving. Skipped for reduced motion. */
   useEffect(() => {
     if (reduced || !lines.current) return;
     const items = Array.from(lines.current.children);
-    const tween = gsap.fromTo(items, { y: 12, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: ease.outExpo, stagger: 0.22, clearProps: "transform" });
+    setSpeaking(true);
+    const tween = gsap.fromTo(items, { y: 12, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: ease.outExpo, stagger: 0.22, clearProps: "transform", onComplete: () => setSpeaking(false) });
     return () => {
       tween.kill();
+      setSpeaking(false);
     };
   }, [active, reduced]);
 
@@ -128,9 +132,13 @@ export function AriaWindow() {
 
         <div className="flex flex-col justify-between gap-6 rounded-2xl bg-chalk p-6">
           <div>
-            <span className="pill-label">
-              <span className="mr-2 h-1.5 w-1.5 rounded-full bg-violet" /> Live demo
-            </span>
+            <div className="flex items-center justify-between gap-3">
+              <span className="pill-label">
+                <span className="mr-2 h-1.5 w-1.5 rounded-full bg-violet" /> Live demo
+              </span>
+              {/* Aria's stud glyph: the bars pulse while she is speaking, breathe when idle. */}
+              <StudGlyph agent="aria" size={72} animate active={speaking} label="Aria, answers calls" />
+            </div>
             <h2 className="mt-4 text-2xl font-semibold tracking-tight">Talk to Aria yourself</h2>
             <p className="mt-2 text-slate">Speak to the agent from your browser. Ask it to book you in. No sign-up needed.</p>
           </div>

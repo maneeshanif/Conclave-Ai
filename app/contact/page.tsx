@@ -29,14 +29,22 @@ export default function ContactPage() {
               {site.city}, serving {site.serving}
             </dd>
           </div>
-          <div>
-            <dt className="label text-slate">WhatsApp</dt>
-            <dd className="text-title">Number to be added</dd>
-          </div>
-          <div>
-            <dt className="label text-slate">Time zone and reply time</dt>
-            <dd className="text-title">To be added</dd>
-          </div>
+          {site.whatsapp && (
+            <div>
+              <dt className="label text-slate">WhatsApp</dt>
+              <dd>
+                <a href={`https://wa.me/${site.whatsapp.replace(/\D/g, "")}`} className="text-title hover:text-plum" rel="noopener">
+                  {site.whatsapp}
+                </a>
+              </dd>
+            </div>
+          )}
+          {site.replyTime && (
+            <div>
+              <dt className="label text-slate">Reply time</dt>
+              <dd className="text-title">{site.replyTime}</dd>
+            </div>
+          )}
         </dl>
         <div className="mt-10 rounded-2xl border hair bg-paper p-5">
           <p className="label text-plum">Book a time</p>
@@ -45,7 +53,7 @@ export default function ContactPage() {
               Pick a slot on our calendar
             </a>
           ) : (
-            <p className="mt-2 text-sm text-slate">The calendar link is added with the Cal.com account. Until then, send the form and we will reply with times.</p>
+            <p className="mt-2 text-sm text-slate">Send the form and we will reply with times that suit you.</p>
           )}
         </div>
         <p className="mt-6 text-sm text-slate">Not sure where to start? Try the &ldquo;Which agent do I need?&rdquo; picker on the services page.</p>

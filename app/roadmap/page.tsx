@@ -10,15 +10,15 @@ export const metadata: Metadata = {
 };
 
 const columns = [
-  { title: "Shipped", tone: "bg-lime", items: ["Voice, follow-up, booking, reactivation and reporting service pages", "Studio, industries, compare, security and receipts pages", "Aria demo (demo mode), missed-call calculator, Convene game and leaderboard", "Contact form with spam protection", "The Brick Crew"] },
+  { title: "Shipped", tone: "bg-lime", items: ["Voice, follow-up, booking, reactivation and reporting service pages", "Studio, industries, compare, security and receipts pages", "Aria demo (demo mode) and the missed-call calculator", "Contact form with spam protection", "The stud crew and the stud C mark"] },
   { title: "Building now", tone: "bg-lilac", items: ["Live voice with the AI model and a phone demo line", "Case studies with real results", "Calendar booking on the contact page"] },
-  { title: "Later", tone: "bg-mist", items: ["Public build logs and bounties", "Open-source agent templates", "More Notes, weekly for the first eight weeks", "A yearly Agent Radar"] },
+  { title: "Later", tone: "bg-mist", items: ["Convene game and the build-your-own-agent wizard, once polished", "Public build logs and bounties", "Open-source agent templates", "More Notes, weekly for the first eight weeks", "A yearly Agent Radar"] },
 ];
 
 export default function RoadmapPage() {
   return (
     <>
-      <PageHeader eyebrow="Roadmap" title="What shipped, what is next." lead="Plain and dated by order, not by promise. Items move left as they ship." />
+      <PageHeader path="/roadmap" eyebrow="Roadmap" title="What shipped, what is next." lead="Plain and dated by order, not by promise. Items move left as they ship." />
       <div className="frame border-t hair">
         <div data-stagger className="grid gap-px bg-[rgb(11_21_18/0.12)] md:grid-cols-3">
           {columns.map((c) => (

@@ -3,8 +3,6 @@
  * All data is sample data and every card says so ("Example"). Replaced by Flow recordings later.
  */
 import { cn } from "@/lib/utils";
-import { CharacterArt } from "@/components/Cast";
-import type { CastId } from "@/lib/content";
 
 const card = "rounded-xl border hair bg-paper shadow-[0_1px_0_rgb(11_21_18/0.06)]";
 
@@ -167,49 +165,3 @@ export const serviceVisuals = [VoiceVisual, FollowUpVisual, BookingVisual, React
 
 /** Flat panel colours behind each visual, cycling lime, lilac, moss, steel, lime. */
 export const panelColours = ["bg-lime", "bg-lilac", "bg-moss", "bg-steel", "bg-lime"];
-
-/* Personas: flat figure, no faces. */
-export function PersonaFigure({ variant }: { variant: 0 | 1 | 2 | 3 }) {
-  const skin = ["#F1F4EC", "#F1F4EC", "#F1F4EC", "#F1F4EC"][variant];
-  const body = ["#14302A", "#7C5CFF", "#C8F169", "#0B1512"][variant];
-  const accent = ["#C8F169", "#CFC4FF", "#0B1512", "#C8F169"][variant];
-  return (
-    <svg viewBox="0 0 200 220" className="mx-auto h-44 w-auto md:h-52" role="img" aria-label="Illustration">
-      <rect x="40" y="150" width="120" height="70" rx="28" fill={body} />
-      <circle cx="100" cy="92" r="40" fill={skin} stroke="#0B1512" strokeWidth="3" />
-      {variant === 0 && <path d="M58 90a42 42 0 0 1 84 0" fill="none" stroke={accent} strokeWidth="10" strokeLinecap="round" />}
-      {variant === 1 && <rect x="64" y="52" width="72" height="16" rx="8" fill={accent} />}
-      {variant === 2 && <circle cx="100" cy="92" r="9" fill="#0B1512" />}
-      {variant === 3 && <path d="M70 70q30-30 60 0" fill="none" stroke={accent} strokeWidth="10" strokeLinecap="round" />}
-      <rect x="84" y="170" width="32" height="10" rx="5" fill={accent} />
-    </svg>
-  );
-}
-
-/* Hero scene: the Brick Crew around the Conclave mark. Flat SVG; MotionRoot snaps them in, drifts them and leans them away from the pointer. */
-const crewSpots: [CastId, number, number][] = [
-  ["aria", 70, 78], ["echo", 215, 40], ["slot", 368, 78], ["boomerang", 396, 196], ["tally", 362, 326], ["gate", 250, 352], ["ledger", 50, 204],
-];
-
-export function HeroScene() {
-  return (
-    <svg viewBox="0 0 440 400" className="h-full w-full" role="img" aria-label="The Brick Crew gathered around the Conclave mark">
-      {crewSpots.map(([, x, y], i) => (
-        <line key={i} data-link={i} x1={x} y1={y} x2="220" y2="200" stroke="#0B1512" strokeOpacity="0.35" strokeWidth="1.5" strokeDasharray="4 6" />
-      ))}
-      <g data-core>
-        <rect x="140" y="120" width="160" height="160" rx="40" fill="#FBFCF8" stroke="#0B1512" strokeWidth="2" />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <image href="/brand/conclave-mark.svg" x="160" y="140" width="120" height="120" />
-        <circle cx="300" cy="122" r="7" fill="#7C5CFF" />
-      </g>
-      {crewSpots.map(([id, x, y], i) => (
-        <g key={id} data-node={i} data-x={x} data-y={y} data-depth={0.6 + (i % 4) * 0.4} transform={`translate(${x} ${y})`}>
-          <g transform="scale(0.4) translate(-110 -110)">
-            <CharacterArt id={id} />
-          </g>
-        </g>
-      ))}
-    </svg>
-  );
-}

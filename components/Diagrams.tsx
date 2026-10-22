@@ -44,3 +44,24 @@ export function ArchDiagram({ stack }: { stack: string[] }) {
     </figure>
   );
 }
+
+/** ERP and CRM module map: the modules around one shared set of data. Example structure, not a screenshot. */
+export function ModuleMap({ modules }: { modules: string[] }) {
+  return (
+    <figure>
+      <div data-stagger className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        {modules.map((m, i) => (
+          <div key={m} className={cn("rounded-2xl border border-ink/80 bg-paper p-4 shadow-[3px_3px_0_0_#0B1512]", false)}>
+            <span className="label text-plum">{String(i + 1).padStart(2, "0")}</span>
+            <p className="mt-2 text-[0.9375rem] font-medium">{m}</p>
+          </div>
+        ))}
+        <div className="col-span-2 rounded-2xl border border-ink/80 bg-ink p-4 text-paper sm:col-span-4">
+          <span className="label text-lilac">Underneath</span>
+          <p className="mt-1 font-medium">One database you own, with every module reading the same customers, orders and stock.</p>
+        </div>
+      </div>
+      <figcaption className="mt-3 text-xs text-slate">Example structure. Screens are added, labelled Example, as modules are built.</figcaption>
+    </figure>
+  );
+}

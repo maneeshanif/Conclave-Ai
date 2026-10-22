@@ -6,7 +6,7 @@ import { NewsletterForm } from "./NewsletterForm";
 
 const columns: { title: string; links: [string, string][] }[] = [
   { title: "Services", links: services.map((s) => [s.short, `/services/${s.slug}`]) },
-  { title: "Studio", links: studio.map((s) => [s.name, `/studio#${s.slug}`]) },
+  { title: "Studio", links: studio.map((s) => [s.name, `/studio/${s.slug}`]) },
   {
     title: "Resources",
     links: [

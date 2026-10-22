@@ -41,7 +41,7 @@ export default async function NotePage({ params }: Params) {
           }),
         }}
       />
-      <PageHeader eyebrow={post.topic} title={post.title} lead={post.summary} />
+      <PageHeader path={`/notes/${post.slug}`} eyebrow={post.topic} title={post.title} lead={post.summary} />
       <article className="frame border-t hair px-4 py-12 md:px-10">
         <div className="mx-auto max-w-2xl space-y-5 text-[1.0625rem]">
           <p className="label text-slate">

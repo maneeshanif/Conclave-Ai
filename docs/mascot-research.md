@@ -45,3 +45,11 @@ Feedback was 5/10: a good start, but wanted more detail and gloss. v2 adds:
 - A chest panel per character (speaker grille, ripple, calendar, loop arrow, chart, door and badge, ruled page with a stamp).
 - Motion: the eyes blink on their own rhythm and Aria's mouth talks (MotionRoot).
 - Moods: `happy`, `oops`, `sleepy`, `wow`, used on the 404 page, the error page, the contact success state and the empty leaderboard.
+
+## Update: v3 replaces the brick robots (Change Spec v3)
+The robots with faces and antennae read as a toy cast to clinic and startup buyers, and seven near-identical figures blurred the message. v3 uses **face-less stud patterns on one 7 x 7 grid**, the way the OpenAI dots work:
+- Each agent is a pattern (a waveform for Aria, ripples for Echo, a calendar for Slot, an arc for Boomerang, rising bars for Tally, an arch door for Gate, ruled lines for Ledger), drawn from `lib/studs/patterns.ts`.
+- The Conclave C is built from the same studs (two rings of 44 and 32, a gap on the right, a centre stud), so the logo and the crew are one system.
+- Personality is motion and colour, not a face. Each agent has an idle and an active motion (see `docs/motion-implementation.md`).
+- One optional character, a lime rounded square with two stud eyes and no mouth, is used only for 404, errors and stickers.
+- It scales to favicon size and avoids copying any real toy brand: generic round studs only.

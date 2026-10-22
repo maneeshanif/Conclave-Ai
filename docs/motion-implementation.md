@@ -46,18 +46,21 @@ Measured on lemlist.com with Playwright (`tools/research/motion-lemlist.mjs`, `m
 
 `cd tools/research && node motion-verify.mjs` (starts and stops its own server; needs `npm run build` first). 22 checks: start states, hero intro, scene, waveform, cursor, reveals, sticky stack, mock-ups, manifesto, accordion, nothing stuck hidden, route change, reduced motion, mobile overflow and tab fit. Frames land in `docs/screens/motion/`.
 
-## WebGL hero (added)
+## Stud scene and agent motion (v3)
 
-`components/home/HeroScene3D.tsx` renders the Brick Crew as real 3D toy bricks (rounded bricks, cylinder studs, clear-coat plastic, ink outline, glossy eyes that blink) around the Conclave mark. `HeroStage.tsx` decides whether to use it.
+The hero is SVG with GSAP (`components/home/HeroStuds.tsx`, `lib/studs/useStudAssemble.ts`). The earlier WebGL hero and `three.js` were removed, as the spec says SVG is enough.
 
-| Rule | Detail |
+| Where | Behaviour |
 | --- | --- |
-| Baseline | The SVG crew scene always renders and is the fallback |
-| Loads only when likely good | width 900px or more, a mouse, no reduced-motion preference, WebGL2 available |
-| Never blocks first paint | Loaded in an idle callback after the page, as one lazy chunk |
-| Pauses off screen | IntersectionObserver sets the canvas to `frameloop="never"` |
-| Quality guard | If smoothed frame time stays above 24ms for 2s, it steps aside for the SVG scene and remembers for the session |
-| Kill switch | `NEXT_PUBLIC_HERO_3D=off`. Add `?hero3d=force` to skip the speed guard when testing on software GL |
-| Motion | Drop-in with overshoot, idle bob, pointer lean (lerp 0.08), blink, dashed links to the core |
+| Hero, on load | Studs start scattered and assemble into the C in about 1.2s with a random stagger, the centre stud last |
+| Hero, on scroll (768px and up) | The C splits into the seven agent tiles over the first 240px of scroll (scrubbed). Phones and reduced motion show the assembled C only |
+| Aria | Bars breathe in height; while speaking they follow a faster, fuller beat |
+| Echo | Rings pulse outward in sequence; faster while sending |
+| Slot | One accent stud blinks every 4s; when active it snaps to the booked cell |
+| Boomerang | Studs light along the arc, out and back; faster while active |
+| Tally | Bars grow in sequence on enter; the top accent stud lifts one row on a good week |
+| Gate | Door studs open and close slowly; fully open on handover |
+| Ledger | Rows draw left to right; check studs light when a figure is sourced |
+| Loading and empty states | One stud pulsing |
 
-Measured on a production build (`node hero3d-weight.mjs` in `tools/research`): the 3D chunk is **241 KB gzip**, requested about 2 seconds after the page, so JavaScript at load stays at 234 KB and the load event is unchanged (about 330 to 360 ms in both cases). Phones, reduced motion and no-WebGL visitors never download it. Software rendering in headless Chrome runs about 5 frames per second, so frame-rate on real hardware was not measured here.
+All loops pause off screen and are static under `prefers-reduced-motion`. Server and browser can disagree in the last digits of sine and cosine, so stud coordinates are rounded to three decimals (otherwise React reports a hydration mismatch).

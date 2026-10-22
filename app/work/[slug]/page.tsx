@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getProject, getProjects } from "@/lib/projects";
+import { getProject, getRealProjects } from "@/lib/projects";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { PageCta } from "@/components/PageCta";
 import { ArchDiagram } from "@/components/Diagrams";
 
 type Params = { params: Promise<{ slug: string }> };
 
+/** Only real cases get a page; anything else is a 404 and stays out of the sitemap. */
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
-  return (await getProjects()).map((p) => ({ slug: p.slug }));
+  return (await getRealProjects()).map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {

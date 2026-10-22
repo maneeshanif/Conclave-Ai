@@ -9,7 +9,7 @@ import { ease, dur, stagger } from "@/lib/motion";
 /**
  * One place that wires every scroll and micro animation from data attributes, so server components stay server components.
  *
- *   data-hero-line / -pill / -fade / -scene   hero intro timeline
+ *   data-hero-line / -pill / -fade / -scene   hero intro timeline (the stud C scene runs its own assembly in lib/studs/useStudAssemble)
  *   data-reveal                               fade and rise once, batched so neighbours stagger
  *   data-stagger                              children rise in turn (total stagger capped at 0.6s)
  *   data-words                                words brighten with scroll (manifesto)
@@ -114,63 +114,6 @@ export function MotionRoot() {
         );
         ScrollTrigger.create({ trigger: wave, start: "top bottom", end: "bottom top", onToggle: (s) => tweens.forEach((t) => (s.isActive ? t.play() : t.pause())) });
       });
-
-      /* Crew blink: each pair of eyes closes for a beat on its own random rhythm, only while on screen. */
-      all<SVGGElement>(".crew-eye").forEach((eyes) => {
-        const tl = gsap.timeline({ repeat: -1, repeatDelay: gsap.utils.random(2.4, 5.6), delay: gsap.utils.random(0.4, 4), paused: true });
-        tl.to(eyes, { scaleY: 0.08, duration: 0.07, ease: "power2.in" }).to(eyes, { scaleY: 1, duration: 0.11, ease: "power2.out" });
-        ScrollTrigger.create({ trigger: eyes.ownerSVGElement ?? eyes, start: "top bottom", end: "bottom top", onToggle: (s) => (s.isActive ? tl.play() : tl.pause()) });
-      });
-      /* Hero scene: nodes drift on their own beat and lean away from the pointer. One ticker, only while the hero is on screen. */
-      const scene = document.querySelector<SVGElement>("[data-hero-scene] svg");
-      const heroSection = document.querySelector<HTMLElement>("[data-hero]");
-      if (scene && heroSection) {
-        const nodes = Array.from(scene.querySelectorAll<SVGGElement>("[data-node]")).map((g, i) => ({
-          g,
-          line: scene.querySelector<SVGLineElement>(`[data-link="${g.dataset.node}"]`),
-          bx: Number(g.dataset.x),
-          by: Number(g.dataset.y),
-          depth: Number(g.dataset.depth || 1),
-          phase: i * 1.7,
-          enter: { v: 0 }, // 0 = hovering above and invisible, 1 = snapped into place
-        }));
-        /* Crew snaps in like bricks being placed: drop, small overshoot, settle. */
-        nodes.forEach((n, i) => gsap.to(n.enter, { v: 1, duration: 0.9, delay: 0.55 + i * 0.09, ease: "back.out(1.8)" }));        const core = scene.querySelector<SVGGElement>("[data-core]");
-        const pointer = { x: 0, y: 0, sx: 0, sy: 0 };
-        const onMove = (e: PointerEvent) => {
-          const r = heroSection.getBoundingClientRect();
-          pointer.x = ((e.clientX - r.left) / r.width - 0.5) * 2;
-          pointer.y = ((e.clientY - r.top) / r.height - 0.5) * 2;
-        };
-        heroSection.addEventListener("pointermove", onMove);
-        const tick = () => {
-          const t = gsap.ticker.time;
-          pointer.sx += (pointer.x - pointer.sx) * 0.08;
-          pointer.sy += (pointer.y - pointer.sy) * 0.08;
-          for (const n of nodes) {
-            const x = n.bx + Math.sin(t * 0.6 + n.phase) * 6 - pointer.sx * 14 * n.depth;
-            const y = n.by + Math.cos(t * 0.5 + n.phase) * 6 - pointer.sy * 14 * n.depth;
-            const drop = (1 - n.enter.v) * -70;
-            n.g.setAttribute("transform", `translate(${x} ${y + drop})`);
-            n.g.setAttribute("opacity", String(Math.min(1, n.enter.v * 2)));
-            n.line?.setAttribute("x1", String(x));
-            n.line?.setAttribute("y1", String(y + drop));
-          }
-          const s = 1 + Math.sin(t * 0.8) * 0.012;
-          core?.setAttribute("transform", `translate(${220 + pointer.sx * 6} ${200 + pointer.sy * 6}) scale(${s}) translate(-220 -200)`);
-        };
-        ScrollTrigger.create({
-          trigger: heroSection,
-          start: "top bottom",
-          end: "bottom top",
-          onToggle: (s) => (s.isActive ? gsap.ticker.add(tick) : gsap.ticker.remove(tick)),
-        });
-        gsap.to("[data-link]", { strokeDashoffset: -20, duration: 1.4, repeat: -1, ease: "none" });
-        return () => {
-          gsap.ticker.remove(tick);
-          heroSection.removeEventListener("pointermove", onMove);
-        };
-      }
     });
 
     /* Sticky card stack (lemlist feature cards): the card being covered steps back. Large screens only. */

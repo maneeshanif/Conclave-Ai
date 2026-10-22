@@ -1,15 +1,16 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { api } from "@/lib/api";
-import { Character } from "@/components/Cast";
-import { cast, type CastId } from "@/lib/content";
+import { StudGlyph } from "@/components/studs/StudGlyph";
+import { StudPulse } from "@/components/studs/StudFace";
+import { AGENTS, AGENT_IDS, type AgentId } from "@/lib/studs/patterns";
 import { cn } from "@/lib/utils";
 
 const GAME_SECONDS = 60;
 const CALL_SECONDS = 4.5;
 
 /** Each incoming call belongs to exactly one crew member. */
-const calls: { text: string; who: CastId }[] = [
+const calls: { text: string; who: AgentId }[] = [
   { text: "“Hi, are you open on Saturday?”", who: "aria" },
   { text: "Web form: “Do you have anything tomorrow?”", who: "echo" },
   { text: "“Can I move my Tuesday visit?”", who: "slot" },
@@ -110,7 +111,7 @@ export function Convene() {
   }, [flash]);
 
   const pick = useCallback(
-    (who: CastId) => {
+    (who: AgentId) => {
       if (phase !== "playing") return;
       if (calls[call].who === who) {
         correct.current += 1;
@@ -133,7 +134,7 @@ export function Convene() {
     const onKey = (e: KeyboardEvent) => {
       if (phase !== "playing" || (e.target as HTMLElement)?.closest("input,textarea,select")) return;
       const n = Number(e.key);
-      if (n >= 1 && n <= 7) pick(cast[n - 1].id);
+      if (n >= 1 && n <= 7) pick(AGENT_IDS[n - 1]);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -181,12 +182,12 @@ export function Convene() {
               </div>
             </div>
             <ul className="mt-4 grid grid-cols-4 gap-2 sm:grid-cols-7">
-              {cast.map((c, i) => (
-                <li key={c.id}>
-                  <button type="button" onClick={() => pick(c.id)} className="press group flex w-full flex-col items-center rounded-xl border hair bg-mist p-1.5 transition-colors duration-150 hover:bg-chalk" aria-label={`${i + 1}. ${c.name}: ${c.job}`}>
-                    <Character id={c.id} className="h-14 w-14 sm:h-16 sm:w-16" label="" />
+              {AGENT_IDS.map((id, i) => (
+                <li key={id}>
+                  <button type="button" onClick={() => pick(id)} className="press group flex w-full flex-col items-center rounded-xl border hair bg-mist p-1.5 transition-colors duration-150 hover:bg-chalk" aria-label={`${i + 1}. ${AGENTS[id].label}: ${AGENTS[id].job}`}>
+                    <StudGlyph agent={id} size="100%" decorative className="h-14 w-14 sm:h-16 sm:w-16" />
                     <span className="label mt-1">
-                      {i + 1} {c.name}
+                      {i + 1} {AGENTS[id].label}
                     </span>
                   </button>
                 </li>
@@ -233,7 +234,7 @@ export function Convene() {
         {boardError && <p className="mt-3 text-sm text-slate">{boardError}</p>}
         {board && board.length === 0 && (
           <div className="mt-3 text-center">
-            <Character id="tally" mood="sleepy" className="mx-auto h-24 w-24" label="Tally, asleep" />
+            <StudPulse size={36} className="mx-auto" label="Waiting for the first score" />
             <p className="mt-1 text-sm text-slate">No scores yet. Be the first.</p>
           </div>
         )}

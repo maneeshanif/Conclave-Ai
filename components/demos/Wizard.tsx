@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { industries } from "@/lib/content";
 import { services } from "@/lib/site";
-import { Character } from "@/components/Cast";
+import { StudGlyph } from "@/components/studs/StudGlyph";
 import { cn } from "@/lib/utils";
 
 const steps = [
@@ -59,7 +59,7 @@ export function Wizard() {
         </fieldset>
       ) : (
         <div className="mt-6 grid items-center gap-6 sm:grid-cols-[auto_1fr]" aria-live="polite">
-          <Character id={industry?.figure ?? "aria"} className="h-36 w-36" />
+          <StudGlyph agent={industry?.figure ?? "aria"} size={144} animate />
           <div>
             <h3 className="head">
               Start with <Link href={`/services/${service.slug}`} className="u-link hover:text-plum">{service.short.toLowerCase()}</Link>

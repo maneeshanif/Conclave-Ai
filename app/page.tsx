@@ -1,22 +1,6 @@
 import type { Metadata } from "next";
-import { getProjects } from "@/lib/projects";
 import { site } from "@/lib/site";
-import {
-  Hero,
-  LiveAgent,
-  Proof,
-  Services,
-  BuiltFor,
-  WorkReel,
-  Manifesto,
-  Process,
-  DemosTeaser,
-  PricingTeaser,
-  Faq,
-  faqs,
-  FinalCta,
-} from "@/components/home/sections";
-import { StudioSection, ReceiptsTeaser, StackScale, JoinGuild } from "@/components/home/sections2";
+import { Hero, LiveAgent, Proof, Services, Systems, BuiltFor, Process, PricingTeaser, Faq, faqs, GuildStrip, FinalCta } from "@/components/home/sections";
 
 export const metadata: Metadata = {
   title: { absolute: `${site.name} | Voice agents, AI automation and full-stack software` },
@@ -24,9 +8,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-/** Order from the upgrade plan: hero, live agent, proof, services, studio, built-for, work, receipts, manifesto, process, demos, stack, pricing, guild, FAQ, close. */
-export default async function Home() {
-  const projects = await getProjects();
+/**
+ * Home, Change Spec v3: eleven sections or fewer, about 7,000 to 8,000px at 1440 wide.
+ * Receipts, Stack and scale, the full Guild block, the Manifesto and the Demos teaser moved to their own pages.
+ * The Work section returns when at least one real case has a screenshot and a metric.
+ */
+export default function Home() {
   return (
     <>
       <script
@@ -43,17 +30,12 @@ export default async function Home() {
       <LiveAgent />
       <Proof />
       <Services />
-      <StudioSection />
+      <Systems />
       <BuiltFor />
-      <WorkReel projects={projects} />
-      <ReceiptsTeaser />
-      <Manifesto />
       <Process />
-      <DemosTeaser />
-      <StackScale />
       <PricingTeaser />
-      <JoinGuild />
       <Faq />
+      <GuildStrip />
       <FinalCta />
     </>
   );

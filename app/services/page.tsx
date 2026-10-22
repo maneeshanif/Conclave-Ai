@@ -20,7 +20,7 @@ const integrations = [...new Set(Object.values(serviceDetail).flatMap((d) => d.i
 export default function ServicesPage() {
   return (
     <>
-      <PageHeader
+      <PageHeader path="/services"
         eyebrow="Services"
         title="Five jobs. One agent each."
         lead="We deliver fixed-scope services now. What we repeat becomes product later."
@@ -44,7 +44,7 @@ export default function ServicesPage() {
             {services.map((s, i) => {
               const Visual = serviceVisuals[i];
               return (
-                <section data-reveal key={s.slug} id={s.slug} className="grid scroll-mt-28 gap-8 border-b hair px-4 py-12 md:grid-cols-2 md:px-10">
+                <section data-reveal key={s.slug} id={s.slug} className="grid scroll-mt-28 gap-6 border-b hair px-4 py-8 md:grid-cols-2 md:px-10">
                   <div>
                     <Eyebrow n={s.n}>{s.slug}</Eyebrow>
                     <h2 className="display mt-4 text-display-m">{s.title}</h2>
@@ -53,7 +53,7 @@ export default function ServicesPage() {
                       How it works, step by step
                     </Link>
                   </div>
-                  <div className={cn("grid min-h-80 place-items-center overflow-hidden rounded-3xl p-5", panelColours[i])}>
+                  <div className={cn("grid min-h-64 place-items-center overflow-hidden rounded-3xl p-4", panelColours[i])}>
                     <Visual />
                   </div>
                 </section>
@@ -63,26 +63,44 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      <div className="frame border-t hair px-4 py-12 md:px-10">
-        <AgentPicker />
+      {/* Compact rows: the picker folds away until asked for, and integrations sit in one wrapped line. */}
+      <div className="frame border-t hair px-4 py-6 md:px-10">
+        <details className="group rounded-2xl border hair bg-paper">
+          <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 px-5 py-3 font-medium">
+            Which agent do I need? <span className="text-sm font-normal text-slate">Three quick questions</span>
+            <svg aria-hidden="true" viewBox="0 0 16 16" className="h-4 w-4 shrink-0 text-slate transition-transform duration-300 group-open:rotate-180">
+              <path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </summary>
+          <div className="border-t hair p-2 md:p-4">
+            <AgentPicker />
+          </div>
+        </details>
       </div>
 
-      <section data-reveal className="frame border-t hair px-4 py-12 md:px-10">
-        <h2 className="head">Works with the tools you already use</h2>
-        <ul className="mt-6 flex flex-wrap gap-2">
-          {integrations.map((t) => (
-            <li key={t} className="rounded-lg border hair bg-paper px-3 py-1.5 text-sm font-medium">
-              {t}
-            </li>
-          ))}
-        </ul>
-        <p className="mt-5 text-sm text-slate">
-          Comparing options? See how this stacks up against a freelancer, a no-code flow, an agency and a receptionist on the{" "}
-          <Link href="/compare" className="u-link hover:text-plum">compare page</Link>. Need a custom agent or a full-stack build? See the{" "}
-          <Link href="/studio" className="u-link hover:text-plum">studio</Link>.
-        </p>
+      <section data-reveal className="frame flex flex-wrap items-center gap-x-4 gap-y-2 border-t hair px-4 py-5 md:px-10">
+        <span className="label text-slate">Works with</span>
+        {integrations.map((t) => (
+          <span key={t} className="text-sm font-medium">
+            {t}
+          </span>
+        ))}
       </section>
-      <PageCta />
+
+      <section data-reveal className="frame border-t hair bg-mist/60 px-4 py-5 md:px-10">
+        <p className="text-sm">
+          <span className="label mr-3 text-plum">Beyond agents</span>
+          Automations, business systems and platforms are on the{" "}
+          <Link href="/studio" className="u-link font-medium hover:text-plum">
+            studio page
+          </Link>
+          . Comparing options? See the{" "}
+          <Link href="/compare" className="u-link font-medium hover:text-plum">
+            comparison
+          </Link>
+          .
+        </p>
+      </section>      <PageCta />
     </>
   );
 }

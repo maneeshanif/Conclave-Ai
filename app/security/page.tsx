@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function SecurityPage() {
   return (
     <>
-      <PageHeader eyebrow="Security" title="Calm answers to the risky questions." lead="The principles we build to. The specifics for your project are agreed in writing before we start." />
+      <PageHeader path="/security" eyebrow="Security" title="Calm answers to the risky questions." lead="The principles we build to. The specifics for your project are agreed in writing before we start." />
       <div className="frame border-t hair">
         <dl data-stagger className="grid gap-px bg-[rgb(11_21_18/0.12)] md:grid-cols-2">
           {security.map(([t, b]) => (

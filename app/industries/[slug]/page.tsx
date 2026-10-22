@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/PageHeader";
 import { PageCta } from "@/components/PageCta";
 import { Accordion } from "@/components/ui/Accordion";
-import { Character } from "@/components/Cast";
+import { StudGlyph } from "@/components/studs/StudGlyph";
 import { IndustryDash } from "@/components/IndustryDash";
 import { industries } from "@/lib/content";
 import { services } from "@/lib/site";
@@ -30,11 +30,11 @@ export default async function IndustryPage({ params }: Params) {
 
   return (
     <>
-      <PageHeader eyebrow={`For ${i.name.toLowerCase()}`} title={i.h1} lead={i.pain} />
+      <PageHeader path={`/industries/${i.slug}`} eyebrow={`For ${i.name.toLowerCase()}`} title={i.h1} lead={i.pain} />
       <div className="frame border-t hair">
         <section className="grid gap-8 border-b hair md:grid-cols-[1fr_2fr]">
           <div data-reveal className="grid place-items-center bg-mist p-8">
-            <Character id={i.figure} className="h-52 w-52" />
+            <StudGlyph agent={i.figure} size={208} animate />
           </div>
           <div className="px-4 py-12 md:px-10">
             <h2 data-reveal className="head">Three workflows we set up first</h2>

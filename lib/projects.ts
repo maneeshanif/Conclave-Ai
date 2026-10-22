@@ -26,14 +26,21 @@ const seed: Project[] = [
   { slug: "task-whisper", title: "Task Whisper", summary: "Outcome to be added once confirmed.", tags: ["Voice agent"], stack: ["Vapi", "Next.js"], cover_video_url: null, gallery: [], body: "", results: [], featured: true, sort_order: 4, role: "Voice agent" },
 ];
 
+/** A case is real when it has a screenshot or loop and at least one result with a number. Placeholders are never shown publicly. */
+export const isReal = (p: Project) => (!!p.cover_video_url || p.gallery.length > 0) && p.results.length > 0;
+
 export async function getProjects(): Promise<Project[]> {
   if (!supabase) return seed;
   const { data, error } = await supabase.from("projects").select("*").order("sort_order");
   return error || !data?.length ? seed : (data as Project[]);
 }
 
+export async function getRealProjects(): Promise<Project[]> {
+  return (await getProjects()).filter(isReal);
+}
+
 export async function getProject(slug: string) {
-  const all = await getProjects();
+  const all = await getRealProjects();
   const i = all.findIndex((p) => p.slug === slug);
   return i < 0 ? null : { project: all[i], next: all[(i + 1) % all.length] };
 }

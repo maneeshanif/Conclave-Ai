@@ -48,7 +48,7 @@ export default async function ServicePage({ params }: Params) {
           }),
         }}
       />
-      <PageHeader eyebrow={`Service ${s.n}`} title={s.title} lead={s.body} />
+      <PageHeader path={`/services/${slug}`} eyebrow={`Service ${s.n}`} title={s.title} lead={s.body} />
 
       <div className="frame border-t hair">
         <section data-reveal className="grid gap-8 border-b hair px-4 py-12 md:grid-cols-2 md:px-10">

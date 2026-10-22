@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
 
-export const metadata: Metadata = { title: "Terms" };
+// Placeholder text: not indexed until the real, professionally reviewed text is in (Change Spec v3).
+export const metadata: Metadata = { title: "Terms", robots: { index: false, follow: true } };
 
 export default function Page() {
   return (

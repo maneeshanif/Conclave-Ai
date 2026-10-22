@@ -39,11 +39,18 @@ check("motion armed by inline script", frames[1].armed);
 check("hero lines start hidden and end visible", Number(frames[0].lines[0]) < 0.9 && frames.at(-1).lines.every((v) => v === "1.00"));
 await p.waitForLoadState("networkidle");
 
-/* hero scene drifts */
-const cx = () => p.evaluate(() => document.querySelector("[data-node]")?.getAttribute("transform"));
-const a = await cx(); await p.mouse.move(300, 200); await p.waitForTimeout(700); const c = await cx();
-check("hero scene nodes move with time and pointer", a !== c, `${a} -> ${c}`);
-
+/* hero studs: scattered, then assembled into the C (77 studs); on scroll they split into the seven crew tiles */
+const studPos = () => p.evaluate(() => [...document.querySelectorAll("[data-stud]")].map((e) => [Math.round(+e.getAttribute("cx")), Math.round(+e.getAttribute("cy")), +getComputedStyle(e).opacity]));
+await p.waitForTimeout(1500);
+const C0 = await studPos();
+const vis = C0.filter((s) => s[2] > 0.4);
+check("hero studs assemble into the C (77 studs, inside the C's bounds)", vis.length === 77 && vis.every((s) => s[0] >= 135 && s[0] <= 345 && s[1] >= 10 && s[1] <= 215), `${vis.length} visible of ${C0.length}`);
+await p.evaluate(() => scrollTo(0, 260)); await p.waitForTimeout(1600);
+const C1 = await studPos();
+const moved = C1.filter((s, i) => Math.abs(s[0] - C0[i][0]) + Math.abs(s[1] - C0[i][1]) > 30).length;
+const tilesShown = await p.evaluate(() => [...document.querySelectorAll("[data-tile]")].filter((g) => +getComputedStyle(g).opacity > 0.9).length);
+check("on scroll the C splits into the crew (studs move, seven tiles appear)", moved > 50 && tilesShown === 7, `${moved} studs moved, ${tilesShown} tiles`);
+await p.evaluate(() => scrollTo(0, 0)); await p.waitForTimeout(1200);
 /* waveform breathes */
 const bar = () => p.evaluate(() => getComputedStyle(document.querySelector("[data-hero-pill] span")).transform);
 const w1 = await bar(); await p.waitForTimeout(500); const w2 = await bar();
@@ -58,14 +65,9 @@ check("cursor ring follows pointer", ring && Math.abs(ring[0] - 700) < 6 && Math
 const fresh = await ctx.newPage();
 await fresh.goto(URL, { waitUntil: "networkidle" });
 await fresh.waitForTimeout(800);
-const op = () => fresh.evaluate(() => { const e = document.querySelector("#manifesto").closest("section").previousElementSibling.querySelector("[data-reveal]"); return e ? +getComputedStyle(e).opacity : -1; });
+const op = () => fresh.evaluate(() => { const e = [...document.querySelectorAll("[data-reveal]")].find((x) => x.getBoundingClientRect().top > innerHeight + 300); return e ? +getComputedStyle(e).opacity : -1; });
 const hiddenBefore = await op();
-check("below-fold reveal starts hidden", hiddenBefore >= 0 && hiddenBefore < 0.5, `opacity ${hiddenBefore}`);
-/* manifesto words dim at first and brighten as you scroll */
-const wordsAt = async (frac) => { await fresh.evaluate((f) => { const r = document.querySelector("#manifesto").getBoundingClientRect(); scrollTo(0, scrollY + r.top - innerHeight * f); }, frac); await fresh.waitForTimeout(900); return fresh.evaluate(() => { const o = [...document.querySelectorAll("#manifesto *")].map((e) => +getComputedStyle(e).opacity); return { dim: o.filter((v) => v < 0.9).length, total: o.length }; }); };
-const early = await wordsAt(0.75), late = await wordsAt(0.15);
-check("manifesto words dim, then brighten with scroll", early.dim > late.dim && early.dim > 5, `dim at entry ${early.dim}/${early.total} -> after scrolling ${late.dim}`);
-await fresh.close();
+check("below-fold reveal starts hidden", hiddenBefore >= 0 && hiddenBefore < 0.5, `opacity ${hiddenBefore}`);await fresh.close();
 /* sticky services stack */
 const stack = await p.evaluate(() => { const ol = document.querySelector("[data-stack]"); const li = ol.children[0]; ol.scrollIntoView(); return { n: ol.children.length, sticky: getComputedStyle(li).position }; });
 check("services stack uses sticky cards", stack.sticky === "sticky" && stack.n === 5, JSON.stringify(stack));
@@ -119,6 +121,9 @@ const rp = await rctx.newPage();
 await rp.goto(URL, { waitUntil: "networkidle" });
 const red = await rp.evaluate(() => ({ armed: document.documentElement.classList.contains("motion-ok"), hidden: [...document.querySelectorAll("[data-reveal],[data-hero-line],[data-stagger]>*")].filter((e) => +getComputedStyle(e).opacity < 1).length, ring: !!document.querySelector("body > div.fixed[aria-hidden]") && +getComputedStyle(document.querySelector("body > div.fixed[aria-hidden]")).opacity }));
 check("reduced motion: not armed, nothing hidden, cursor ring stays off", !red.armed && red.hidden === 0 && red.ring === 0, JSON.stringify(red));
+const rs = () => rp.evaluate(() => [...document.querySelectorAll("[data-stud]")].map((e) => [Math.round(+e.getAttribute("cx")), Math.round(+e.getAttribute("cy")), +getComputedStyle(e).opacity]));
+const rA = await rs(); await rp.evaluate(() => scrollTo(0, 260)); await rp.waitForTimeout(800); const rB = await rs();
+check("reduced motion: the stud C is static (77 studs, no scatter, no split on scroll)", rA.filter((s) => s[2] > 0.4).length === 77 && JSON.stringify(rA) === JSON.stringify(rB));
 await rctx.close();
 
 /* ---------- mobile ---------- */
@@ -136,8 +141,12 @@ const mob = await mp.evaluate(() => {
 });
 check("mobile: no horizontal overflow", !mob.over);
 check("mobile: all four demo tabs fit without cut-off labels", mob.tabsFit && mob.n === 4);
-check("mobile: services cards not sticky, cursor ring off", mob.sticky === "static" && mob.ring === 0, JSON.stringify(mob));
+check("mobile: services cards not sticky, cursor ring off", mob.sticky !== "sticky" && mob.ring === 0, JSON.stringify(mob));
 check("mobile: no page errors", merr.length === 0, merr.join("|"));
+const ms = () => mp.evaluate(() => [...document.querySelectorAll("[data-stud]")].map((e) => [Math.round(+e.getAttribute("cx")), Math.round(+e.getAttribute("cy"))]));
+await mp.waitForTimeout(3500); /* let the load assembly finish */
+const mA = await ms(); await mp.evaluate(() => scrollTo(0, 260)); await mp.waitForTimeout(900); const mB = await ms();
+check("mobile: the stud C stays assembled (no scroll split)", JSON.stringify(mA) === JSON.stringify(mB));
 await mp.screenshot({ path: `${OUT}/mobile-top.png` });
 await mp.evaluate(() => document.querySelector('[role="tablist"]').scrollIntoView({ block: "center" })); await mp.waitForTimeout(900);
 await mp.screenshot({ path: `${OUT}/mobile-tabs.png` });

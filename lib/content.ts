@@ -1,39 +1,111 @@
 /**
- * Copy and structure from "Conclave AI Website Review and Upgrade Plan.md".
+ * Copy and structure from "Conclave AI Website Review and Upgrade Plan.md" and "Conclave AI Claude Code Change Spec (v3).md".
  * No invented numbers: anything that needs a real figure, price or name is marked `pending` and shown as such.
  */
 
+import type { AgentId } from "./studs/patterns";
+
+/** The Studio offer (Change Spec v3): business systems and automations in place of the CMS card. Chips list only what we can demonstrate. */
 export const studio = [
-  { slug: "agents", name: "Agents", job: "Voice, follow-up, booking, reactivation and reporting agents.", buyer: "Clinics and local businesses", timeline: "14-day pilot", stack: ["Vapi", "LiveKit", "OpenAI", "Cal.com"] },
-  { slug: "agent-apps", name: "Agent apps", job: "Internal copilots, retrieval over your documents, tool-using agents.", buyer: "Startups and SMEs", timeline: "3 to 4 week build", stack: ["OpenAI Agents SDK", "FastAPI", "Supabase", "pgvector"] },
-  { slug: "sites", name: "Websites with CMS", job: "Animated Next.js sites with a headless CMS, SEO and booking built in.", buyer: "Anyone who needs a face", timeline: "Fixed fee", stack: ["Next.js", "Tailwind", "GSAP", "Headless CMS"] },
-  { slug: "mobile", name: "Mobile apps", job: "React Native or Flutter apps with agent features.", buyer: "Startups", timeline: "Fixed scope per milestone", stack: ["React Native", "Flutter", "FastAPI", "Supabase"] },
-  { slug: "platforms", name: "Platforms", job: "Multi-service systems with an event backbone, containers and observability.", buyer: "Funded startups and scale-ups", timeline: "Retainer or milestone", stack: ["Dapr", "Kafka", "Kubernetes", "Postgres"] },
+  { slug: "agents", name: "Agents", job: "Voice, follow-up, booking, reactivation, reporting agents.", buyer: "Clinics and local businesses", tag: "14-day pilot", stack: ["Vapi", "LiveKit", "OpenAI"] },
+  { slug: "automations", name: "Automations", job: "Workflows that move data between your tools and run on triggers.", buyer: "Teams re-typing data between apps", tag: "1 to 2 week build", stack: ["n8n", "Webhooks", "Zapier", "APIs"] },
+  { slug: "erp-crm", name: "ERP and CRM", job: "Custom business systems: customers, orders, inventory, billing, POS.", buyer: "Businesses outgrowing spreadsheets", tag: "Fixed scope per module", stack: ["Next.js", "FastAPI", "Postgres"] },
+  { slug: "apps", name: "Apps", job: "Web and mobile apps with agent features; marketing sites included when needed.", buyer: "Startups and anyone who needs a product or a face", tag: "Fixed scope per milestone", stack: ["Next.js", "React Native", "Flutter"] },
+  { slug: "platforms", name: "Platforms", job: "Multi-service systems with an event backbone and monitoring.", buyer: "Funded startups and scale-ups", tag: "Retainer or milestone", stack: ["Dapr", "Kafka", "Kubernetes"] },
 ] as const;
+export type StudioSlug = (typeof studio)[number]["slug"];
+
+export interface StudioDetail {
+  h1: string;
+  problem: string;
+  build: string[];
+  /** Which diagram the page draws. */
+  diagram: "flow" | "modules" | "stack" | "arch";
+  steps?: string[];
+  modules?: string[];
+  faq: [string, string][];
+  related: string;
+}
+
+export const studioDetail: Record<StudioSlug, StudioDetail> = {
+  agents: {
+    h1: "Agents that take the calls",
+    problem: "Calls that ring out and enquiries that wait are customers you paid to attract and then lost.",
+    build: ["Voice agents that answer, ask what is needed and book", "Follow-up that replies to every enquiry in seconds", "Booking against your real calendar", "Reactivation of customers who stopped coming", "A weekly report you can read in a minute"],
+    diagram: "flow",
+    steps: ["A call or message arrives", "The agent answers and asks what is needed", "It checks your live calendar", "It books, confirms and reminds", "Anything it cannot handle goes to a person with a summary"],
+    faq: [
+      ["How long is the pilot?", "A pilot is planned for 14 days on one job. The exact scope is written down before we start."],
+      ["Which languages?", "English, Arabic and Urdu. Other languages are scoped on request."],
+      ["Do I own it?", "Yes. You own the code, and handover and training are part of the build."],
+    ],
+    related: "See the five service pages for each job in detail.",
+  },
+  automations: {
+    h1: "Workflows that move your data",
+    problem: "Your team re-types the same details between tools, and things fall through the gaps between them.",
+    build: ["Lead captured, then added to the CRM, answered and a task created", "Invoices and reminders sent on a schedule", "Reports assembled and emailed each week", "Alerts when something looks wrong", "Clean hand-offs between your apps"],
+    diagram: "flow",
+    steps: ["A trigger fires (a form, an email, a payment, a schedule)", "The data is checked and cleaned", "The right tool is updated", "The right person is told", "Failures retry, then raise an alert"],
+    faq: [
+      ["n8n, Zapier or code?", "We use n8n or Zapier where they fit and code you own where volume, cost or compliance means they do not."],
+      ["What happens when a step fails?", "It retries, then alerts a person with what failed, so nothing disappears silently."],
+      ["How long does a workflow take?", "Typically a one to two week build, scoped per workflow before we start."],
+    ],
+    related: "Pairs with Agents: an agent takes the call, an automation does the follow-through.",
+  },
+  "erp-crm": {
+    h1: "A system built around you",
+    problem: "Customers, orders and stock live in spreadsheets and three apps that do not talk to each other.",
+    build: ["Customers and leads", "Appointments", "Inventory", "Invoicing", "Staff and roles", "Reports", "Integrations with the tools you already use"],
+    diagram: "modules",
+    modules: ["Customers and leads", "Appointments", "Inventory", "Invoicing", "Staff and roles", "Reports", "Integrations"],
+    faq: [
+      ["Do I have to build all of it?", "No. It is scoped per module, so you start with the one that hurts most and add the rest later."],
+      ["Can it replace my spreadsheets?", "That is usually the first job: import what you have, then retire the sheets."],
+      ["Who owns the data?", "You do, in a database you can export from at any time."],
+    ],
+    related: "Example screens are added here, labelled Example, as modules are built.",
+  },
+  apps: {
+    h1: "Apps with agent features",
+    problem: "You need a product, or a site, that works on a phone and does something clever without a fragile pile of plug-ins.",
+    build: ["Web apps and dashboards", "Mobile apps in React Native or Flutter", "Agent features inside the app: copilots, search over your documents, tool use", "Marketing sites with a headless CMS, SEO and booking built in"],
+    diagram: "arch",
+    faq: [
+      ["Do you build marketing sites too?", "Yes. Sites with a headless CMS, SEO and booking built in are part of this offer, scoped as one milestone."],
+      ["React Native or Flutter?", "We pick with you, based on your team and the features you need."],
+      ["How is it priced?", "Fixed scope per milestone, agreed before each one starts."],
+    ],
+    related: "Need the agent first and the app later? Start with Agents.",
+  },
+  platforms: {
+    h1: "Built to keep running at volume",
+    problem: "One agent is easy. Many services at many times the volume need an event backbone and boring infrastructure underneath.",
+    build: ["Event-driven services between your systems", "Containers and orchestration", "Monitoring and alerting", "A handover your team can run"],
+    diagram: "stack",
+    faq: [
+      ["Is this overkill for a small team?", "Often, and we will say so. Platform work is for products that already have volume or are about to."],
+      ["Retainer or milestones?", "Either: a retainer for ongoing operation, or milestones for a defined build."],
+      ["What do you actually run?", "We list only tools we can demonstrate: Dapr, Kafka and Kubernetes."],
+    ],
+    related: "Friendly on the surface, serious underneath.",
+  },
+};
 
 export const trust = [
-  ["No lock-in", "Leave any time. Your agent keeps working."],
-  ["You own the code", "Handover and training are part of every build."],
   ["Fixed scope", "You know what you get before we start."],
-  ["Data stays yours", "Only what the agent needs, stored where you can audit it."],
+  ["You own the code", "Handover and training are part of every build."],
+  ["Live in 14 days", "A pilot is planned for 14 days, scoped up front."],
 ] as const;
 
-/** The Brick Crew: seven characters from one toy-brick kit (studs are the dots). Art in components/Cast.tsx, research in docs/mascot-research.md. */
-export const cast = [
-  { id: "aria", name: "Aria", job: "Answers calls", fill: "#C8F169", trait: "Warm, quick", sig: "Headset and a waveform smile", line: "Picks up in one ring." },
-  { id: "echo", name: "Echo", job: "Follows up", fill: "#CFC4FF", trait: "Persistent, polite", sig: "Ghost copies stepping away behind it", line: "Sent. Sending again, politely." },
-  { id: "slot", name: "Slot", job: "Books the slot", fill: "#0B1512", trait: "Precise", sig: "A calendar on its belly, one lime day", line: "Thursday, 10:30. Done." },
-  { id: "boomerang", name: "Boomerang", job: "Wins customers back", fill: "#7C5CFF", trait: "Cheeky", sig: "A curved lime boomerang tail", line: "Remember us? We saved you a seat." },
-  { id: "tally", name: "Tally", job: "Reports the week", fill: "#F1F4EC", trait: "Calm, nerdy", sig: "A rising three-bar chart for a belly", line: "Here is the week in one minute." },
-  { id: "gate", name: "Gate", job: "Hands over to a human", fill: "#14302A", trait: "Honest", sig: "An arch body with a lime door ajar", line: "This one needs a person. Passing it on." },
-  { id: "ledger", name: "Ledger", job: "Keeps the receipts", fill: "#8FA39A", trait: "Dry humour", sig: "A wide ruled page and a pen", line: "Every number has a source." },
-] as const;export type CastId = (typeof cast)[number]["id"];
-
+/** Compat shape for older call sites: the crew is now the stud patterns in lib/studs/patterns.ts. */
+export type CastId = AgentId;
 export const industries = [
   {
     slug: "clinics",
     name: "Clinics",
-    figure: "aria" as CastId,
+    figure: "aria" as AgentId,
     pain: "Calls go unanswered while the front desk is with a patient.",
     h1: "A front desk that never steps away",
     flows: ["Answer and triage the call", "Book, move or cancel in your calendar", "Text a reminder and a follow-up"],
@@ -42,7 +114,7 @@ export const industries = [
   {
     slug: "med-spas",
     name: "Med spas",
-    figure: "echo" as CastId,
+    figure: "echo" as AgentId,
     pain: "Enquiries arrive at night and are cold by morning.",
     h1: "Reply to every enquiry while it is warm",
     flows: ["Reply to web and social enquiries in seconds", "Hold a consultation slot", "Bring lapsed clients back with a personal message"],
@@ -51,7 +123,7 @@ export const industries = [
   {
     slug: "dental",
     name: "Dental",
-    figure: "slot" as CastId,
+    figure: "slot" as AgentId,
     pain: "Gaps in the schedule and no-shows that nobody has time to chase.",
     h1: "Fewer gaps, fewer no-shows",
     flows: ["Confirm and reschedule by phone or text", "Fill a cancelled slot from your waiting list", "Recall patients who are due a visit"],
@@ -60,7 +132,7 @@ export const industries = [
   {
     slug: "real-estate",
     name: "Real estate",
-    figure: "boomerang" as CastId,
+    figure: "tally" as AgentId,
     pain: "Portal leads ask once and move on to whoever replies first.",
     h1: "Be the first to reply, every time",
     flows: ["Answer portal and website enquiries instantly", "Qualify the lead and book a viewing", "Reactivate old enquiries when new stock arrives"],
@@ -69,7 +141,7 @@ export const industries = [
   {
     slug: "home-services",
     name: "Home services",
-    figure: "tally" as CastId,
+    figure: "boomerang" as AgentId,
     pain: "The owner is on a job and the phone rings out.",
     h1: "Pick up while you are on the roof",
     flows: ["Answer, take the job details and book a visit", "Send quotes and chase the reply", "Summarise the week in one message"],
@@ -78,7 +150,7 @@ export const industries = [
   {
     slug: "startups",
     name: "Startups",
-    figure: "gate" as CastId,
+    figure: "gate" as AgentId,
     pain: "You need an agent, an app or a platform and a team that ships.",
     h1: "Agent-first software, built like a platform",
     flows: ["Agent apps and copilots in weeks", "Web and mobile products with agent features", "Event-driven backbone when volume grows"],
@@ -158,7 +230,7 @@ export const serviceDetail: Record<
 };
 
 export const compare = {
-  cols: ["Conclave", "Freelancer", "n8n or no-code flow", "Big agency", "In-house receptionist"],
+  cols: ["Conclave AI", "Freelancer", "n8n or no-code flow", "Big agency", "In-house receptionist"],
   rows: [
     ["Live demo before you hire", "Rarely", "Sometimes", "Rarely", "Not applicable"],
     ["Scope and price known up front", "Often", "Often", "Rarely", "Salary"],

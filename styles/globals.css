@@ -88,5 +88,10 @@ p { text-wrap: pretty; }
 .pill-label { display: inline-flex; align-items: center; border: 1px solid rgb(11 21 18 / 0.12); background: var(--color-paper); border-radius: 8px; padding: 4px 10px; font-family: var(--font-mono); font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-slate); box-shadow: 0 1px 0 rgb(11 21 18 / 0.06); }
 .head { font-family: var(--font-sans); font-weight: 600; letter-spacing: -0.02em; font-size: var(--text-head); line-height: 1.1; text-wrap: balance; }
 
-/* Crew animation hooks: SVG parts scale around their own centre (blink, talk). */
-.crew-eye, [data-wave] > * { transform-box: fill-box; transform-origin: center; }
+/* Voice waveform bars scale around their own centre. */
+[data-wave] > * { transform-box: fill-box; transform-origin: center; }
+
+/* Stud system: parts scale around their own centre; the single pulsing stud for loading and empty states. */
+.stud { transform-box: fill-box; transform-origin: center; }
+.stud-pulse circle { transform-box: fill-box; transform-origin: center; animation: stud-pulse 1.1s ease-in-out infinite; }
+@keyframes stud-pulse { 0%, 100% { transform: scale(0.55); opacity: 0.5; } 50% { transform: scale(1); opacity: 1; } }

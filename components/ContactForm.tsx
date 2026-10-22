@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { api } from "@/lib/api";
 import { services, site } from "@/lib/site";
-import { Character } from "@/components/Cast";
+import { StudGlyph } from "@/components/studs/StudGlyph";
 import { cn } from "@/lib/utils";
 
 const budgets = ["Not sure yet", "A 14-day pilot first", "A fixed-scope build", "An ongoing retainer"];
@@ -49,7 +49,7 @@ export function ContactForm({ source = "contact" }: { source?: string }) {
   if (status === "done") {
     return (
       <div role="status" className="flex flex-col items-center rounded-3xl border hair bg-lime p-10 text-center text-ink">
-        <Character id="aria" className="h-36 w-36" label="Aria, celebrating" />
+        <StudGlyph agent="aria" size={128} animate active label="Aria, answering" />
         <h2 className="head mt-4">Got it. Thank you.</h2>
         <p className="mt-2 max-w-sm">We will reply by email. If you do not hear from us, write to {site.email}.</p>
       </div>

@@ -56,6 +56,10 @@ check("calculator recalculates from the inputs", c0 !== c1, `${c0} -> ${c1}`);
 // 10 missed x 30% x 4.33 x 100 x 12 x 70% = 10,920
 check("calculator maths is right for the default example (10,920)", c0.replace(/,/g, "") === "10920", c0);
 
+// Convene and the wizard are behind a flag (hidden by default). Check they are absent, or test them when the flag is on.
+const extras = (await p.locator("#convene").count()) > 0;
+check("hidden demos: Convene and the wizard are not shown unless the flag is on", extras === (process.env.EXTRA_DEMOS === "1"));
+if (extras) {
 // wizard
 for (const label of ["Clinics", "Voice agents", "By phone", "Two to ten"]) await p.locator("#wizard").getByRole("button", { name: label, exact: true }).click();
 check("wizard ends in a suggestion with a booking link", (await p.locator("#wizard h3").innerText()).toLowerCase().includes("voice agents for clinics"));
@@ -74,12 +78,23 @@ const score = Number((await p.locator("#convene [aria-live=polite] b").innerText
 check("Convene scores correct picks", score >= right - 1 && score > 0, `score ${score} after ${right} right picks`);
 await p.screenshot({ path: "../../docs/screens/e2e-convene.png" });
 
+}
+
 // leaderboard accepts a sane score through the API and lists it
 const sc = await fetch(`${API}/scores`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ handle: "e2e", score: 33, seconds: 60 }) });
 const top = await (await fetch(`${API}/scores`)).json();
 check("leaderboard accepts and lists a score", sc.ok && top.some((r) => r.handle === "e2e"));
 const cheat = await fetch(`${API}/scores`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ handle: "x", score: 1500, seconds: 60 }) });
 check("leaderboard rejects an impossible score", cheat.status === 422);
+
+// home closing block: callback request
+await p.goto(`${WEB}/`, { waitUntil: "networkidle" });
+await p.waitForTimeout(3000);
+await p.locator("#main form").filter({ hasText: "Request a call" }).locator('input[name="email"]').fill(`cb+${stamp}@example.com`);
+await p.locator("#main form").filter({ hasText: "Request a call" }).locator('input[name="consent"]').check();
+await p.getByRole("button", { name: "Request a call" }).click();
+await p.getByText("Got it.").first().waitFor({ timeout: 8000 }).then(() => check("home callback request goes through", true)).catch(() => check("home callback request goes through", false));
+check("callback request stored with its source", fs.readFileSync("../../backend/data/leads.jsonl", "utf8").includes("home-cta"));
 
 // newsletter
 await p.goto(`${WEB}/`, { waitUntil: "networkidle" });

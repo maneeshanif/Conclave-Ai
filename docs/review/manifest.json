@@ -14,7 +14,7 @@
     ],
     "file": "shots/home/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 13305
+    "height": 7037
   },
   {
     "page": "home",
@@ -27,7 +27,7 @@
     "name": "hero",
     "heading": "Agentsconvened.",
     "source": [
-      "components/home/sections.tsx (Hero), components/home/visuals.tsx (HeroScene)"
+      "components/home/sections.tsx (Hero), components/home/HeroStuds.tsx, lib/studs/hero.ts"
     ],
     "file": "shots/home/desktop/01-hero.jpg",
     "width": 1440,
@@ -48,7 +48,7 @@
     ],
     "file": "shots/home/desktop/02-live-agent.jpg",
     "width": 1440,
-    "height": 539
+    "height": 559
   },
   {
     "page": "home",
@@ -59,13 +59,13 @@
     "id": "home/desktop/03-proof",
     "kind": "section",
     "name": "proof",
-    "heading": "No lock-in plus 3 more",
+    "heading": "Fixed scope plus 2 more",
     "source": [
       "components/home/sections.tsx (Proof), lib/content.ts (trust)"
     ],
     "file": "shots/home/desktop/03-proof.jpg",
     "width": 1440,
-    "height": 239
+    "height": 119
   },
   {
     "page": "home",
@@ -78,11 +78,11 @@
     "name": "services",
     "heading": "From the first ring to the booked slot, one agen plus 5 more",
     "source": [
-      "components/home/sections.tsx (Services), components/home/visuals.tsx (service mock-ups)"
+      "components/home/sections.tsx (Services), components/home/visuals.tsx (mock-ups), components/studs/StudGlyph.tsx"
     ],
     "file": "shots/home/desktop/04-services.jpg",
     "width": 1440,
-    "height": 2375
+    "height": 1517
   },
   {
     "page": "home",
@@ -90,16 +90,16 @@
     "route": "/",
     "viewport": "desktop",
     "pageFile": "app/page.tsx",
-    "id": "home/desktop/05-studio",
+    "id": "home/desktop/05-systems",
     "kind": "section",
-    "name": "studio",
-    "heading": "Agent-first software, built like a platform plus 5 more",
+    "name": "systems",
+    "heading": "Agents, automations and the systems behind them plus 5 more",
     "source": [
-      "components/home/sections2.tsx (StudioSection), lib/content.ts (studio)"
+      "components/home/sections.tsx (Systems), lib/content.ts (studio)"
     ],
-    "file": "shots/home/desktop/05-studio.jpg",
+    "file": "shots/home/desktop/05-systems.jpg",
     "width": 1440,
-    "height": 654
+    "height": 563
   },
   {
     "page": "home",
@@ -112,11 +112,11 @@
     "name": "built-for",
     "heading": "Made for teams who live on the phone",
     "source": [
-      "components/home/sections.tsx (BuiltFor), components/Cast.tsx, lib/content.ts (industries)"
+      "components/home/sections.tsx (BuiltFor), lib/content.ts (industries), lib/studs/patterns.ts"
     ],
     "file": "shots/home/desktop/06-built-for.jpg",
     "width": 1440,
-    "height": 962
+    "height": 479
   },
   {
     "page": "home",
@@ -124,67 +124,16 @@
     "route": "/",
     "viewport": "desktop",
     "pageFile": "app/page.tsx",
-    "id": "home/desktop/07-work",
-    "kind": "section",
-    "name": "work",
-    "heading": "Selected builds, outcome first plus 3 more",
-    "source": [
-      "components/home/sections.tsx (WorkReel), lib/projects.ts"
-    ],
-    "file": "shots/home/desktop/07-work.jpg",
-    "width": 1440,
-    "height": 1049
-  },
-  {
-    "page": "home",
-    "pageTitle": "Home",
-    "route": "/",
-    "viewport": "desktop",
-    "pageFile": "app/page.tsx",
-    "id": "home/desktop/08-receipts",
-    "kind": "section",
-    "name": "receipts",
-    "heading": "Numbers in public, only when they are real",
-    "source": [
-      "components/home/sections2.tsx (ReceiptsTeaser)"
-    ],
-    "file": "shots/home/desktop/08-receipts.jpg",
-    "width": 1440,
-    "height": 653
-  },
-  {
-    "page": "home",
-    "pageTitle": "Home",
-    "route": "/",
-    "viewport": "desktop",
-    "pageFile": "app/page.tsx",
-    "id": "home/desktop/09-manifesto",
-    "kind": "section",
-    "name": "manifesto",
-    "heading": "The Brick Crew",
-    "source": [
-      "components/home/sections.tsx (Manifesto), components/Cast.tsx (CastRow)"
-    ],
-    "file": "shots/home/desktop/09-manifesto.jpg",
-    "width": 1440,
-    "height": 943
-  },
-  {
-    "page": "home",
-    "pageTitle": "Home",
-    "route": "/",
-    "viewport": "desktop",
-    "pageFile": "app/page.tsx",
-    "id": "home/desktop/10-process",
+    "id": "home/desktop/07-process",
     "kind": "section",
     "name": "process",
     "heading": "Three steps, no surprises plus 3 more",
     "source": [
       "components/home/sections.tsx (Process), lib/content.ts (processSteps)"
     ],
-    "file": "shots/home/desktop/10-process.jpg",
+    "file": "shots/home/desktop/07-process.jpg",
     "width": 1440,
-    "height": 552
+    "height": 500
   },
   {
     "page": "home",
@@ -192,50 +141,16 @@
     "route": "/",
     "viewport": "desktop",
     "pageFile": "app/page.tsx",
-    "id": "home/desktop/11-demos",
-    "kind": "section",
-    "name": "demos",
-    "heading": "Try it before you talk to us",
-    "source": [
-      "components/home/sections.tsx (DemosTeaser)"
-    ],
-    "file": "shots/home/desktop/11-demos.jpg",
-    "width": 1440,
-    "height": 871
-  },
-  {
-    "page": "home",
-    "pageTitle": "Home",
-    "route": "/",
-    "viewport": "desktop",
-    "pageFile": "app/page.tsx",
-    "id": "home/desktop/12-stack-scale",
-    "kind": "section",
-    "name": "stack-scale",
-    "heading": "Friendly on the surface. Serious underneath.",
-    "source": [
-      "components/home/sections2.tsx (StackScale)"
-    ],
-    "file": "shots/home/desktop/12-stack-scale.jpg",
-    "width": 1440,
-    "height": 802
-  },
-  {
-    "page": "home",
-    "pageTitle": "Home",
-    "route": "/",
-    "viewport": "desktop",
-    "pageFile": "app/page.tsx",
-    "id": "home/desktop/13-pricing",
+    "id": "home/desktop/08-pricing",
     "kind": "section",
     "name": "pricing",
     "heading": "Start small, scale when it works plus 3 more",
     "source": [
       "components/home/sections.tsx (PricingTeaser)"
     ],
-    "file": "shots/home/desktop/13-pricing.jpg",
+    "file": "shots/home/desktop/08-pricing.jpg",
     "width": 1440,
-    "height": 604
+    "height": 646
   },
   {
     "page": "home",
@@ -243,31 +158,14 @@
     "route": "/",
     "viewport": "desktop",
     "pageFile": "app/page.tsx",
-    "id": "home/desktop/14-join-guild",
-    "kind": "section",
-    "name": "join-guild",
-    "heading": "Build with a small team that ships plus 4 more",
-    "source": [
-      "components/home/sections2.tsx (JoinGuild), lib/content.ts (guild)"
-    ],
-    "file": "shots/home/desktop/14-join-guild.jpg",
-    "width": 1440,
-    "height": 412
-  },
-  {
-    "page": "home",
-    "pageTitle": "Home",
-    "route": "/",
-    "viewport": "desktop",
-    "pageFile": "app/page.tsx",
-    "id": "home/desktop/15-faq",
+    "id": "home/desktop/09-faq",
     "kind": "section",
     "name": "faq",
     "heading": "Frequently asked questions plus 10 more",
     "source": [
       "components/home/sections.tsx (Faq), components/ui/Accordion.tsx"
     ],
-    "file": "shots/home/desktop/15-faq.jpg",
+    "file": "shots/home/desktop/09-faq.jpg",
     "width": 1440,
     "height": 587
   },
@@ -277,16 +175,16 @@
     "route": "/",
     "viewport": "desktop",
     "pageFile": "app/page.tsx",
-    "id": "home/desktop/16-final-cta",
+    "id": "home/desktop/10-guild-strip",
     "kind": "section",
-    "name": "final-cta",
-    "heading": "Hear it.Then book it.",
+    "name": "guild-strip",
+    "heading": "DEVELOPERSJoin the Conclave AI Guild: careers, o",
     "source": [
-      "components/home/sections.tsx (FinalCta)"
+      "components/home/sections.tsx (GuildStrip)"
     ],
-    "file": "shots/home/desktop/16-final-cta.jpg",
+    "file": "shots/home/desktop/10-guild-strip.jpg",
     "width": 1440,
-    "height": 631
+    "height": 54
   },
   {
     "page": "home",
@@ -294,14 +192,31 @@
     "route": "/",
     "viewport": "desktop",
     "pageFile": "app/page.tsx",
-    "id": "home/desktop/17-footer",
+    "id": "home/desktop/11-final-cta",
+    "kind": "section",
+    "name": "final-cta",
+    "heading": "Hear it.Then book it.",
+    "source": [
+      "components/home/sections.tsx (FinalCta), components/QuickBook.tsx"
+    ],
+    "file": "shots/home/desktop/11-final-cta.jpg",
+    "width": 1440,
+    "height": 575
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "app/page.tsx",
+    "id": "home/desktop/12-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/home/desktop/17-footer.jpg",
+    "file": "shots/home/desktop/12-footer.jpg",
     "width": 1440,
     "height": 684
   },
@@ -320,7 +235,7 @@
     ],
     "file": "shots/services/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 5833
+    "height": 4895
   },
   {
     "page": "services",
@@ -354,7 +269,7 @@
     ],
     "file": "shots/services/desktop/02-voice-agents-that-answer-every-call-plus.jpg",
     "width": 1280,
-    "height": 3179
+    "height": 3019
   },
   {
     "page": "services",
@@ -371,7 +286,7 @@
     ],
     "file": "shots/services/desktop/03-which-agent-do-i-need.jpg",
     "width": 1280,
-    "height": 750
+    "height": 108
   },
   {
     "page": "services",
@@ -379,16 +294,16 @@
     "route": "/services",
     "viewport": "desktop",
     "pageFile": "app/services/page.tsx",
-    "id": "services/desktop/04-works-with-the-tools-you-already-use",
+    "id": "services/desktop/04-works-with-twilio-vapi-livekit-google-ca",
     "kind": "section",
-    "name": "Works with the tools you already use",
-    "heading": "Works with the tools you already use",
+    "name": "WORKS WITH Twilio Vapi LiveKit Google Calendar C",
+    "heading": "WORKS WITH Twilio Vapi LiveKit Google Calendar C",
     "source": [
       "app/services/page.tsx"
     ],
-    "file": "shots/services/desktop/04-works-with-the-tools-you-already-use.jpg",
+    "file": "shots/services/desktop/04-works-with-twilio-vapi-livekit-google-ca.jpg",
     "width": 1280,
-    "height": 287
+    "height": 90
   },
   {
     "page": "services",
@@ -396,14 +311,31 @@
     "route": "/services",
     "viewport": "desktop",
     "pageFile": "app/services/page.tsx",
-    "id": "services/desktop/05-hear-it-then-book-it",
+    "id": "services/desktop/05-beyond-agentsautomations-business-system",
+    "kind": "section",
+    "name": "BEYOND AGENTSAutomations, business systems and p",
+    "heading": "BEYOND AGENTSAutomations, business systems and p",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/desktop/05-beyond-agentsautomations-business-system.jpg",
+    "width": 1280,
+    "height": 62
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "desktop",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/desktop/06-hear-it-then-book-it",
     "kind": "section",
     "name": "Hear it, then book it.",
     "heading": "Hear it, then book it.",
     "source": [
       "app/services/page.tsx"
     ],
-    "file": "shots/services/desktop/05-hear-it-then-book-it.jpg",
+    "file": "shots/services/desktop/06-hear-it-then-book-it.jpg",
     "width": 1280,
     "height": 317
   },
@@ -413,16 +345,16 @@
     "route": "/services",
     "viewport": "desktop",
     "pageFile": "app/services/page.tsx",
-    "id": "services/desktop/06-footer",
+    "id": "services/desktop/07-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/services/desktop/06-footer.jpg",
+    "file": "shots/services/desktop/07-footer.jpg",
     "width": 1440,
-    "height": 685
+    "height": 684
   },
   {
     "page": "service-detail",
@@ -595,6 +527,74 @@
     "height": 684
   },
   {
+    "page": "service-follow-up",
+    "pageTitle": "Service: follow-up",
+    "route": "/services/follow-up",
+    "viewport": "desktop",
+    "pageFile": "app/services/[slug]/page.tsx",
+    "id": "service-follow-up/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/service-follow-up/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2895
+  },
+  {
+    "page": "service-booking",
+    "pageTitle": "Service: booking",
+    "route": "/services/booking",
+    "viewport": "desktop",
+    "pageFile": "app/services/[slug]/page.tsx",
+    "id": "service-booking/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/service-booking/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 3033
+  },
+  {
+    "page": "service-reactivation",
+    "pageTitle": "Service: reactivation",
+    "route": "/services/reactivation",
+    "viewport": "desktop",
+    "pageFile": "app/services/[slug]/page.tsx",
+    "id": "service-reactivation/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/service-reactivation/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2918
+  },
+  {
+    "page": "service-reporting",
+    "pageTitle": "Service: reporting",
+    "route": "/services/reporting",
+    "viewport": "desktop",
+    "pageFile": "app/services/[slug]/page.tsx",
+    "id": "service-reporting/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/service-reporting/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 3014
+  },
+  {
     "page": "studio",
     "pageTitle": "Studio",
     "route": "/studio",
@@ -609,7 +609,7 @@
     ],
     "file": "shots/studio/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 3123
+    "height": 3772
   },
   {
     "page": "studio",
@@ -643,7 +643,7 @@
     ],
     "file": "shots/studio/desktop/02-agents.jpg",
     "width": 1278,
-    "height": 265
+    "height": 241
   },
   {
     "page": "studio",
@@ -651,16 +651,16 @@
     "route": "/studio",
     "viewport": "desktop",
     "pageFile": "app/studio/page.tsx",
-    "id": "studio/desktop/03-agent-apps",
+    "id": "studio/desktop/03-automations",
     "kind": "section",
-    "name": "Agent apps",
-    "heading": "Agent apps",
+    "name": "Automations",
+    "heading": "Automations",
     "source": [
       "app/studio/page.tsx"
     ],
-    "file": "shots/studio/desktop/03-agent-apps.jpg",
+    "file": "shots/studio/desktop/03-automations.jpg",
     "width": 1278,
-    "height": 265
+    "height": 241
   },
   {
     "page": "studio",
@@ -668,16 +668,16 @@
     "route": "/studio",
     "viewport": "desktop",
     "pageFile": "app/studio/page.tsx",
-    "id": "studio/desktop/04-websites-with-cms",
+    "id": "studio/desktop/04-erp-and-crm",
     "kind": "section",
-    "name": "Websites with CMS",
-    "heading": "Websites with CMS",
+    "name": "ERP and CRM",
+    "heading": "ERP and CRM",
     "source": [
       "app/studio/page.tsx"
     ],
-    "file": "shots/studio/desktop/04-websites-with-cms.jpg",
+    "file": "shots/studio/desktop/04-erp-and-crm.jpg",
     "width": 1278,
-    "height": 266
+    "height": 242
   },
   {
     "page": "studio",
@@ -685,16 +685,16 @@
     "route": "/studio",
     "viewport": "desktop",
     "pageFile": "app/studio/page.tsx",
-    "id": "studio/desktop/05-mobile-apps",
+    "id": "studio/desktop/05-apps",
     "kind": "section",
-    "name": "Mobile apps",
-    "heading": "Mobile apps",
+    "name": "Apps",
+    "heading": "Apps",
     "source": [
       "app/studio/page.tsx"
     ],
-    "file": "shots/studio/desktop/05-mobile-apps.jpg",
+    "file": "shots/studio/desktop/05-apps.jpg",
     "width": 1278,
-    "height": 265
+    "height": 241
   },
   {
     "page": "studio",
@@ -711,7 +711,7 @@
     ],
     "file": "shots/studio/desktop/06-platforms.jpg",
     "width": 1278,
-    "height": 266
+    "height": 242
   },
   {
     "page": "studio",
@@ -728,7 +728,7 @@
     ],
     "file": "shots/studio/desktop/07-we-list-a-tool-here-only-when-we-can-dem.jpg",
     "width": 1278,
-    "height": 85
+    "height": 69
   },
   {
     "page": "studio",
@@ -736,14 +736,31 @@
     "route": "/studio",
     "viewport": "desktop",
     "pageFile": "app/studio/page.tsx",
-    "id": "studio/desktop/08-have-a-build-in-mind",
+    "id": "studio/desktop/08-friendly-on-the-surface-serious-undernea",
+    "kind": "section",
+    "name": "Friendly on the surface. Serious underneath.",
+    "heading": "Friendly on the surface. Serious underneath.",
+    "source": [
+      "app/studio/page.tsx"
+    ],
+    "file": "shots/studio/desktop/08-friendly-on-the-surface-serious-undernea.jpg",
+    "width": 1440,
+    "height": 786
+  },
+  {
+    "page": "studio",
+    "pageTitle": "Studio",
+    "route": "/studio",
+    "viewport": "desktop",
+    "pageFile": "app/studio/page.tsx",
+    "id": "studio/desktop/09-have-a-build-in-mind",
     "kind": "section",
     "name": "Have a build in mind?",
     "heading": "Have a build in mind?",
     "source": [
       "app/studio/page.tsx"
     ],
-    "file": "shots/studio/desktop/08-have-a-build-in-mind.jpg",
+    "file": "shots/studio/desktop/09-have-a-build-in-mind.jpg",
     "width": 1280,
     "height": 317
   },
@@ -753,14 +770,796 @@
     "route": "/studio",
     "viewport": "desktop",
     "pageFile": "app/studio/page.tsx",
-    "id": "studio/desktop/09-footer",
+    "id": "studio/desktop/10-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/studio/desktop/09-footer.jpg",
+    "file": "shots/studio/desktop/10-footer.jpg",
+    "width": 1440,
+    "height": 684
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/studio/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/studio-agents/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2691
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/desktop/01-agents-that-take-the-calls",
+    "kind": "section",
+    "name": "Agents that take the calls",
+    "heading": "Agents that take the calls",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-agents/desktop/01-agents-that-take-the-calls.jpg",
+    "width": 1280,
+    "height": 621
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/desktop/02-what-we-build",
+    "kind": "section",
+    "name": "What we build",
+    "heading": "What we build",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-agents/desktop/02-what-we-build.jpg",
+    "width": 1278,
+    "height": 288
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/desktop/03-how-it-runs",
+    "kind": "section",
+    "name": "How it runs",
+    "heading": "How it runs",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-agents/desktop/03-how-it-runs.jpg",
+    "width": 1278,
+    "height": 324
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/desktop/04-timeline-price-and-stack",
+    "kind": "section",
+    "name": "Timeline, price and stack",
+    "heading": "Timeline, price and stack",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-agents/desktop/04-timeline-price-and-stack.jpg",
+    "width": 1278,
+    "height": 195
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/desktop/05-questions-plus-3-more",
+    "kind": "section",
+    "name": "Questions plus 3 more",
+    "heading": "Questions plus 3 more",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-agents/desktop/05-questions-plus-3-more.jpg",
+    "width": 1278,
+    "height": 177
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/desktop/06-see-the-five-service-pages-for-each-job-",
+    "kind": "section",
+    "name": "See the five service pages for each job in detai",
+    "heading": "See the five service pages for each job in detai",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-agents/desktop/06-see-the-five-service-pages-for-each-job-.jpg",
+    "width": 1278,
+    "height": 90
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/desktop/07-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-agents/desktop/07-hear-it-then-book-it.jpg",
+    "width": 1280,
+    "height": 318
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/desktop/08-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/studio-agents/desktop/08-footer.jpg",
+    "width": 1440,
+    "height": 684
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/studio/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/studio-automations/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2691
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/desktop/01-workflows-that-move-your-data",
+    "kind": "section",
+    "name": "Workflows that move your data",
+    "heading": "Workflows that move your data",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-automations/desktop/01-workflows-that-move-your-data.jpg",
+    "width": 1280,
+    "height": 621
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/desktop/02-what-we-build",
+    "kind": "section",
+    "name": "What we build",
+    "heading": "What we build",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-automations/desktop/02-what-we-build.jpg",
+    "width": 1278,
+    "height": 288
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/desktop/03-how-it-runs",
+    "kind": "section",
+    "name": "How it runs",
+    "heading": "How it runs",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-automations/desktop/03-how-it-runs.jpg",
+    "width": 1278,
+    "height": 324
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/desktop/04-timeline-price-and-stack",
+    "kind": "section",
+    "name": "Timeline, price and stack",
+    "heading": "Timeline, price and stack",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-automations/desktop/04-timeline-price-and-stack.jpg",
+    "width": 1278,
+    "height": 195
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/desktop/05-questions-plus-3-more",
+    "kind": "section",
+    "name": "Questions plus 3 more",
+    "heading": "Questions plus 3 more",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-automations/desktop/05-questions-plus-3-more.jpg",
+    "width": 1278,
+    "height": 177
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/desktop/06-pairs-with-agents-an-agent-takes-the-cal",
+    "kind": "section",
+    "name": "Pairs with Agents: an agent takes the call, an a",
+    "heading": "Pairs with Agents: an agent takes the call, an a",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-automations/desktop/06-pairs-with-agents-an-agent-takes-the-cal.jpg",
+    "width": 1278,
+    "height": 90
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/desktop/07-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-automations/desktop/07-hear-it-then-book-it.jpg",
+    "width": 1280,
+    "height": 318
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/desktop/08-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/studio-automations/desktop/08-footer.jpg",
+    "width": 1440,
+    "height": 684
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/studio/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/studio-erp-crm/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2903
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/desktop/01-a-system-built-around-you",
+    "kind": "section",
+    "name": "A system built around you",
+    "heading": "A system built around you",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-erp-crm/desktop/01-a-system-built-around-you.jpg",
+    "width": 1280,
+    "height": 621
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/desktop/02-what-we-build",
+    "kind": "section",
+    "name": "What we build",
+    "heading": "What we build",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-erp-crm/desktop/02-what-we-build.jpg",
+    "width": 1278,
+    "height": 322
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/desktop/03-the-modules",
+    "kind": "section",
+    "name": "The modules",
+    "heading": "The modules",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-erp-crm/desktop/03-the-modules.jpg",
+    "width": 1278,
+    "height": 503
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/desktop/04-timeline-price-and-stack",
+    "kind": "section",
+    "name": "Timeline, price and stack",
+    "heading": "Timeline, price and stack",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-erp-crm/desktop/04-timeline-price-and-stack.jpg",
+    "width": 1278,
+    "height": 194
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/desktop/05-questions-plus-3-more",
+    "kind": "section",
+    "name": "Questions plus 3 more",
+    "heading": "Questions plus 3 more",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-erp-crm/desktop/05-questions-plus-3-more.jpg",
+    "width": 1278,
+    "height": 177
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/desktop/06-example-screens-are-added-here-labelled-",
+    "kind": "section",
+    "name": "Example screens are added here, labelled Example",
+    "heading": "Example screens are added here, labelled Example",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-erp-crm/desktop/06-example-screens-are-added-here-labelled-.jpg",
+    "width": 1278,
+    "height": 91
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/desktop/07-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-erp-crm/desktop/07-hear-it-then-book-it.jpg",
+    "width": 1280,
+    "height": 317
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/desktop/08-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/studio-erp-crm/desktop/08-footer.jpg",
+    "width": 1440,
+    "height": 684
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/studio/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/studio-apps/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2803
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/desktop/01-apps-with-agent-features",
+    "kind": "section",
+    "name": "Apps with agent features",
+    "heading": "Apps with agent features",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-apps/desktop/01-apps-with-agent-features.jpg",
+    "width": 1280,
+    "height": 621
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/desktop/02-what-we-build",
+    "kind": "section",
+    "name": "What we build",
+    "heading": "What we build",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-apps/desktop/02-what-we-build.jpg",
+    "width": 1278,
+    "height": 230
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/desktop/03-what-it-is-built-with",
+    "kind": "section",
+    "name": "What it is built with",
+    "heading": "What it is built with",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-apps/desktop/03-what-it-is-built-with.jpg",
+    "width": 1278,
+    "height": 252
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/desktop/04-marketing-sites-when-you-need-a-face",
+    "kind": "section",
+    "name": "Marketing sites, when you need a face",
+    "heading": "Marketing sites, when you need a face",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-apps/desktop/04-marketing-sites-when-you-need-a-face.jpg",
+    "width": 1278,
+    "height": 243
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/desktop/05-timeline-price-and-stack",
+    "kind": "section",
+    "name": "Timeline, price and stack",
+    "heading": "Timeline, price and stack",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-apps/desktop/05-timeline-price-and-stack.jpg",
+    "width": 1278,
+    "height": 195
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/desktop/06-questions-plus-3-more",
+    "kind": "section",
+    "name": "Questions plus 3 more",
+    "heading": "Questions plus 3 more",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-apps/desktop/06-questions-plus-3-more.jpg",
+    "width": 1278,
+    "height": 177
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/desktop/07-need-the-agent-first-and-the-app-later-s",
+    "kind": "section",
+    "name": "Need the agent first and the app later? Start wi",
+    "heading": "Need the agent first and the app later? Start wi",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-apps/desktop/07-need-the-agent-first-and-the-app-later-s.jpg",
+    "width": 1278,
+    "height": 91
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/desktop/08-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-apps/desktop/08-hear-it-then-book-it.jpg",
+    "width": 1280,
+    "height": 317
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/desktop/09-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/studio-apps/desktop/09-footer.jpg",
+    "width": 1440,
+    "height": 684
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/studio/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/studio-platforms/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2988
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/desktop/01-built-to-keep-running-at-volume",
+    "kind": "section",
+    "name": "Built to keep running at volume",
+    "heading": "Built to keep running at volume",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-platforms/desktop/01-built-to-keep-running-at-volume.jpg",
+    "width": 1280,
+    "height": 717
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/desktop/02-what-we-build",
+    "kind": "section",
+    "name": "What we build",
+    "heading": "What we build",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-platforms/desktop/02-what-we-build.jpg",
+    "width": 1278,
+    "height": 206
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/desktop/03-what-sits-under-it",
+    "kind": "section",
+    "name": "What sits under it",
+    "heading": "What sits under it",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-platforms/desktop/03-what-sits-under-it.jpg",
+    "width": 1278,
+    "height": 608
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/desktop/04-timeline-price-and-stack",
+    "kind": "section",
+    "name": "Timeline, price and stack",
+    "heading": "Timeline, price and stack",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-platforms/desktop/04-timeline-price-and-stack.jpg",
+    "width": 1278,
+    "height": 194
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/desktop/05-questions-plus-3-more",
+    "kind": "section",
+    "name": "Questions plus 3 more",
+    "heading": "Questions plus 3 more",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-platforms/desktop/05-questions-plus-3-more.jpg",
+    "width": 1278,
+    "height": 177
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/desktop/06-friendly-on-the-surface-serious-undernea",
+    "kind": "section",
+    "name": "Friendly on the surface, serious underneath. Nex",
+    "heading": "Friendly on the surface, serious underneath. Nex",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-platforms/desktop/06-friendly-on-the-surface-serious-undernea.jpg",
+    "width": 1278,
+    "height": 91
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/desktop/07-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-platforms/desktop/07-hear-it-then-book-it.jpg",
+    "width": 1280,
+    "height": 317
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "desktop",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/desktop/08-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/studio-platforms/desktop/08-footer.jpg",
     "width": 1440,
     "height": 684
   },
@@ -918,8 +1717,93 @@
     "height": 684
   },
   {
+    "page": "industry-med-spas",
+    "pageTitle": "Industry: med spas",
+    "route": "/industries/med-spas",
+    "viewport": "desktop",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-med-spas/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-med-spas/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 3127
+  },
+  {
+    "page": "industry-dental",
+    "pageTitle": "Industry: dental",
+    "route": "/industries/dental",
+    "viewport": "desktop",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-dental/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-dental/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2936
+  },
+  {
+    "page": "industry-real-estate",
+    "pageTitle": "Industry: real estate",
+    "route": "/industries/real-estate",
+    "viewport": "desktop",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-real-estate/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-real-estate/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 2936
+  },
+  {
+    "page": "industry-home-services",
+    "pageTitle": "Industry: home services",
+    "route": "/industries/home-services",
+    "viewport": "desktop",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-home-services/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-home-services/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 3031
+  },
+  {
+    "page": "industry-startups",
+    "pageTitle": "Industry: startups",
+    "route": "/industries/startups",
+    "viewport": "desktop",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-startups/desktop/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-startups/desktop/00-full-page.jpg",
+    "width": 1440,
+    "height": 3031
+  },
+  {
     "page": "crew",
-    "pageTitle": "The crew",
+    "pageTitle": "The Crew",
     "route": "/crew",
     "viewport": "desktop",
     "pageFile": "app/crew/page.tsx",
@@ -932,90 +1816,107 @@
     ],
     "file": "shots/crew/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 3110
+    "height": 3187
   },
   {
     "page": "crew",
-    "pageTitle": "The crew",
+    "pageTitle": "The Crew",
     "route": "/crew",
     "viewport": "desktop",
     "pageFile": "app/crew/page.tsx",
-    "id": "crew/desktop/01-seven-bricks-one-job-each",
+    "id": "crew/desktop/01-seven-agents-one-job-each",
     "kind": "section",
-    "name": "Seven bricks. One job each.",
-    "heading": "Seven bricks. One job each.",
+    "name": "Seven agents. One job each.",
+    "heading": "Seven agents. One job each.",
     "source": [
       "app/crew/page.tsx"
     ],
-    "file": "shots/crew/desktop/01-seven-bricks-one-job-each.jpg",
+    "file": "shots/crew/desktop/01-seven-agents-one-job-each.jpg",
     "width": 1280,
     "height": 621
   },
   {
     "page": "crew",
-    "pageTitle": "The crew",
+    "pageTitle": "The Crew",
     "route": "/crew",
     "viewport": "desktop",
     "pageFile": "app/crew/page.tsx",
-    "id": "crew/desktop/02-aria-plus-6-more",
+    "id": "crew/desktop/02-the-conclave-c-made-of-studs",
+    "kind": "section",
+    "name": "The Conclave C, made of studs",
+    "heading": "The Conclave C, made of studs",
+    "source": [
+      "app/crew/page.tsx"
+    ],
+    "file": "shots/crew/desktop/02-the-conclave-c-made-of-studs.jpg",
+    "width": 1278,
+    "height": 138
+  },
+  {
+    "page": "crew",
+    "pageTitle": "The Crew",
+    "route": "/crew",
+    "viewport": "desktop",
+    "pageFile": "app/crew/page.tsx",
+    "id": "crew/desktop/03-aria-plus-6-more",
     "kind": "section",
     "name": "Aria plus 6 more",
     "heading": "Aria plus 6 more",
     "source": [
       "app/crew/page.tsx"
     ],
-    "file": "shots/crew/desktop/02-aria-plus-6-more.jpg",
+    "file": "shots/crew/desktop/03-aria-plus-6-more.jpg",
     "width": 1278,
-    "height": 1421
+    "height": 1361
   },
   {
     "page": "crew",
-    "pageTitle": "The crew",
+    "pageTitle": "The Crew",
     "route": "/crew",
     "viewport": "desktop",
     "pageFile": "app/crew/page.tsx",
-    "id": "crew/desktop/03-built-from-one-kit-so-they-read-as-a-fam",
+    "id": "crew/desktop/04-voice-lines-are-sample-copy-for-the-agen",
     "kind": "section",
-    "name": "Built from one kit so they read as a family at a",
-    "heading": "Built from one kit so they read as a family at a",
+    "name": "Voice lines are sample copy for the agents, not ",
+    "heading": "Voice lines are sample copy for the agents, not ",
     "source": [
       "app/crew/page.tsx"
     ],
-    "file": "shots/crew/desktop/03-built-from-one-kit-so-they-read-as-a-fam.jpg",
+    "file": "shots/crew/desktop/04-voice-lines-are-sample-copy-for-the-agen.jpg",
     "width": 1278,
     "height": 70
   },
   {
     "page": "crew",
-    "pageTitle": "The crew",
+    "pageTitle": "The Crew",
     "route": "/crew",
     "viewport": "desktop",
     "pageFile": "app/crew/page.tsx",
-    "id": "crew/desktop/04-want-a-crew-of-your-own",
+    "id": "crew/desktop/05-want-a-crew-of-your-own",
     "kind": "section",
     "name": "Want a crew of your own?",
     "heading": "Want a crew of your own?",
     "source": [
       "app/crew/page.tsx"
     ],
-    "file": "shots/crew/desktop/04-want-a-crew-of-your-own.jpg",
+    "file": "shots/crew/desktop/05-want-a-crew-of-your-own.jpg",
     "width": 1280,
     "height": 318
   },
   {
     "page": "crew",
-    "pageTitle": "The crew",
+    "pageTitle": "The Crew",
     "route": "/crew",
     "viewport": "desktop",
     "pageFile": "app/crew/page.tsx",
-    "id": "crew/desktop/05-footer",
+    "id": "crew/desktop/06-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/crew/desktop/05-footer.jpg",
+    "file": "shots/crew/desktop/06-footer.jpg",
     "width": 1440,
     "height": 684
   },
@@ -1034,7 +1935,7 @@
     ],
     "file": "shots/work/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 3035
+    "height": 1884
   },
   {
     "page": "work",
@@ -1059,16 +1960,16 @@
     "route": "/work",
     "viewport": "desktop",
     "pageFile": "app/work/page.tsx",
-    "id": "work/desktop/02-filter-by-type",
+    "id": "work/desktop/02-what-you-will-find-here-plus-1-more",
     "kind": "section",
-    "name": "Filter by type",
-    "heading": "Filter by type",
+    "name": "What you will find here plus 1 more",
+    "heading": "What you will find here plus 1 more",
     "source": [
       "app/work/page.tsx"
     ],
-    "file": "shots/work/desktop/02-filter-by-type.jpg",
-    "width": 1198,
-    "height": 45
+    "file": "shots/work/desktop/02-what-you-will-find-here-plus-1-more.jpg",
+    "width": 1280,
+    "height": 294
   },
   {
     "page": "work",
@@ -1076,48 +1977,14 @@
     "route": "/work",
     "viewport": "desktop",
     "pageFile": "app/work/page.tsx",
-    "id": "work/desktop/03-bazar-flow-plus-3-more",
-    "kind": "section",
-    "name": "Bazar Flow plus 3 more",
-    "heading": "Bazar Flow plus 3 more",
-    "source": [
-      "app/work/page.tsx"
-    ],
-    "file": "shots/work/desktop/03-bazar-flow-plus-3-more.jpg",
-    "width": 1198,
-    "height": 1136
-  },
-  {
-    "page": "work",
-    "pageTitle": "Work",
-    "route": "/work",
-    "viewport": "desktop",
-    "pageFile": "app/work/page.tsx",
-    "id": "work/desktop/04-testimonial-client-quotes-appear-here-wi",
-    "kind": "section",
-    "name": "TESTIMONIAL Client quotes appear here with their",
-    "heading": "TESTIMONIAL Client quotes appear here with their",
-    "source": [
-      "app/work/page.tsx"
-    ],
-    "file": "shots/work/desktop/04-testimonial-client-quotes-appear-here-wi.jpg",
-    "width": 1198,
-    "height": 129
-  },
-  {
-    "page": "work",
-    "pageTitle": "Work",
-    "route": "/work",
-    "viewport": "desktop",
-    "pageFile": "app/work/page.tsx",
-    "id": "work/desktop/05-hear-it-then-book-it",
+    "id": "work/desktop/03-hear-it-then-book-it",
     "kind": "section",
     "name": "Hear it, then book it.",
     "heading": "Hear it, then book it.",
     "source": [
       "app/work/page.tsx"
     ],
-    "file": "shots/work/desktop/05-hear-it-then-book-it.jpg",
+    "file": "shots/work/desktop/03-hear-it-then-book-it.jpg",
     "width": 1280,
     "height": 318
   },
@@ -1127,203 +1994,16 @@
     "route": "/work",
     "viewport": "desktop",
     "pageFile": "app/work/page.tsx",
-    "id": "work/desktop/06-footer",
+    "id": "work/desktop/04-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/work/desktop/06-footer.jpg",
+    "file": "shots/work/desktop/04-footer.jpg",
     "width": 1440,
     "height": 684
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "desktop",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/work/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/work-detail/desktop/00-full-page.jpg",
-    "width": 1440,
-    "height": 3124
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "desktop",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/01-bazar-flow",
-    "kind": "section",
-    "name": "Bazar Flow",
-    "heading": "Bazar Flow",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/desktop/01-bazar-flow.jpg",
-    "width": 1280,
-    "height": 446
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "desktop",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/02-bazar-flow-preview",
-    "kind": "section",
-    "name": "Bazar Flow preview",
-    "heading": "Bazar Flow preview",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/desktop/02-bazar-flow-preview.jpg",
-    "width": 1198,
-    "height": 675
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "desktop",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/03-result",
-    "kind": "section",
-    "name": "Result",
-    "heading": "Result",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/desktop/03-result.jpg",
-    "width": 1198,
-    "height": 149
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "desktop",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/04-the-problem",
-    "kind": "section",
-    "name": "The problem",
-    "heading": "The problem",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/desktop/04-the-problem.jpg",
-    "width": 1198,
-    "height": 147
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "desktop",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/05-the-solution",
-    "kind": "section",
-    "name": "The solution",
-    "heading": "The solution",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/desktop/05-the-solution.jpg",
-    "width": 1198,
-    "height": 146
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "desktop",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/06-architecture",
-    "kind": "section",
-    "name": "Architecture",
-    "heading": "Architecture",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/desktop/06-architecture.jpg",
-    "width": 1198,
-    "height": 172
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "desktop",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/07-what-we-would-do-differently",
-    "kind": "section",
-    "name": "What we would do differently",
-    "heading": "What we would do differently",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/desktop/07-what-we-would-do-differently.jpg",
-    "width": 1198,
-    "height": 195
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "desktop",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/08-next-project-codenexus-ai",
-    "kind": "section",
-    "name": "NEXT PROJECT CODENEXUS AI",
-    "heading": "NEXT PROJECT CODENEXUS AI",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/desktop/08-next-project-codenexus-ai.jpg",
-    "width": 1198,
-    "height": 161
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "desktop",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/09-hear-it-then-book-it",
-    "kind": "section",
-    "name": "Hear it, then book it.",
-    "heading": "Hear it, then book it.",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/desktop/09-hear-it-then-book-it.jpg",
-    "width": 1280,
-    "height": 317
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "desktop",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/desktop/10-footer",
-    "kind": "section",
-    "name": "footer",
-    "heading": "Footer",
-    "source": [
-      "components/Footer.tsx"
-    ],
-    "file": "shots/work-detail/desktop/10-footer.jpg",
-    "width": 1440,
-    "height": 685
   },
   {
     "page": "demos",
@@ -1340,7 +2020,7 @@
     ],
     "file": "shots/demos/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 4576
+    "height": 3329
   },
   {
     "page": "demos",
@@ -1399,67 +2079,16 @@
     "route": "/demos",
     "viewport": "desktop",
     "pageFile": "app/demos/page.tsx",
-    "id": "demos/desktop/04-the-60-second-game-plus-1-more",
+    "id": "demos/desktop/04-hear-it-then-book-it",
     "kind": "section",
-    "name": "The 60-second game plus 1 more",
-    "heading": "The 60-second game plus 1 more",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
     "source": [
       "app/demos/page.tsx"
     ],
-    "file": "shots/demos/desktop/04-the-60-second-game-plus-1-more.jpg",
-    "width": 1278,
-    "height": 498
-  },
-  {
-    "page": "demos",
-    "pageTitle": "Demos",
-    "route": "/demos",
-    "viewport": "desktop",
-    "pageFile": "app/demos/page.tsx",
-    "id": "demos/desktop/05-build-your-own-agent-in-four-questions",
-    "kind": "section",
-    "name": "Build your own agent in four questions",
-    "heading": "Build your own agent in four questions",
-    "source": [
-      "app/demos/page.tsx"
-    ],
-    "file": "shots/demos/desktop/05-build-your-own-agent-in-four-questions.jpg",
-    "width": 1278,
-    "height": 494
-  },
-  {
-    "page": "demos",
-    "pageTitle": "Demos",
-    "route": "/demos",
-    "viewport": "desktop",
-    "pageFile": "app/demos/page.tsx",
-    "id": "demos/desktop/06-call-our-demo-line",
-    "kind": "section",
-    "name": "Call our demo line",
-    "heading": "Call our demo line",
-    "source": [
-      "app/demos/page.tsx"
-    ],
-    "file": "shots/demos/desktop/06-call-our-demo-line.jpg",
-    "width": 1278,
-    "height": 285
-  },
-  {
-    "page": "demos",
-    "pageTitle": "Demos",
-    "route": "/demos",
-    "viewport": "desktop",
-    "pageFile": "app/demos/page.tsx",
-    "id": "demos/desktop/07-prefer-to-talk-to-a-person",
-    "kind": "section",
-    "name": "Prefer to talk to a person?",
-    "heading": "Prefer to talk to a person?",
-    "source": [
-      "app/demos/page.tsx"
-    ],
-    "file": "shots/demos/desktop/07-prefer-to-talk-to-a-person.jpg",
+    "file": "shots/demos/desktop/04-hear-it-then-book-it.jpg",
     "width": 1280,
-    "height": 292
+    "height": 318
   },
   {
     "page": "demos",
@@ -1467,14 +2096,14 @@
     "route": "/demos",
     "viewport": "desktop",
     "pageFile": "app/demos/page.tsx",
-    "id": "demos/desktop/08-footer",
+    "id": "demos/desktop/05-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/demos/desktop/08-footer.jpg",
+    "file": "shots/demos/desktop/05-footer.jpg",
     "width": 1440,
     "height": 684
   },
@@ -1493,7 +2122,7 @@
     ],
     "file": "shots/about/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 2470
+    "height": 2298
   },
   {
     "page": "about",
@@ -1510,7 +2139,7 @@
     ],
     "file": "shots/about/desktop/01-agents-convened.jpg",
     "width": 1280,
-    "height": 525
+    "height": 555
   },
   {
     "page": "about",
@@ -1518,16 +2147,16 @@
     "route": "/about",
     "viewport": "desktop",
     "pageFile": "app/about/page.tsx",
-    "id": "about/desktop/02-fixed-scope-plus-4-more",
+    "id": "about/desktop/02-fixed-scope-plus-3-more",
     "kind": "section",
-    "name": "Fixed scope plus 4 more",
-    "heading": "Fixed scope plus 4 more",
+    "name": "Fixed scope plus 3 more",
+    "heading": "Fixed scope plus 3 more",
     "source": [
       "app/about/page.tsx"
     ],
-    "file": "shots/about/desktop/02-fixed-scope-plus-4-more.jpg",
+    "file": "shots/about/desktop/02-fixed-scope-plus-3-more.jpg",
     "width": 1280,
-    "height": 947
+    "height": 745
   },
   {
     "page": "about",
@@ -1578,7 +2207,7 @@
     ],
     "file": "shots/pricing/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 3055
+    "height": 3501
   },
   {
     "page": "pricing",
@@ -1620,14 +2249,31 @@
     "route": "/pricing",
     "viewport": "desktop",
     "pageFile": "app/pricing/page.tsx",
-    "id": "pricing/desktop/03-what-is-included",
+    "id": "pricing/desktop/03-agent-receptionist-or-answering-service",
+    "kind": "section",
+    "name": "Agent, receptionist or answering service?",
+    "heading": "Agent, receptionist or answering service?",
+    "source": [
+      "app/pricing/page.tsx"
+    ],
+    "file": "shots/pricing/desktop/03-agent-receptionist-or-answering-service.jpg",
+    "width": 1280,
+    "height": 447
+  },
+  {
+    "page": "pricing",
+    "pageTitle": "Pricing",
+    "route": "/pricing",
+    "viewport": "desktop",
+    "pageFile": "app/pricing/page.tsx",
+    "id": "pricing/desktop/04-what-is-included",
     "kind": "section",
     "name": "What is included",
     "heading": "What is included",
     "source": [
       "app/pricing/page.tsx"
     ],
-    "file": "shots/pricing/desktop/03-what-is-included.jpg",
+    "file": "shots/pricing/desktop/04-what-is-included.jpg",
     "width": 1280,
     "height": 501
   },
@@ -1637,14 +2283,14 @@
     "route": "/pricing",
     "viewport": "desktop",
     "pageFile": "app/pricing/page.tsx",
-    "id": "pricing/desktop/04-questions-about-pricing-plus-10-more",
+    "id": "pricing/desktop/05-questions-about-pricing-plus-10-more",
     "kind": "section",
     "name": "Questions about pricing plus 10 more",
     "heading": "Questions about pricing plus 10 more",
     "source": [
       "app/pricing/page.tsx"
     ],
-    "file": "shots/pricing/desktop/04-questions-about-pricing-plus-10-more.jpg",
+    "file": "shots/pricing/desktop/05-questions-about-pricing-plus-10-more.jpg",
     "width": 1280,
     "height": 587
   },
@@ -1654,16 +2300,16 @@
     "route": "/pricing",
     "viewport": "desktop",
     "pageFile": "app/pricing/page.tsx",
-    "id": "pricing/desktop/05-hear-it-then-book-it",
+    "id": "pricing/desktop/06-hear-it-then-book-it",
     "kind": "section",
     "name": "Hear it, then book it.",
     "heading": "Hear it, then book it.",
     "source": [
       "app/pricing/page.tsx"
     ],
-    "file": "shots/pricing/desktop/05-hear-it-then-book-it.jpg",
+    "file": "shots/pricing/desktop/06-hear-it-then-book-it.jpg",
     "width": 1280,
-    "height": 317
+    "height": 318
   },
   {
     "page": "pricing",
@@ -1671,16 +2317,16 @@
     "route": "/pricing",
     "viewport": "desktop",
     "pageFile": "app/pricing/page.tsx",
-    "id": "pricing/desktop/06-footer",
+    "id": "pricing/desktop/07-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/pricing/desktop/06-footer.jpg",
+    "file": "shots/pricing/desktop/07-footer.jpg",
     "width": 1440,
-    "height": 685
+    "height": 684
   },
   {
     "page": "contact",
@@ -1765,7 +2411,7 @@
     ],
     "file": "shots/join/desktop/00-full-page.jpg",
     "width": 1440,
-    "height": 2552
+    "height": 2375
   },
   {
     "page": "join",
@@ -1773,14 +2419,14 @@
     "route": "/join",
     "viewport": "desktop",
     "pageFile": "app/join/page.tsx",
-    "id": "join/desktop/01-the-conclave-guild",
+    "id": "join/desktop/01-the-conclave-ai-guild",
     "kind": "section",
-    "name": "The Conclave Guild.",
-    "heading": "The Conclave Guild.",
+    "name": "The Conclave AI Guild.",
+    "heading": "The Conclave AI Guild.",
     "source": [
       "app/join/page.tsx"
     ],
-    "file": "shots/join/desktop/01-the-conclave-guild.jpg",
+    "file": "shots/join/desktop/01-the-conclave-ai-guild.jpg",
     "width": 1280,
     "height": 621
   },
@@ -1790,16 +2436,16 @@
     "route": "/join",
     "viewport": "desktop",
     "pageFile": "app/join/page.tsx",
-    "id": "join/desktop/02-careers-plus-4-more",
+    "id": "join/desktop/02-careers-plus-3-more",
     "kind": "section",
-    "name": "Careers plus 4 more",
-    "heading": "Careers plus 4 more",
+    "name": "Careers plus 3 more",
+    "heading": "Careers plus 3 more",
     "source": [
       "app/join/page.tsx"
     ],
-    "file": "shots/join/desktop/02-careers-plus-4-more.jpg",
+    "file": "shots/join/desktop/02-careers-plus-3-more.jpg",
     "width": 1280,
-    "height": 933
+    "height": 755
   },
   {
     "page": "join",
@@ -2534,7 +3180,7 @@
   },
   {
     "page": "privacy",
-    "pageTitle": "Privacy",
+    "pageTitle": "Privacy (not indexed)",
     "route": "/privacy",
     "viewport": "desktop",
     "pageFile": "app/privacy/page.tsx",
@@ -2551,7 +3197,7 @@
   },
   {
     "page": "privacy",
-    "pageTitle": "Privacy",
+    "pageTitle": "Privacy (not indexed)",
     "route": "/privacy",
     "viewport": "desktop",
     "pageFile": "app/privacy/page.tsx",
@@ -2568,7 +3214,7 @@
   },
   {
     "page": "privacy",
-    "pageTitle": "Privacy",
+    "pageTitle": "Privacy (not indexed)",
     "route": "/privacy",
     "viewport": "desktop",
     "pageFile": "app/privacy/page.tsx",
@@ -2585,7 +3231,7 @@
   },
   {
     "page": "privacy",
-    "pageTitle": "Privacy",
+    "pageTitle": "Privacy (not indexed)",
     "route": "/privacy",
     "viewport": "desktop",
     "pageFile": "app/privacy/page.tsx",
@@ -2602,7 +3248,7 @@
   },
   {
     "page": "terms",
-    "pageTitle": "Terms",
+    "pageTitle": "Terms (not indexed)",
     "route": "/terms",
     "viewport": "desktop",
     "pageFile": "app/terms/page.tsx",
@@ -2619,7 +3265,7 @@
   },
   {
     "page": "terms",
-    "pageTitle": "Terms",
+    "pageTitle": "Terms (not indexed)",
     "route": "/terms",
     "viewport": "desktop",
     "pageFile": "app/terms/page.tsx",
@@ -2636,7 +3282,7 @@
   },
   {
     "page": "terms",
-    "pageTitle": "Terms",
+    "pageTitle": "Terms (not indexed)",
     "route": "/terms",
     "viewport": "desktop",
     "pageFile": "app/terms/page.tsx",
@@ -2653,7 +3299,7 @@
   },
   {
     "page": "terms",
-    "pageTitle": "Terms",
+    "pageTitle": "Terms (not indexed)",
     "route": "/terms",
     "viewport": "desktop",
     "pageFile": "app/terms/page.tsx",
@@ -2667,210 +3313,6 @@
     "file": "shots/terms/desktop/03-footer.jpg",
     "width": 1440,
     "height": 685
-  },
-  {
-    "page": "service-follow-up",
-    "pageTitle": "Service: follow-up",
-    "route": "/services/follow-up",
-    "viewport": "desktop",
-    "pageFile": "app/services/[slug]/page.tsx",
-    "id": "service-follow-up/desktop/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/services/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/service-follow-up/desktop/00-full-page.jpg",
-    "width": 1440,
-    "height": 2895
-  },
-  {
-    "page": "service-booking",
-    "pageTitle": "Service: booking",
-    "route": "/services/booking",
-    "viewport": "desktop",
-    "pageFile": "app/services/[slug]/page.tsx",
-    "id": "service-booking/desktop/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/services/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/service-booking/desktop/00-full-page.jpg",
-    "width": 1440,
-    "height": 3033
-  },
-  {
-    "page": "service-reactivation",
-    "pageTitle": "Service: reactivation",
-    "route": "/services/reactivation",
-    "viewport": "desktop",
-    "pageFile": "app/services/[slug]/page.tsx",
-    "id": "service-reactivation/desktop/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/services/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/service-reactivation/desktop/00-full-page.jpg",
-    "width": 1440,
-    "height": 2918
-  },
-  {
-    "page": "service-reporting",
-    "pageTitle": "Service: reporting",
-    "route": "/services/reporting",
-    "viewport": "desktop",
-    "pageFile": "app/services/[slug]/page.tsx",
-    "id": "service-reporting/desktop/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/services/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/service-reporting/desktop/00-full-page.jpg",
-    "width": 1440,
-    "height": 3014
-  },
-  {
-    "page": "industry-med-spas",
-    "pageTitle": "Industry: med spas",
-    "route": "/industries/med-spas",
-    "viewport": "desktop",
-    "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry-med-spas/desktop/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/industries/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/industry-med-spas/desktop/00-full-page.jpg",
-    "width": 1440,
-    "height": 3127
-  },
-  {
-    "page": "industry-dental",
-    "pageTitle": "Industry: dental",
-    "route": "/industries/dental",
-    "viewport": "desktop",
-    "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry-dental/desktop/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/industries/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/industry-dental/desktop/00-full-page.jpg",
-    "width": 1440,
-    "height": 2936
-  },
-  {
-    "page": "industry-real-estate",
-    "pageTitle": "Industry: real estate",
-    "route": "/industries/real-estate",
-    "viewport": "desktop",
-    "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry-real-estate/desktop/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/industries/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/industry-real-estate/desktop/00-full-page.jpg",
-    "width": 1440,
-    "height": 2936
-  },
-  {
-    "page": "industry-home-services",
-    "pageTitle": "Industry: home services",
-    "route": "/industries/home-services",
-    "viewport": "desktop",
-    "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry-home-services/desktop/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/industries/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/industry-home-services/desktop/00-full-page.jpg",
-    "width": 1440,
-    "height": 3031
-  },
-  {
-    "page": "industry-startups",
-    "pageTitle": "Industry: startups",
-    "route": "/industries/startups",
-    "viewport": "desktop",
-    "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry-startups/desktop/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/industries/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/industry-startups/desktop/00-full-page.jpg",
-    "width": 1440,
-    "height": 3031
-  },
-  {
-    "page": "work-codenexus-ai",
-    "pageTitle": "Project: CodeNexus AI",
-    "route": "/work/codenexus-ai",
-    "viewport": "desktop",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-codenexus-ai/desktop/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/work/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/work-codenexus-ai/desktop/00-full-page.jpg",
-    "width": 1440,
-    "height": 3220
-  },
-  {
-    "page": "work-scalenexus-ai",
-    "pageTitle": "Project: ScaleNexus AI",
-    "route": "/work/scalenexus-ai",
-    "viewport": "desktop",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-scalenexus-ai/desktop/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/work/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/work-scalenexus-ai/desktop/00-full-page.jpg",
-    "width": 1440,
-    "height": 3220
-  },
-  {
-    "page": "work-task-whisper",
-    "pageTitle": "Project: Task Whisper",
-    "route": "/work/task-whisper",
-    "viewport": "desktop",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-task-whisper/desktop/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/work/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/work-task-whisper/desktop/00-full-page.jpg",
-    "width": 1440,
-    "height": 3220
   },
   {
     "page": "not-found",
@@ -2937,7 +3379,7 @@
     ],
     "file": "shots/states/desktop/01-aria-tab-answer-calls.jpg",
     "width": 1440,
-    "height": 539
+    "height": 559
   },
   {
     "page": "states",
@@ -2953,7 +3395,7 @@
     ],
     "file": "shots/states/desktop/02-aria-tab-follow-up-fast.jpg",
     "width": 1440,
-    "height": 539
+    "height": 559
   },
   {
     "page": "states",
@@ -2969,7 +3411,7 @@
     ],
     "file": "shots/states/desktop/03-aria-tab-book-the-slot.jpg",
     "width": 1440,
-    "height": 539
+    "height": 559
   },
   {
     "page": "states",
@@ -2985,7 +3427,7 @@
     ],
     "file": "shots/states/desktop/04-aria-tab-win-back.jpg",
     "width": 1440,
-    "height": 539
+    "height": 559
   },
   {
     "page": "states",
@@ -3085,41 +3527,7 @@
     ],
     "file": "shots/home/mobile/00-full-page-part4.jpg",
     "width": 780,
-    "height": 8000
-  },
-  {
-    "page": "home",
-    "pageTitle": "Home",
-    "route": "/",
-    "viewport": "mobile",
-    "pageFile": "app/page.tsx",
-    "id": "home/mobile/full-page-part5",
-    "kind": "full",
-    "name": "Full page, part 5",
-    "source": [
-      "app/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/home/mobile/00-full-page-part5.jpg",
-    "width": 780,
-    "height": 8000
-  },
-  {
-    "page": "home",
-    "pageTitle": "Home",
-    "route": "/",
-    "viewport": "mobile",
-    "pageFile": "app/page.tsx",
-    "id": "home/mobile/full-page-part6",
-    "kind": "full",
-    "name": "Full page, part 6",
-    "source": [
-      "app/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/home/mobile/00-full-page-part6.jpg",
-    "width": 780,
-    "height": 4846
+    "height": 1294
   },
   {
     "page": "home",
@@ -3132,7 +3540,7 @@
     "name": "hero",
     "heading": "Agentsconvened.",
     "source": [
-      "components/home/sections.tsx (Hero), components/home/visuals.tsx (HeroScene)"
+      "components/home/sections.tsx (Hero), components/home/HeroStuds.tsx, lib/studs/hero.ts"
     ],
     "file": "shots/home/mobile/01-hero.jpg",
     "width": 780,
@@ -3153,7 +3561,7 @@
     ],
     "file": "shots/home/mobile/02-live-agent.jpg",
     "width": 780,
-    "height": 2120
+    "height": 2158
   },
   {
     "page": "home",
@@ -3164,13 +3572,13 @@
     "id": "home/mobile/03-proof",
     "kind": "section",
     "name": "proof",
-    "heading": "No lock-in plus 3 more",
+    "heading": "Fixed scope plus 2 more",
     "source": [
       "components/home/sections.tsx (Proof), lib/content.ts (trust)"
     ],
     "file": "shots/home/mobile/03-proof.jpg",
     "width": 780,
-    "height": 864
+    "height": 610
   },
   {
     "page": "home",
@@ -3183,11 +3591,11 @@
     "name": "services",
     "heading": "From the first ring to the booked slot, one agen plus 5 more",
     "source": [
-      "components/home/sections.tsx (Services), components/home/visuals.tsx (service mock-ups)"
+      "components/home/sections.tsx (Services), components/home/visuals.tsx (mock-ups), components/studs/StudGlyph.tsx"
     ],
     "file": "shots/home/mobile/04-services.jpg",
     "width": 780,
-    "height": 6936
+    "height": 4884
   },
   {
     "page": "home",
@@ -3195,16 +3603,16 @@
     "route": "/",
     "viewport": "mobile",
     "pageFile": "app/page.tsx",
-    "id": "home/mobile/05-studio",
+    "id": "home/mobile/05-systems",
     "kind": "section",
-    "name": "studio",
-    "heading": "Agent-first software, built like a platform plus 5 more",
+    "name": "systems",
+    "heading": "Agents, automations and the systems behind them plus 5 more",
     "source": [
-      "components/home/sections2.tsx (StudioSection), lib/content.ts (studio)"
+      "components/home/sections.tsx (Systems), lib/content.ts (studio)"
     ],
-    "file": "shots/home/mobile/05-studio.jpg",
+    "file": "shots/home/mobile/05-systems.jpg",
     "width": 780,
-    "height": 3152
+    "height": 2468
   },
   {
     "page": "home",
@@ -3217,11 +3625,11 @@
     "name": "built-for",
     "heading": "Made for teams who live on the phone",
     "source": [
-      "components/home/sections.tsx (BuiltFor), components/Cast.tsx, lib/content.ts (industries)"
+      "components/home/sections.tsx (BuiltFor), lib/content.ts (industries), lib/studs/patterns.ts"
     ],
     "file": "shots/home/mobile/06-built-for.jpg",
     "width": 780,
-    "height": 4574
+    "height": 2614
   },
   {
     "page": "home",
@@ -3229,67 +3637,16 @@
     "route": "/",
     "viewport": "mobile",
     "pageFile": "app/page.tsx",
-    "id": "home/mobile/07-work",
-    "kind": "section",
-    "name": "work",
-    "heading": "Selected builds, outcome first plus 3 more",
-    "source": [
-      "components/home/sections.tsx (WorkReel), lib/projects.ts"
-    ],
-    "file": "shots/home/mobile/07-work.jpg",
-    "width": 780,
-    "height": 4486
-  },
-  {
-    "page": "home",
-    "pageTitle": "Home",
-    "route": "/",
-    "viewport": "mobile",
-    "pageFile": "app/page.tsx",
-    "id": "home/mobile/08-receipts",
-    "kind": "section",
-    "name": "receipts",
-    "heading": "Numbers in public, only when they are real",
-    "source": [
-      "components/home/sections2.tsx (ReceiptsTeaser)"
-    ],
-    "file": "shots/home/mobile/08-receipts.jpg",
-    "width": 780,
-    "height": 1396
-  },
-  {
-    "page": "home",
-    "pageTitle": "Home",
-    "route": "/",
-    "viewport": "mobile",
-    "pageFile": "app/page.tsx",
-    "id": "home/mobile/09-manifesto",
-    "kind": "section",
-    "name": "manifesto",
-    "heading": "The Brick Crew",
-    "source": [
-      "components/home/sections.tsx (Manifesto), components/Cast.tsx (CastRow)"
-    ],
-    "file": "shots/home/mobile/09-manifesto.jpg",
-    "width": 780,
-    "height": 2732
-  },
-  {
-    "page": "home",
-    "pageTitle": "Home",
-    "route": "/",
-    "viewport": "mobile",
-    "pageFile": "app/page.tsx",
-    "id": "home/mobile/10-process",
+    "id": "home/mobile/07-process",
     "kind": "section",
     "name": "process",
     "heading": "Three steps, no surprises plus 3 more",
     "source": [
       "components/home/sections.tsx (Process), lib/content.ts (processSteps)"
     ],
-    "file": "shots/home/mobile/10-process.jpg",
+    "file": "shots/home/mobile/07-process.jpg",
     "width": 780,
-    "height": 2096
+    "height": 1894
   },
   {
     "page": "home",
@@ -3297,50 +3654,16 @@
     "route": "/",
     "viewport": "mobile",
     "pageFile": "app/page.tsx",
-    "id": "home/mobile/11-demos",
-    "kind": "section",
-    "name": "demos",
-    "heading": "Try it before you talk to us",
-    "source": [
-      "components/home/sections.tsx (DemosTeaser)"
-    ],
-    "file": "shots/home/mobile/11-demos.jpg",
-    "width": 780,
-    "height": 2744
-  },
-  {
-    "page": "home",
-    "pageTitle": "Home",
-    "route": "/",
-    "viewport": "mobile",
-    "pageFile": "app/page.tsx",
-    "id": "home/mobile/12-stack-scale",
-    "kind": "section",
-    "name": "stack-scale",
-    "heading": "Friendly on the surface. Serious underneath.",
-    "source": [
-      "components/home/sections2.tsx (StackScale)"
-    ],
-    "file": "shots/home/mobile/12-stack-scale.jpg",
-    "width": 780,
-    "height": 1896
-  },
-  {
-    "page": "home",
-    "pageTitle": "Home",
-    "route": "/",
-    "viewport": "mobile",
-    "pageFile": "app/page.tsx",
-    "id": "home/mobile/13-pricing",
+    "id": "home/mobile/08-pricing",
     "kind": "section",
     "name": "pricing",
     "heading": "Start small, scale when it works plus 3 more",
     "source": [
       "components/home/sections.tsx (PricingTeaser)"
     ],
-    "file": "shots/home/mobile/13-pricing.jpg",
+    "file": "shots/home/mobile/08-pricing.jpg",
     "width": 780,
-    "height": 2446
+    "height": 2440
   },
   {
     "page": "home",
@@ -3348,33 +3671,16 @@
     "route": "/",
     "viewport": "mobile",
     "pageFile": "app/page.tsx",
-    "id": "home/mobile/14-join-guild",
-    "kind": "section",
-    "name": "join-guild",
-    "heading": "Build with a small team that ships plus 4 more",
-    "source": [
-      "components/home/sections2.tsx (JoinGuild), lib/content.ts (guild)"
-    ],
-    "file": "shots/home/mobile/14-join-guild.jpg",
-    "width": 780,
-    "height": 1730
-  },
-  {
-    "page": "home",
-    "pageTitle": "Home",
-    "route": "/",
-    "viewport": "mobile",
-    "pageFile": "app/page.tsx",
-    "id": "home/mobile/15-faq",
+    "id": "home/mobile/09-faq",
     "kind": "section",
     "name": "faq",
     "heading": "Frequently asked questions plus 10 more",
     "source": [
       "components/home/sections.tsx (Faq), components/ui/Accordion.tsx"
     ],
-    "file": "shots/home/mobile/15-faq.jpg",
+    "file": "shots/home/mobile/09-faq.jpg",
     "width": 780,
-    "height": 1762
+    "height": 1732
   },
   {
     "page": "home",
@@ -3382,16 +3688,33 @@
     "route": "/",
     "viewport": "mobile",
     "pageFile": "app/page.tsx",
-    "id": "home/mobile/16-final-cta",
+    "id": "home/mobile/10-guild-strip",
+    "kind": "section",
+    "name": "guild-strip",
+    "heading": "DEVELOPERSJoin the Conclave AI Guild: careers, o",
+    "source": [
+      "components/home/sections.tsx (GuildStrip)"
+    ],
+    "file": "shots/home/mobile/10-guild-strip.jpg",
+    "width": 780,
+    "height": 212
+  },
+  {
+    "page": "home",
+    "pageTitle": "Home",
+    "route": "/",
+    "viewport": "mobile",
+    "pageFile": "app/page.tsx",
+    "id": "home/mobile/11-final-cta",
     "kind": "section",
     "name": "final-cta",
     "heading": "Hear it.Then book it.",
     "source": [
-      "components/home/sections.tsx (FinalCta)"
+      "components/home/sections.tsx (FinalCta), components/QuickBook.tsx"
     ],
-    "file": "shots/home/mobile/16-final-cta.jpg",
+    "file": "shots/home/mobile/11-final-cta.jpg",
     "width": 780,
-    "height": 1184
+    "height": 1542
   },
   {
     "page": "home",
@@ -3399,14 +3722,14 @@
     "route": "/",
     "viewport": "mobile",
     "pageFile": "app/page.tsx",
-    "id": "home/mobile/17-footer",
+    "id": "home/mobile/12-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/home/mobile/17-footer.jpg",
+    "file": "shots/home/mobile/12-footer.jpg",
     "width": 780,
     "height": 3336
   },
@@ -3425,7 +3748,7 @@
     ],
     "file": "shots/services/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 14646
+    "height": 11852
   },
   {
     "page": "services",
@@ -3459,7 +3782,7 @@
     ],
     "file": "shots/services/mobile/02-voice-agents-that-answer-every-call-plus.jpg",
     "width": 780,
-    "height": 6880
+    "height": 6310
   },
   {
     "page": "services",
@@ -3476,7 +3799,7 @@
     ],
     "file": "shots/services/mobile/03-which-agent-do-i-need.jpg",
     "width": 780,
-    "height": 1974
+    "height": 254
   },
   {
     "page": "services",
@@ -3484,16 +3807,16 @@
     "route": "/services",
     "viewport": "mobile",
     "pageFile": "app/services/page.tsx",
-    "id": "services/mobile/04-works-with-the-tools-you-already-use",
+    "id": "services/mobile/04-works-with-twilio-vapi-livekit-google-ca",
     "kind": "section",
-    "name": "Works with the tools you already use",
-    "heading": "Works with the tools you already use",
+    "name": "WORKS WITH Twilio Vapi LiveKit Google Calendar C",
+    "heading": "WORKS WITH Twilio Vapi LiveKit Google Calendar C",
     "source": [
       "app/services/page.tsx"
     ],
-    "file": "shots/services/mobile/04-works-with-the-tools-you-already-use.jpg",
+    "file": "shots/services/mobile/04-works-with-twilio-vapi-livekit-google-ca.jpg",
     "width": 780,
-    "height": 1054
+    "height": 348
   },
   {
     "page": "services",
@@ -3501,14 +3824,31 @@
     "route": "/services",
     "viewport": "mobile",
     "pageFile": "app/services/page.tsx",
-    "id": "services/mobile/05-hear-it-then-book-it",
+    "id": "services/mobile/05-beyond-agentsautomations-business-system",
+    "kind": "section",
+    "name": "BEYOND AGENTSAutomations, business systems and p",
+    "heading": "BEYOND AGENTSAutomations, business systems and p",
+    "source": [
+      "app/services/page.tsx"
+    ],
+    "file": "shots/services/mobile/05-beyond-agentsautomations-business-system.jpg",
+    "width": 780,
+    "height": 204
+  },
+  {
+    "page": "services",
+    "pageTitle": "Services",
+    "route": "/services",
+    "viewport": "mobile",
+    "pageFile": "app/services/page.tsx",
+    "id": "services/mobile/06-hear-it-then-book-it",
     "kind": "section",
     "name": "Hear it, then book it.",
     "heading": "Hear it, then book it.",
     "source": [
       "app/services/page.tsx"
     ],
-    "file": "shots/services/mobile/05-hear-it-then-book-it.jpg",
+    "file": "shots/services/mobile/06-hear-it-then-book-it.jpg",
     "width": 780,
     "height": 600
   },
@@ -3518,14 +3858,14 @@
     "route": "/services",
     "viewport": "mobile",
     "pageFile": "app/services/page.tsx",
-    "id": "services/mobile/06-footer",
+    "id": "services/mobile/07-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/services/mobile/06-footer.jpg",
+    "file": "shots/services/mobile/07-footer.jpg",
     "width": 780,
     "height": 3336
   },
@@ -3700,6 +4040,74 @@
     "height": 3334
   },
   {
+    "page": "service-follow-up",
+    "pageTitle": "Service: follow-up",
+    "route": "/services/follow-up",
+    "viewport": "mobile",
+    "pageFile": "app/services/[slug]/page.tsx",
+    "id": "service-follow-up/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/service-follow-up/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 9100
+  },
+  {
+    "page": "service-booking",
+    "pageTitle": "Service: booking",
+    "route": "/services/booking",
+    "viewport": "mobile",
+    "pageFile": "app/services/[slug]/page.tsx",
+    "id": "service-booking/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/service-booking/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 9298
+  },
+  {
+    "page": "service-reactivation",
+    "pageTitle": "Service: reactivation",
+    "route": "/services/reactivation",
+    "viewport": "mobile",
+    "pageFile": "app/services/[slug]/page.tsx",
+    "id": "service-reactivation/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/service-reactivation/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 8988
+  },
+  {
+    "page": "service-reporting",
+    "pageTitle": "Service: reporting",
+    "route": "/services/reporting",
+    "viewport": "mobile",
+    "pageFile": "app/services/[slug]/page.tsx",
+    "id": "service-reporting/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/services/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/service-reporting/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 8988
+  },
+  {
     "page": "studio",
     "pageTitle": "Studio",
     "route": "/studio",
@@ -3714,7 +4122,7 @@
     ],
     "file": "shots/studio/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 9976
+    "height": 11734
   },
   {
     "page": "studio",
@@ -3748,7 +4156,7 @@
     ],
     "file": "shots/studio/mobile/02-agents.jpg",
     "width": 776,
-    "height": 986
+    "height": 968
   },
   {
     "page": "studio",
@@ -3756,16 +4164,16 @@
     "route": "/studio",
     "viewport": "mobile",
     "pageFile": "app/studio/page.tsx",
-    "id": "studio/mobile/03-agent-apps",
+    "id": "studio/mobile/03-automations",
     "kind": "section",
-    "name": "Agent apps",
-    "heading": "Agent apps",
+    "name": "Automations",
+    "heading": "Automations",
     "source": [
       "app/studio/page.tsx"
     ],
-    "file": "shots/studio/mobile/03-agent-apps.jpg",
+    "file": "shots/studio/mobile/03-automations.jpg",
     "width": 776,
-    "height": 984
+    "height": 968
   },
   {
     "page": "studio",
@@ -3773,16 +4181,16 @@
     "route": "/studio",
     "viewport": "mobile",
     "pageFile": "app/studio/page.tsx",
-    "id": "studio/mobile/04-websites-with-cms",
+    "id": "studio/mobile/04-erp-and-crm",
     "kind": "section",
-    "name": "Websites with CMS",
-    "heading": "Websites with CMS",
+    "name": "ERP and CRM",
+    "heading": "ERP and CRM",
     "source": [
       "app/studio/page.tsx"
     ],
-    "file": "shots/studio/mobile/04-websites-with-cms.jpg",
+    "file": "shots/studio/mobile/04-erp-and-crm.jpg",
     "width": 776,
-    "height": 986
+    "height": 968
   },
   {
     "page": "studio",
@@ -3790,16 +4198,16 @@
     "route": "/studio",
     "viewport": "mobile",
     "pageFile": "app/studio/page.tsx",
-    "id": "studio/mobile/05-mobile-apps",
+    "id": "studio/mobile/05-apps",
     "kind": "section",
-    "name": "Mobile apps",
-    "heading": "Mobile apps",
+    "name": "Apps",
+    "heading": "Apps",
     "source": [
       "app/studio/page.tsx"
     ],
-    "file": "shots/studio/mobile/05-mobile-apps.jpg",
+    "file": "shots/studio/mobile/05-apps.jpg",
     "width": 776,
-    "height": 984
+    "height": 1020
   },
   {
     "page": "studio",
@@ -3816,7 +4224,7 @@
     ],
     "file": "shots/studio/mobile/06-platforms.jpg",
     "width": 776,
-    "height": 984
+    "height": 968
   },
   {
     "page": "studio",
@@ -3833,7 +4241,7 @@
     ],
     "file": "shots/studio/mobile/07-we-list-a-tool-here-only-when-we-can-dem.jpg",
     "width": 776,
-    "height": 208
+    "height": 138
   },
   {
     "page": "studio",
@@ -3841,16 +4249,33 @@
     "route": "/studio",
     "viewport": "mobile",
     "pageFile": "app/studio/page.tsx",
-    "id": "studio/mobile/08-have-a-build-in-mind",
+    "id": "studio/mobile/08-friendly-on-the-surface-serious-undernea",
+    "kind": "section",
+    "name": "Friendly on the surface. Serious underneath.",
+    "heading": "Friendly on the surface. Serious underneath.",
+    "source": [
+      "app/studio/page.tsx"
+    ],
+    "file": "shots/studio/mobile/08-friendly-on-the-surface-serious-undernea.jpg",
+    "width": 780,
+    "height": 1866
+  },
+  {
+    "page": "studio",
+    "pageTitle": "Studio",
+    "route": "/studio",
+    "viewport": "mobile",
+    "pageFile": "app/studio/page.tsx",
+    "id": "studio/mobile/09-have-a-build-in-mind",
     "kind": "section",
     "name": "Have a build in mind?",
     "heading": "Have a build in mind?",
     "source": [
       "app/studio/page.tsx"
     ],
-    "file": "shots/studio/mobile/08-have-a-build-in-mind.jpg",
+    "file": "shots/studio/mobile/09-have-a-build-in-mind.jpg",
     "width": 780,
-    "height": 598
+    "height": 600
   },
   {
     "page": "studio",
@@ -3858,14 +4283,796 @@
     "route": "/studio",
     "viewport": "mobile",
     "pageFile": "app/studio/page.tsx",
-    "id": "studio/mobile/09-footer",
+    "id": "studio/mobile/10-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/studio/mobile/09-footer.jpg",
+    "file": "shots/studio/mobile/10-footer.jpg",
+    "width": 780,
+    "height": 3334
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/studio/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/studio-agents/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 8766
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/mobile/01-agents-that-take-the-calls",
+    "kind": "section",
+    "name": "Agents that take the calls",
+    "heading": "Agents that take the calls",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-agents/mobile/01-agents-that-take-the-calls.jpg",
+    "width": 780,
+    "height": 868
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/mobile/02-what-we-build",
+    "kind": "section",
+    "name": "What we build",
+    "heading": "What we build",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-agents/mobile/02-what-we-build.jpg",
+    "width": 776,
+    "height": 982
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/mobile/03-how-it-runs",
+    "kind": "section",
+    "name": "How it runs",
+    "heading": "How it runs",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-agents/mobile/03-how-it-runs.jpg",
+    "width": 776,
+    "height": 1444
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/mobile/04-timeline-price-and-stack",
+    "kind": "section",
+    "name": "Timeline, price and stack",
+    "heading": "Timeline, price and stack",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-agents/mobile/04-timeline-price-and-stack.jpg",
+    "width": 776,
+    "height": 708
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/mobile/05-questions-plus-3-more",
+    "kind": "section",
+    "name": "Questions plus 3 more",
+    "heading": "Questions plus 3 more",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-agents/mobile/05-questions-plus-3-more.jpg",
+    "width": 776,
+    "height": 578
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/mobile/06-see-the-five-service-pages-for-each-job-",
+    "kind": "section",
+    "name": "See the five service pages for each job in detai",
+    "heading": "See the five service pages for each job in detai",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-agents/mobile/06-see-the-five-service-pages-for-each-job-.jpg",
+    "width": 776,
+    "height": 264
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/mobile/07-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-agents/mobile/07-hear-it-then-book-it.jpg",
+    "width": 780,
+    "height": 600
+  },
+  {
+    "page": "studio-agents",
+    "pageTitle": "Studio: agents",
+    "route": "/studio/agents",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-agents/mobile/08-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/studio-agents/mobile/08-footer.jpg",
+    "width": 780,
+    "height": 3334
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/studio/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/studio-automations/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 8768
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/mobile/01-workflows-that-move-your-data",
+    "kind": "section",
+    "name": "Workflows that move your data",
+    "heading": "Workflows that move your data",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-automations/mobile/01-workflows-that-move-your-data.jpg",
+    "width": 780,
+    "height": 868
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/mobile/02-what-we-build",
+    "kind": "section",
+    "name": "What we build",
+    "heading": "What we build",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-automations/mobile/02-what-we-build.jpg",
+    "width": 776,
+    "height": 934
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/mobile/03-how-it-runs",
+    "kind": "section",
+    "name": "How it runs",
+    "heading": "How it runs",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-automations/mobile/03-how-it-runs.jpg",
+    "width": 776,
+    "height": 1444
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/mobile/04-timeline-price-and-stack",
+    "kind": "section",
+    "name": "Timeline, price and stack",
+    "heading": "Timeline, price and stack",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-automations/mobile/04-timeline-price-and-stack.jpg",
+    "width": 776,
+    "height": 708
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/mobile/05-questions-plus-3-more",
+    "kind": "section",
+    "name": "Questions plus 3 more",
+    "heading": "Questions plus 3 more",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-automations/mobile/05-questions-plus-3-more.jpg",
+    "width": 776,
+    "height": 578
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/mobile/06-pairs-with-agents-an-agent-takes-the-cal",
+    "kind": "section",
+    "name": "Pairs with Agents: an agent takes the call, an a",
+    "heading": "Pairs with Agents: an agent takes the call, an a",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-automations/mobile/06-pairs-with-agents-an-agent-takes-the-cal.jpg",
+    "width": 776,
+    "height": 314
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/mobile/07-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-automations/mobile/07-hear-it-then-book-it.jpg",
+    "width": 780,
+    "height": 600
+  },
+  {
+    "page": "studio-automations",
+    "pageTitle": "Studio: automations",
+    "route": "/studio/automations",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-automations/mobile/08-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/studio-automations/mobile/08-footer.jpg",
+    "width": 780,
+    "height": 3336
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/studio/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/studio-erp-crm/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 9074
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/mobile/01-a-system-built-around-you",
+    "kind": "section",
+    "name": "A system built around you",
+    "heading": "A system built around you",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-erp-crm/mobile/01-a-system-built-around-you.jpg",
+    "width": 780,
+    "height": 868
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/mobile/02-what-we-build",
+    "kind": "section",
+    "name": "What we build",
+    "heading": "What we build",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-erp-crm/mobile/02-what-we-build.jpg",
+    "width": 776,
+    "height": 1118
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/mobile/03-the-modules",
+    "kind": "section",
+    "name": "The modules",
+    "heading": "The modules",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-erp-crm/mobile/03-the-modules.jpg",
+    "width": 776,
+    "height": 1566
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/mobile/04-timeline-price-and-stack",
+    "kind": "section",
+    "name": "Timeline, price and stack",
+    "heading": "Timeline, price and stack",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-erp-crm/mobile/04-timeline-price-and-stack.jpg",
+    "width": 776,
+    "height": 708
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/mobile/05-questions-plus-3-more",
+    "kind": "section",
+    "name": "Questions plus 3 more",
+    "heading": "Questions plus 3 more",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-erp-crm/mobile/05-questions-plus-3-more.jpg",
+    "width": 776,
+    "height": 576
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/mobile/06-example-screens-are-added-here-labelled-",
+    "kind": "section",
+    "name": "Example screens are added here, labelled Example",
+    "heading": "Example screens are added here, labelled Example",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-erp-crm/mobile/06-example-screens-are-added-here-labelled-.jpg",
+    "width": 776,
+    "height": 316
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/mobile/07-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-erp-crm/mobile/07-hear-it-then-book-it.jpg",
+    "width": 780,
+    "height": 600
+  },
+  {
+    "page": "studio-erp-crm",
+    "pageTitle": "Studio: ERP and CRM",
+    "route": "/studio/erp-crm",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-erp-crm/mobile/08-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/studio-erp-crm/mobile/08-footer.jpg",
+    "width": 780,
+    "height": 3336
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/studio/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/studio-apps/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 8472
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/mobile/01-apps-with-agent-features",
+    "kind": "section",
+    "name": "Apps with agent features",
+    "heading": "Apps with agent features",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-apps/mobile/01-apps-with-agent-features.jpg",
+    "width": 780,
+    "height": 868
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/mobile/02-what-we-build",
+    "kind": "section",
+    "name": "What we build",
+    "heading": "What we build",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-apps/mobile/02-what-we-build.jpg",
+    "width": 776,
+    "height": 866
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/mobile/03-what-it-is-built-with",
+    "kind": "section",
+    "name": "What it is built with",
+    "heading": "What it is built with",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-apps/mobile/03-what-it-is-built-with.jpg",
+    "width": 776,
+    "height": 608
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/mobile/04-marketing-sites-when-you-need-a-face",
+    "kind": "section",
+    "name": "Marketing sites, when you need a face",
+    "heading": "Marketing sites, when you need a face",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-apps/mobile/04-marketing-sites-when-you-need-a-face.jpg",
+    "width": 776,
+    "height": 610
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/mobile/05-timeline-price-and-stack",
+    "kind": "section",
+    "name": "Timeline, price and stack",
+    "heading": "Timeline, price and stack",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-apps/mobile/05-timeline-price-and-stack.jpg",
+    "width": 776,
+    "height": 706
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/mobile/06-questions-plus-3-more",
+    "kind": "section",
+    "name": "Questions plus 3 more",
+    "heading": "Questions plus 3 more",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-apps/mobile/06-questions-plus-3-more.jpg",
+    "width": 776,
+    "height": 578
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/mobile/07-need-the-agent-first-and-the-app-later-s",
+    "kind": "section",
+    "name": "Need the agent first and the app later? Start wi",
+    "heading": "Need the agent first and the app later? Start wi",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-apps/mobile/07-need-the-agent-first-and-the-app-later-s.jpg",
+    "width": 776,
+    "height": 316
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/mobile/08-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-apps/mobile/08-hear-it-then-book-it.jpg",
+    "width": 780,
+    "height": 600
+  },
+  {
+    "page": "studio-apps",
+    "pageTitle": "Studio: apps",
+    "route": "/studio/apps",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-apps/mobile/09-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/studio-apps/mobile/09-footer.jpg",
+    "width": 780,
+    "height": 3334
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/studio/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/studio-platforms/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 8328
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/mobile/01-built-to-keep-running-at-volume",
+    "kind": "section",
+    "name": "Built to keep running at volume",
+    "heading": "Built to keep running at volume",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-platforms/mobile/01-built-to-keep-running-at-volume.jpg",
+    "width": 780,
+    "height": 868
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/mobile/02-what-we-build",
+    "kind": "section",
+    "name": "What we build",
+    "heading": "What we build",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-platforms/mobile/02-what-we-build.jpg",
+    "width": 776,
+    "height": 770
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/mobile/03-what-sits-under-it",
+    "kind": "section",
+    "name": "What sits under it",
+    "heading": "What sits under it",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-platforms/mobile/03-what-sits-under-it.jpg",
+    "width": 776,
+    "height": 1220
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/mobile/04-timeline-price-and-stack",
+    "kind": "section",
+    "name": "Timeline, price and stack",
+    "heading": "Timeline, price and stack",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-platforms/mobile/04-timeline-price-and-stack.jpg",
+    "width": 776,
+    "height": 708
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/mobile/05-questions-plus-3-more",
+    "kind": "section",
+    "name": "Questions plus 3 more",
+    "heading": "Questions plus 3 more",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-platforms/mobile/05-questions-plus-3-more.jpg",
+    "width": 776,
+    "height": 576
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/mobile/06-friendly-on-the-surface-serious-undernea",
+    "kind": "section",
+    "name": "Friendly on the surface, serious underneath. Nex",
+    "heading": "Friendly on the surface, serious underneath. Nex",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-platforms/mobile/06-friendly-on-the-surface-serious-undernea.jpg",
+    "width": 776,
+    "height": 264
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/mobile/07-hear-it-then-book-it",
+    "kind": "section",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
+    "source": [
+      "app/studio/[slug]/page.tsx"
+    ],
+    "file": "shots/studio-platforms/mobile/07-hear-it-then-book-it.jpg",
+    "width": 780,
+    "height": 600
+  },
+  {
+    "page": "studio-platforms",
+    "pageTitle": "Studio: platforms",
+    "route": "/studio/platforms",
+    "viewport": "mobile",
+    "pageFile": "app/studio/[slug]/page.tsx",
+    "id": "studio-platforms/mobile/08-footer",
+    "kind": "section",
+    "name": "footer",
+    "heading": "Footer",
+    "source": [
+      "components/Footer.tsx"
+    ],
+    "file": "shots/studio-platforms/mobile/08-footer.jpg",
     "width": 780,
     "height": 3336
   },
@@ -4023,8 +5230,93 @@
     "height": 3334
   },
   {
+    "page": "industry-med-spas",
+    "pageTitle": "Industry: med spas",
+    "route": "/industries/med-spas",
+    "viewport": "mobile",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-med-spas/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-med-spas/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 9068
+  },
+  {
+    "page": "industry-dental",
+    "pageTitle": "Industry: dental",
+    "route": "/industries/dental",
+    "viewport": "mobile",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-dental/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-dental/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 8962
+  },
+  {
+    "page": "industry-real-estate",
+    "pageTitle": "Industry: real estate",
+    "route": "/industries/real-estate",
+    "viewport": "mobile",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-real-estate/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-real-estate/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 8962
+  },
+  {
+    "page": "industry-home-services",
+    "pageTitle": "Industry: home services",
+    "route": "/industries/home-services",
+    "viewport": "mobile",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-home-services/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-home-services/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 9006
+  },
+  {
+    "page": "industry-startups",
+    "pageTitle": "Industry: startups",
+    "route": "/industries/startups",
+    "viewport": "mobile",
+    "pageFile": "app/industries/[slug]/page.tsx",
+    "id": "industry-startups/mobile/full-page",
+    "kind": "full",
+    "name": "Full page",
+    "source": [
+      "app/industries/[slug]/page.tsx",
+      "app/layout.tsx"
+    ],
+    "file": "shots/industry-startups/mobile/00-full-page.jpg",
+    "width": 780,
+    "height": 9016
+  },
+  {
     "page": "crew",
-    "pageTitle": "The crew",
+    "pageTitle": "The Crew",
     "route": "/crew",
     "viewport": "mobile",
     "pageFile": "app/crew/page.tsx",
@@ -4037,92 +5329,109 @@
     ],
     "file": "shots/crew/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 11424
+    "height": 11718
   },
   {
     "page": "crew",
-    "pageTitle": "The crew",
+    "pageTitle": "The Crew",
     "route": "/crew",
     "viewport": "mobile",
     "pageFile": "app/crew/page.tsx",
-    "id": "crew/mobile/01-seven-bricks-one-job-each",
+    "id": "crew/mobile/01-seven-agents-one-job-each",
     "kind": "section",
-    "name": "Seven bricks. One job each.",
-    "heading": "Seven bricks. One job each.",
+    "name": "Seven agents. One job each.",
+    "heading": "Seven agents. One job each.",
     "source": [
       "app/crew/page.tsx"
     ],
-    "file": "shots/crew/mobile/01-seven-bricks-one-job-each.jpg",
+    "file": "shots/crew/mobile/01-seven-agents-one-job-each.jpg",
     "width": 780,
-    "height": 868
+    "height": 922
   },
   {
     "page": "crew",
-    "pageTitle": "The crew",
+    "pageTitle": "The Crew",
     "route": "/crew",
     "viewport": "mobile",
     "pageFile": "app/crew/page.tsx",
-    "id": "crew/mobile/02-aria-plus-6-more",
+    "id": "crew/mobile/02-the-conclave-c-made-of-studs",
+    "kind": "section",
+    "name": "The Conclave C, made of studs",
+    "heading": "The Conclave C, made of studs",
+    "source": [
+      "app/crew/page.tsx"
+    ],
+    "file": "shots/crew/mobile/02-the-conclave-c-made-of-studs.jpg",
+    "width": 776,
+    "height": 520
+  },
+  {
+    "page": "crew",
+    "pageTitle": "The Crew",
+    "route": "/crew",
+    "viewport": "mobile",
+    "pageFile": "app/crew/page.tsx",
+    "id": "crew/mobile/03-aria-plus-6-more",
     "kind": "section",
     "name": "Aria plus 6 more",
     "heading": "Aria plus 6 more",
     "source": [
       "app/crew/page.tsx"
     ],
-    "file": "shots/crew/mobile/02-aria-plus-6-more.jpg",
+    "file": "shots/crew/mobile/03-aria-plus-6-more.jpg",
     "width": 776,
-    "height": 6408
+    "height": 6170
   },
   {
     "page": "crew",
-    "pageTitle": "The crew",
+    "pageTitle": "The Crew",
     "route": "/crew",
     "viewport": "mobile",
     "pageFile": "app/crew/page.tsx",
-    "id": "crew/mobile/03-built-from-one-kit-so-they-read-as-a-fam",
+    "id": "crew/mobile/04-voice-lines-are-sample-copy-for-the-agen",
     "kind": "section",
-    "name": "Built from one kit so they read as a family at a",
-    "heading": "Built from one kit so they read as a family at a",
+    "name": "Voice lines are sample copy for the agents, not ",
+    "heading": "Voice lines are sample copy for the agents, not ",
     "source": [
       "app/crew/page.tsx"
     ],
-    "file": "shots/crew/mobile/03-built-from-one-kit-so-they-read-as-a-fam.jpg",
+    "file": "shots/crew/mobile/04-voice-lines-are-sample-copy-for-the-agen.jpg",
     "width": 776,
-    "height": 220
+    "height": 180
   },
   {
     "page": "crew",
-    "pageTitle": "The crew",
+    "pageTitle": "The Crew",
     "route": "/crew",
     "viewport": "mobile",
     "pageFile": "app/crew/page.tsx",
-    "id": "crew/mobile/04-want-a-crew-of-your-own",
+    "id": "crew/mobile/05-want-a-crew-of-your-own",
     "kind": "section",
     "name": "Want a crew of your own?",
     "heading": "Want a crew of your own?",
     "source": [
       "app/crew/page.tsx"
     ],
-    "file": "shots/crew/mobile/04-want-a-crew-of-your-own.jpg",
+    "file": "shots/crew/mobile/05-want-a-crew-of-your-own.jpg",
     "width": 780,
     "height": 600
   },
   {
     "page": "crew",
-    "pageTitle": "The crew",
+    "pageTitle": "The Crew",
     "route": "/crew",
     "viewport": "mobile",
     "pageFile": "app/crew/page.tsx",
-    "id": "crew/mobile/05-footer",
+    "id": "crew/mobile/06-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/crew/mobile/05-footer.jpg",
+    "file": "shots/crew/mobile/06-footer.jpg",
     "width": 780,
-    "height": 3336
+    "height": 3334
   },
   {
     "page": "work",
@@ -4139,7 +5448,7 @@
     ],
     "file": "shots/work/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 8582
+    "height": 5768
   },
   {
     "page": "work",
@@ -4164,16 +5473,16 @@
     "route": "/work",
     "viewport": "mobile",
     "pageFile": "app/work/page.tsx",
-    "id": "work/mobile/02-filter-by-type",
+    "id": "work/mobile/02-what-you-will-find-here-plus-1-more",
     "kind": "section",
-    "name": "Filter by type",
-    "heading": "Filter by type",
+    "name": "What you will find here plus 1 more",
+    "heading": "What you will find here plus 1 more",
     "source": [
       "app/work/page.tsx"
     ],
-    "file": "shots/work/mobile/02-filter-by-type.jpg",
-    "width": 712,
-    "height": 194
+    "file": "shots/work/mobile/02-what-you-will-find-here-plus-1-more.jpg",
+    "width": 780,
+    "height": 1026
   },
   {
     "page": "work",
@@ -4181,48 +5490,14 @@
     "route": "/work",
     "viewport": "mobile",
     "pageFile": "app/work/page.tsx",
-    "id": "work/mobile/03-bazar-flow-plus-3-more",
-    "kind": "section",
-    "name": "Bazar Flow plus 3 more",
-    "heading": "Bazar Flow plus 3 more",
-    "source": [
-      "app/work/page.tsx"
-    ],
-    "file": "shots/work/mobile/03-bazar-flow-plus-3-more.jpg",
-    "width": 712,
-    "height": 3066
-  },
-  {
-    "page": "work",
-    "pageTitle": "Work",
-    "route": "/work",
-    "viewport": "mobile",
-    "pageFile": "app/work/page.tsx",
-    "id": "work/mobile/04-testimonial-client-quotes-appear-here-wi",
-    "kind": "section",
-    "name": "TESTIMONIAL Client quotes appear here with their",
-    "heading": "TESTIMONIAL Client quotes appear here with their",
-    "source": [
-      "app/work/page.tsx"
-    ],
-    "file": "shots/work/mobile/04-testimonial-client-quotes-appear-here-wi.jpg",
-    "width": 712,
-    "height": 310
-  },
-  {
-    "page": "work",
-    "pageTitle": "Work",
-    "route": "/work",
-    "viewport": "mobile",
-    "pageFile": "app/work/page.tsx",
-    "id": "work/mobile/05-hear-it-then-book-it",
+    "id": "work/mobile/03-hear-it-then-book-it",
     "kind": "section",
     "name": "Hear it, then book it.",
     "heading": "Hear it, then book it.",
     "source": [
       "app/work/page.tsx"
     ],
-    "file": "shots/work/mobile/05-hear-it-then-book-it.jpg",
+    "file": "shots/work/mobile/03-hear-it-then-book-it.jpg",
     "width": 780,
     "height": 600
   },
@@ -4232,203 +5507,16 @@
     "route": "/work",
     "viewport": "mobile",
     "pageFile": "app/work/page.tsx",
-    "id": "work/mobile/06-footer",
+    "id": "work/mobile/04-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/work/mobile/06-footer.jpg",
+    "file": "shots/work/mobile/04-footer.jpg",
     "width": 780,
-    "height": 3336
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "mobile",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/work/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/work-detail/mobile/00-full-page.jpg",
-    "width": 780,
-    "height": 7708
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "mobile",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/01-bazar-flow",
-    "kind": "section",
-    "name": "Bazar Flow",
-    "heading": "Bazar Flow",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/mobile/01-bazar-flow.jpg",
-    "width": 780,
-    "height": 748
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "mobile",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/02-bazar-flow-preview",
-    "kind": "section",
-    "name": "Bazar Flow preview",
-    "heading": "Bazar Flow preview",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/mobile/02-bazar-flow-preview.jpg",
-    "width": 712,
-    "height": 402
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "mobile",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/03-result",
-    "kind": "section",
-    "name": "Result",
-    "heading": "Result",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/mobile/03-result.jpg",
-    "width": 712,
-    "height": 460
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "mobile",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/04-the-problem",
-    "kind": "section",
-    "name": "The problem",
-    "heading": "The problem",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/mobile/04-the-problem.jpg",
-    "width": 712,
-    "height": 408
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "mobile",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/05-the-solution",
-    "kind": "section",
-    "name": "The solution",
-    "heading": "The solution",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/mobile/05-the-solution.jpg",
-    "width": 712,
-    "height": 408
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "mobile",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/06-architecture",
-    "kind": "section",
-    "name": "Architecture",
-    "heading": "Architecture",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/mobile/06-architecture.jpg",
-    "width": 712,
-    "height": 484
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "mobile",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/07-what-we-would-do-differently",
-    "kind": "section",
-    "name": "What we would do differently",
-    "heading": "What we would do differently",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/mobile/07-what-we-would-do-differently.jpg",
-    "width": 712,
-    "height": 470
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "mobile",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/08-next-project-codenexus-ai",
-    "kind": "section",
-    "name": "NEXT PROJECT CODENEXUS AI",
-    "heading": "NEXT PROJECT CODENEXUS AI",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/mobile/08-next-project-codenexus-ai.jpg",
-    "width": 712,
-    "height": 328
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "mobile",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/09-hear-it-then-book-it",
-    "kind": "section",
-    "name": "Hear it, then book it.",
-    "heading": "Hear it, then book it.",
-    "source": [
-      "app/work/[slug]/page.tsx"
-    ],
-    "file": "shots/work-detail/mobile/09-hear-it-then-book-it.jpg",
-    "width": 780,
-    "height": 600
-  },
-  {
-    "page": "work-detail",
-    "pageTitle": "Project detail",
-    "route": "/work/bazar-flow",
-    "viewport": "mobile",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-detail/mobile/10-footer",
-    "kind": "section",
-    "name": "footer",
-    "heading": "Footer",
-    "source": [
-      "components/Footer.tsx"
-    ],
-    "file": "shots/work-detail/mobile/10-footer.jpg",
-    "width": 780,
-    "height": 3336
+    "height": 3334
   },
   {
     "page": "demos",
@@ -4445,7 +5533,7 @@
     ],
     "file": "shots/demos/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 12890
+    "height": 9786
   },
   {
     "page": "demos",
@@ -4504,67 +5592,16 @@
     "route": "/demos",
     "viewport": "mobile",
     "pageFile": "app/demos/page.tsx",
-    "id": "demos/mobile/04-the-60-second-game-plus-1-more",
+    "id": "demos/mobile/04-hear-it-then-book-it",
     "kind": "section",
-    "name": "The 60-second game plus 1 more",
-    "heading": "The 60-second game plus 1 more",
+    "name": "Hear it, then book it.",
+    "heading": "Hear it, then book it.",
     "source": [
       "app/demos/page.tsx"
     ],
-    "file": "shots/demos/mobile/04-the-60-second-game-plus-1-more.jpg",
-    "width": 776,
-    "height": 1384
-  },
-  {
-    "page": "demos",
-    "pageTitle": "Demos",
-    "route": "/demos",
-    "viewport": "mobile",
-    "pageFile": "app/demos/page.tsx",
-    "id": "demos/mobile/05-build-your-own-agent-in-four-questions",
-    "kind": "section",
-    "name": "Build your own agent in four questions",
-    "heading": "Build your own agent in four questions",
-    "source": [
-      "app/demos/page.tsx"
-    ],
-    "file": "shots/demos/mobile/05-build-your-own-agent-in-four-questions.jpg",
-    "width": 776,
-    "height": 1192
-  },
-  {
-    "page": "demos",
-    "pageTitle": "Demos",
-    "route": "/demos",
-    "viewport": "mobile",
-    "pageFile": "app/demos/page.tsx",
-    "id": "demos/mobile/06-call-our-demo-line",
-    "kind": "section",
-    "name": "Call our demo line",
-    "heading": "Call our demo line",
-    "source": [
-      "app/demos/page.tsx"
-    ],
-    "file": "shots/demos/mobile/06-call-our-demo-line.jpg",
-    "width": 776,
-    "height": 584
-  },
-  {
-    "page": "demos",
-    "pageTitle": "Demos",
-    "route": "/demos",
-    "viewport": "mobile",
-    "pageFile": "app/demos/page.tsx",
-    "id": "demos/mobile/07-prefer-to-talk-to-a-person",
-    "kind": "section",
-    "name": "Prefer to talk to a person?",
-    "heading": "Prefer to talk to a person?",
-    "source": [
-      "app/demos/page.tsx"
-    ],
-    "file": "shots/demos/mobile/07-prefer-to-talk-to-a-person.jpg",
+    "file": "shots/demos/mobile/04-hear-it-then-book-it.jpg",
     "width": 780,
-    "height": 548
+    "height": 600
   },
   {
     "page": "demos",
@@ -4572,16 +5609,16 @@
     "route": "/demos",
     "viewport": "mobile",
     "pageFile": "app/demos/page.tsx",
-    "id": "demos/mobile/08-footer",
+    "id": "demos/mobile/05-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/demos/mobile/08-footer.jpg",
+    "file": "shots/demos/mobile/05-footer.jpg",
     "width": 780,
-    "height": 3336
+    "height": 3334
   },
   {
     "page": "about",
@@ -4598,7 +5635,7 @@
     ],
     "file": "shots/about/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 8590
+    "height": 8028
   },
   {
     "page": "about",
@@ -4615,7 +5652,7 @@
     ],
     "file": "shots/about/mobile/01-agents-convened.jpg",
     "width": 780,
-    "height": 814
+    "height": 922
   },
   {
     "page": "about",
@@ -4640,16 +5677,16 @@
     "route": "/about",
     "viewport": "mobile",
     "pageFile": "app/about/page.tsx",
-    "id": "about/mobile/03-the-brick-crew",
+    "id": "about/mobile/03-the-crew",
     "kind": "section",
-    "name": "The Brick Crew",
-    "heading": "The Brick Crew",
+    "name": "The crew",
+    "heading": "The crew",
     "source": [
       "app/about/page.tsx"
     ],
-    "file": "shots/about/mobile/03-the-brick-crew.jpg",
+    "file": "shots/about/mobile/03-the-crew.jpg",
     "width": 776,
-    "height": 1820
+    "height": 1692
   },
   {
     "page": "about",
@@ -4657,33 +5694,16 @@
     "route": "/about",
     "viewport": "mobile",
     "pageFile": "app/about/page.tsx",
-    "id": "about/mobile/04-the-people",
-    "kind": "section",
-    "name": "The people",
-    "heading": "The people",
-    "source": [
-      "app/about/page.tsx"
-    ],
-    "file": "shots/about/mobile/04-the-people.jpg",
-    "width": 776,
-    "height": 494
-  },
-  {
-    "page": "about",
-    "pageTitle": "About",
-    "route": "/about",
-    "viewport": "mobile",
-    "pageFile": "app/about/page.tsx",
-    "id": "about/mobile/05-where-we-are",
+    "id": "about/mobile/04-where-we-are",
     "kind": "section",
     "name": "Where we are",
     "heading": "Where we are",
     "source": [
       "app/about/page.tsx"
     ],
-    "file": "shots/about/mobile/05-where-we-are.jpg",
+    "file": "shots/about/mobile/04-where-we-are.jpg",
     "width": 776,
-    "height": 424
+    "height": 374
   },
   {
     "page": "about",
@@ -4691,14 +5711,14 @@
     "route": "/about",
     "viewport": "mobile",
     "pageFile": "app/about/page.tsx",
-    "id": "about/mobile/06-conclave-ai-is-an-agent-studio-not-affil",
+    "id": "about/mobile/05-conclave-ai-is-an-agent-studio-not-affil",
     "kind": "section",
     "name": "Conclave AI is an agent studio. Not affiliated w",
     "heading": "Conclave AI is an agent studio. Not affiliated w",
     "source": [
       "app/about/page.tsx"
     ],
-    "file": "shots/about/mobile/06-conclave-ai-is-an-agent-studio-not-affil.jpg",
+    "file": "shots/about/mobile/05-conclave-ai-is-an-agent-studio-not-affil.jpg",
     "width": 776,
     "height": 180
   },
@@ -4708,14 +5728,14 @@
     "route": "/about",
     "viewport": "mobile",
     "pageFile": "app/about/page.tsx",
-    "id": "about/mobile/07-hear-it-then-book-it",
+    "id": "about/mobile/06-hear-it-then-book-it",
     "kind": "section",
     "name": "Hear it, then book it.",
     "heading": "Hear it, then book it.",
     "source": [
       "app/about/page.tsx"
     ],
-    "file": "shots/about/mobile/07-hear-it-then-book-it.jpg",
+    "file": "shots/about/mobile/06-hear-it-then-book-it.jpg",
     "width": 780,
     "height": 600
   },
@@ -4725,16 +5745,16 @@
     "route": "/about",
     "viewport": "mobile",
     "pageFile": "app/about/page.tsx",
-    "id": "about/mobile/08-footer",
+    "id": "about/mobile/07-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/about/mobile/08-footer.jpg",
+    "file": "shots/about/mobile/07-footer.jpg",
     "width": 780,
-    "height": 3336
+    "height": 3334
   },
   {
     "page": "pricing",
@@ -4751,7 +5771,7 @@
     ],
     "file": "shots/pricing/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 9724
+    "height": 10884
   },
   {
     "page": "pricing",
@@ -4827,14 +5847,31 @@
     "route": "/pricing",
     "viewport": "mobile",
     "pageFile": "app/pricing/page.tsx",
-    "id": "pricing/mobile/05-what-is-included",
+    "id": "pricing/mobile/05-agent-receptionist-or-answering-service",
+    "kind": "section",
+    "name": "Agent, receptionist or answering service?",
+    "heading": "Agent, receptionist or answering service?",
+    "source": [
+      "app/pricing/page.tsx"
+    ],
+    "file": "shots/pricing/mobile/05-agent-receptionist-or-answering-service.jpg",
+    "width": 780,
+    "height": 1162
+  },
+  {
+    "page": "pricing",
+    "pageTitle": "Pricing",
+    "route": "/pricing",
+    "viewport": "mobile",
+    "pageFile": "app/pricing/page.tsx",
+    "id": "pricing/mobile/06-what-is-included",
     "kind": "section",
     "name": "What is included",
     "heading": "What is included",
     "source": [
       "app/pricing/page.tsx"
     ],
-    "file": "shots/pricing/mobile/05-what-is-included.jpg",
+    "file": "shots/pricing/mobile/06-what-is-included.jpg",
     "width": 780,
     "height": 1008
   },
@@ -4844,14 +5881,14 @@
     "route": "/pricing",
     "viewport": "mobile",
     "pageFile": "app/pricing/page.tsx",
-    "id": "pricing/mobile/06-questions-about-pricing-plus-10-more",
+    "id": "pricing/mobile/07-questions-about-pricing-plus-10-more",
     "kind": "section",
     "name": "Questions about pricing plus 10 more",
     "heading": "Questions about pricing plus 10 more",
     "source": [
       "app/pricing/page.tsx"
     ],
-    "file": "shots/pricing/mobile/06-questions-about-pricing-plus-10-more.jpg",
+    "file": "shots/pricing/mobile/07-questions-about-pricing-plus-10-more.jpg",
     "width": 780,
     "height": 1634
   },
@@ -4861,14 +5898,14 @@
     "route": "/pricing",
     "viewport": "mobile",
     "pageFile": "app/pricing/page.tsx",
-    "id": "pricing/mobile/07-hear-it-then-book-it",
+    "id": "pricing/mobile/08-hear-it-then-book-it",
     "kind": "section",
     "name": "Hear it, then book it.",
     "heading": "Hear it, then book it.",
     "source": [
       "app/pricing/page.tsx"
     ],
-    "file": "shots/pricing/mobile/07-hear-it-then-book-it.jpg",
+    "file": "shots/pricing/mobile/08-hear-it-then-book-it.jpg",
     "width": 780,
     "height": 600
   },
@@ -4878,16 +5915,16 @@
     "route": "/pricing",
     "viewport": "mobile",
     "pageFile": "app/pricing/page.tsx",
-    "id": "pricing/mobile/08-footer",
+    "id": "pricing/mobile/09-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/pricing/mobile/08-footer.jpg",
+    "file": "shots/pricing/mobile/09-footer.jpg",
     "width": 780,
-    "height": 3336
+    "height": 3334
   },
   {
     "page": "contact",
@@ -4904,7 +5941,7 @@
     ],
     "file": "shots/contact/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 7316
+    "height": 6992
   },
   {
     "page": "contact",
@@ -4921,7 +5958,7 @@
     ],
     "file": "shots/contact/mobile/01-let-s-talk.jpg",
     "width": 712,
-    "height": 1272
+    "height": 950
   },
   {
     "page": "contact",
@@ -4989,7 +6026,7 @@
     ],
     "file": "shots/contact/mobile/05-message.jpg",
     "width": 612,
-    "height": 288
+    "height": 286
   },
   {
     "page": "contact",
@@ -5040,7 +6077,7 @@
     ],
     "file": "shots/join/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 7230
+    "height": 6804
   },
   {
     "page": "join",
@@ -5048,14 +6085,14 @@
     "route": "/join",
     "viewport": "mobile",
     "pageFile": "app/join/page.tsx",
-    "id": "join/mobile/01-the-conclave-guild",
+    "id": "join/mobile/01-the-conclave-ai-guild",
     "kind": "section",
-    "name": "The Conclave Guild.",
-    "heading": "The Conclave Guild.",
+    "name": "The Conclave AI Guild.",
+    "heading": "The Conclave AI Guild.",
     "source": [
       "app/join/page.tsx"
     ],
-    "file": "shots/join/mobile/01-the-conclave-guild.jpg",
+    "file": "shots/join/mobile/01-the-conclave-ai-guild.jpg",
     "width": 780,
     "height": 814
   },
@@ -5133,31 +6170,14 @@
     "route": "/join",
     "viewport": "mobile",
     "pageFile": "app/join/page.tsx",
-    "id": "join/mobile/06-the-convene-leaderboard",
-    "kind": "section",
-    "name": "The Convene leaderboard",
-    "heading": "The Convene leaderboard",
-    "source": [
-      "app/join/page.tsx"
-    ],
-    "file": "shots/join/mobile/06-the-convene-leaderboard.jpg",
-    "width": 776,
-    "height": 428
-  },
-  {
-    "page": "join",
-    "pageTitle": "Join",
-    "route": "/join",
-    "viewport": "mobile",
-    "pageFile": "app/join/page.tsx",
-    "id": "join/mobile/07-prefer-to-hire-us",
+    "id": "join/mobile/06-prefer-to-hire-us",
     "kind": "section",
     "name": "Prefer to hire us?",
     "heading": "Prefer to hire us?",
     "source": [
       "app/join/page.tsx"
     ],
-    "file": "shots/join/mobile/07-prefer-to-hire-us.jpg",
+    "file": "shots/join/mobile/06-prefer-to-hire-us.jpg",
     "width": 780,
     "height": 600
   },
@@ -5167,14 +6187,14 @@
     "route": "/join",
     "viewport": "mobile",
     "pageFile": "app/join/page.tsx",
-    "id": "join/mobile/08-footer",
+    "id": "join/mobile/07-footer",
     "kind": "section",
     "name": "footer",
     "heading": "Footer",
     "source": [
       "components/Footer.tsx"
     ],
-    "file": "shots/join/mobile/08-footer.jpg",
+    "file": "shots/join/mobile/07-footer.jpg",
     "width": 780,
     "height": 3336
   },
@@ -5822,7 +6842,7 @@
     ],
     "file": "shots/roadmap/mobile/00-full-page.jpg",
     "width": 780,
-    "height": 7076
+    "height": 7248
   },
   {
     "page": "roadmap",
@@ -5881,16 +6901,16 @@
     "route": "/roadmap",
     "viewport": "mobile",
     "pageFile": "app/roadmap/page.tsx",
-    "id": "roadmap/mobile/04-later-public-build-logs-and-bounties-ope",
+    "id": "roadmap/mobile/04-later-convene-game-and-the-build-your-ow",
     "kind": "section",
-    "name": "LATER Public build logs and bounties Open-source",
-    "heading": "LATER Public build logs and bounties Open-source",
+    "name": "LATER Convene game and the build-your-own-agent ",
+    "heading": "LATER Convene game and the build-your-own-agent ",
     "source": [
       "app/roadmap/page.tsx"
     ],
-    "file": "shots/roadmap/mobile/04-later-public-build-logs-and-bounties-ope.jpg",
+    "file": "shots/roadmap/mobile/04-later-convene-game-and-the-build-your-ow.jpg",
     "width": 776,
-    "height": 668
+    "height": 840
   },
   {
     "page": "roadmap",
@@ -5945,7 +6965,7 @@
   },
   {
     "page": "privacy",
-    "pageTitle": "Privacy",
+    "pageTitle": "Privacy (not indexed)",
     "route": "/privacy",
     "viewport": "mobile",
     "pageFile": "app/privacy/page.tsx",
@@ -5962,7 +6982,7 @@
   },
   {
     "page": "privacy",
-    "pageTitle": "Privacy",
+    "pageTitle": "Privacy (not indexed)",
     "route": "/privacy",
     "viewport": "mobile",
     "pageFile": "app/privacy/page.tsx",
@@ -5979,7 +6999,7 @@
   },
   {
     "page": "privacy",
-    "pageTitle": "Privacy",
+    "pageTitle": "Privacy (not indexed)",
     "route": "/privacy",
     "viewport": "mobile",
     "pageFile": "app/privacy/page.tsx",
@@ -5996,7 +7016,7 @@
   },
   {
     "page": "privacy",
-    "pageTitle": "Privacy",
+    "pageTitle": "Privacy (not indexed)",
     "route": "/privacy",
     "viewport": "mobile",
     "pageFile": "app/privacy/page.tsx",
@@ -6013,7 +7033,7 @@
   },
   {
     "page": "terms",
-    "pageTitle": "Terms",
+    "pageTitle": "Terms (not indexed)",
     "route": "/terms",
     "viewport": "mobile",
     "pageFile": "app/terms/page.tsx",
@@ -6030,7 +7050,7 @@
   },
   {
     "page": "terms",
-    "pageTitle": "Terms",
+    "pageTitle": "Terms (not indexed)",
     "route": "/terms",
     "viewport": "mobile",
     "pageFile": "app/terms/page.tsx",
@@ -6047,7 +7067,7 @@
   },
   {
     "page": "terms",
-    "pageTitle": "Terms",
+    "pageTitle": "Terms (not indexed)",
     "route": "/terms",
     "viewport": "mobile",
     "pageFile": "app/terms/page.tsx",
@@ -6064,7 +7084,7 @@
   },
   {
     "page": "terms",
-    "pageTitle": "Terms",
+    "pageTitle": "Terms (not indexed)",
     "route": "/terms",
     "viewport": "mobile",
     "pageFile": "app/terms/page.tsx",
@@ -6078,210 +7098,6 @@
     "file": "shots/terms/mobile/03-footer.jpg",
     "width": 780,
     "height": 3336
-  },
-  {
-    "page": "service-follow-up",
-    "pageTitle": "Service: follow-up",
-    "route": "/services/follow-up",
-    "viewport": "mobile",
-    "pageFile": "app/services/[slug]/page.tsx",
-    "id": "service-follow-up/mobile/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/services/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/service-follow-up/mobile/00-full-page.jpg",
-    "width": 780,
-    "height": 9100
-  },
-  {
-    "page": "service-booking",
-    "pageTitle": "Service: booking",
-    "route": "/services/booking",
-    "viewport": "mobile",
-    "pageFile": "app/services/[slug]/page.tsx",
-    "id": "service-booking/mobile/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/services/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/service-booking/mobile/00-full-page.jpg",
-    "width": 780,
-    "height": 9298
-  },
-  {
-    "page": "service-reactivation",
-    "pageTitle": "Service: reactivation",
-    "route": "/services/reactivation",
-    "viewport": "mobile",
-    "pageFile": "app/services/[slug]/page.tsx",
-    "id": "service-reactivation/mobile/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/services/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/service-reactivation/mobile/00-full-page.jpg",
-    "width": 780,
-    "height": 8988
-  },
-  {
-    "page": "service-reporting",
-    "pageTitle": "Service: reporting",
-    "route": "/services/reporting",
-    "viewport": "mobile",
-    "pageFile": "app/services/[slug]/page.tsx",
-    "id": "service-reporting/mobile/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/services/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/service-reporting/mobile/00-full-page.jpg",
-    "width": 780,
-    "height": 8988
-  },
-  {
-    "page": "industry-med-spas",
-    "pageTitle": "Industry: med spas",
-    "route": "/industries/med-spas",
-    "viewport": "mobile",
-    "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry-med-spas/mobile/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/industries/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/industry-med-spas/mobile/00-full-page.jpg",
-    "width": 780,
-    "height": 9068
-  },
-  {
-    "page": "industry-dental",
-    "pageTitle": "Industry: dental",
-    "route": "/industries/dental",
-    "viewport": "mobile",
-    "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry-dental/mobile/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/industries/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/industry-dental/mobile/00-full-page.jpg",
-    "width": 780,
-    "height": 8962
-  },
-  {
-    "page": "industry-real-estate",
-    "pageTitle": "Industry: real estate",
-    "route": "/industries/real-estate",
-    "viewport": "mobile",
-    "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry-real-estate/mobile/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/industries/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/industry-real-estate/mobile/00-full-page.jpg",
-    "width": 780,
-    "height": 8962
-  },
-  {
-    "page": "industry-home-services",
-    "pageTitle": "Industry: home services",
-    "route": "/industries/home-services",
-    "viewport": "mobile",
-    "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry-home-services/mobile/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/industries/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/industry-home-services/mobile/00-full-page.jpg",
-    "width": 780,
-    "height": 9006
-  },
-  {
-    "page": "industry-startups",
-    "pageTitle": "Industry: startups",
-    "route": "/industries/startups",
-    "viewport": "mobile",
-    "pageFile": "app/industries/[slug]/page.tsx",
-    "id": "industry-startups/mobile/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/industries/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/industry-startups/mobile/00-full-page.jpg",
-    "width": 780,
-    "height": 9016
-  },
-  {
-    "page": "work-codenexus-ai",
-    "pageTitle": "Project: CodeNexus AI",
-    "route": "/work/codenexus-ai",
-    "viewport": "mobile",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-codenexus-ai/mobile/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/work/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/work-codenexus-ai/mobile/00-full-page.jpg",
-    "width": 780,
-    "height": 7708
-  },
-  {
-    "page": "work-scalenexus-ai",
-    "pageTitle": "Project: ScaleNexus AI",
-    "route": "/work/scalenexus-ai",
-    "viewport": "mobile",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-scalenexus-ai/mobile/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/work/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/work-scalenexus-ai/mobile/00-full-page.jpg",
-    "width": 780,
-    "height": 7760
-  },
-  {
-    "page": "work-task-whisper",
-    "pageTitle": "Project: Task Whisper",
-    "route": "/work/task-whisper",
-    "viewport": "mobile",
-    "pageFile": "app/work/[slug]/page.tsx",
-    "id": "work-task-whisper/mobile/full-page",
-    "kind": "full",
-    "name": "Full page",
-    "source": [
-      "app/work/[slug]/page.tsx",
-      "app/layout.tsx"
-    ],
-    "file": "shots/work-task-whisper/mobile/00-full-page.jpg",
-    "width": 780,
-    "height": 7708
   },
   {
     "page": "not-found",
@@ -6356,14 +7172,48 @@
     "route": "/",
     "viewport": "desktop",
     "pageFile": "components",
-    "id": "states/desktop/hero-webgl",
+    "id": "states/desktop/hero-studs-scatter",
     "kind": "state",
-    "name": "Hero in WebGL (3D crew, shown on wide screens with a mouse)",
+    "name": "Hero: studs scattering into the C (0.9s after load)",
     "source": [
-      "components/home/HeroScene3D.tsx",
-      "components/home/HeroStage.tsx"
+      "components/home/HeroStuds.tsx",
+      "lib/studs/useStudAssemble.ts"
     ],
-    "file": "shots/states/desktop/07-hero-webgl.jpg",
+    "file": "shots/states/desktop/07-hero-studs-scatter.jpg",
+    "width": 1440,
+    "height": 820
+  },
+  {
+    "page": "states",
+    "pageTitle": "Interactive states",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "components",
+    "id": "states/desktop/hero-studs-assembled",
+    "kind": "state",
+    "name": "Hero: the stud C assembled",
+    "source": [
+      "components/home/HeroStuds.tsx",
+      "lib/studs/mark.ts"
+    ],
+    "file": "shots/states/desktop/08-hero-studs-assembled.jpg",
+    "width": 1440,
+    "height": 820
+  },
+  {
+    "page": "states",
+    "pageTitle": "Interactive states",
+    "route": "/",
+    "viewport": "desktop",
+    "pageFile": "components",
+    "id": "states/desktop/hero-studs-crew",
+    "kind": "state",
+    "name": "Hero: the C split into the seven agents (after 240px of scroll)",
+    "source": [
+      "lib/studs/hero.ts",
+      "lib/studs/useStudAssemble.ts"
+    ],
+    "file": "shots/states/desktop/09-hero-studs-crew.jpg",
     "width": 1440,
     "height": 820
   }

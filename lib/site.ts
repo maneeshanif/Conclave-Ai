@@ -7,6 +7,9 @@ export const site = {
   city: "Karachi",
   serving: "US, Gulf and Europe",
   calLink: process.env.NEXT_PUBLIC_CAL_LINK ?? "",
+  /** Shown on Contact only when set. Never show a placeholder. */
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP ?? "",
+  replyTime: process.env.NEXT_PUBLIC_REPLY_TIME ?? "",
   apiUrl: process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8010",
   /** One line used in titles, social bios and JSON-LD so the brand phrase repeats the same way everywhere. */
   description: "Voice agents, AI automation and full-stack software for clinics, local businesses and startups.",

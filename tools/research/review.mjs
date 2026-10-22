@@ -26,32 +26,40 @@ process.on("exit", stop);
 for (let i = 0; i < 60; i++) { try { if ((await fetch(BASE + "/")).ok) break; } catch {} await new Promise((r) => setTimeout(r, 500)); }
 
 const HOME = [
-  ["hero", "components/home/sections.tsx (Hero), components/home/visuals.tsx (HeroScene)"],
+  ["hero", "components/home/sections.tsx (Hero), components/home/HeroStuds.tsx, lib/studs/hero.ts"],
   ["live-agent", "components/home/sections.tsx (LiveAgent), components/home/AriaWindow.tsx"],
   ["proof", "components/home/sections.tsx (Proof), lib/content.ts (trust)"],
-  ["services", "components/home/sections.tsx (Services), components/home/visuals.tsx (service mock-ups)"],
-  ["studio", "components/home/sections2.tsx (StudioSection), lib/content.ts (studio)"],
-  ["built-for", "components/home/sections.tsx (BuiltFor), components/Cast.tsx, lib/content.ts (industries)"],
-  ["work", "components/home/sections.tsx (WorkReel), lib/projects.ts"],
-  ["receipts", "components/home/sections2.tsx (ReceiptsTeaser)"],
-  ["manifesto", "components/home/sections.tsx (Manifesto), components/Cast.tsx (CastRow)"],
+  ["services", "components/home/sections.tsx (Services), components/home/visuals.tsx (mock-ups), components/studs/StudGlyph.tsx"],
+  ["systems", "components/home/sections.tsx (Systems), lib/content.ts (studio)"],
+  ["built-for", "components/home/sections.tsx (BuiltFor), lib/content.ts (industries), lib/studs/patterns.ts"],
   ["process", "components/home/sections.tsx (Process), lib/content.ts (processSteps)"],
-  ["demos", "components/home/sections.tsx (DemosTeaser)"],
-  ["stack-scale", "components/home/sections2.tsx (StackScale)"],
   ["pricing", "components/home/sections.tsx (PricingTeaser)"],
-  ["join-guild", "components/home/sections2.tsx (JoinGuild), lib/content.ts (guild)"],
   ["faq", "components/home/sections.tsx (Faq), components/ui/Accordion.tsx"],
-  ["final-cta", "components/home/sections.tsx (FinalCta)"],
+  ["guild-strip", "components/home/sections.tsx (GuildStrip)"],
+  ["final-cta", "components/home/sections.tsx (FinalCta), components/QuickBook.tsx"],
 ];
 const PAGES = [
   { slug: "home", route: "/", title: "Home", file: "app/page.tsx" },
   { slug: "services", route: "/services", title: "Services", file: "app/services/page.tsx" },
   { slug: "service-detail", route: "/services/voice", title: "Service detail", file: "app/services/[slug]/page.tsx" },
+  { slug: "service-follow-up", route: "/services/follow-up", title: "Service: follow-up", file: "app/services/[slug]/page.tsx", compact: true },
+  { slug: "service-booking", route: "/services/booking", title: "Service: booking", file: "app/services/[slug]/page.tsx", compact: true },
+  { slug: "service-reactivation", route: "/services/reactivation", title: "Service: reactivation", file: "app/services/[slug]/page.tsx", compact: true },
+  { slug: "service-reporting", route: "/services/reporting", title: "Service: reporting", file: "app/services/[slug]/page.tsx", compact: true },
   { slug: "studio", route: "/studio", title: "Studio", file: "app/studio/page.tsx" },
+  { slug: "studio-agents", route: "/studio/agents", title: "Studio: agents", file: "app/studio/[slug]/page.tsx" },
+  { slug: "studio-automations", route: "/studio/automations", title: "Studio: automations", file: "app/studio/[slug]/page.tsx" },
+  { slug: "studio-erp-crm", route: "/studio/erp-crm", title: "Studio: ERP and CRM", file: "app/studio/[slug]/page.tsx" },
+  { slug: "studio-apps", route: "/studio/apps", title: "Studio: apps", file: "app/studio/[slug]/page.tsx" },
+  { slug: "studio-platforms", route: "/studio/platforms", title: "Studio: platforms", file: "app/studio/[slug]/page.tsx" },
   { slug: "industry", route: "/industries/clinics", title: "Industry page", file: "app/industries/[slug]/page.tsx" },
-  { slug: "crew", route: "/crew", title: "The crew", file: "app/crew/page.tsx" },
+  { slug: "industry-med-spas", route: "/industries/med-spas", title: "Industry: med spas", file: "app/industries/[slug]/page.tsx", compact: true },
+  { slug: "industry-dental", route: "/industries/dental", title: "Industry: dental", file: "app/industries/[slug]/page.tsx", compact: true },
+  { slug: "industry-real-estate", route: "/industries/real-estate", title: "Industry: real estate", file: "app/industries/[slug]/page.tsx", compact: true },
+  { slug: "industry-home-services", route: "/industries/home-services", title: "Industry: home services", file: "app/industries/[slug]/page.tsx", compact: true },
+  { slug: "industry-startups", route: "/industries/startups", title: "Industry: startups", file: "app/industries/[slug]/page.tsx", compact: true },
+  { slug: "crew", route: "/crew", title: "The Crew", file: "app/crew/page.tsx" },
   { slug: "work", route: "/work", title: "Work", file: "app/work/page.tsx" },
-  { slug: "work-detail", route: "/work/bazar-flow", title: "Project detail", file: "app/work/[slug]/page.tsx" },
   { slug: "demos", route: "/demos", title: "Demos", file: "app/demos/page.tsx" },
   { slug: "about", route: "/about", title: "About", file: "app/about/page.tsx" },
   { slug: "pricing", route: "/pricing", title: "Pricing", file: "app/pricing/page.tsx" },
@@ -63,20 +71,9 @@ const PAGES = [
   { slug: "notes", route: "/notes", title: "Notes", file: "app/notes/page.tsx" },
   { slug: "note", route: "/notes/missed-call-cost", title: "Note (post)", file: "app/notes/[slug]/page.tsx" },
   { slug: "roadmap", route: "/roadmap", title: "Roadmap", file: "app/roadmap/page.tsx" },
-  { slug: "privacy", route: "/privacy", title: "Privacy", file: "app/privacy/page.tsx" },
-  { slug: "terms", route: "/terms", title: "Terms", file: "app/terms/page.tsx" },
-  { slug: "service-follow-up", route: "/services/follow-up", title: "Service: follow-up", file: "app/services/[slug]/page.tsx", compact: true },
-  { slug: "service-booking", route: "/services/booking", title: "Service: booking", file: "app/services/[slug]/page.tsx", compact: true },
-  { slug: "service-reactivation", route: "/services/reactivation", title: "Service: reactivation", file: "app/services/[slug]/page.tsx", compact: true },
-  { slug: "service-reporting", route: "/services/reporting", title: "Service: reporting", file: "app/services/[slug]/page.tsx", compact: true },
-  { slug: "industry-med-spas", route: "/industries/med-spas", title: "Industry: med spas", file: "app/industries/[slug]/page.tsx", compact: true },
-  { slug: "industry-dental", route: "/industries/dental", title: "Industry: dental", file: "app/industries/[slug]/page.tsx", compact: true },
-  { slug: "industry-real-estate", route: "/industries/real-estate", title: "Industry: real estate", file: "app/industries/[slug]/page.tsx", compact: true },
-  { slug: "industry-home-services", route: "/industries/home-services", title: "Industry: home services", file: "app/industries/[slug]/page.tsx", compact: true },
-  { slug: "industry-startups", route: "/industries/startups", title: "Industry: startups", file: "app/industries/[slug]/page.tsx", compact: true },
-  { slug: "work-codenexus-ai", route: "/work/codenexus-ai", title: "Project: CodeNexus AI", file: "app/work/[slug]/page.tsx", compact: true },
-  { slug: "work-scalenexus-ai", route: "/work/scalenexus-ai", title: "Project: ScaleNexus AI", file: "app/work/[slug]/page.tsx", compact: true },
-  { slug: "work-task-whisper", route: "/work/task-whisper", title: "Project: Task Whisper", file: "app/work/[slug]/page.tsx", compact: true },  { slug: "not-found", route: "/no-such-page", title: "404", file: "app/not-found.tsx" },
+  { slug: "privacy", route: "/privacy", title: "Privacy (not indexed)", file: "app/privacy/page.tsx" },
+  { slug: "terms", route: "/terms", title: "Terms (not indexed)", file: "app/terms/page.tsx" },
+  { slug: "not-found", route: "/no-such-page", title: "404", file: "app/not-found.tsx" },
 ];const VIEWPORTS = [["desktop", 1440, 900], ["mobile", 390, 844]];
 
 const manifest = [];
@@ -205,16 +202,20 @@ for (const [vp, w, h] of VIEWPORTS) {
   }
   await ctx.close();
 }
-// WebGL hero: the stills above use reduced motion (SVG hero), so capture the 3D hero separately with software GL.
+// Hero stud scene: the stills above use reduced motion (the assembled C), so capture the scatter, the C and the scroll split with motion on.
 {
-  const gb = await chromium.launch({ args: ["--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"] });
-  const gp = await (await gb.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
-  await gp.goto(BASE + "/?hero3d=force", { waitUntil: "load" });
-  await gp.mouse.move(900, 300);
-  await gp.waitForTimeout(7000);
+  const hb = await chromium.launch();
+  const hp = await (await hb.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
   const st = { page: "states", pageTitle: "Interactive states", route: "/", viewport: "desktop", pageFile: "components" };
-  await save(gp, null, "states/desktop/07-hero-webgl.jpg", { ...st, id: "states/desktop/hero-webgl", kind: "state", name: "Hero in WebGL (3D crew, shown on wide screens with a mouse)", source: ["components/home/HeroScene3D.tsx", "components/home/HeroStage.tsx"] }, { clip: { x: 0, y: 0, width: 1440, height: 820 } });
-  await gb.close();
+  await hp.goto(BASE + "/", { waitUntil: "commit" });
+  await hp.waitForTimeout(900);
+  await save(hp, null, "states/desktop/07-hero-studs-scatter.jpg", { ...st, id: "states/desktop/hero-studs-scatter", kind: "state", name: "Hero: studs scattering into the C (0.9s after load)", source: ["components/home/HeroStuds.tsx", "lib/studs/useStudAssemble.ts"] }, { clip: { x: 0, y: 0, width: 1440, height: 820 } });
+  await hp.waitForTimeout(3500);
+  await save(hp, null, "states/desktop/08-hero-studs-assembled.jpg", { ...st, id: "states/desktop/hero-studs-assembled", kind: "state", name: "Hero: the stud C assembled", source: ["components/home/HeroStuds.tsx", "lib/studs/mark.ts"] }, { clip: { x: 0, y: 0, width: 1440, height: 820 } });
+  await hp.evaluate(() => scrollTo(0, 240));
+  await hp.waitForTimeout(1800);
+  await save(hp, null, "states/desktop/09-hero-studs-crew.jpg", { ...st, id: "states/desktop/hero-studs-crew", kind: "state", name: "Hero: the C split into the seven agents (after 240px of scroll)", source: ["lib/studs/hero.ts", "lib/studs/useStudAssemble.ts"] }, { clip: { x: 0, y: 0, width: 1440, height: 820 } });
+  await hb.close();
 }await browser.close();
 stop();
 

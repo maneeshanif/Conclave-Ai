@@ -120,3 +120,16 @@ Direction: the crew is built from one toy-brick kit, in the spirit of the lemlis
 4. **Founders (image):** "Two friendly toy-brick characters at a table with laptops, studs on their heads, flat vector, ink outline, lime background, no text."
 5. **Brick badges (image):** "Shield-shaped badge built from toy bricks in lime, violet and ink with a blank plate, flat vector, hard shadow, transparent background, no text." (for Receipts and proof, like lemlist's brick award badges)
 6. **Sticker pack (images, 12):** "Twelve sticker-style reactions of the brick characters (thumbs up, phone ringing, calendar done, sleeping, celebrating, thinking, error, handover), flat vector, white outline border, transparent background."
+
+---
+
+## Revision 4: stud system prompts (Change Spec v3, replaces the Brick Crew prompts)
+
+Same style block as above: flat colour, palette only, no gradients, no faces, no text. Generate, then send the files back.
+
+1. **Stud C mark, hero:** "Flat vector, lime background (#C8F169), a bold letter C made of two rings of round dark studs with a gap on the right and one olive dot in the centre, minimal, no text."
+2. **Stud crew set:** "Flat vector grid of seven rounded square tiles, each with a 7x7 grid of round studs forming a simple pattern: a waveform, concentric ripples, a calendar, a curved arc, rising bars, an arch door, ruled lines. Dark green, ink, violet, chalk and lime palette, no faces, no text."
+3. **Hero scatter-to-C loop (video):** "Seamless 6-second loop: scattered round studs fly in and assemble into a letter C on a lime background, smooth easing, flat vector, no text."
+4. **ERP and CRM visual:** "Flat vector illustration of a business dashboard built from round studs: a table, a chart and a calendar, lime and violet palette, minimal, no text."
+5. **Automations visual:** "Flat vector diagram of stud nodes connected by lines flowing left to right, one lime node lit, dark green background, no text."
+6. **Email header and social post:** "Wide flat vector banner of a row of seven stud patterns on dark green with lime accents, minimal, no text."

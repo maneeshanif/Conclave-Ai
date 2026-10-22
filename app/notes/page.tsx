@@ -15,7 +15,7 @@ export default function NotesPage() {
   const published = new Set(posts.map((p) => p.slug));
   return (
     <>
-      <PageHeader eyebrow="Notes" title="Short posts with a real number or a diagram." lead="Playbooks for owners and honest engineering notes. Each one links to the service it supports." />
+      <PageHeader path="/notes" eyebrow="Notes" title="Short posts with a real number or a diagram." lead="Playbooks for owners and honest engineering notes. Each one links to the service it supports." />
       <div className="frame border-t hair">
         <ul data-stagger className="divide-y divide-[rgb(11_21_18/0.12)]">
           {posts.map((p) => (
