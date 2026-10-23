@@ -32,6 +32,8 @@ export function Head({ eyebrow, children, className }: { eyebrow: string; childr
 export function Hero() {
   const pill = [10, 22, 14, 26, 12];
   return (
+    // ScrollTrigger wraps the pinned hero in a spacer element. Wrapping it in a React-owned div keeps that spacer inside a node React can remove cleanly.
+    <div>
     <section data-hero className="relative flex min-h-[92svh] flex-col justify-end bg-lime pb-24 pt-28 text-ink md:pb-28">
       {/* The stud scene is a full-hero overlay in the hero's own pixels. The headline and actions sit above it. */}
       <div data-hero-scene className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -80,6 +82,7 @@ export function Hero() {
         </div>
       </div>
     </section>
+    </div>
   );
 }
 
