@@ -10,3 +10,5 @@ docs/conclave-design-review.zip
 .env
 
 backend/data/
+.vercel
+.env*.local
