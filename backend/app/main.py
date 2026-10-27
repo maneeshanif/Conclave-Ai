@@ -4,7 +4,7 @@ import re
 import time
 from typing import Annotated, Literal
 
-from fastapi import Depends, FastAPI
+from fastapi import Depends, FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, EmailStr, Field, field_validator
 
@@ -15,6 +15,17 @@ logging.basicConfig(level=logging.INFO)
 log = logging.getLogger("conclave.api")
 
 app = FastAPI(title="Conclave AI API", version="0.2.0")
+
+
+@app.middleware("http")
+async def strip_api_prefix(request: Request, call_next):
+    """On Vercel the backend is served under /api. Accept the prefix whether or not the platform strips it."""
+    path = request.scope["path"]
+    if path == "/api" or path.startswith("/api/"):
+        request.scope["path"] = path[4:] or "/"
+    return await call_next(request)
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=config.ALLOWED_ORIGINS,
