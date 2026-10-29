@@ -7,12 +7,12 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Conclave AI",
-  description: "Conclave AI is an agent studio in Karachi serving the US, Gulf and Europe. Small agents, fixed scope, engineer-led.",
+  description: "Conclave AI is an agent studio in Karachi serving the US, Gulf and Europe. Small agents, engineer-led.",
   alternates: { canonical: "/about" },
 };
 
 const approach = [
-  ["Fixed scope", "You know what you get and what it costs before we start."],
+  ["Listen first", "We start with your calls and workflows, then build what fits."],
   ["One job per agent", "A council of narrow agents beats one fragile mega-bot. Small agents are easier to test, trust and fix."],
   ["Product later", "What we repeat for clients becomes software."],
 ];

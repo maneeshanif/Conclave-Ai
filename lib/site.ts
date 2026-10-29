@@ -22,7 +22,6 @@ export const nav = [
   { href: "/studio", label: "Studio" },
   { href: "/work", label: "Work" },
   { href: "/demos", label: "Demos" },
-  { href: "/pricing", label: "Pricing" },
 ] as const;
 
 export const company = [

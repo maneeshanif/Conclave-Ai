@@ -65,7 +65,7 @@ export function Wizard() {
               Start with <Link href={`/services/${service.slug}`} className="u-link hover:text-plum">{service.short.toLowerCase()}</Link>
               {industry ? ` for ${industry.name.toLowerCase()}` : ""}.
             </h3>
-            <p className="mt-2 text-slate">The usual first step is a 14-day pilot on this one job, so you can see it work before you decide on more.</p>
+            <p className="mt-2 text-slate">The usual first step is a short call about this one job, so you can see how it would work before you decide on more.</p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Link href="/contact" className="press inline-flex h-11 items-center rounded-xl bg-lime px-5 font-medium text-ink transition-colors duration-150 hover:bg-ink hover:text-lime">
                 Book a call

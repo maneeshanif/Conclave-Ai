@@ -7,10 +7,10 @@ import type { AgentId } from "./studs/patterns";
 
 /** The Studio offer (Change Spec v3): business systems and automations in place of the CMS card. Chips list only what we can demonstrate. */
 export const studio = [
-  { slug: "agents", name: "Agents", job: "Voice, follow-up, booking, reactivation, reporting agents.", buyer: "Clinics and local businesses", tag: "14-day pilot", stack: ["Vapi", "LiveKit", "OpenAI"] },
-  { slug: "automations", name: "Automations", job: "Workflows that move data between your tools and run on triggers.", buyer: "Teams re-typing data between apps", tag: "1 to 2 week build", stack: ["n8n", "Webhooks", "Zapier", "APIs"] },
-  { slug: "erp-crm", name: "ERP and CRM", job: "Custom business systems: customers, orders, inventory, billing, POS.", buyer: "Businesses outgrowing spreadsheets", tag: "Fixed scope per module", stack: ["Next.js", "FastAPI", "Postgres"] },
-  { slug: "apps", name: "Apps", job: "Web and mobile apps with agent features; marketing sites included when needed.", buyer: "Startups and anyone who needs a product or a face", tag: "Fixed scope per milestone", stack: ["Next.js", "React Native", "Flutter"] },
+  { slug: "agents", name: "Agents", job: "Voice, follow-up, booking, reactivation, reporting agents.", buyer: "Clinics and local businesses", tag: "Start with one job", stack: ["Vapi", "LiveKit", "OpenAI"] },
+  { slug: "automations", name: "Automations", job: "Workflows that move data between your tools and run on triggers.", buyer: "Teams re-typing data between apps", tag: "Scoped per project", stack: ["n8n", "Webhooks", "Zapier", "APIs"] },
+  { slug: "erp-crm", name: "ERP and CRM", job: "Custom business systems: customers, orders, inventory, billing, POS.", buyer: "Businesses outgrowing spreadsheets", tag: "Scoped per module", stack: ["Next.js", "FastAPI", "Postgres"] },
+  { slug: "apps", name: "Apps", job: "Web and mobile apps with agent features; marketing sites included when needed.", buyer: "Startups and anyone who needs a product or a face", tag: "Scoped per milestone", stack: ["Next.js", "React Native", "Flutter"] },
   { slug: "platforms", name: "Platforms", job: "Multi-service systems with an event backbone and monitoring.", buyer: "Funded startups and scale-ups", tag: "Retainer or milestone", stack: ["Dapr", "Kafka", "Kubernetes"] },
 ] as const;
 export type StudioSlug = (typeof studio)[number]["slug"];
@@ -35,9 +35,8 @@ export const studioDetail: Record<StudioSlug, StudioDetail> = {
     diagram: "flow",
     steps: ["A call or message arrives", "The agent answers and asks what is needed", "It checks your live calendar", "It books, confirms and reminds", "Anything it cannot handle goes to a person with a summary"],
     faq: [
-      ["How long is the pilot?", "A pilot is planned for 14 days on one job. The exact scope is written down before we start."],
+      ["How do we start?", "With one job. The scope is written down together before we begin."],
       ["Which languages?", "English, Arabic and Urdu. Other languages are scoped on request."],
-      ["Do I own it?", "Yes. You own the code, and handover and training are part of the build."],
     ],
     related: "See the five service pages for each job in detail.",
   },
@@ -75,7 +74,7 @@ export const studioDetail: Record<StudioSlug, StudioDetail> = {
     faq: [
       ["Do you build marketing sites too?", "Yes. Sites with a headless CMS, SEO and booking built in are part of this offer, scoped as one milestone."],
       ["React Native or Flutter?", "We pick with you, based on your team and the features you need."],
-      ["How is it priced?", "Fixed scope per milestone, agreed before each one starts."],
+      ["How do we scope it?", "Milestone by milestone, agreed together before each one starts."],
     ],
     related: "Need the agent first and the app later? Start with Agents.",
   },
@@ -94,9 +93,9 @@ export const studioDetail: Record<StudioSlug, StudioDetail> = {
 };
 
 export const trust = [
-  ["Fixed scope", "You know what you get before we start."],
-  ["You own the code", "Handover and training are part of every build."],
-  ["Live in 14 days", "A pilot is planned for 14 days, scoped up front."],
+  ["One job at a time", "We start with the single task that costs you the most."],
+  ["Engineer-led", "The people you talk to are the people who build it."],
+  ["Hear it first", "Try a live agent before you decide on anything."],
 ] as const;
 
 /** Compat shape for older call sites: the crew is now the stud patterns in lib/studs/patterns.ts. */
@@ -233,11 +232,8 @@ export const compare = {
   cols: ["Conclave AI", "Freelancer", "n8n or no-code flow", "Big agency", "In-house receptionist"],
   rows: [
     ["Live demo before you hire", "Rarely", "Sometimes", "Rarely", "Not applicable"],
-    ["Scope and price known up front", "Often", "Often", "Rarely", "Salary"],
     ["Monitoring, retries and handover", "Varies", "You build it", "Yes", "Not applicable"],
-    ["You own the code", "Varies", "You own the flow", "Varies", "Not applicable"],
     ["Works at 6pm on a Friday", "Varies", "Until it fails", "Yes", "Shift hours"],
-    ["Time to first live version", "14-day pilot", "Days", "Weeks to months", "Weeks to hire"],
   ],
 } as const;
 
@@ -267,7 +263,7 @@ export const guild = [
 ] as const;
 
 export const processSteps = [
-  ["001", "Audit", "2 days", "We listen to a week of your calls and find where revenue leaks.", "A short audit write-up"],
-  ["002", "Build", "7 to 10 days", "One agent, one job, wired into your phone line and calendar.", "A live agent you can call"],
-  ["003", "Run", "Weekly", "We monitor, tune and report every week. You keep the results.", "A one-page weekly summary"],
+  ["001", "Audit", "First", "We listen to a week of your calls and find where revenue leaks.", "A short audit write-up"],
+  ["002", "Build", "Next", "One agent, one job, wired into your phone line and calendar.", "A live agent you can call"],
+  ["003", "Run", "Ongoing", "We monitor, tune and report every week. You keep the results.", "A one-page weekly summary"],
 ] as const;

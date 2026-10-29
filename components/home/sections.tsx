@@ -68,8 +68,8 @@ export function Hero() {
         </div>
         <div className="mt-10 grid gap-8 md:grid-cols-2 md:items-end lg:mt-[4.5rem]">
           <div data-hero-fade>
-            <p className="max-w-md text-lead">Voice agents, AI automation and full-stack software for clinics, local businesses and startups.</p>
-            <p className="label mt-4 text-ink">Live in 14 days. Fixed price. Hear it first.</p>
+            <p className="max-w-md text-lead">AI agents that work around the clock, plus automation and software, for clinics, med spas and local businesses.</p>
+            <p className="label mt-4 text-ink">Hear it first. Then decide.</p>
           </div>
           <div data-hero-fade className="flex flex-wrap gap-3 md:justify-end">
             <Button href="/contact" variant="dark" magnetic>
@@ -277,55 +277,16 @@ export function Process() {
   );
 }
 
-/* 09 Pricing: three plans. "From" prices are added when set; until then each says it is scoped on a call. */
-export const tiers = [
-  { name: "Pilot", for: "Prove it on one line", points: ["One agent, one job", "A 14-day pilot, scoped up front", "Weekly summary"], from: null as string | null },
-  { name: "Build", for: "Fixed scope, fixed fee", points: ["Agent plus integrations", "Your calendar and CRM", "Handover and training"], from: null as string | null },
-  { name: "Retainer", for: "We run it for you", points: ["Monitoring and tuning", "New flows each month", "Priority support"], from: null as string | null },
-];
-
-export function PricingTeaser() {
-  return (
-    <section>
-      <div className="frame border-t hair">
-        <Head eyebrow="Pricing">Start small, scale when it works</Head>
-        <div data-stagger className="grid gap-4 px-4 py-6 md:grid-cols-3 md:px-6 md:py-8">
-          {tiers.map((t, i) => {
-            const dark = i === 1;
-            return (
-              <div key={t.name} className={cn("rounded-3xl border p-7", dark ? "border-ink bg-ink text-paper" : "hair bg-paper")}>
-                <h3 className="display text-[clamp(1.5rem,2.6vw,2.25rem)]">{t.name}</h3>
-                <p className={cn("mt-2", dark ? "text-lilac" : "text-plum")}>{t.for}</p>
-                <ul className={cn("mt-5 space-y-1.5", dark ? "text-chalk" : "text-slate")}>
-                  {t.points.map((p) => (
-                    <li key={p}>{p}</li>
-                  ))}
-                </ul>
-                <p className="label mt-6">{t.from ? `From ${t.from}` : "Scoped on a call"}</p>
-              </div>
-            );
-          })}
-        </div>
-        <div className="flex justify-center border-t hair py-5">
-          <Button href="/pricing" variant="ghost">
-            See the full table
-          </Button>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* 10 FAQ: two columns, hairline rows. */
 export const faqs = [
   ["Will callers know it is an AI?", "We never hide it. Aria introduces itself plainly, and any caller can ask for a human at any time."],
   ["What happens when the agent cannot help?", "It takes a message, flags it as urgent if needed, and passes the call to a person on your team."],
   ["Does it work with our calendar and booking tool?", "We connect to the tool you already use. If an integration does not exist, we build it as part of the project."],
   ["How is patient or customer data handled?", "Only what the agent needs is stored, in an access-controlled database. The specifics are agreed in writing before we start."],
-  ["How long until it is live?", "A pilot is planned for 14 days. The exact timeline is written into the scope before we start."],
+  ["How do we start?", "With a short call. We listen first, pick one job to start with, and agree the scope in writing before any work begins."],
+  ["Can the agents work around the clock?", "Yes. Voice and follow-up agents can answer at any hour. We agree with you which jobs run unattended and which hand over to a person."],
   ["Which languages does it speak?", "English, Arabic and Urdu. Other languages are scoped on request."],
   ["Do you handle health data, and what about HIPAA?", "We design for privacy and agree data handling in writing before we start. We do not claim a certification we do not hold; any compliance requirement is scoped first."],
-  ["Do I own the code?", "Yes. No lock-in: handover and training are part of every build."],
   ["What if the agent is wrong?", "It hands over to a person when unsure, every conversation is logged, and we review the log with you each week."],
   ["How is this different from a freelancer or a no-code flow?", "A flow works until it fails at 6pm on a Friday. We ship monitoring, retries and handover, and we use n8n where it fits and code you own where it does not."],
 ];

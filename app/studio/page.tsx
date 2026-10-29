@@ -43,10 +43,6 @@ export default function StudioPage() {
                   <dd className="mt-1 text-base">{s.tag}</dd>
                 </div>
                 <div>
-                  <dt className="label text-slate">Price</dt>
-                  <dd className="mt-1 text-base">Scoped on a call, fixed before we start</dd>
-                </div>
-                <div>
                   <dt className="label text-slate">Stack</dt>
                   <dd className="mt-2 flex flex-wrap gap-1.5">
                     {s.stack.map((t) => (

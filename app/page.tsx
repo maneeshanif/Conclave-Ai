@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
-import { Hero, LiveAgent, Proof, Services, Systems, BuiltFor, WorkReel, Process, PricingTeaser, Faq, faqs, FinalCta } from "@/components/home/sections";
+import { Hero, LiveAgent, Proof, Services, Systems, BuiltFor, WorkReel, Process, Faq, faqs, FinalCta } from "@/components/home/sections";
 import { getShowcaseProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
@@ -36,7 +36,6 @@ export default async function Home() {
       <BuiltFor />
       {projects.length > 0 && <WorkReel projects={projects} />}
       <Process />
-      <PricingTeaser />
       <Faq />
       <FinalCta />
     </>

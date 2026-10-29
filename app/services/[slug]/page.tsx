@@ -81,8 +81,8 @@ export default async function ServicePage({ params }: Params) {
         </section>
 
         <section data-reveal className="grid gap-8 border-b hair px-4 py-12 md:grid-cols-[1fr_2fr] md:px-10">
-          <h2 className="head">Price and timeline</h2>
-          <p className="max-w-lg text-slate">Starts as a 14-day pilot. Scope and price are fixed on a call before any work begins, so there are no surprises.</p>
+          <h2 className="head">How we start</h2>
+          <p className="max-w-lg text-slate">We start with one job. We agree the scope together on a call before any work begins.</p>
         </section>
 
         <section className="grid gap-8 border-b hair md:grid-cols-[1fr_2fr]">

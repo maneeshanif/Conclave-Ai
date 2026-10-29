@@ -22,7 +22,6 @@ const columns: { title: string; links: [string, string][] }[] = [
     links: [
       ["About", "/about"],
       ["Work", "/work"],
-      ["Pricing", "/pricing"],
       ["Join the guild", "/join"],
       ["Contact", "/contact"],
     ],
