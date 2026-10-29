@@ -23,7 +23,7 @@ export default function ServicesPage() {
       <PageHeader path="/services"
         eyebrow="Services"
         title="Five jobs. One agent each."
-        lead="We deliver fixed-scope services now. What we repeat becomes product later."
+        lead="We start with services. What we repeat becomes product later."
       />
       <div className="frame border-t hair">
         <div className="grid lg:grid-cols-[14rem_1fr]">

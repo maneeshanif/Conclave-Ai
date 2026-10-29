@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const config: NextConfig = {
   reactStrictMode: true,
+  async redirects() {
+    return [{ source: "/pricing", destination: "/contact", permanent: false }];
+  },
   images: { remotePatterns: [{ protocol: "https", hostname: "*.supabase.co" }] },
   experimental: {
     // Turbopack evaluates Tailwind/PostCSS in a pool of child processes by default. On a machine that is short of

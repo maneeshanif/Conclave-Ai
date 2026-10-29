@@ -85,15 +85,11 @@ export default async function StudioDetailPage({ params }: Params) {
         )}
 
         <section data-reveal className="grid gap-8 border-b hair px-4 py-12 md:grid-cols-[1fr_2fr] md:px-10">
-          <h2 className="head">Timeline, price and stack</h2>
+          <h2 className="head">Engagement and stack</h2>
           <dl className="grid gap-6 sm:grid-cols-3">
             <div>
-              <dt className="label text-slate">Timeline</dt>
+              <dt className="label text-slate">Engagement</dt>
               <dd className="mt-1">{s.tag}</dd>
-            </div>
-            <div>
-              <dt className="label text-slate">Price from</dt>
-              <dd className="mt-1">Scoped on a call, fixed before we start</dd>
             </div>
             <div>
               <dt className="label text-slate">Stack</dt>

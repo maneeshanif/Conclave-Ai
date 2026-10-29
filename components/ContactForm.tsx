@@ -5,7 +5,7 @@ import { services, site } from "@/lib/site";
 import { StudGlyph } from "@/components/studs/StudGlyph";
 import { cn } from "@/lib/utils";
 
-const budgets = ["Not sure yet", "A 14-day pilot first", "A fixed-scope build", "An ongoing retainer"];
+const budgets = ["Not sure yet", "Start with one job", "A larger build", "Ongoing support"];
 const field = "mt-1.5 w-full rounded-xl border hair bg-paper px-3.5 text-[0.9375rem] transition-colors duration-150 placeholder:text-slate/70 hover:border-ink/30 focus-visible:border-ink";
 
 type Status = "idle" | "sending" | "done" | "error";
