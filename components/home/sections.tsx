@@ -192,6 +192,33 @@ export function Systems() {
   );
 }
 
+/* Digital FTEs: role-based AI workers that run around the clock, with a person approving what matters. */
+const ftes = [
+  ["Front-desk FTE", "Answers calls and chats at any hour, books the slot and hands anything unusual to a person."],
+  ["Follow-up FTE", "Replies to every enquiry within seconds and nudges leads that go quiet."],
+  ["Reactivation FTE", "Reaches out to customers who stopped coming and brings the right ones back."],
+  ["Reporting FTE", "Sends a plain weekly summary of calls answered, slots booked and revenue recovered."],
+] as const;
+
+export function DigitalFtes() {
+  return (
+    <section>
+      <div className="frame border-t hair">
+        <Head eyebrow="Digital FTEs">AI team members that work around the clock</Head>
+        <p className="max-w-2xl px-4 pt-6 text-lead md:px-6">A Digital FTE is an AI worker with one defined role. It does the routine work 24/7 while a person on your team stays in charge of what matters.</p>
+        <div data-stagger className="grid gap-px bg-[rgb(11_21_18/0.12)] sm:grid-cols-2 lg:grid-cols-4 mt-6">
+          {ftes.map(([t, b]) => (
+            <div key={t} className="bg-mist p-6">
+              <span className="pill-label w-fit">{t}</span>
+              <p className="mt-3 text-sm text-slate">{b}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* 06 Built for: four tiles with their stud glyph. Dental and real estate stay as pages. */
 const builtFor = ["clinics", "med-spas", "home-services", "startups"] as const;
 
