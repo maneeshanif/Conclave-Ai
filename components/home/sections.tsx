@@ -68,7 +68,7 @@ export function Hero() {
         </div>
         <div className="mt-10 grid gap-8 md:grid-cols-2 md:items-end lg:mt-[4.5rem]">
           <div data-hero-fade>
-            <p className="max-w-md text-lead">AI agents that work around the clock, plus automation and software, for clinics, med spas and local businesses.</p>
+            <p className="max-w-md text-lead">AI agents, voice agents and automation for small businesses.</p>
             <p className="label mt-4 text-ink">Hear it first. Then decide.</p>
           </div>
           <div data-hero-fade className="flex flex-wrap gap-3 md:justify-end">
@@ -192,20 +192,20 @@ export function Systems() {
   );
 }
 
-/* Digital FTEs: role-based AI workers that run around the clock, with a person approving what matters. */
+/* Digital FTEs: AI agents built around a defined role, with human oversight where needed. */
 const ftes = [
-  ["Front-desk FTE", "Answers calls and chats at any hour, books the slot and hands anything unusual to a person."],
-  ["Follow-up FTE", "Replies to every enquiry within seconds and nudges leads that go quiet."],
-  ["Reactivation FTE", "Reaches out to customers who stopped coming and brings the right ones back."],
-  ["Reporting FTE", "Sends a plain weekly summary of calls answered, slots booked and revenue recovered."],
+  ["Front-desk agent", "Handles routine calls and chats and refers anything outside its scope to your team."],
+  ["Follow-up agent", "Replies to new enquiries quickly and nudges leads that go quiet."],
+  ["Reactivation agent", "Reaches out to customers who stopped coming and invites them back."],
+  ["Reporting agent", "Summarises activity such as calls answered, enquiries handled and bookings made, where your tools support it."],
 ] as const;
 
 export function DigitalFtes() {
   return (
     <section>
       <div className="frame border-t hair">
-        <Head eyebrow="Digital FTEs">AI team members that work around the clock</Head>
-        <p className="max-w-2xl px-4 pt-6 text-lead md:px-6">A Digital FTE is an AI worker with one defined role. It does the routine work 24/7 while a person on your team stays in charge of what matters.</p>
+        <Head eyebrow="Digital FTEs">AI agents built around defined roles</Head>
+        <p className="max-w-2xl px-4 pt-6 text-lead md:px-6">Digital FTEs are the idea behind how we build: each agent has a specific job, clear boundaries and human oversight where needed.</p>
         <div data-stagger className="grid gap-px bg-[rgb(11_21_18/0.12)] sm:grid-cols-2 lg:grid-cols-4 mt-6">
           {ftes.map(([t, b]) => (
             <div key={t} className="bg-mist p-6">

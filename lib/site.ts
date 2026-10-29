@@ -47,5 +47,5 @@ export const services = [
   { n: "02", slug: "follow-up", short: "Follow-up", title: "Follow-up in seconds, not days", body: "Every enquiry gets a reply while the lead is still looking at their phone." },
   { n: "03", slug: "booking", short: "Booking", title: "Bookings straight into your calendar", body: "The agent checks real availability and books the slot, with no back and forth." },
   { n: "04", slug: "reactivation", short: "Reactivation", title: "Reactivation of lapsed customers", body: "Quietly reaches out to people who stopped coming, and brings the right ones back." },
-  { n: "05", slug: "reporting", short: "Reporting", title: "Reporting you can read in a minute", body: "Calls answered, slots booked and revenue recovered, in one plain weekly summary." },
+  { n: "05", slug: "reporting", short: "Reporting", title: "Reporting you can read in a minute", body: "Activity such as calls answered, enquiries handled and bookings made, where your tools support it, in one plain summary." },
 ] as const;
