@@ -68,7 +68,7 @@ export function Hero() {
         </div>
         <div className="mt-10 grid gap-8 md:grid-cols-2 md:items-end lg:mt-[4.5rem]">
           <div data-hero-fade>
-            <p className="max-w-md text-lead">AI agents, voice agents and automation for small businesses.</p>
+            <p className="max-w-md text-lead">Voice agents, AI automation and full-stack software for clinics, local businesses and startups.</p>
             <p className="label mt-4 text-ink">Hear it first. Then decide.</p>
           </div>
           <div data-hero-fade className="flex flex-wrap gap-3 md:justify-end">
