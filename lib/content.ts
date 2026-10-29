@@ -263,7 +263,7 @@ export const guild = [
 ] as const;
 
 export const processSteps = [
-  ["001", "Audit", "First", "We listen to a week of your calls and find where revenue leaks.", "A short audit write-up"],
+  ["001", "Audit", "First", "We review your website, enquiry process and workflows to find where enquiries slip through.", "A short audit write-up"],
   ["002", "Build", "Next", "One agent, one job, wired into your phone line and calendar.", "A live agent you can call"],
-  ["003", "Run", "Ongoing", "We monitor, tune and report every week. You keep the results.", "A one-page weekly summary"],
+  ["003", "Run", "Ongoing", "We monitor, tune and report on a schedule we agree together.", "A plain activity summary"],
 ] as const;
