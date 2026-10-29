@@ -27,8 +27,8 @@ export interface Project {
  */
 const seed: Project[] = [
   { slug: "bazar-flow", title: "Bazar Flow", summary: "A web app, built full-stack.", tags: ["Web app"], stack: ["Next.js", "FastAPI", "Supabase"], cover_video_url: null, gallery: [], body: "", results: [], featured: true, sort_order: 1, role: "Full-stack build" },
-  { slug: "codenexus-ai", title: "CodeNexus AI", summary: "An AI agent project.", tags: ["AI agent"], stack: ["OpenAI Agents SDK", "FastAPI"], cover_video_url: null, gallery: [], body: "", results: [], featured: true, sort_order: 2, role: "Agent design and build" },
-  { slug: "scalenexus-ai", title: "ScaleNexus AI", summary: "A workflow automation project.", tags: ["Automation"], stack: ["Python", "Supabase"], cover_video_url: null, gallery: [], body: "", results: [], featured: true, sort_order: 3, role: "Workflow automation" },
+  { slug: "vespera-ai", title: "Vespera AI", summary: "An after-hours chat and voice agent for med spas, with safety screening.", tags: ["AI agent"], stack: [], cover_video_url: null, gallery: [], body: "", results: [], featured: true, sort_order: 2, role: "Agent design and build" },
+  { slug: "owner-ai", title: "Owner AI", summary: "An AI agent project.", tags: ["AI agent"], stack: [], cover_video_url: null, gallery: [], body: "", results: [], featured: true, sort_order: 3, role: "Agent design and build" },
   { slug: "task-whisper", title: "Task Whisper", summary: "A voice agent.", tags: ["Voice agent"], stack: ["Vapi", "Next.js"], cover_video_url: null, gallery: [], body: "", results: [], featured: true, sort_order: 4, role: "Voice agent" },
 ];
 
