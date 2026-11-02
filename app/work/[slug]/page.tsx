@@ -48,6 +48,22 @@ export default async function ProjectPage({ params }: Params) {
       <div className="frame border-t hair px-4 md:px-10">
         <ProjectCover project={p} index={index} priority className="mt-10 aspect-video rounded-3xl" />
 
+        {p.cover_video_url && (
+          <section data-reveal className="grid gap-6 border-b hair py-12 md:grid-cols-[1fr_2fr]">
+            <h2 className="head">Walkthrough</h2>
+            <video
+              src={p.cover_video_url}
+              poster={p.gallery[0] ?? undefined}
+              controls
+              playsInline
+              preload="none"
+              className="aspect-video w-full rounded-2xl bg-ink object-cover"
+            >
+              Your browser cannot play this video.
+            </video>
+          </section>
+        )}
+
         {p.results.length > 0 && (
           <section data-reveal className="grid gap-6 border-b hair py-12 md:grid-cols-[1fr_2fr]">
             <h2 className="head">Result</h2>
