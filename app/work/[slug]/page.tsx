@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProject, getShowcaseProjects, hasWriteUp } from "@/lib/projects";
@@ -65,6 +66,19 @@ export default async function ProjectPage({ params }: Params) {
           <section data-reveal className="grid gap-6 border-b hair py-12 md:grid-cols-[1fr_2fr]">
             <h2 className="head">The build</h2>
             <p className="max-w-xl whitespace-pre-line text-slate">{p.body}</p>
+          </section>
+        )}
+
+        {p.gallery.length > 1 && (
+          <section data-reveal className="grid gap-6 border-b hair py-12 md:grid-cols-[1fr_2fr]">
+            <h2 className="head">Screens</h2>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {p.gallery.slice(1).map((src, i) => (
+                <div key={src} className="relative aspect-video overflow-hidden rounded-2xl bg-mist">
+                  <Image src={src} alt={`${p.title} screen ${i + 2}`} fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover object-top" />
+                </div>
+              ))}
+            </div>
           </section>
         )}
 
