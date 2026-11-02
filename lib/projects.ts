@@ -128,21 +128,7 @@ const seed: Project[] = [
     sort_order: 7,
     role: "Full-stack and agent build",
   },
-  {
-    slug: "physical-ai-textbook",
-    title: "Physical AI Textbook",
-    summary: "A 15-week interactive textbook with an AI tutor that answers from the course material.",
-    tags: ["AI agent", "RAG"],
-    stack: ["Docusaurus", "FastAPI", "Qdrant", "Gemini"],
-    cover_video_url: null,
-    gallery: [],
-    body: "Students learning Physical AI had no guided, interactive resource. This textbook has a retrieval-based tutor chatbot: questions are answered from the course chapters, using vector search over the content.",
-    results: [],
-    featured: true,
-    sort_order: 8,
-    role: "Full-stack and RAG build",
-  },
-  { slug: "owner-ai", title: "Owner AI", summary: "An AI agent project.", tags: ["AI agent"], stack: [], cover_video_url: null, gallery: [], body: "", results: [], featured: true, sort_order: 9, role: "Agent design and build" },
+  { slug: "owner-ai", title: "Owner AI", summary: "An AI agent project.", tags: ["AI agent"], stack: [], cover_video_url: null, gallery: [], body: "", results: [], featured: true, sort_order: 8, role: "Agent design and build" },
 ];
 
 /** Looks for public/work/<slug>.(png|jpg|jpeg|webp) at build or request time. */
