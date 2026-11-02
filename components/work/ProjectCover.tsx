@@ -24,7 +24,7 @@ export function ProjectCover({ project, index = 0, className, priority }: { proj
   if (project.image) {
     return (
       <div className={cn("relative overflow-hidden bg-mist", className)}>
-        <Image src={project.image} alt={`${project.title} screenshot`} fill sizes="(min-width: 1024px) 40vw, 100vw" className="zoom-on-hover object-cover object-top" priority={priority} />
+        <Image src={project.image} alt={`${project.title} screenshot`} fill sizes="(min-width: 1024px) 40vw, 100vw" className="zoom-on-hover object-cover object-top" priority={priority} unoptimized />
       </div>
     );
   }

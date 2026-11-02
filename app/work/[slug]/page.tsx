@@ -75,7 +75,7 @@ export default async function ProjectPage({ params }: Params) {
             <div className="grid gap-4 sm:grid-cols-2">
               {p.gallery.slice(1).map((src, i) => (
                 <div key={src} className="relative aspect-video overflow-hidden rounded-2xl bg-mist">
-                  <Image src={src} alt={`${p.title} screen ${i + 2}`} fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover object-top" />
+                  <Image src={src} alt={`${p.title} screen ${i + 2}`} fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover object-top" unoptimized />
                 </div>
               ))}
             </div>
