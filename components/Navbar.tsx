@@ -4,17 +4,19 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
 import { Button } from "./ui/Button";
-import { company, nav } from "@/lib/site";
+import { company, nav, solutions } from "@/lib/site";
 import { useUI } from "@/stores/ui";
 import { cn } from "@/lib/utils";
 
-const linkCls = "rounded-lg px-3 py-2 text-[0.9375rem] text-ink transition-colors duration-150 hover:bg-mist";
+const linkCls = "rounded-lg px-2 py-2 lg:px-3 text-[0.9375rem] text-ink transition-colors duration-150 hover:bg-mist";
 
-/** Company dropdown: opens on click or hover, closes on Escape, outside click or navigation. Keyboard reachable. */
-function CompanyMenu({ pathname }: { pathname: string }) {
+type MenuItem = { href: string; label: string; note: string };
+
+/** Dropdown (Solutions, Company): opens on click or hover, closes on Escape, outside click or navigation. Keyboard reachable. */
+function DropMenu({ pathname, id, title, items }: { pathname: string; id: string; title: string; items: readonly MenuItem[] }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLLIElement>(null);
-  const active = company.some((c) => pathname.startsWith(c.href));
+  const active = items.some((c) => pathname.startsWith(c.href));
 
   useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
@@ -35,17 +37,17 @@ function CompanyMenu({ pathname }: { pathname: string }) {
         type="button"
         aria-expanded={open}
         aria-haspopup="true"
-        aria-controls="company-menu"
+        aria-controls={id}
         onClick={() => setOpen((o) => !o)}
         className={cn(linkCls, "inline-flex items-center gap-1.5", (active || open) && "bg-mist")}
       >
-        Company
+        {title}
         <svg aria-hidden="true" viewBox="0 0 16 16" className={cn("h-3.5 w-3.5 transition-transform duration-200", open && "rotate-180")}>
           <path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </button>
       <div
-        id="company-menu"
+        id={id}
         inert={!open}
         className={cn(
           "absolute left-1/2 top-full w-72 -translate-x-1/2 pt-3 transition-[opacity,translate] duration-200 [transition-timing-function:var(--ease-out-quart)]",
@@ -53,7 +55,7 @@ function CompanyMenu({ pathname }: { pathname: string }) {
         )}
       >
         <ul className="rounded-2xl border hair bg-paper p-2 shadow-[0_12px_32px_rgb(11_21_18/0.1)]">
-          {company.map((c) => (
+          {items.map((c) => (
             <li key={c.href}>
               <Link href={c.href} className="block rounded-xl px-3 py-2.5 transition-colors duration-150 hover:bg-mist">
                 <span className="block text-[0.9375rem] font-medium">{c.label}</span>
@@ -88,7 +90,7 @@ export function Navbar() {
     return () => window.removeEventListener("keydown", onKey);
   }, [menuOpen, setMenuOpen]);
 
-  const mobileLinks = [...nav, ...company.map(({ href, label }) => ({ href, label }))];
+  const mobileLinks = [...nav, ...solutions.map(({ href, label }) => ({ href, label })), ...company.map(({ href, label }) => ({ href, label }))];
 
   return (
     <>
@@ -109,7 +111,8 @@ export function Navbar() {
                 </Link>
               </li>
             ))}
-            <CompanyMenu pathname={pathname} />
+            <DropMenu pathname={pathname} id="solutions-menu" title="Solutions" items={solutions} />
+            <DropMenu pathname={pathname} id="company-menu" title="Company" items={company} />
           </ul>
           <div className="flex items-center gap-2">
             <button
@@ -123,7 +126,7 @@ export function Navbar() {
             <Button href="/demos" variant="ghost" className="hidden lg:inline-flex">
               Hear Aria
             </Button>
-            <Button href="/contact" className="hidden md:inline-flex">
+            <Button href="/contact" className="hidden whitespace-nowrap md:inline-flex">
               Book a call
             </Button>
             <button

@@ -24,12 +24,24 @@ export const site = {
   description: "Voice agents, AI automation and full-stack software for clinics, local businesses and startups.",
 };
 
-/** Seven top-level items is the ceiling (upgrade plan section 4). */
+/** Top-level links. Search landing pages live in the Solutions dropdown below, so the bar stays short. */
 export const nav = [
   { href: "/services", label: "Services" },
   { href: "/studio", label: "Studio" },
   { href: "/work", label: "Work" },
   { href: "/demos", label: "Demos" },
+] as const;
+
+/** Solutions dropdown: who it is for, where, and the calling use cases. Same pages the search strategy targets. */
+export const solutions = [
+  { href: "/industries/clinics", label: "Clinics", note: "A front desk that never steps away" },
+  { href: "/industries/med-spas", label: "Med spas", note: "Reply to every enquiry while it is warm" },
+  { href: "/industries/dental", label: "Dental", note: "Fewer gaps, fewer no-shows" },
+  { href: "/after-hours-answering-service", label: "After hours answering", note: "Nights and weekends, covered" },
+  { href: "/services/outbound-calling", label: "Outbound calling", note: "Callbacks, reminders, win-back" },
+  { href: "/ai-receptionist-uk", label: "AI receptionist UK", note: "For UK clinics and businesses" },
+  { href: "/ai-receptionist-canada", label: "AI receptionist Canada", note: "PIPEDA-aware setup" },
+  { href: "/ai-receptionist-gulf-clinics", label: "Gulf clinics", note: "English, Arabic and Urdu" },
 ] as const;
 
 export const company = [
@@ -46,6 +58,7 @@ export const company = [
 export const allRoutes = [
   { href: "/", label: "Home" },
   ...nav,
+  ...solutions.map(({ href, label }) => ({ href, label })),
   ...company.map(({ href, label }) => ({ href, label })),
   { href: "/contact", label: "Contact" },
 ] as const;

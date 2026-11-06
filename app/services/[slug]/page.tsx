@@ -126,6 +126,17 @@ export default async function ServicePage({ params }: Params) {
             Next: {next.short}
           </Link>
         </section>
+
+        {slug === "voice" && (
+          <nav aria-label="Related pages" className="flex flex-wrap gap-x-6 gap-y-2 border-t hair px-4 py-6 text-sm md:px-10">
+            <span className="text-slate">Related:</span>
+            <Link href="/after-hours-answering-service" className="u-link font-medium hover:text-plum">After hours answering service</Link>
+            <Link href="/services/outbound-calling" className="u-link font-medium hover:text-plum">Outbound calling</Link>
+            <Link href="/ai-receptionist-uk" className="u-link font-medium hover:text-plum">AI receptionist UK</Link>
+            <Link href="/ai-receptionist-canada" className="u-link font-medium hover:text-plum">AI receptionist Canada</Link>
+            <Link href="/ai-receptionist-gulf-clinics" className="u-link font-medium hover:text-plum">Gulf clinics</Link>
+          </nav>
+        )}
       </div>
       <PageCta />
     </>

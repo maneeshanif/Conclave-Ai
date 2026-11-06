@@ -5,7 +5,14 @@ import { Logo } from "./Logo";
 import { NewsletterForm } from "./NewsletterForm";
 
 const columns: { title: string; links: [string, string][] }[] = [
-  { title: "Services", links: services.map((s) => [s.short, `/services/${s.slug}`]) },
+  {
+    title: "Services",
+    links: [
+      ...services.map((s): [string, string] => [s.short, `/services/${s.slug}`]),
+      ["Outbound calling", "/services/outbound-calling"],
+      ["After hours answering", "/after-hours-answering-service"],
+    ],
+  },
   { title: "Studio", links: studio.map((s) => [s.name, `/studio/${s.slug}`]) },
   {
     title: "Resources",
@@ -13,6 +20,10 @@ const columns: { title: string; links: [string, string][] }[] = [
       ["Notes", "/notes"],
       ["Receipts", "/receipts"],
       ["Compare", "/compare"],
+      ["AI receptionist UK", "/ai-receptionist-uk"],
+      ["AI receptionist Canada", "/ai-receptionist-canada"],
+      ["Gulf clinics", "/ai-receptionist-gulf-clinics"],
+      ["Dental", "/industries/dental"],
       ["Security", "/security"],
       ["Demos", "/demos"],
     ],
@@ -69,6 +80,24 @@ export function Footer() {
           <p className="mt-3 text-sm text-steel">
             {site.city}, serving {site.serving}.
           </p>
+          <nav aria-label="Social profiles" className="mt-5">
+            <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+              {(
+                [
+                  ["LinkedIn", site.social.linkedin],
+                  ["Instagram", site.social.instagram],
+                  ["X", site.social.x],
+                ] as const
+              ).map(([label, href]) => (
+                <li key={label}>
+                  <a href={href} target="_blank" rel="me noopener noreferrer" className="text-chalk underline-offset-4 transition-colors duration-150 hover:text-lime hover:underline">
+                    {label}
+                    <span className="sr-only"> (opens in a new tab)</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
           <div className="mt-8">
             <NewsletterForm />
           </div>
