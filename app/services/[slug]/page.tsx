@@ -21,7 +21,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
   const s = services.find((x) => x.slug === slug);
-  return s ? { title: s.title, description: s.body, alternates: { canonical: `/services/${s.slug}` } } : {};
+  return s ? { title: slug === "voice" ? "AI receptionist: voice agents that answer every call" : s.title, description: slug === "voice" ? "An AI receptionist that picks up in one ring, in the caller's language, books the slot and never puts anyone on hold. English, Arabic and Urdu." : s.body, alternates: { canonical: `/services/${s.slug}` } } : {};
 }
 
 export default async function ServicePage({ params }: Params) {
@@ -45,6 +45,16 @@ export default async function ServicePage({ params }: Params) {
             description: s.body,
             provider: { "@type": "Organization", name: site.name, url: site.url },
             areaServed: ["US", "Gulf", "Europe"],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: d.faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
           }),
         }}
       />

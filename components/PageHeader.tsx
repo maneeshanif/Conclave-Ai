@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 
 const names: Record<string, string> = {
   services: "Services", studio: "Studio", industries: "Industries", work: "Work", demos: "Demos", about: "About", pricing: "Pricing",
-  contact: "Contact", compare: "Compare", security: "Security", crew: "The Crew", join: "Join", receipts: "Receipts", roadmap: "Roadmap", notes: "Notes",
+  contact: "Contact", compare: "Compare", security: "Security", crew: "The Crew", join: "Join", receipts: "Receipts", roadmap: "Roadmap", notes: "Notes", "ai-receptionist-gulf-clinics": "Gulf clinics",
 };
 
 /**

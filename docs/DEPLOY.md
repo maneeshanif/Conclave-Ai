@@ -4,13 +4,13 @@ Frontend on Vercel, API on Railway (or Render). Nothing here has been deployed y
 
 ## 1. Before you start
 1. Push the repo (send the remote URL and I will push, or run `git remote add origin <url> && git push -u origin main`).
-2. Decide the canonical domain (`conclaveai.com` or `conclave.ai`) and set it in `lib/site.ts` (`site.url`, `site.email`).
+2. Decide the canonical domain (`www.conclaveai.pro`) and set it in `lib/site.ts` (`site.url`, `site.email`).
 3. Run `supabase/schema.sql` in the Supabase SQL editor. Create a public storage bucket named `media`.
 
 ## 2. API (Railway or Render)
 - Root directory: `backend`. Python 3.11.
 - Install: `pip install -r requirements.txt`. Start: `uvicorn app.main:app --host 0.0.0.0 --port $PORT` (the `Procfile` has it).
-- Environment variables (see `backend/.env.example`): `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `RESEND_API_KEY`, `FROM_EMAIL` (a sender on a domain you verified in Resend), `NOTIFY_EMAIL`, `OPENAI_API_KEY`, and **`ALLOWED_ORIGINS`** = your site origin, for example `https://conclaveai.com,https://www.conclaveai.com`.
+- Environment variables (see `backend/.env.example`): `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `RESEND_API_KEY`, `FROM_EMAIL` (a sender on a domain you verified in Resend), `NOTIFY_EMAIL`, `OPENAI_API_KEY`, and **`ALLOWED_ORIGINS`** = your site origin, for example `https://www.conclaveai.pro,https://conclaveai.pro`.
 - Check: open `<api-url>/health`. It reports `storage: supabase`, `email: true`, `aria: ai` once the keys are in.
 - The rate limiter is in memory, which is right for one instance. If you scale to several, move it to Redis.
 

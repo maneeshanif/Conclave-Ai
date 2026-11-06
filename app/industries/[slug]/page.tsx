@@ -7,6 +7,7 @@ import { Accordion } from "@/components/ui/Accordion";
 import { StudGlyph } from "@/components/studs/StudGlyph";
 import { IndustryDash } from "@/components/IndustryDash";
 import { industries } from "@/lib/content";
+import { industryGuides } from "@/lib/guides";
 import { services } from "@/lib/site";
 
 type Params = { params: Promise<{ slug: string }> };
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
   const i = industries.find((x) => x.slug === slug);
   return i
-    ? { title: `AI voice agents for ${i.name.toLowerCase()}`, description: `${i.pain} ${i.h1}.`, alternates: { canonical: `/industries/${i.slug}` } }
+    ? { title: i.slug === "startups" ? `AI voice agents for ${i.name.toLowerCase()}` : `AI receptionist for ${i.name.toLowerCase()}`, description: i.slug === "startups" ? `${i.pain} ${i.h1}.` : `An AI receptionist and voice agents for ${i.name.toLowerCase()}. ${i.pain} ${i.h1}.`, alternates: { canonical: `/industries/${i.slug}` } }
     : {};
 }
 
@@ -28,8 +29,21 @@ export default async function IndustryPage({ params }: Params) {
   const i = industries.find((x) => x.slug === slug);
   if (!i) notFound();
 
+  const guide = industryGuides[slug];
+  const faq = guide ? [i.objection as unknown as [string, string], ...guide.faq] : [i.objection as unknown as [string, string]];
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
+          }),
+        }}
+      />
       <PageHeader path={`/industries/${i.slug}`} eyebrow={`For ${i.name.toLowerCase()}`} title={i.h1} lead={i.pain} />
       <div className="frame border-t hair">
         <section className="grid gap-8 border-b hair md:grid-cols-[1fr_2fr]">
@@ -76,9 +90,33 @@ export default async function IndustryPage({ params }: Params) {
         <section className="grid gap-8 border-b hair md:grid-cols-[1fr_2fr]">
           <h2 data-reveal className="head px-4 pt-12 md:px-10">The usual objection</h2>
           <div data-reveal className="border-t hair bg-paper md:border-l md:border-t-0">
-            <Accordion items={[i.objection]} />
+            <Accordion items={faq} />
           </div>
         </section>
+
+        {guide && (
+          <article className="grid gap-8 border-b hair px-4 py-12 md:grid-cols-[1fr_2fr] md:px-10">
+            <h2 data-reveal className="head">{guide.title}</h2>
+            <div className="max-w-2xl space-y-10">
+              <p className="text-lead">{guide.intro}</p>
+              {guide.sections.map((sec) => (
+                <section key={sec.h}>
+                  <h3 className="head text-xl">{sec.h}</h3>
+                  <div className="mt-3 space-y-4 text-slate">
+                    {sec.p.map((t) => (
+                      <p key={t}>{t}</p>
+                    ))}
+                  </div>
+                </section>
+              ))}
+              {slug === "clinics" && (
+                <p className="text-slate">
+                  In the Gulf? <Link href="/ai-receptionist-gulf-clinics" className="u-link font-medium hover:text-plum">AI receptionist for clinics in Dubai and the Gulf</Link>.
+                </p>
+              )}
+            </div>
+          </article>
+        )}
 
         <p className="px-4 py-6 text-sm text-slate md:px-10">
           Language: we build in English, Arabic and Urdu. A real {i.name.toLowerCase()} case is added with the first build in this field.

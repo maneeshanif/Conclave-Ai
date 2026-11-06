@@ -62,13 +62,15 @@ export function Hero() {
               convened.
             </span>
           </span>
+          {/* Keyword heading for search engines and screen readers; the visible lines above stay the brand voice. */}
+          <span className="sr-only"> | AI receptionist and voice agents for clinics and med spas</span>
         </h1>
         {/* Invisible anchor for the crew row: directly under the headline, right aligned, clear of the supporting text on the left. */}
         <div data-crew-slot aria-hidden="true" className="pointer-events-none absolute right-0 top-full mt-4 hidden h-[76px] w-[min(576px,calc(100%-31rem))] lg:block" />
         </div>
         <div className="mt-10 grid gap-8 md:grid-cols-2 md:items-end lg:mt-[4.5rem]">
           <div data-hero-fade>
-            <p className="max-w-md text-lead">Voice agents, AI automation and full-stack software for clinics, local businesses and startups.</p>
+            <p className="max-w-md text-lead">An AI receptionist and voice agents for clinics, med spas and local businesses, plus automation and full-stack software for startups.</p>
             <p className="label mt-4 text-ink">Hear it first. Then decide.</p>
           </div>
           <div data-hero-fade className="flex flex-wrap gap-3 md:justify-end">

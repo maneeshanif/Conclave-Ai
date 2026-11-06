@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { ContactForm } from "@/components/ContactForm";
+import { CalEmbed } from "@/components/CalEmbed";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact: book a call or send a message",
-  description: "Book a call with Conclave AI or send a message. We reply by email.",
+  title: "Contact: book a call",
+  description: "Book a call with Conclave AI. Pick a time that suits you.",
   alternates: { canonical: "/contact" },
 };
 
@@ -46,19 +46,9 @@ export default function ContactPage() {
             </div>
           )}
         </dl>
-        <div className="mt-10 rounded-2xl border hair bg-paper p-5">
-          <p className="label text-plum">Book a time</p>
-          {site.calLink ? (
-            <a href={site.calLink} className="u-link mt-2 inline-block font-medium hover:text-plum" rel="noopener">
-              Pick a slot on our calendar
-            </a>
-          ) : (
-            <p className="mt-2 text-sm text-slate">Send the form and we will reply with times that suit you.</p>
-          )}
-        </div>
         <p className="mt-6 text-sm text-slate">Not sure where to start? Try the &ldquo;Which agent do I need?&rdquo; picker on the services page.</p>
       </div>
-      <ContactForm />
+      <CalEmbed className="rounded-3xl border hair bg-paper p-4 md:p-6" />
     </div>
   );
 }

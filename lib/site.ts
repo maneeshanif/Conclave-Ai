@@ -1,9 +1,15 @@
 export const site = {
   name: "Conclave AI",
   tagline: "Agents, convened.",
-  // Domain from the upgrade plan ("we agreed hello@conclaveai.com"). One constant, so a change is one line.
-  email: "hello@conclaveai.com",
-  url: "https://conclaveai.com",
+  // Domain from the upgrade plan ("canonical domain is www.conclaveai.pro"). One constant, so a change is one line.
+  email: "hello@conclaveai.pro",
+  url: "https://www.conclaveai.pro",
+  /** Official profiles. Used for Organization sameAs so Google ties these to this brand, not the other "Conclave" products. */
+  social: {
+    linkedin: "https://www.linkedin.com/company/conclaveai/",
+    instagram: "https://www.instagram.com/conclaveai.pro/",
+    x: "https://x.com/conclaveai_pro",
+  },
   city: "Karachi",
   serving: "US, Gulf and Europe",
   calLink: process.env.NEXT_PUBLIC_CAL_LINK ?? "",

@@ -8,6 +8,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const projects = (await getShowcaseProjects()).filter(hasWriteUp);
   const paths = [
     ...allRoutes.map((r) => r.href),
+    "/ai-receptionist-gulf-clinics",
     ...services.map((s) => `/services/${s.slug}`),
     ...studio.map((s) => `/studio/${s.slug}`),
     ...industries.map((i) => `/industries/${i.slug}`),
