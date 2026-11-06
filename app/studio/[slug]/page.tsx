@@ -8,6 +8,13 @@ import { ArchDiagram, FlowDiagram, ModuleMap } from "@/components/Diagrams";
 import { StackScale } from "@/components/home/sections2";
 import { studio, studioDetail, type StudioSlug } from "@/lib/content";
 import { site } from "@/lib/site";
+import { LastUpdated } from "@/components/LastUpdated";
+
+/** Search-targeted titles (strategy doc). Other studio pages keep "Name: headline". */
+const seoTitle: Record<string, string> = {
+  agents: "AI agents for business: AI agent development company",
+  automations: "AI automation agency: AI automation services",
+};
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -21,7 +28,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
   const s = meta(slug);
   const d = studioDetail[slug as StudioSlug];
-  return s && d ? { title: `${s.name}: ${d.h1}`, description: `${s.job} ${d.problem}`, alternates: { canonical: `/studio/${s.slug}` } } : {};
+  return s && d ? { title: seoTitle[slug] ?? `${s.name}: ${d.h1}`, description: `${s.job} ${d.problem}`, alternates: { canonical: `/studio/${s.slug}` } } : {};
 }
 
 export default async function StudioDetailPage({ params }: Params) {
@@ -43,6 +50,7 @@ export default async function StudioDetailPage({ params }: Params) {
         }}
       />
       <PageHeader path={`/studio/${slug}`} eyebrow={`Studio / ${s.name}`} title={d.h1} lead={d.problem} />
+      {seoTitle[slug] && <LastUpdated />}
 
       <div className="frame border-t hair">
         <section data-reveal className="grid gap-8 border-b hair px-4 py-12 md:grid-cols-[1fr_2fr] md:px-10">

@@ -39,7 +39,8 @@ export function PageHeader({ eyebrow, title, lead, path }: { eyebrow: string; ti
       <div data-reveal>
         <Eyebrow>{eyebrow}</Eyebrow>
       </div>
-      <h1 data-reveal className="display mt-5 text-display-l">
+      {/* A single long word (such as "receptionist") does not fit the column at the full heading size, so it would break mid-word; those titles use a slightly smaller size. */}
+      <h1 data-reveal className={`display mt-5 ${title.split(/\s+/).some((w) => w.length >= 11) ? "text-[clamp(1.75rem,5.6vw,5rem)] leading-[0.95]" : "text-display-l"}`}>
         {title}
       </h1>
       {lead ? (

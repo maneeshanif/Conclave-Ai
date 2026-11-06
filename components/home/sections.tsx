@@ -42,6 +42,8 @@ export function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 md:px-10">
         <div className="relative">
         <h1 className="display text-display-xl">
+          {/* Visible keyword line, part of the H1 so search engines and screen readers read it with the brand headline. */}
+          <span data-hero-fade className="label mb-5 block max-w-[34rem] text-ink">AI receptionist and front desk for clinics and small businesses</span>
           <span className="block overflow-hidden pb-[0.06em]">
             <span data-hero-line className="block">
               Agents
@@ -62,8 +64,6 @@ export function Hero() {
               convened.
             </span>
           </span>
-          {/* Keyword heading for search engines and screen readers; the visible lines above stay the brand voice. */}
-          <span className="sr-only"> | AI receptionist and voice agents for clinics and med spas</span>
         </h1>
         {/* Invisible anchor for the crew row: directly under the headline, right aligned, clear of the supporting text on the left. */}
         <div data-crew-slot aria-hidden="true" className="pointer-events-none absolute right-0 top-full mt-4 hidden h-[76px] w-[min(576px,calc(100%-31rem))] lg:block" />

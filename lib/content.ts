@@ -29,24 +29,27 @@ export interface StudioDetail {
 
 export const studioDetail: Record<StudioSlug, StudioDetail> = {
   agents: {
-    h1: "Agents that take the calls",
+    h1: "AI agents for business",
     problem: "Calls that ring out and enquiries that wait are customers you paid to attract and then lost.",
     build: ["Voice agents that answer, ask what is needed and book", "Follow-up that replies to every enquiry in seconds", "Booking against your real calendar", "Reactivation of customers who stopped coming", "A weekly report you can read in a minute"],
     diagram: "flow",
     steps: ["A call or message arrives", "The agent answers and asks what is needed", "It checks your live calendar", "It books, confirms and reminds", "Anything it cannot handle goes to a person with a summary"],
     faq: [
       ["How do we start?", "With one job. The scope is written down together before we begin."],
+      ["Are you an AI agent development company?", "Yes. We design, build and run AI agents for businesses: voice agents that answer calls, follow-up and booking agents, and agents wired into your CRM and calendar. Real builds are on the Work page."],
+      ["What do AI agent development services include?", "Scoping the job, writing the agent's brief with you, connecting your tools, a supervised pilot, handover and a weekly summary."],
       ["Which languages?", "English, Arabic and Urdu. Other languages are scoped on request."],
     ],
     related: "See the five service pages for each job in detail.",
   },
   automations: {
-    h1: "Workflows that move your data",
+    h1: "AI automation services",
     problem: "Your team re-types the same details between tools, and things fall through the gaps between them.",
     build: ["Lead captured, then added to the CRM, answered and a task created", "Invoices and reminders sent on a schedule", "Reports assembled and emailed each week", "Alerts when something looks wrong", "Clean hand-offs between your apps"],
     diagram: "flow",
     steps: ["A trigger fires (a form, an email, a payment, a schedule)", "The data is checked and cleaned", "The right tool is updated", "The right person is told", "Failures retry, then raise an alert"],
     faq: [
+      ["Are you an AI automation agency?", "Yes. We build AI automation services: workflows that capture leads, update your CRM, send reminders and reports, and use AI where a step needs judgment, in n8n, Zapier or custom code."],
       ["n8n, Zapier or code?", "We use n8n or Zapier where they fit and code you own where volume, cost or compliance means they do not."],
       ["What happens when a step fails?", "It retries, then alerts a person with what failed, so nothing disappears silently."],
       ["How long does a workflow take?", "Typically a one to two week build, scoped per workflow before we start."],
@@ -177,6 +180,8 @@ export const serviceDetail: Record<
     integrations: ["Twilio", "Vapi", "LiveKit", "Google Calendar", "Cal.com", "Your CRM"],
     faq: [
       ["Will callers know it is an AI?", "We never hide it. Aria introduces itself plainly, and any caller can ask for a human."],
+      ["What is an AI answering service?", "It is a voice agent that answers your business phone, books the appointment and follows up, instead of only taking a message. Ours works in English, Arabic and Urdu."],
+      ["Is this an AI phone answering service for small business?", "Yes. It answers every call in one ring, books into your calendar and flags urgent calls to a person on your team. It also works after hours, see the after hours answering service page."],
       ["Which languages?", "English, Arabic and Urdu. Other languages are scoped on request."],
       ["Are calls recorded?", "Only if you want them to be, with the consent wording agreed in writing first."],
     ],
@@ -187,6 +192,8 @@ export const serviceDetail: Record<
     flow: ["A form, message or missed call arrives", "The agent replies within seconds in your tone", "It answers the first questions and offers a slot", "It keeps the thread going until a person is needed"],
     integrations: ["WhatsApp", "SMS", "Email", "Web forms", "Instagram", "Your CRM"],
     faq: [
+      ["What is missed call text back?", "When a call is missed, the agent texts the caller within seconds, answers the first questions and offers a slot. It only messages people who contacted you."],
+      ["Is this an AI sales agent?", "It is a follow-up agent for the enquiries you already get: it replies fast, keeps the thread going and hands a ready lead to a person. It does not message people who did not ask."],
       ["Does it message people who did not ask?", "No. Follow-up only goes to people who contacted you."],
       ["Can I approve messages first?", "Yes. Start in approve-first mode and relax it when you trust it."],
       ["What if the lead replies angrily?", "The thread is handed to a person immediately."],

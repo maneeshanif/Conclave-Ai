@@ -10,6 +10,8 @@ export const site = {
     instagram: "https://www.instagram.com/conclaveai.pro/",
     x: "https://x.com/conclaveai_pro",
   },
+  /** The one line used on the site, in schema and in every profile, so assistants see one clear entity (strategy doc, step 1). */
+  brandLine: "Conclave AI, AI receptionist and voice agents for clinics and med spas, English, Arabic, Urdu",
   city: "Karachi",
   serving: "US, Gulf and Europe",
   calLink: process.env.NEXT_PUBLIC_CAL_LINK ?? "",

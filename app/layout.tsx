@@ -17,7 +17,7 @@ const plex = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variabl
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   // "Conclave AI" is always two words in titles so the brand phrase repeats; never just "Conclave".
-  title: { default: `${site.name} | AI receptionist and voice agents for clinics`, template: `%s | ${site.name}` },
+  title: { default: `${site.name} | AI receptionist for clinics and small businesses`, template: `%s | ${site.name}` },
   description: `${site.description} Hear a live agent, then book a call.`,
   twitter: { card: "summary_large_image", site: "@conclaveai_pro" },
   alternates: { canonical: "/" },
@@ -48,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@graph": [
-                { "@type": "Organization", "@id": `${site.url}/#org`, name: site.name, url: site.url, logo: `${site.url}/brand/conclave-logo-on-light.svg`, alternateName: "Conclave AI voice agents", sameAs: Object.values(site.social), email: site.email, description: `${site.name}, voice agents: ${site.description}`, address: { "@type": "PostalAddress", addressLocality: site.city } },
+                { "@type": "Organization", "@id": `${site.url}/#org`, name: site.name, url: site.url, logo: `${site.url}/brand/conclave-logo-on-light.svg`, alternateName: "Conclave AI voice agents", sameAs: Object.values(site.social), email: site.email, description: `${site.brandLine}. ${site.description}`, address: { "@type": "PostalAddress", addressLocality: site.city } },
                 { "@type": "WebSite", "@id": `${site.url}/#site`, url: site.url, name: site.name, publisher: { "@id": `${site.url}/#org` } },
               ],
             }),

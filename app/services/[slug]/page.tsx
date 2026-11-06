@@ -11,6 +11,23 @@ import { panelColours, serviceVisuals } from "@/components/home/visuals";
 import { serviceDetail } from "@/lib/content";
 import { services } from "@/lib/site";
 import { cn } from "@/lib/utils";
+import { LastUpdated } from "@/components/LastUpdated";
+
+/** Search-targeted titles and headings (strategy doc). Other services keep their home-page wording. */
+const seo: Record<string, { lead: string; title: string; h1: string; description: string }> = {
+  voice: {
+    lead: "An AI phone answering service picks up every call in one ring, finds out what the caller needs and books the slot in your real calendar. It works in English, Arabic and Urdu, tells callers it is an AI, and hands urgent calls to a person on your team.",
+    title: "AI answering service and AI voice agents for clinics",
+    h1: "An AI phone answering service",
+    description: "An AI answering service and AI voice agents that pick up in one ring, in the caller's language, book the slot and never put anyone on hold. English, Arabic and Urdu.",
+  },
+  "follow-up": {
+    lead: "Missed call text back replies to a missed call or new enquiry within seconds, answers the first questions and offers a slot. The agent only messages people who contacted you, and hands the thread to a person when needed.",
+    title: "AI sales agent and missed call text back",
+    h1: "Missed call text back, in seconds",
+    description: "An AI sales agent that replies to every enquiry and texts back missed calls within seconds, while the lead is still looking at their phone.",
+  },
+};
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -21,7 +38,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
   const s = services.find((x) => x.slug === slug);
-  return s ? { title: slug === "voice" ? "AI receptionist: voice agents that answer every call" : s.title, description: slug === "voice" ? "An AI receptionist that picks up in one ring, in the caller's language, books the slot and never puts anyone on hold. English, Arabic and Urdu." : s.body, alternates: { canonical: `/services/${s.slug}` } } : {};
+  return s ? { title: seo[slug]?.title ?? s.title, description: seo[slug]?.description ?? s.body, alternates: { canonical: `/services/${s.slug}` } } : {};
 }
 
 export default async function ServicePage({ params }: Params) {
@@ -58,7 +75,8 @@ export default async function ServicePage({ params }: Params) {
           }),
         }}
       />
-      <PageHeader path={`/services/${slug}`} eyebrow={`Service ${s.n}`} title={s.title} lead={s.body} />
+      <PageHeader path={`/services/${slug}`} eyebrow={`Service ${s.n}`} title={seo[slug]?.h1 ?? s.title} lead={seo[slug]?.lead ?? s.body} />
+      {seo[slug] && <LastUpdated />}
 
       <div className="frame border-t hair">
         <section data-reveal className="grid gap-8 border-b hair px-4 py-12 md:grid-cols-2 md:px-10">

@@ -35,7 +35,7 @@ export default function GulfClinicsPage() {
       <PageHeader
         path="/ai-receptionist-gulf-clinics"
         eyebrow="For clinics in the Gulf"
-        title="An AI receptionist for clinics in Dubai and the Gulf"
+        title="AI receptionist for Gulf clinics"
         lead="Answers every call in English, Arabic or Urdu, books the appointment, and hands anything urgent to your staff."
       />
       <div className="frame border-t hair">

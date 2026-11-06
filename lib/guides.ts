@@ -65,6 +65,51 @@ export const industryGuides: Record<string, Guide> = {
       ["Does it work in Arabic?", "Yes. We build in English, Arabic and Urdu. Other languages are scoped on request."],
     ],
   },
+  dental: {
+    title: "A dental AI receptionist, explained",
+    intro:
+      "A dental AI receptionist answers every call to your practice, books and moves appointments in your calendar, and sends recall reminders so fewer slots go empty. Urgent calls, such as pain or a broken tooth, are flagged to your team straight away with a short summary.",
+    sections: [
+      {
+        h: "What a dental AI receptionist does",
+        p: [
+          "It answers in one ring while your team is with patients, books new and existing patients against your real calendar and texts a confirmation. It answers the routine questions: opening hours, location, which dentist sees what, what to bring.",
+          "It confirms upcoming visits and handles reschedules by phone or text, and when a slot is cancelled it can offer it to people on your waiting list.",
+        ],
+      },
+      {
+        h: "Emergency triage and handover",
+        p: [
+          "The agent does not diagnose or give clinical advice. You and we agree a list of urgent triggers, for example severe pain, swelling, a knocked-out tooth or bleeding that will not stop. Calls that match are passed to a person on your team immediately with a summary, so the patient does not repeat themselves. The list can be changed at any time.",
+        ],
+      },
+      {
+        h: "Recall reminders",
+        p: [
+          "Recalls fill the diary. The agent can contact patients who are due a check-up with a short message and offer a slot. It only contacts patients with an existing relationship, with an easy opt-out, and you approve the list and set the weekly cap before anything is sent.",
+        ],
+      },
+      {
+        h: "Practice software and patient data",
+        p: [
+          "We connect to the calendar or practice software you use. If an integration does not exist, we scope building it before any work starts.",
+          "Dental records are sensitive. We agree data handling in writing before we start: what is stored, where, for how long and who can see it. We do not claim a certification we do not hold, and any rule that applies to you, such as HIPAA in the US or UK GDPR in the UK, is scoped first.",
+        ],
+      },
+      {
+        h: "Is it right for you?",
+        p: [
+          "It fits if calls go unanswered during treatments, after-hours calls are lost, or no-shows and gaps are a problem. It is less useful for a very small practice with a handful of calls a week. We will tell you honestly on the first call.",
+        ],
+      },
+    ],
+    faq: [
+      ["What is a dental AI receptionist?", "A voice agent that answers your practice's calls, books and reschedules appointments, sends reminders and flags urgent calls to your team."],
+      ["Can it handle dental emergencies?", "It does not give clinical advice. Calls that match your urgent triggers are passed to a person on your team immediately, with a summary."],
+      ["Does it work with our practice software?", "We connect to the tool you use. If an integration does not exist, we scope building it before work starts."],
+      ["Can it fill cancelled slots?", "Yes. It can offer a cancelled slot to people on your waiting list and book the first to accept."],
+    ],
+  },
   clinics: {
     title: "An AI receptionist for clinics, explained",
     intro:

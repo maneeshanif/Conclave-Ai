@@ -9,6 +9,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const paths = [
     ...allRoutes.map((r) => r.href),
     "/ai-receptionist-gulf-clinics",
+    "/after-hours-answering-service",
+    "/ai-receptionist-uk",
+    "/ai-receptionist-canada",
+    "/services/outbound-calling",
     ...services.map((s) => `/services/${s.slug}`),
     ...studio.map((s) => `/studio/${s.slug}`),
     ...industries.map((i) => `/industries/${i.slug}`),

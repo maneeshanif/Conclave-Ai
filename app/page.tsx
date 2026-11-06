@@ -4,8 +4,8 @@ import { Hero, LiveAgent, Proof, Services, Systems, BuiltFor, DigitalFtes, WorkR
 import { getShowcaseProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
-  title: { absolute: `${site.name} | AI receptionist and voice agents for clinics and med spas` },
-  description: "Conclave AI builds an AI receptionist that answers every call, books the slot and follows up, in English, Arabic and Urdu. Hear it first, then decide.",
+  title: { absolute: `${site.name} | AI receptionist and front desk for clinics and small businesses` },
+  description: "Conclave AI builds an AI receptionist for clinics, med spas and small businesses. It answers every call, books the slot and follows up, in English, Arabic and Urdu. Hear it first, then decide.",
   alternates: { canonical: "/" },
 };
 

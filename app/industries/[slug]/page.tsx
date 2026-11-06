@@ -8,6 +8,7 @@ import { StudGlyph } from "@/components/studs/StudGlyph";
 import { IndustryDash } from "@/components/IndustryDash";
 import { industries } from "@/lib/content";
 import { industryGuides } from "@/lib/guides";
+import { LastUpdated } from "@/components/LastUpdated";
 import { services } from "@/lib/site";
 
 type Params = { params: Promise<{ slug: string }> };
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
   const i = industries.find((x) => x.slug === slug);
   return i
-    ? { title: i.slug === "startups" ? `AI voice agents for ${i.name.toLowerCase()}` : `AI receptionist for ${i.name.toLowerCase()}`, description: i.slug === "startups" ? `${i.pain} ${i.h1}.` : `An AI receptionist and voice agents for ${i.name.toLowerCase()}. ${i.pain} ${i.h1}.`, alternates: { canonical: `/industries/${i.slug}` } }
+    ? { title: i.slug === "startups" ? `AI voice agents for ${i.name.toLowerCase()}` : i.slug === "dental" ? "Dental AI receptionist: books, reminds and flags emergencies" : `AI receptionist for ${i.name.toLowerCase()}`, description: i.slug === "startups" ? `${i.pain} ${i.h1}.` : `An AI receptionist and voice agents for ${i.name.toLowerCase()}. ${i.pain} ${i.h1}.`, alternates: { canonical: `/industries/${i.slug}` } }
     : {};
 }
 
@@ -44,7 +45,8 @@ export default async function IndustryPage({ params }: Params) {
           }),
         }}
       />
-      <PageHeader path={`/industries/${i.slug}`} eyebrow={`For ${i.name.toLowerCase()}`} title={i.h1} lead={i.pain} />
+      <PageHeader path={`/industries/${i.slug}`} eyebrow={`For ${i.name.toLowerCase()}`} title={i.h1} lead={guide ? guide.intro : i.pain} />
+      {guide && <LastUpdated />}
       <div className="frame border-t hair">
         <section className="grid gap-8 border-b hair md:grid-cols-[1fr_2fr]">
           <div data-reveal className="grid place-items-center bg-mist p-8">
@@ -98,7 +100,6 @@ export default async function IndustryPage({ params }: Params) {
           <article className="grid gap-8 border-b hair px-4 py-12 md:grid-cols-[1fr_2fr] md:px-10">
             <h2 data-reveal className="head">{guide.title}</h2>
             <div className="max-w-2xl space-y-10">
-              <p className="text-lead">{guide.intro}</p>
               {guide.sections.map((sec) => (
                 <section key={sec.h}>
                   <h3 className="head text-xl">{sec.h}</h3>
