@@ -42,7 +42,7 @@ export function WorkGrid({ projects }: { projects: Project[] }) {
             <Link href={`/work/${p.slug}`} className="group block overflow-hidden rounded-3xl border hair bg-paper transition-colors duration-150 hover:bg-chalk">
               {p.image ? (
                 <div className="relative aspect-video overflow-hidden bg-mist">
-                  <Image src={p.image} alt={`${p.title} screenshot`} fill sizes="(min-width: 768px) 50vw, 100vw" className="zoom-on-hover object-cover object-top" />
+                  <Image src={p.image} alt={`${p.title} screenshot`} fill sizes="(min-width: 768px) 50vw, 100vw" className="zoom-on-hover object-cover object-top" unoptimized />
                 </div>
               ) : (
                 <div className={cn("grid aspect-video place-items-center overflow-hidden", tones[i % tones.length])}>
